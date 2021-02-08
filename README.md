@@ -17,4 +17,7 @@ Extra Requirements:
   - Use Actions and unit test
   
 TODO:
-  - Decide on operations, outline stub-APIs
+  - Decide on operations
+
+Game Plan:
+  - Make unit tests, make actions, implement skeleton of these APIs
