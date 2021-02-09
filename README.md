@@ -17,7 +17,8 @@ Extra Requirements:
   - Use Actions and unit test
   
 TODO:
-  - Decide on operations
+  - Create skeleton code
+    - Code in Python?
 
 Game Plan:
   - Make unit tests, make actions, implement skeleton of these APIs
