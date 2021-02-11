@@ -17,8 +17,8 @@ Extra Requirements:
   - Use Actions and unit test
   
 TODO:
-  - Create skeleton code
-    - Code in Python?
+  - Implement stub-API, actions, unit test, for three modules
+    - Code in Python
 
 Game Plan:
   - Make unit tests, make actions, implement skeleton of these APIs
