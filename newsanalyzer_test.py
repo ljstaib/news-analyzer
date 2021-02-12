@@ -35,36 +35,37 @@ def test_OrganizeFileList():
 # Text NLP Analysis Testing
 # ========================================================================	
 
-def ConvertFilesToText():
+def test_ConvertFilesToText():
 
-def CreateKeywords():
+def test_CreateKeywords():
 
-def ObtainArticles():
+def test_ObtainArticles():
 
-def AssessData():
+def test_AssessData():
 
-def SaveSentiment():
+def test_SaveSentiment():
 
-def EditSentiment():
+def test_EditSentiment():
 
-def Translate():
+def test_Translate():
 
 # ========================================================================
 # Newsfeed Ingest Testing
 # ========================================================================
 
-def DiscoverContent():
+def test_DiscoverContent():
 
-def DisplayContent():
+def test_DisplayContent():
 
-def OrganizeContent():
+def test_OrganizeContent():
 
-def ReadLater():
+def test_ReadLater():
 
 # ========================================================================
 # Logging and Diagnostics Testing
 # ========================================================================
 
-def SendLogReport():
+def test_SendLogReport():
 
-def Diagnostics():
+def test_Diagnostics():
+  
