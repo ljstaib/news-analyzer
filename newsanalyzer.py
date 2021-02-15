@@ -5,332 +5,322 @@
 # News Analyzer
 # ========================================================================
 
+#I will use Django and Heroku to host or Flask, I will use S3 or MongoDB for my database
+
 # ========================================================================
 # Imports/Constants
 # ========================================================================
+
+files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
+uploadingCancelled = False
+userID = "0" #Will implement user ID's with secure user authentication system
+
+class ProgressBar:
+	def __init__(self, percent):
+		self.percent = percent
 
 # ========================================================================
 # File Uploader/Ingest
 # ========================================================================
 
-def UploadFiles(userID, files[], filetype):
-	#Inputs: userID is a string, files[] is a string list, filetype is a string
+def UploadFiles(userID, files[]):
+	#Inputs: userID is a string, files[] is a string list
 
-	Locate account with user ID:
-	find(userID)
-	if (userID does not exist in database):
-		quit and show error("User ID not found or account not made, something to that effect")
+	if (userID != "0"):
+		print("User account not found.")
+		return False
 	else:	
 		while (CancelUpload() == False):
 			percent_done = 0 #Used to tell user the progress of files being uploaded
 			successes = 0 #Used to count successful uploads to calculate current percent
 			DisplayUploadStatus(0) #Start progress bar at zero
 
-			Upload file on website made with Django and Heroku or Flask
+			#Upload file on website made with Django and Heroku or Flask
 
 			for file in files[]:
-				retrieve file from computer of user
-				trim file to save filename (remove extension for the name but save the filetype)
-				upload specific file to database based on filetype variable
-				if (upload is successful):
+				print("Retrieved file " + str(file))
+				split_str = file.split(".")
+				filename = split_str[0]
+				filetype = split_str[1]
+				filetype = filetype.lower()
+				print("Uploading file " + str(file) + " with name " + filename)
+				uploadSuccess = True
+				if (uploadSuccess):
 					successes += 1
 					percent_done = round(float(successes / len(files)), 2)
-					update DisplayUploadStatus(percent_done) to reflect progress
+					DisplayUploadStatus(percent_done)
 				else:
-					UploadError(file) and show error, which file failed and why
+					UploadError(file)
+					return False
+				if (CancelUpload() == True):
+					break
 
 		if (CancelUpload() == True):
-			cancel POST uploading of files
-			tell user operation was cancelled and exit
+			print("Cancelling POST operation to database")
+			print("Alert to user: Upload successfully cancelled.")
+			return False
 		else:				
-			Call DisplayUploadStatus(100) to tell user that file uploading has been completed
+			DisplayUploadStatus(100)
+			return True
 
 def DisplayUploadStatus(percent):
-	Psuedocode below:
-
-	percent is a float
-
 	if percent == 0:
-		User must have just started so spawn progress bar: RenderProgressBar(True) 
-		...this will be created with some web elements, not sure
-		set the percent of the progress bar to zero
+		pbar = ProgressBar(0)
+		RenderProgressBar(True)
+		print("Progress Bar: 0%")
 	elif percent == 100:
-		Set progress bar to 100 percent
-		Progress is done so RenderProgressBar(False)
-		Display message that uploading has been completed
+		pbar.percent = 100
+		RenderProgressBar(False)
+		print("Progress Bar: 100%")
+		print("Upload/s complete!")
 	else:
-		In the middle of uploading files so just set the percent bar to the current percent	
+		pbar.percent = percent
+		print("Progress Bar: " + str(percent) + "%")
+
+	return True	
 
 def RenderProgressBar(switch):
-	Psuedocode below:
-
-	switch is a bool
-
-	DisplayUploadStatus(percent) is used to update the number of the progress bar, 
-	...this function is to just turn the render on and off 
-
 	if (switch):
 		if (progress bar is not there):
-			use web elements to render the progress bar
+			print("Progress bar showing!")
 	else:
 		if (progress bar is there):
-			use web elements to remove the progress bar	
+			print("Progress bar not showing!")
+
+	return True		
 
 def UploadError(file):
-	Psuedocode below:
-
-	file is a string
-
-	print out a message telling the user that there was a problem uploading "file"
-	describe what happened so user can change their behavior to have program running,
-	...example: if they uploaded an unsupported file
+	print("Alert to user: There was a problem uploading " + file)
+	return True
 
 def CancelUpload():
-	Psuedocode below:
-
-	This function is used in UploadFiles() to stop the current process if necessary
-
-	if user hit cancel button, updates a global variable that sets to True:
+	if (uploadingCancelled):
+		uploadingCancelled = False
 		return True
 	else:
 		return False		
 
 def FileDelete(userID, file):
-	Psuedocode below:
-
-	userID is a string, file is a string
-
-	Locate account with user ID:
-	find(userID)
-	if (userID does not exist in database):
-		quit and show error("User ID not found or account not made, something to that effect")
+	if (userID != "0"):
+		print("User account not found.")
+		return False
 	else:
-		retrieve user list files[] from database
-		find file in user list files[]
-		if file exists: (it should since user selected it from their list of files[])
-			delete from that userID account on database
-			if successful:
-				tell file was deleted successfully
+		print("Retrieving files list from user with userID " + userID)
+		if file in files:
+			print("Deleting file " + file)
+			success = True
+			if success:
+				print("File " + file + " was deleted successfully.")
+				return True
 			else:
-				display error to user
+				print("ERROR: File " + file + " was not deleted.")
+				return False
+		else:
+			print("Files does not exist in user\'s library")
+			return False		
 
 def FileEditName(userID, file, new_name):
-	Psuedocode below:
-
-	userID is a string, file is a string, new_name is a string
-
-	Locate account with user ID:
-	find(userID)
-	if (userID does not exist in database):
-		quit and show error("User ID not found or account not made, something to that effect")
+	if (userID != "0"):
+		print("User account not found.")
+		return False
 	else:
-		retrieve user list files[] from database
-		find file in user list files[]
-		if file exists: (it should since user selected it from their list of files[])
-			edit name of file with new_name, update in database
-			if successful:
-				tell file name was edited successfully
+		print("Retrieving files list from user with userID " + userID)
+		if file in files:
+			print("Changing name of " + file + " to " + new_name)
+			success = True
+			if success:
+				print("File " + file + " was edited successfully.")
+				return True
 			else:
-				display error to user
+				print("ERROR: File " + file + " could not be edited.")
+				return False
 
 def OrganizeFileList(files[], organize_type):
-	Psuedocode below:
-
-	files is a string list, organize_type is a string
-
-	Locate account with user ID:
-	find(userID)
-	if (userID does not exist in database):
-		quit and show error("User ID not found or account not made, something to that effect")
+	if (userID != "0"):
+		print("User account not found.")
+		return False
 	else:	
-		retrieve user list files[] from database
-		shuffle indexes based on organize_type
+		print("Retrieving files list from user with userID " + userID)
+		print("Current order of files: " + files)
 		if organize_type == "Alphabetical":
-			sort(list) in alphabetical order
+			files = sorted(files, key=None)
+			print("New order of files (" + organize_type +"): " + files)
 		elif organize_type == "Reverse Alphabetical":
-			sort(list) in reverse from alphabetical order
+			files = sorted(files, key=None, reverse=True)
+			print("New order of files (" + organize_type +"): " + files)
 		elif organize_type == "Earliest Uploaded":
-			sort(list) by earliest files under userID in database
+			print("Organized content by earliest uploaded")
+			print("New order of files (" + organize_type +"): " + files)
 		elif organize_type == "Latest Uploaded":
-			sort(list) by latest files under userID in database
-		can add more sorting methods
-	
-	update list display of files[] to user	
+			print("Organized content by latest uploaded")
+			print("New order of files (" + organize_type +"): " + files)
 
 # ========================================================================
 # Text NLP Analysis
 # ========================================================================
 
 def ConvertFilesToText(userID, files[]):
-	Psuedocode below:
-
-	userID is a string, files[] is a list of strings
-
-	Locate account with user ID:
-	find(userID)
-	if (userID does not exist in database):
-		quit and show error("User ID not found or account not made, something to that effect")
+	if (userID != "0"):
+		print("User account not found.")
 		return False
 	else:
-		Take files and convert to TXT/JSON data (I will call text_data) using different methods depending on the filetype
-		filetype = file extension by splitting string, taking text after decimal point "."
-		filetype = filetype.lower()
-		if filetype == "docx":
-			then use the docx2txt library to retrieve text data
-		etc. for other file types
+		for file in files:
+			split_str = file.split(".")
+			filename = split_str[0]
+			filetype = split_str[1]
+			filetype = filetype.lower()
+			if filetype == ".docx":
+				print("Here, I will use the docx2txt library turn this docx file into text")
+			elif filetype == ".txt":
+				print("Here, there is no conversion to do since it is already a .txt file")
+			elif filetype == ".pdf":
+				print("I will figure out some way of converting PDF to TXT")
+			else:
+				print("Other filetype")	
+
+			text_data = "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."		
 	
-	CreateKeywords(text_data)
+	return text_data
 
-def CreateKeywords(text_data):
-	Psuedocode below:
+def CreateKeywords(text_data):	
+	articles = ObtainArticles(text_data) #get articles/links using Google API 
+	#article_data = extra relevant information gathered from the articles
+	#use results -> names of Internet links/articles, to generate 5 keywords -> a list of 5 strings
+	#some Google NLP function
+	
+	article_data = ["The Earth is habitable in part due to its perfect distance from the Sun."]
+	keywords = ["Sun", "Earth", "Solar System", "Planet", "Star"]
 
-	text_data is a string
-
-	use text_data as search method for Google NLP API
-	articles = ObtainArticles(text_data) to get articles/links using Google API 
-	use results -> names of Internet links/articles, to generate 5 keywords -> a list of 5 strings
-	article_data = extra relevant information gathered from the articles
-
-	AssessData(article_data, keywords[], text_data)
+	return keywords
 
 def ObtainArticles(text_data):
-	Psuedocode below:
+	#use text_data to search for specific parts on Google
+	#take information received to pull specific articles for CreateKeywords() to use to generate keywords
 
-	text_data is a string
-
-	use text_data to search for specific parts on Google
-	take information received to pull specific articles for CreateKeywords() to use to generate keywords
-
+	article_links = ["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"]
 	return article_links
 
 def AssessData(article_data[], keywords[], text_data):
-	Psuedocode below:
-
-	article_data is a string list(possibly), keywords is a string list, text_data is a string
-	sentiment = use GoogleAPI, keywords, and original text_data to create a universal common sentiment
-
-	display sentiment to user, allow them to save, edit, or delete and try again
+	#use GoogleAPI, keywords, and original text_data to create a universal common sentiment
+	sentiment = "The Sun is a yellow dwarf star at the center of our Solar System. The distance between the Sun and the Earth is one important reason why life can be sustained on Earth. At about 92 million miles away, the Earth is the third closest planet from the Sun out of 8 planets."
+	print("Sentiment of text information entered: " + sentiment)
 
 def SaveSentiment(userID, sentiment):
-	Psuedocode below
-
-	userID is a string, sentiment is a string
-
-	Locate account with user ID:
-	find(userID)
-	if (userID does not exist in database):
-		quit and show error("User ID not found or account not made, something to that effect")
+	if (userID != "0"):
+		print("User account not found.")
 		return False
 	else:
-		save sentiment to user ID sentiment[] list of strings in database
+		#save sentiment to user ID sentiment[] list of strings in database
+		print("Sentiment \"" + sentiment + "\" saved.")
+		return True
 
 def EditSentiment(userID, sentiment, new_sentiment):
-	Psuedocode below:
-
-	userID is a string, sentiment is a string, new_sentiment is a string
-
-	Locate account with user ID:
-	find(userID)
-	if (userID does not exist in database):
-		quit and show error("User ID not found or account not made, something to that effect")
+	if (userID != "0"):
+		print("User account not found.")
+		return False
 	else:
-		retrieve user list sentiments[] from database
-		find sentiment in user list sentiments[]
-		if sentiment exists: (it should since user selected it from their list of sentiments[] or changed it upon viewing immediately)
-			edit sentiment with new_sentiment, update in database
+		sentiments = ["The sky is yellow.", "The Sun is cold."]
+		if sentiment in sentiments:
+			for i, x in enumerate(sentiments):
+				if x == sentiment:
+					x[i] = new_sentiment
+			print("Sentiment \"" + sentiment + "\" replaced with \"" + new_sentiment + "\".")
+			return True		
+		else:
+			print("Sentiment not found")
+			return False	
 
-def Translate(text or sentiment, language):
-	Psuedocode below:
-
-	text or sentiment is a string, language is a string
-
-	use Google Translate API to take in text or sentiment and translate into any language in Google translate API
-	translated_text = GoogleTranslateAPI(text, language)??
+def Translate(text, language):
+	# use Google Translate API to take in text or sentiment and translate into any language in Google translate API
+	# translated_text = GoogleTranslateAPI(text, language)
+	if language == "English":
+		translated_text = "Hello"
+	elif language == "Spanish":
+		translated_text = "Hola"
+	elif language == "Chinese":
+		translated_text = "你好"
+	elif language == "French":
+		translated_text = "Bonjour"
+	else:
+		print("Unrecognized Language: " + language)
+		return False			
 
 	return translated_text		
-
 
 # ========================================================================
 # Newsfeed Ingest
 # ========================================================================
 
 def DiscoverContent(search_text):
-	Psuedocode below:
+	# Use NLP analysis from last section or Google Search API to retrieve relevant links
+	# Organize by relevant searches returned by API
+	# searches = NLP results (string list of links)
+	searches = ObtainArticles(search_text)
 
-	search_text is a string
-
-	Use NLP analysis from last section or Google Search API to retrieve relevant links
-	Organize by relevant searches returned by API
-	searches[] = NLP results (string list of links)
-
-	return searches[]
+	return searches
 
 def DisplayContent(searches[]):
-	Psuedocode below:
-
-	searches is a string list
-
-	Command organizes searches[] and puts them into a web element to display on the screen
+	print("Searches displayed: ")
+	for i, search in enumerable(searches):
+		print("Search " + string(i) + ": " + search)
+	#Command organizes searches[] and puts them into a web element to display on the screen
+	return True
 
 def OrganizeContent(searches[], organize_type):	
-	Psuedocode below:
+	if organize_type == "Alphabetical":
+		searches = sorted(searches, key=None)
+		print("New order of searches (" + organize_type +"): " + searches)
+	elif organize_type == "Latest Uploaded":
+		print("Organized content by latest uploaded")
+		print("New order of searches (" + organize_type +"): " + searches)
+	elif organize_type == "Most Relevant":
+		print("Organized content by most relevant")
+		print("New order of searches (" + organize_type +"): " + searches)
 
-	searches is a string list, organize_type is a string
-
-	shuffle indexes based on organize_type
-		if organize_type == "Alphabetical":
-			sort(list) in alphabetical order
-		elif organize_type == "Latest Uploaded":
-			sort(list) by latest searches by date
-		elif organize_type == "Most Relevant":
-			sort(list) by most relevant (aka back to default searches[])
-
-	call DisplayContent(searches[]) to render new web element
+	if (DisplayContent(searches)):
+		return True
+	else:
+		return False	
 
 def ReadLater(userID, articleID):
-	Psuedocode below:
-
-	userID is a string, articleID is a string
-
-	Locate account with user ID:
-	find(userID)
-	if (userID does not exist in database):
-		quit and show error("User ID not found or account not made, something to that effect")
+	if (userID != "0"):
+		print("User account not found.")
+		return False
 	else:	
-		Save article to user ID database to read_later[] list by using its ID (has to be some ID in Google API):
+		#Save article to user ID database to read_later[] list by using its ID (has to be some ID in Google API)
+		articles = ["Populating Mars", "Why the Sky is in Fact Orange.", "Americans Need One Thing Right Now: Free Biscuits."]
+		artcileIDs = ["0001", "0002", "0003"]
+		if articleID in articleIDs:
+			print("Article with ID " + articleID + " already exists in user\'s read later list")
+		else:
+			print("Article with ID " + articleID + " saved in user\'s read later list.")	
 
 # ========================================================================
 # Logging and Diagnostics
 # ========================================================================
 
 def SendLogReport(error):
-	Psuedocode below:
-
-	If error occurs, can use this function to track the current process of the user that led to the error,
-	...save .log files to the database interface to analyze
-	...mark by specific errors to analyze
-
-	if error from UploadFiles():
-		error_type = 1
-	something like this
+	# If error occurs, can use this function to track the current process of the user that led to the error,
+	# ...save .log files to the database interface to analyze
+	# ...mark by specific errors to analyze
+	print("[LOG] ERROR: " + error)
+	print("[LOG] Sending log report...")
 
 def Diagnostics():
-	Psuedocode below:
+	#CPU usage:
+	print("[STATS] [Top 5 files allocating the most memory:]")
+	for stat in top_stats[:5]:
+	    print(stat)
 
-	Profiling functions:
-	I took these examples from additions I made to my homework 1
-		CPU usage:
-			print("[Top 5 files allocating the most memory:]")
-			for stat in top_stats[:5]:
-			    print(stat)
+	#Memory usage:
+	print("[STATS] Testing UploadFiles() for CPU usage")
+	cProfile.run('UploadFiles(0, files)')
 
-		Memory usage:
-			print("[ANALYZING] int_float_check()")
-			cProfile.run('int_float_check(10)')
+	#Network traffic usage and bandwidth usage
+	print("[STATS] Analyzing traffic and bandwidth... to be implemented...")
 
-		Network traffic usage and bandwidth usage
-
-	Sends information to database interface		
+	#Sends information to database interface	
+	print("[STATS] Sending diagnostic information to the database interface.")	
 
 
 # ========================================================================
@@ -340,3 +330,5 @@ def Diagnostics():
 # =========================================================================================
 # Testing with Command Line (will move to Website using ex. Django, Flask, Heroku to host)
 # =========================================================================================
+
+print("To be completed...")
