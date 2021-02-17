@@ -35,30 +35,30 @@ def UploadFiles(userID, files):
 		print("User account not found.")
 		return False
 	else:	
-		while (CancelUpload() == False):
-			percent_done = 0 #Used to tell user the progress of files being uploaded
-			successes = 0 #Used to count successful uploads to calculate current percent
-			DisplayUploadStatus(0) #Start progress bar at zero
+		# while (CancelUpload() == False):
+		percent_done = 0 #Used to tell user the progress of files being uploaded
+		successes = 0 #Used to count successful uploads to calculate current percent
+		DisplayUploadStatus(0) #Start progress bar at zero
 
-			#Upload file on website made with Django and Heroku or Flask
+		#Upload file on website made with Django and Heroku or Flask
 
-			for file in files:
-				print("Retrieved file " + str(file))
-				split_str = file.split(".")
-				filename = split_str[0]
-				filetype = split_str[1]
-				filetype = filetype.lower()
-				print("Uploading file " + str(file) + " with name " + filename)
-				uploadSuccess = True
-				if (uploadSuccess):
-					successes += 1
-					percent_done = round(float(successes / len(files)), 2)
-					DisplayUploadStatus(percent_done)
-				else:
-					UploadError(file)
-					return False
-				if (CancelUpload() == True):
-					break
+		for file in files:
+			print("Retrieved file " + str(file))
+			split_str = file.split(".")
+			filename = split_str[0]
+			filetype = split_str[1]
+			filetype = filetype.lower()
+			print("Uploading file " + str(file) + " with name " + filename)
+			uploadSuccess = True
+			if (uploadSuccess):
+				successes += 1
+				percent_done = round(float(successes / len(files)), 2)
+				DisplayUploadStatus(percent_done)
+			else:
+				UploadError(file)
+				return False
+			if (CancelUpload() == True):
+				break
 
 		if (CancelUpload() == True):
 			print("Cancelling POST operation to database")
