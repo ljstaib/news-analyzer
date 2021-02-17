@@ -70,8 +70,8 @@ def UploadFiles(userID, files):
 
 def DisplayUploadStatus(percent):
 	if (percent >= 0 and percent <= 100):
+		pbar = ProgressBar(0)
 		if percent == 0:
-			pbar = ProgressBar(0)
 			RenderProgressBar(True)
 			print("Progress Bar: 0%")
 		elif percent == 100:
@@ -141,10 +141,7 @@ def FileEditName(userID, file, new_name):
 			success = True
 			if success:
 				print("File " + file + " was edited successfully.")
-				split_str = file.split(".")
-				filetype = split_str[1]
-				new_file = new_name + filetype
-				return new_file
+				return new_name
 			else:
 				print("ERROR: File " + file + " could not be edited.")
 				return False
@@ -254,7 +251,7 @@ def EditSentiment(userID, sentiment, new_sentiment):
 		if sentiment in sentiments:
 			for i, x in enumerate(sentiments):
 				if x == sentiment:
-					x[i] = new_sentiment
+					sentiments[i] = new_sentiment
 			print("Sentiment \"" + sentiment + "\" replaced with \"" + new_sentiment + "\".")
 			return True		
 		else:
