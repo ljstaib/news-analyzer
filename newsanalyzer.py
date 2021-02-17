@@ -83,7 +83,7 @@ def RenderProgressBar(switch):
 	progressBarVisible = True
 	if (switch):
 		progressBarVisible = False
-		if (!progressBarVisible):
+		if not progressBarVisible:
 			print("Progress bar showing!")
 	else:
 		if (progressBarVisible):
