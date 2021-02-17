@@ -11,8 +11,13 @@
 # Imports/Constants
 # ========================================================================
 
+import cProfile
+import tracemalloc #Memory profiling
+
+tracemalloc.start()
+
 files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
-uploadingCancelled = False
+#uploadingCancelled = False
 userID = "0" #Will implement user ID's with secure user authentication system
 
 class ProgressBar:
@@ -96,8 +101,8 @@ def UploadError(file):
 	return error
 
 def CancelUpload():
+	uploadingCancelled = False
 	if (uploadingCancelled):
-		uploadingCancelled = False
 		return True
 	else:
 		return False		
@@ -275,8 +280,10 @@ def DiscoverContent(search_text):
 
 def DisplayContent(searches):
 	print("Searches displayed: ")
-	for i, search in enumerable(searches):
-		print("Search " + string(i) + ": " + search)
+	i = 0
+	for search in searches:
+		print("Search " + str(i) + ": " + search)
+		i += 1
 	#Command organizes searches[] and puts them into a web element to display on the screen
 	return True
 
@@ -307,7 +314,7 @@ def ReadLater(userID, articleID):
 	else:	
 		#Save article to user ID database to read_later[] list by using its ID (has to be some ID in Google API)
 		articles = ["Populating Mars", "Why the Sky is in Fact Orange.", "Americans Need One Thing Right Now: Free Biscuits."]
-		artcileIDs = ["0001", "0002", "0003"]
+		articleIDs = ["0001", "0002", "0003"]
 		if articleID in articleIDs:
 			print("Article with ID " + articleID + " already exists in user\'s read later list")
 			return False
@@ -330,6 +337,8 @@ def SendLogReport(error):
 def Diagnostics():
 	#CPU usage:
 	print("[STATS] [Top 5 files allocating the most memory:]")
+	snapshot = tracemalloc.take_snapshot()
+	top_stats = snapshot.statistics('lineno')
 	for stat in top_stats[:5]:
 	    print(stat)
 

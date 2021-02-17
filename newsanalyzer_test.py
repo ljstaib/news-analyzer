@@ -34,7 +34,7 @@ def test_UploadError():
 	assert UploadError("File2.txt") == "Alert to user: There was a problem uploading File2.txt"
 
 def test_CancelUpload():
-	assert CancelUpload() == True
+	assert CancelUpload() == False
 
 def test_FileDelete():	
 	assert FileDelete("1", "Sample.txt") == False
