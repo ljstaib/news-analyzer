@@ -80,11 +80,13 @@ def DisplayUploadStatus(percent):
 	return True	
 
 def RenderProgressBar(switch):
+	progressBarVisible = True
 	if (switch):
-		if (progress bar is not there):
+		progressBarVisible = False
+		if (!progressBarVisible):
 			print("Progress bar showing!")
 	else:
-		if (progress bar is there):
+		if (progressBarVisible):
 			print("Progress bar not showing!")
 
 	return True		
