@@ -273,7 +273,7 @@ def DiscoverContent(search_text):
 
 	return searches
 
-def DisplayContent(searches[]):
+def DisplayContent(searches):
 	print("Searches displayed: ")
 	for i, search in enumerable(searches):
 		print("Search " + string(i) + ": " + search)
