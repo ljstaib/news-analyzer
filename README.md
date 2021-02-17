@@ -1,6 +1,8 @@
 # Homework #2 for EC500 at BU: news-analyzer-ljstaib
 
-# Stub-API modules for Phase 1 are in "newsanalyzer_psuedocode.py".
+# Phase 1 completed!
+
+Stub-API modules for Phase 1 are in "newsanalyzer.py". I also have psuedocode in newsanalyzer_pseudocode.txt.
 
 Copyright @2021 
 Luke Staib 
@@ -17,9 +19,3 @@ Extra Requirements:
   - For each module, decide on operations, data and status
   - Implement a stub-API
   - Use Actions and unit test
-  
-TODO:
-  - Implement actions, unit test, for three modules
-
-Game Plan:
-  - Make unit tests, make actions, implement skeleton of these APIs
