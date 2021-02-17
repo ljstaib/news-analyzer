@@ -161,7 +161,7 @@ def OrganizeFileList(userID, files, organize_type):
 			print("Organized content by latest uploaded")
 			new_files = files
 			print("New order of files (" + organize_type +"): " + new_files)
-		else
+		else:
 			return False	
 
 	return new_files		
