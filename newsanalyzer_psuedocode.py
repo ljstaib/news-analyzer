@@ -5,7 +5,7 @@
 # News Analyzer
 # ========================================================================
 
-#I will use Django and Heroku to host or Flask, I might use MongoDB for my database, or something else if easier
+#I will use Flask to host, I will use AWS for my database
 
 # ========================================================================
 # Imports/Constants

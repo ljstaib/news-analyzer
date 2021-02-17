@@ -90,8 +90,8 @@ def RenderProgressBar(switch):
 	return True		
 
 def UploadError(file):
-	print("Alert to user: There was a problem uploading " + file)
-	return True
+	error = "Alert to user: There was a problem uploading " + file
+	return error
 
 def CancelUpload():
 	if (uploadingCancelled):
@@ -130,12 +130,15 @@ def FileEditName(userID, file, new_name):
 			success = True
 			if success:
 				print("File " + file + " was edited successfully.")
-				return True
+				split_str = file.split(".")
+				filetype = split_str[1]
+				new_file = new_name + filetype
+				return new_file
 			else:
 				print("ERROR: File " + file + " could not be edited.")
 				return False
 
-def OrganizeFileList(files[], organize_type):
+def OrganizeFileList(userID, files[], organize_type):
 	if (userID != "0"):
 		print("User account not found.")
 		return False
@@ -143,17 +146,23 @@ def OrganizeFileList(files[], organize_type):
 		print("Retrieving files list from user with userID " + userID)
 		print("Current order of files: " + files)
 		if organize_type == "Alphabetical":
-			files = sorted(files, key=None)
-			print("New order of files (" + organize_type +"): " + files)
+			new_files = sorted(files, key=None)
+			print("New order of files (" + organize_type +"): " + new_files)
 		elif organize_type == "Reverse Alphabetical":
-			files = sorted(files, key=None, reverse=True)
-			print("New order of files (" + organize_type +"): " + files)
+			new_files = sorted(files, key=None, reverse=True)
+			print("New order of files (" + organize_type +"): " + new_files)
 		elif organize_type == "Earliest Uploaded":
 			print("Organized content by earliest uploaded")
-			print("New order of files (" + organize_type +"): " + files)
+			new_files = files
+			print("New order of files (" + organize_type +"): " + new_files)
 		elif organize_type == "Latest Uploaded":
 			print("Organized content by latest uploaded")
-			print("New order of files (" + organize_type +"): " + files)
+			new_files = files
+			print("New order of files (" + organize_type +"): " + new_files)
+		else
+			return False	
+
+	return new_files		
 
 # ========================================================================
 # Text NLP Analysis
@@ -164,6 +173,7 @@ def ConvertFilesToText(userID, files[]):
 		print("User account not found.")
 		return False
 	else:
+		data_list = []
 		for file in files:
 			split_str = file.split(".")
 			filename = split_str[0]
@@ -178,9 +188,10 @@ def ConvertFilesToText(userID, files[]):
 			else:
 				print("Other filetype")	
 
-			text_data = "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."		
+			text_data = "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."	
+			data_list.append([filetype, text_data])	
 	
-	return text_data
+	return data_list
 
 def CreateKeywords(text_data):	
 	articles = ObtainArticles(text_data) #get articles/links using Google API 
@@ -191,7 +202,7 @@ def CreateKeywords(text_data):
 	article_data = ["The Earth is habitable in part due to its perfect distance from the Sun."]
 	keywords = ["Sun", "Earth", "Solar System", "Planet", "Star"]
 
-	return keywords
+	return article_data, keywords
 
 def ObtainArticles(text_data):
 	#use text_data to search for specific parts on Google
@@ -204,6 +215,7 @@ def AssessData(article_data[], keywords[], text_data):
 	#use GoogleAPI, keywords, and original text_data to create a universal common sentiment
 	sentiment = "The Sun is a yellow dwarf star at the center of our Solar System. The distance between the Sun and the Earth is one important reason why life can be sustained on Earth. At about 92 million miles away, the Earth is the third closest planet from the Sun out of 8 planets."
 	print("Sentiment of text information entered: " + sentiment)
+	return sentiment
 
 def SaveSentiment(userID, sentiment):
 	if (userID != "0"):
@@ -268,17 +280,21 @@ def DisplayContent(searches[]):
 
 def OrganizeContent(searches[], organize_type):	
 	if organize_type == "Alphabetical":
-		searches = sorted(searches, key=None)
-		print("New order of searches (" + organize_type +"): " + searches)
+		new_searches = sorted(searches, key=None)
+		print("New order of searches (" + organize_type +"): " + new_searches)
 	elif organize_type == "Latest Uploaded":
 		print("Organized content by latest uploaded")
-		print("New order of searches (" + organize_type +"): " + searches)
+		new_searches = searches
+		print("New order of searches (" + organize_type +"): " + new_searches)
 	elif organize_type == "Most Relevant":
 		print("Organized content by most relevant")
+		new_searches = searches
 		print("New order of searches (" + organize_type +"): " + searches)
+	else:
+		return False	
 
-	if (DisplayContent(searches)):
-		return True
+	if (DisplayContent(new_searches)):
+		return new_searches, True
 	else:
 		return False	
 
@@ -292,8 +308,10 @@ def ReadLater(userID, articleID):
 		artcileIDs = ["0001", "0002", "0003"]
 		if articleID in articleIDs:
 			print("Article with ID " + articleID + " already exists in user\'s read later list")
+			return False
 		else:
-			print("Article with ID " + articleID + " saved in user\'s read later list.")	
+			print("Article with ID " + articleID + " saved in user\'s read later list.")
+			return articleID
 
 # ========================================================================
 # Logging and Diagnostics
@@ -305,6 +323,7 @@ def SendLogReport(error):
 	# ...mark by specific errors to analyze
 	print("[LOG] ERROR: " + error)
 	print("[LOG] Sending log report...")
+	return True
 
 def Diagnostics():
 	#CPU usage:
@@ -321,7 +340,7 @@ def Diagnostics():
 
 	#Sends information to database interface	
 	print("[STATS] Sending diagnostic information to the database interface.")	
-
+	return True
 
 # ========================================================================
 # Implementation
