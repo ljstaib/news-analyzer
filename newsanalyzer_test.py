@@ -20,14 +20,19 @@ from newsanalyzer import *
 
 def test_UploadFiles():
 	assert UploadFiles("1", files) == False
-	assert UploadFiles("0") == False
+	#assert UploadFiles("0") == False
 	assert UploadFiles("0", files) == True
 
 def test_DisplayUploadStatus():
-	assert DisplayUploadStatus() == True
+	assert DisplayUploadStatus(0) == True
+	assert DisplayUploadStatus(50) == True
+	assert DisplayUploadStatus(100) == True
+	assert DisplayUploadStatus(200) == False
+	assert DisplayUploadStatus(-1) == False
 
 def test_RenderProgressBar():
-	assert RenderProgressBar() == True
+	assert RenderProgressBar(True) == True
+	assert RenderProgressBar(False) == True
 
 def test_UploadError():
 	assert UploadError("File1.txt") == "Alert to user: There was a problem uploading File1.txt"
@@ -38,7 +43,7 @@ def test_CancelUpload():
 
 def test_FileDelete():	
 	assert FileDelete("1", "Sample.txt") == False
-	assert FileDelete("0") == False
+	#assert FileDelete("0") == False
 	assert FileDelete("0", "File.txt") == False
 	assert FileDelete("0", "DONOTREAD.docx") == True
 
@@ -61,10 +66,10 @@ def test_OrganizeFileList():
 
 def test_ConvertFilesToText():
 	assert ConvertFilesToText("1", files) == False
-	assert ConvertFilesToText("0", files) == [[".txt", "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."], [".docx", "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."], [".pdf", "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."]]
+	assert ConvertFilesToText("0", files) == [["txt", "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."], ["docx", "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."], ["pdf", "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."]]
 
 def test_CreateKeywords():
-	assert CreateKeywords("Placeholder") == ["The Earth is habitable in part due to its perfect distance from the Sun."], ["Sun", "Earth", "Solar System", "Planet", "Star"]
+	assert CreateKeywords("Placeholder") == "The Earth is habitable in part due to its perfect distance from the Sun.", ["Sun", "Earth", "Solar System", "Planet", "Star"]
 
 def test_ObtainArticles():
 	assert ObtainArticles("Placeholder") == ["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"]
@@ -79,7 +84,7 @@ def test_SaveSentiment():
 def test_EditSentiment():
 	assert EditSentiment("1", "Placeholder", "New placeholder") == False
 	assert EditSentiment("0", "Placeholder", "New placeholder") == False
-	assert EditSentiment("0", "The sky is yellow", "The sky is blue") == True
+	assert EditSentiment("0", "The sky is yellow.", "The sky is blue.") == True
 
 def test_Translate():
 	assert Translate("Hello, my name is Luke!", "Spanish") == "Hola"

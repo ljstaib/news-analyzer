@@ -69,20 +69,24 @@ def UploadFiles(userID, files):
 			return True
 
 def DisplayUploadStatus(percent):
-	if percent == 0:
-		pbar = ProgressBar(0)
-		RenderProgressBar(True)
-		print("Progress Bar: 0%")
-	elif percent == 100:
-		pbar.percent = 100
-		RenderProgressBar(False)
-		print("Progress Bar: 100%")
-		print("Upload/s complete!")
-	else:
-		pbar.percent = percent
-		print("Progress Bar: " + str(percent) + "%")
+	if (percent >= 0 and percent <= 100):
+		if percent == 0:
+			pbar = ProgressBar(0)
+			RenderProgressBar(True)
+			print("Progress Bar: 0%")
+		elif percent == 100:
+			pbar.percent = 100
+			RenderProgressBar(False)
+			print("Progress Bar: 100%")
+			print("Upload/s complete!")
+		else:
+			pbar.percent = percent
+			print("Progress Bar: " + str(percent) + "%")
 
-	return True	
+		return True	
+	else:
+		print("Progress must be 0-100%")
+		return False	
 
 def RenderProgressBar(switch):
 	progressBarVisible = True
@@ -144,6 +148,9 @@ def FileEditName(userID, file, new_name):
 			else:
 				print("ERROR: File " + file + " could not be edited.")
 				return False
+		else:
+			print("File not found")
+			return False		
 
 def OrganizeFileList(userID, files, organize_type):
 	if (userID != "0"):
@@ -151,21 +158,26 @@ def OrganizeFileList(userID, files, organize_type):
 		return False
 	else:	
 		print("Retrieving files list from user with userID " + userID)
-		print("Current order of files: " + files)
+		print("Current order of files: ")
+		print(files)
 		if organize_type == "Alphabetical":
 			new_files = sorted(files, key=None)
-			print("New order of files (" + organize_type +"): " + new_files)
+			print("New order of files (" + organize_type +"): ")
+			print(new_files)
 		elif organize_type == "Reverse Alphabetical":
 			new_files = sorted(files, key=None, reverse=True)
-			print("New order of files (" + organize_type +"): " + new_files)
+			print("New order of files (" + organize_type +"): ")
+			print(new_files)
 		elif organize_type == "Earliest Uploaded":
 			print("Organized content by earliest uploaded")
 			new_files = files
-			print("New order of files (" + organize_type +"): " + new_files)
+			print("New order of files (" + organize_type +"): ")
+			print(new_files)
 		elif organize_type == "Latest Uploaded":
 			print("Organized content by latest uploaded")
 			new_files = files
-			print("New order of files (" + organize_type +"): " + new_files)
+			print("New order of files (" + organize_type +"): ")
+			print(new_files)
 		else:
 			return False	
 
@@ -186,11 +198,11 @@ def ConvertFilesToText(userID, files):
 			filename = split_str[0]
 			filetype = split_str[1]
 			filetype = filetype.lower()
-			if filetype == ".docx":
+			if filetype == "docx":
 				print("Here, I will use the docx2txt library turn this docx file into text")
-			elif filetype == ".txt":
+			elif filetype == "txt":
 				print("Here, there is no conversion to do since it is already a .txt file")
-			elif filetype == ".pdf":
+			elif filetype == "pdf":
 				print("I will figure out some way of converting PDF to TXT")
 			else:
 				print("Other filetype")	
@@ -290,15 +302,18 @@ def DisplayContent(searches):
 def OrganizeContent(searches, organize_type):	
 	if organize_type == "Alphabetical":
 		new_searches = sorted(searches, key=None)
-		print("New order of searches (" + organize_type +"): " + new_searches)
+		print("New order of searches (" + organize_type +"): ")
+		print(new_searches)
 	elif organize_type == "Latest Uploaded":
 		print("Organized content by latest uploaded")
 		new_searches = searches
-		print("New order of searches (" + organize_type +"): " + new_searches)
+		print("New order of searches (" + organize_type +"): ")
+		print(new_searches)
 	elif organize_type == "Most Relevant":
 		print("Organized content by most relevant")
 		new_searches = searches
-		print("New order of searches (" + organize_type +"): " + searches)
+		print("New order of searches (" + organize_type +"): ")
+		print(new_searches)
 	else:
 		return False	
 
@@ -344,7 +359,7 @@ def Diagnostics():
 
 	#Memory usage:
 	print("[STATS] Testing UploadFiles() for CPU usage")
-	cProfile.run('UploadFiles(0, files)')
+	#cProfile.run('UploadFiles(0, files)') -> needs to be in main part, not in a function
 
 	#Network traffic usage and bandwidth usage
 	print("[STATS] Analyzing traffic and bandwidth... to be implemented...")
