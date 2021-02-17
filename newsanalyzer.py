@@ -23,7 +23,7 @@ class ProgressBar:
 # File Uploader/Ingest
 # ========================================================================
 
-def UploadFiles(userID, files[]):
+def UploadFiles(userID, files):
 	#Inputs: userID is a string, files[] is a string list
 
 	if (userID != "0"):
@@ -37,7 +37,7 @@ def UploadFiles(userID, files[]):
 
 			#Upload file on website made with Django and Heroku or Flask
 
-			for file in files[]:
+			for file in files:
 				print("Retrieved file " + str(file))
 				split_str = file.split(".")
 				filename = split_str[0]
@@ -138,7 +138,7 @@ def FileEditName(userID, file, new_name):
 				print("ERROR: File " + file + " could not be edited.")
 				return False
 
-def OrganizeFileList(userID, files[], organize_type):
+def OrganizeFileList(userID, files, organize_type):
 	if (userID != "0"):
 		print("User account not found.")
 		return False
@@ -168,7 +168,7 @@ def OrganizeFileList(userID, files[], organize_type):
 # Text NLP Analysis
 # ========================================================================
 
-def ConvertFilesToText(userID, files[]):
+def ConvertFilesToText(userID, files):
 	if (userID != "0"):
 		print("User account not found.")
 		return False
@@ -211,7 +211,7 @@ def ObtainArticles(text_data):
 	article_links = ["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"]
 	return article_links
 
-def AssessData(article_data[], keywords[], text_data):
+def AssessData(article_data, keywords, text_data):
 	#use GoogleAPI, keywords, and original text_data to create a universal common sentiment
 	sentiment = "The Sun is a yellow dwarf star at the center of our Solar System. The distance between the Sun and the Earth is one important reason why life can be sustained on Earth. At about 92 million miles away, the Earth is the third closest planet from the Sun out of 8 planets."
 	print("Sentiment of text information entered: " + sentiment)
@@ -278,7 +278,7 @@ def DisplayContent(searches[]):
 	#Command organizes searches[] and puts them into a web element to display on the screen
 	return True
 
-def OrganizeContent(searches[], organize_type):	
+def OrganizeContent(searches, organize_type):	
 	if organize_type == "Alphabetical":
 		new_searches = sorted(searches, key=None)
 		print("New order of searches (" + organize_type +"): " + new_searches)
