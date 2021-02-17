@@ -69,7 +69,7 @@ def test_ConvertFilesToText():
 	assert ConvertFilesToText("0", files) == [["txt", "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."], ["docx", "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."], ["pdf", "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."]]
 
 def test_CreateKeywords():
-	assert CreateKeywords("Placeholder") == ("The Earth is habitable in part due to its perfect distance from the Sun.", ["Sun", "Earth", "Solar System", "Planet", "Star"])
+	assert CreateKeywords("Placeholder") == (["The Earth is habitable in part due to its perfect distance from the Sun."], ["Sun", "Earth", "Solar System", "Planet", "Star"])
 
 def test_ObtainArticles():
 	assert ObtainArticles("Placeholder") == ["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"]
