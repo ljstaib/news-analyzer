@@ -2,7 +2,7 @@
 
 # Phase 1 completed!
 
-Stub-API modules for Phase 1 are in "newsanalyzer.py". I also have psuedocode in newsanalyzer_pseudocode.txt.
+Stub-API modules for Phase 1 are in their respective .py files. I also have psuedocode in newsanalyzer_pseudocode.txt.
 
 Copyright @2021 
 Luke Staib 
