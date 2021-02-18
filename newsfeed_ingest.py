@@ -32,7 +32,8 @@ def DiscoverContent(search_text):
 	# Use NLP analysis from last section or Google Search API to retrieve relevant links
 	# Organize by relevant searches returned by API
 	# searches = NLP results (string list of links)
-	searches = ObtainArticles(search_text)
+	# searches = ObtainArticles(search_text)
+	searches = ["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"]
 
 	return searches
 
