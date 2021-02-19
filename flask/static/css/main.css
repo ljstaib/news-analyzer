@@ -1,0 +1,18 @@
+/*Luke Staib 2021*/
+body {
+  background-color: #B7F7FF;
+}
+
+.bigText {
+	text-align: center;
+	margin-bottom: 10px;
+	line-height: 100px;
+	color: #2EB9CC;
+	font-size: 72px;
+}
+
+.smallText {
+	line-height: 50px;
+	color: #E5E100;
+	font-size: 36px;
+}
