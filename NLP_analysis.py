@@ -135,8 +135,8 @@ def DiagnosticsNLP():
 
 	#Memory usage:
 	logging.info("[STATS] CPU Usage: Testing ConvertFilesToText()")
-	output = cProfile.run('ConvertFilesToText(str(0), files)')  #-> needs to be in main part, not in a function
-	logging.info(output)
+	#output = cProfile.run('ConvertFilesToText(str(0), files)')  #-> needs to be in main part, not in a function
+	#logging.info(output)
 
 	#Network traffic usage and bandwidth usage
 	logging.info("[STATS] Analyzing traffic and bandwidth... to be implemented...")
