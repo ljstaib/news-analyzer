@@ -15,10 +15,12 @@ import cProfile
 import tracemalloc #Memory profiling
 from tqdm import tqdm
 import logging #Logging
+import PyPDF2 #PDF -> TXT
+#import docx2txt #DOC -> TXT
 
 tracemalloc.start()
 
-logging.basicConfig(filename='NLP_analysis.log', level=logging.INFO, format='%(levelname)s: %(message)s')
+logging.basicConfig(filename='NLP_analysis.log', level=logging.DEBUG, format='%(levelname)s: %(message)s')
 
 files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
 userID = "0" #Will implement user ID's with secure user authentication system
@@ -39,16 +41,32 @@ def ConvertFilesToText(userID, files):
 			filename = split_str[0]
 			filetype = split_str[1]
 			filetype = filetype.lower()
+			file_path = "./test_files/" + file
 			if filetype == "docx":
 				logging.debug("Here, I will use the docx2txt library to turn this .docx file into .txt")
+				logging.info("Filetype = .docx")
+				text_data = "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."	
 			elif filetype == "txt":
 				logging.debug("Here, there is no conversion to do since it is already a .txt file")
+				logging.info("Filetype = .txt")
+				file_ref = open(file_path, "r")
+				text_data = file_ref.read()
+				logging.debug("File contents: " + text_data)
 			elif filetype == "pdf":
-				logging.debug("Here, I will use the PyPDF library to turn this pdf file into .txt")
+				logging.debug("Here, I will use the PyPDF2 library to turn this pdf file into .txt")
+				logging.info("Filetype = .pdf")
+				file_ref = open(file_path, "rb")
+				file_reader = PyPDF2.PdfFileReader(file_ref)
+				text_data = ""
+				for i in range(file_reader.numPages):
+					page = file_reader.getPage(i)
+					text_data += page.extractText()
+				file_ref.close()	
 			else:
-				logging.debug("I will implement support for other filetypes")	
+				logging.debug("I will implement support for other filetypes")
+				logging.info("Filetype = other")	
+				text_data = "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."	
 
-			text_data = "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."	
 			data_list.append([filetype, text_data])	
 	
 	return data_list
@@ -135,8 +153,8 @@ def DiagnosticsNLP():
 
 	#Memory usage:
 	logging.info("[STATS] CPU Usage: Testing ConvertFilesToText()")
-	#output = cProfile.run('ConvertFilesToText(str(0), files)')  #-> needs to be in main part, not in a function
-	#logging.info(output)
+	output = cProfile.run('ConvertFilesToText(str(0), files)')  #-> needs to be in main part, not in a function
+	logging.info(output)
 
 	#Network traffic usage and bandwidth usage
 	logging.info("[STATS] Analyzing traffic and bandwidth... to be implemented...")
@@ -154,5 +172,6 @@ def DiagnosticsNLP():
 # =========================================================================================
 
 print("To be completed...")
-ConvertFilesToText("0", files)
+output = ConvertFilesToText("0", files)
+print(output)
 DiagnosticsNLP()

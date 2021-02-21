@@ -20,7 +20,7 @@ from NLP_analysis import *
 
 def test_ConvertFilesToText():
 	assert ConvertFilesToText("1", files) == False
-	assert ConvertFilesToText("0", files) == [["txt", "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."], ["docx", "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."], ["pdf", "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."]]
+	assert ConvertFilesToText("0", files) == [["txt", "Testing123..."], ["docx", "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."], ["pdf", "White House Briefing: Today on February 21.......\n \n"]]
 
 def test_CreateKeywords():
 	assert CreateKeywords("Placeholder") == (["The Earth is habitable in part due to its perfect distance from the Sun."], ["Sun", "Earth", "Solar System", "Planet", "Star"])
