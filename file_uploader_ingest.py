@@ -170,8 +170,8 @@ def DiagnosticsUploader():
 
 	#Memory usage:
 	logging.info("[STATS] CPU Usage: Testing UploadFiles()")
-	output = cProfile.run('UploadFiles(str(0), files)')  #-> needs to be in main part, not in a function
-	logging.info(output)
+	#output = cProfile.run('UploadFiles(str(0), files)')  #-> needs to be in main part, not in a function
+	#logging.info(output)
 
 	#Network traffic usage and bandwidth usage
 	logging.info("[STATS] Analyzing traffic and bandwidth... to be implemented...")
