@@ -5,7 +5,7 @@
 # Newsfeed Ingest
 # ========================================================================
 
-#I will use Django and Heroku to host or Flask, I will use S3 or MongoDB for my database
+#I will create the website with Flask, I will use S3 or MongoDB for my database, I will use S3(?) to host
 
 # ========================================================================
 # Imports/Constants
@@ -13,16 +13,11 @@
 
 import cProfile
 import tracemalloc #Memory profiling
+import logging #Logging
 
 tracemalloc.start()
 
-files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
-#uploadingCancelled = False
-userID = "0" #Will implement user ID's with secure user authentication system
-
-class ProgressBar:
-	def __init__(self, percent):
-		self.percent = percent
+logging.basicConfig(filename='newsfeed_ingest.log', level=logging.INFO, format='%(levelname)s: %(message)s')
 
 # ========================================================================
 # Newsfeed Ingest
@@ -38,51 +33,75 @@ def DiscoverContent(search_text):
 	return searches
 
 def DisplayContent(searches):
-	print("Searches displayed: ")
+	logging.info("Searches displayed: ")
 	i = 0
 	for search in searches:
-		print("Search " + str(i) + ": " + search)
+		logging.info("Search " + str(i) + ": " + search)
 		i += 1
 	#Command organizes searches[] and puts them into a web element to display on the screen
 	return True
 
 def OrganizeContent(searches, organize_type):	
+	if (len(searches) == 1):
+		logging.warning("Only 1 search result, there is nothing to organize.")
+		return False
+	else:
+		search_list = str(searches)[1:-1]
+		logging.info("First 20 searches: " + search_list[:20])
+
 	if organize_type == "Alphabetical":
 		new_searches = sorted(searches, key=None)
-		print("New order of searches (" + organize_type +"): ")
-		print(new_searches)
 	elif organize_type == "Latest Uploaded":
 		print("Organized content by latest uploaded")
 		new_searches = searches
-		print("New order of searches (" + organize_type +"): ")
-		print(new_searches)
 	elif organize_type == "Most Relevant":
 		print("Organized content by most relevant")
 		new_searches = searches
-		print("New order of searches (" + organize_type +"): ")
-		print(new_searches)
 	else:
-		return False	
+		return False		
 
 	if (DisplayContent(new_searches)):
-		return new_searches, True
+		new_search_list = str(new_searches)[1:-1]
+		logging.info("New order of searches (" + organize_type +"): " + new_search_list)
+		return new_searches
 	else:
 		return False	
 
 def ReadLater(userID, articleID):
 	if (userID != "0"):
-		print("User account not found.")
+		logging.error("User account with userID " + userID + " not found.")
 		return False
 	else:	
+		logging.info("User account with userID " + userID + " verified.")
 		#Save article to user ID database to read_later[] list by using its ID (has to be some ID in Google API)
 		articles = ["Populating Mars", "Why the Sky is in Fact Orange.", "Americans Need One Thing Right Now: Free Biscuits."]
 		articleIDs = ["0001", "0002", "0003"]
 		if articleID in articleIDs:
-			print("Article with ID " + articleID + " already exists in user\'s read later list")
+			logging.error("Article with ID " + articleID + " already exists in user\'s read later list")
 			return False
 		else:
-			print("Article with ID " + articleID + " saved in user\'s read later list.")
+			logging.info("Article with ID " + articleID + " saved in user\'s read later list.")
 			return articleID
+
+def DiagnosticsNewsfeed():
+	#CPU usage:
+	logging.info("[STATS] Memory Usage: Top 5 files allocating the most memory:")
+	snapshot = tracemalloc.take_snapshot()
+	top_stats = snapshot.statistics('lineno')
+	for stat in top_stats[:5]:
+	    logging.info(stat)
+
+	#Memory usage:
+	logging.info("[STATS] CPU Usage: Testing DiscoverContent()")
+	output = cProfile.run('DiscoverContent(str(0))')  #-> needs to be in main part, not in a function
+	logging.info(output)
+
+	#Network traffic usage and bandwidth usage
+	logging.info("[STATS] Analyzing traffic and bandwidth... to be implemented...")
+
+	#Sends information to database interface	
+	logging.info("[STATS] Sending diagnostic information to the database interface... to be implemented...")	
+	return True				
 
 # ========================================================================
 # Implementation
@@ -93,3 +112,5 @@ def ReadLater(userID, articleID):
 # =========================================================================================
 
 print("To be completed...")
+DiscoverContent("Our Sun")
+DiagnosticsNewsfeed()

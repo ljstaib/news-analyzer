@@ -5,7 +5,7 @@
 # NLP Analysis
 # ========================================================================
 
-#I will use Django and Heroku to host or Flask, I will use S3 or MongoDB for my database
+#I will create the website with Flask, I will use S3 or MongoDB for my database, I will use S3(?) to host
 
 # ========================================================================
 # Imports/Constants
@@ -13,16 +13,15 @@
 
 import cProfile
 import tracemalloc #Memory profiling
+from tqdm import tqdm
+import logging #Logging
 
 tracemalloc.start()
 
-files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
-#uploadingCancelled = False
-userID = "0" #Will implement user ID's with secure user authentication system
+logging.basicConfig(filename='NLP_analysis.log', level=logging.INFO, format='%(levelname)s: %(message)s')
 
-class ProgressBar:
-	def __init__(self, percent):
-		self.percent = percent
+files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
+userID = "0" #Will implement user ID's with secure user authentication system
 
 # ========================================================================
 # Text NLP Analysis
@@ -30,23 +29,24 @@ class ProgressBar:
 
 def ConvertFilesToText(userID, files):
 	if (userID != "0"):
-		print("User account not found.")
+		logging.error("User account with userID " + userID + " not found.")
 		return False
 	else:
+		logging.info("User account with userID " + userID + " verified.")
 		data_list = []
-		for file in files:
+		for file in tqdm(files, total=len(files), desc="File Conversion Progress"):
 			split_str = file.split(".")
 			filename = split_str[0]
 			filetype = split_str[1]
 			filetype = filetype.lower()
 			if filetype == "docx":
-				print("Here, I will use the docx2txt library turn this docx file into text")
+				logging.debug("Here, I will use the docx2txt library to turn this .docx file into .txt")
 			elif filetype == "txt":
-				print("Here, there is no conversion to do since it is already a .txt file")
+				logging.debug("Here, there is no conversion to do since it is already a .txt file")
 			elif filetype == "pdf":
-				print("I will figure out some way of converting PDF to TXT")
+				logging.debug("Here, I will use the PyPDF library to turn this pdf file into .txt")
 			else:
-				print("Other filetype")	
+				logging.debug("I will implement support for other filetypes")	
 
 			text_data = "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."	
 			data_list.append([filetype, text_data])	
@@ -74,32 +74,34 @@ def ObtainArticles(text_data):
 def AssessData(article_data, keywords, text_data):
 	#use GoogleAPI, keywords, and original text_data to create a universal common sentiment
 	sentiment = "The Sun is a yellow dwarf star at the center of our Solar System. The distance between the Sun and the Earth is one important reason why life can be sustained on Earth. At about 92 million miles away, the Earth is the third closest planet from the Sun out of 8 planets."
-	print("Sentiment of text information entered: " + sentiment)
+	logging.info("Sentiment of text information entered: " + sentiment)
 	return sentiment
 
 def SaveSentiment(userID, sentiment):
 	if (userID != "0"):
-		print("User account not found.")
+		logging.error("User account with userID " + userID + " not found.")
 		return False
 	else:
+		logging.info("User account with userID " + userID + " verified.")
 		#save sentiment to user ID sentiment[] list of strings in database
-		print("Sentiment \"" + sentiment + "\" saved.")
+		logging.info("Sentiment \"" + sentiment + "\" saved.")
 		return True
 
 def EditSentiment(userID, sentiment, new_sentiment):
 	if (userID != "0"):
-		print("User account not found.")
+		logging.error("User account with userID " + userID + " not found.")
 		return False
 	else:
+		logging.info("User account with userID " + userID + " verified.")
 		sentiments = ["The sky is yellow.", "The Sun is cold."]
 		if sentiment in sentiments:
 			for i, x in enumerate(sentiments):
 				if x == sentiment:
 					sentiments[i] = new_sentiment
-			print("Sentiment \"" + sentiment + "\" replaced with \"" + new_sentiment + "\".")
+			logging.info("Sentiment \"" + sentiment + "\" replaced with \"" + new_sentiment + "\".")
 			return True		
 		else:
-			print("Sentiment not found")
+			logging.info("Sentiment \"" + sentiment + "\" not found")
 			return False	
 
 def Translate(text, language):
@@ -107,17 +109,41 @@ def Translate(text, language):
 	# translated_text = GoogleTranslateAPI(text, language)
 	if language == "English":
 		translated_text = "Hello"
+		logging.info("Text translated into English.")
 	elif language == "Spanish":
 		translated_text = "Hola"
+		logging.info("Text translated into Spanish.")
 	elif language == "Chinese":
 		translated_text = "你好"
+		logging.info("Text translated into Chinese.")
 	elif language == "French":
 		translated_text = "Bonjour"
+		logging.info("Text translated into French.")
 	else:
-		print("Unrecognized Language: " + language)
+		logging.error("Unrecognized Language: " + language)
 		return False			
 
-	return translated_text		
+	return translated_text	
+
+def DiagnosticsNLP():
+	#CPU usage:
+	logging.info("[STATS] Memory Usage: Top 5 files allocating the most memory:")
+	snapshot = tracemalloc.take_snapshot()
+	top_stats = snapshot.statistics('lineno')
+	for stat in top_stats[:5]:
+	    logging.info(stat)
+
+	#Memory usage:
+	logging.info("[STATS] CPU Usage: Testing ConvertFilesToText()")
+	output = cProfile.run('ConvertFilesToText(str(0), files)')  #-> needs to be in main part, not in a function
+	logging.info(output)
+
+	#Network traffic usage and bandwidth usage
+	logging.info("[STATS] Analyzing traffic and bandwidth... to be implemented...")
+
+	#Sends information to database interface	
+	logging.info("[STATS] Sending diagnostic information to the database interface... to be implemented...")	
+	return True		
 
 # ========================================================================
 # Implementation
@@ -128,3 +154,5 @@ def Translate(text, language):
 # =========================================================================================
 
 print("To be completed...")
+ConvertFilesToText("0", files)
+DiagnosticsNLP()

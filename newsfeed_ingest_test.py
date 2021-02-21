@@ -25,9 +25,9 @@ def test_DisplayContent():
 	assert DisplayContent(["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"]) == True
 
 def test_OrganizeContent():
-	assert OrganizeContent(["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"], "Alphabetical") == (["https://en.wikipedia.org/wiki/Sun", "https://solarsystem.nasa.gov/solar-system/sun/overview/"], True)
-	assert OrganizeContent(["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"], "Latest Uploaded") == (["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"], True)
-	assert OrganizeContent(["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"], "Most Relevant") == (["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"], True)
+	assert OrganizeContent(["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"], "Alphabetical") == ["https://en.wikipedia.org/wiki/Sun", "https://solarsystem.nasa.gov/solar-system/sun/overview/"]
+	assert OrganizeContent(["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"], "Latest Uploaded") == ["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"]
+	assert OrganizeContent(["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"], "Most Relevant") == ["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"]
 	assert OrganizeContent(["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"], "Something Else") == False
 
 def test_ReadLater():

@@ -23,20 +23,9 @@ def test_UploadFiles():
 	#assert UploadFiles("0") == False
 	assert UploadFiles("0", files) == True
 
-def test_DisplayUploadStatus():
-	assert DisplayUploadStatus(0) == True
-	assert DisplayUploadStatus(50) == True
-	assert DisplayUploadStatus(100) == True
-	assert DisplayUploadStatus(200) == False
-	assert DisplayUploadStatus(-1) == False
-
 def test_RenderProgressBar():
 	assert RenderProgressBar(True) == True
 	assert RenderProgressBar(False) == True
-
-def test_UploadError():
-	assert UploadError("File1.txt") == "Alert to user: There was a problem uploading File1.txt"
-	assert UploadError("File2.txt") == "Alert to user: There was a problem uploading File2.txt"
 
 def test_CancelUpload():
 	assert CancelUpload() == False
