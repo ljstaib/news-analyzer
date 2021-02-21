@@ -19,3 +19,5 @@ Extra Requirements:
   - For each module, decide on operations, data and status
   - Implement a stub-API
   - Use Actions and unit test
+
+2/20: Added logging, diagnostics, removed obsolete functions, coverage to action testing
