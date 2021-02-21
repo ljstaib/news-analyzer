@@ -51,7 +51,6 @@ def UploadFiles(userID, files):
 			if (uploadSuccess):
 				logging.info("File %s uploaded.", file)
 			else:
-				UploadError(file)
 				logging.error("Problem uploading %s", file)
 				return False
 			if (uploadingCancelled == True):
