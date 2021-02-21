@@ -28,7 +28,7 @@ def test_RenderProgressBar():
 	assert RenderProgressBar(False) == True
 
 def test_CancelUpload():
-	assert CancelUpload() == False
+	assert CancelUpload() == True
 
 def test_FileDelete():	
 	assert FileDelete("1", "Sample.txt") == False
