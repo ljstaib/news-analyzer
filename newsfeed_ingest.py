@@ -93,8 +93,8 @@ def DiagnosticsNewsfeed():
 
 	#Memory usage:
 	logging.info("[STATS] CPU Usage: Testing DiscoverContent()")
-	output = cProfile.run('DiscoverContent(str(0))')  #-> needs to be in main part, not in a function
-	logging.info(output)
+	#output = cProfile.run('DiscoverContent(str(0))')  #-> needs to be in main part, not in a function
+	#logging.info(output)
 
 	#Network traffic usage and bandwidth usage
 	logging.info("[STATS] Analyzing traffic and bandwidth... to be implemented...")
