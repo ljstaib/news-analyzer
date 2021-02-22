@@ -1,6 +1,6 @@
 # Homework #2 for EC500 at BU: news-analyzer-ljstaib
 
-# Phase 2 in progress 
+# Status: Phase 2 in progress 
 
 Copyright @2021 
 Luke Staib 
