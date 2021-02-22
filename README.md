@@ -1,6 +1,6 @@
 # Homework #2 for EC500 at BU: news-analyzer-ljstaib
 
-# Phase 2 completed! 
+# Phase 2 in progress 
 
 Copyright @2021 
 Luke Staib 
@@ -27,6 +27,30 @@ Extra Requirements:
 Phase 2:
 --------------------------------------------------------------------------------------------------------------------------------
 
-Test123
+- Use Flask as your WEB service platform
+  - Reference 1:  https://palletsprojects.com/p/flask/ (Github:  https://github.com/pallets/flask )
+  - Reference 2:  Flask-RESTFUL  (Github:  https://github.com/flask-restful/flask-restful )
+- Step 2:  Integrate your module to become a RESTFUL system
+  - Deploy your system to free AWS services:  https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc
+  - Develop simple WEB applications to test your system.
+  - Document your REST APIs on your Github
+ 
+--------------------------------------------------------------------------------------------------------------------------------
+
+Phase 3:
+--------------------------------------------------------------------------------------------------------------------------------
+
+- Focus on Ingestor module
+- Investigate PDF to Text conversions
+  - How to Extract Data from PDF Forms Using Python
+  - pdfreader
+  - Python for Pdf
+  - PDFMiner
+  - Fork of PDFMiner
+  - Pdfplumber
+- Chose module you want to use and implement uploader and Ingester
+- For storage, use a folder.  No need for cloud storage.
+- For extracted text, store the data in files.  No database yet.  This will be phase 3.
+- Due Date 2/28/2021.  It is strict this time because we want to use the database concept and implement other modules.
 
 --------------------------------------------------------------------------------------------------------------------------------
