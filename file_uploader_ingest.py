@@ -72,6 +72,8 @@ def UploadFiles(userID, files):
 				logging.info("Uploading of files completed: " + file_list + "!")
 				print("Alert to user: Uploading of files completed: " + file_list + "!")	
 			return True	
+	else:
+		return False		
 
 def RenderProgressBar(switch):
 	progressBarVisible = True
@@ -104,7 +106,9 @@ def FileDelete(userID, file):
 				return False
 		else:
 			logging.error("File " + file + " does not exist in user\'s library")
-			return False		
+			return False
+	else:
+		return False				
 
 def FileEditName(userID, file, new_name):
 	result = doesUserExist(userID)
@@ -121,7 +125,9 @@ def FileEditName(userID, file, new_name):
 				return False
 		else:
 			logging.error("File " + file + " not found")
-			return False		
+			return False	
+	else:
+		return False			
 
 def OrganizeFileList(userID, files, organize_type):
 	result = doesUserExist(userID)
@@ -148,9 +154,10 @@ def OrganizeFileList(userID, files, organize_type):
 			return False
 
 		new_file_list = str(new_files)[1:-1]
-		logging.info("New order of files (" + organize_type +"): " + new_file_list)		
-
-	return new_files
+		logging.info("New order of files (" + organize_type +"): " + new_file_list)	
+		return new_files
+	else:
+		return False		
 
 def DiagnosticsUploader():
 	#CPU usage:

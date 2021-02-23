@@ -89,7 +89,9 @@ def ConvertFilesToText(userID, files):
 
 			data_list.append([filetype, text_data])	
 	
-	return data_list
+			return data_list
+	else:
+		return False		
 
 def CreateKeywords(text_data):	
 	articles = ObtainArticles(text_data) #get articles/links using Google API 
@@ -121,6 +123,8 @@ def SaveSentiment(userID, sentiment):
 		#save sentiment to user ID sentiment[] list of strings in database
 		logging.info("Sentiment \"" + sentiment + "\" saved.")
 		return True
+	else:
+		return False	
 
 def EditSentiment(userID, sentiment, new_sentiment):
 	result = doesUserExist(userID)
@@ -135,6 +139,8 @@ def EditSentiment(userID, sentiment, new_sentiment):
 		else:
 			logging.info("Sentiment \"" + sentiment + "\" not found")
 			return False	
+	else:
+		return False		
 
 def Translate(text, language):
 	# use Google Translate API to take in text or sentiment and translate into any language in Google translate API

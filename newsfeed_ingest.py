@@ -83,6 +83,8 @@ def ReadLater(userID, articleID):
 		else:
 			logging.info("Article with ID " + articleID + " saved in user\'s read later list.")
 			return articleID
+	else:
+		return False		
 
 def DiagnosticsNewsfeed():
 	#CPU usage:
