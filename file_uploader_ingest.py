@@ -11,6 +11,10 @@
 # Imports/Constants
 # ========================================================================
 
+#Import Data (in future from database)
+from newsanalyzer_data import *
+
+#Import libraries
 import cProfile #CPU
 import tracemalloc #Memory profiling
 from tqdm import tqdm #Percent bar
@@ -35,11 +39,8 @@ userID = "0" #Will implement user ID's with secure user authentication system
 def UploadFiles(userID, files):
 	#Inputs: userID is a string, files[] is a string list
 
-	if (userID != "0"):
-		logging.error("User account with userID " + userID + " not found.")
-		return False
-	else:
-		logging.info("User account with userID " + userID + " verified.")	
+	result = doesUserExist(userID)
+	if (result):	
 		for file in tqdm(files, total=len(files), desc="File Upload Progress"):
 			#print("Retrieved file " + str(file))
 			split_str = file.split(".")
@@ -89,11 +90,8 @@ def CancelUpload():
 	return True	
 
 def FileDelete(userID, file):
-	if (userID != "0"):
-		logging.error("User account with userID " + userID + " not found.")
-		return False
-	else:
-		logging.info("User account with userID " + userID + " verified.")
+	result = doesUserExist(userID)
+	if (result):
 		#print("Retrieving files list from user with userID " + userID)
 		if file in files:
 			logging.info("Deleting file " + file)
@@ -109,11 +107,8 @@ def FileDelete(userID, file):
 			return False		
 
 def FileEditName(userID, file, new_name):
-	if (userID != "0"):
-		logging.error("User account with userID " + userID + " not found.")
-		return False
-	else:
-		logging.info("User account with userID " + userID + " verified.")
+	result = doesUserExist(userID)
+	if (result):
 		#print("Retrieving files list from user with userID " + userID)
 		if file in files:
 			logging.info("Changing name of " + file + " to " + new_name)
@@ -129,11 +124,8 @@ def FileEditName(userID, file, new_name):
 			return False		
 
 def OrganizeFileList(userID, files, organize_type):
-	if (userID != "0"):
-		logging.error("User account with userID " + userID + " not found.")
-		return False
-	else:
-		logging.info("User account with userID " + userID + " verified.")
+	result = doesUserExist(userID)
+	if (result):
 		#print("Retrieving files list from user with userID " + userID)
 		if (len(files) == 1):
 			logging.warning("Only 1 file, there is nothing to sort.")

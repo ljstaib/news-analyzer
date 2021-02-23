@@ -11,6 +11,10 @@
 # Imports/Constants
 # ========================================================================
 
+#Import Data (in future from database)
+from newsanalyzer_data import *
+
+#Import libraries
 import cProfile
 import tracemalloc #Memory profiling
 import logging #Logging
@@ -68,11 +72,8 @@ def OrganizeContent(searches, organize_type):
 		return False	
 
 def ReadLater(userID, articleID):
-	if (userID != "0"):
-		logging.error("User account with userID " + userID + " not found.")
-		return False
-	else:	
-		logging.info("User account with userID " + userID + " verified.")
+	result = doesUserExist(userID)
+	if (result):
 		#Save article to user ID database to read_later[] list by using its ID (has to be some ID in Google API)
 		articles = ["Populating Mars", "Why the Sky is in Fact Orange.", "Americans Need One Thing Right Now: Free Biscuits."]
 		articleIDs = ["0001", "0002", "0003"]
@@ -111,6 +112,7 @@ def DiagnosticsNewsfeed():
 # Testing with Command Line (will move to Website using ex. Django, Flask, Heroku to host)
 # =========================================================================================
 
-print("To be completed...")
-DiscoverContent("Our Sun")
-DiagnosticsNewsfeed()
+# print("To be completed...")
+# result = DiscoverContent("Our Sun")
+# print(result)
+# DiagnosticsNewsfeed()

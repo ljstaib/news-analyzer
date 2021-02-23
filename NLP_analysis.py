@@ -11,6 +11,10 @@
 # Imports/Constants
 # ========================================================================
 
+#Import Data (in future from database)
+from newsanalyzer_data import *
+
+#Import libraries
 import cProfile
 import tracemalloc #Memory profiling
 from tqdm import tqdm
@@ -31,11 +35,8 @@ userID = "0" #Will implement user ID's with secure user authentication system
 # ========================================================================
 
 def ConvertFilesToText(userID, files):
-	if (userID != "0"):
-		logging.error("User account with userID " + userID + " not found.")
-		return False
-	else:
-		logging.info("User account with userID " + userID + " verified.")
+	result = doesUserExist(userID)
+	if (result):
 		data_list = []
 		path_created = True
 		for file in tqdm(files, total=len(files), desc="File Conversion Progress"):
@@ -115,21 +116,15 @@ def AssessData(article_data, keywords, text_data):
 	return sentiment
 
 def SaveSentiment(userID, sentiment):
-	if (userID != "0"):
-		logging.error("User account with userID " + userID + " not found.")
-		return False
-	else:
-		logging.info("User account with userID " + userID + " verified.")
+	result = doesUserExist(userID)
+	if (result):
 		#save sentiment to user ID sentiment[] list of strings in database
 		logging.info("Sentiment \"" + sentiment + "\" saved.")
 		return True
 
 def EditSentiment(userID, sentiment, new_sentiment):
-	if (userID != "0"):
-		logging.error("User account with userID " + userID + " not found.")
-		return False
-	else:
-		logging.info("User account with userID " + userID + " verified.")
+	result = doesUserExist(userID)
+	if (result):
 		sentiments = ["The sky is yellow.", "The Sun is cold."]
 		if sentiment in sentiments:
 			for i, x in enumerate(sentiments):
@@ -190,7 +185,7 @@ def DiagnosticsNLP():
 # Testing with Command Line (will move to Website using ex. Django, Flask, Heroku to host)
 # =========================================================================================
 
-print("To be completed...")
-output = ConvertFilesToText("0", files)
-print(output)
-DiagnosticsNLP()
+# print("To be completed...")
+# output = ConvertFilesToText("0", files)
+# print(output)
+# DiagnosticsNLP()

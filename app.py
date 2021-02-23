@@ -1,72 +1,109 @@
-#Luke Staib 2021 - Using code from docs: flask_restful and marshmallow
+#!/usr/bin/python3
+# ========================================================================
+# Luke Staib ljstaib@bu.edu 
+# Copyright @2021, for EC500: Software Engineering
+# Flask Restful Website
+# ========================================================================
 
 #import modules
 from file_uploader_ingest import *
 from NLP_analysis import *
 from newsfeed_ingest import *
+from newsanalyzer_data import *
 
-#flask_restful and marshmallow imports
-from flask import Flask, render_template
+#flask, flask_restful
+from flask import Flask, render_template, request, jsonify
 from flask_restful import reqparse, abort, Api, Resource
 
-#other imports
-import datetime as dt
+from datetime import datetime
 
 #################################
 
 app = Flask(__name__)
-api = Api(app)      
-
-TODOS = {
-	'todo1': {'task': 'Do homework'},
-	'todo2': {'task': 'Enjoy the weather'},
-	'todo3': {'task': 'Sleep'},
-}
-
-def abort_if_todo_doesnt_exist(todo_id):
-	if todo_id not in TODOS:
-		abort(404, message="Todo {} doesn't exist".format(todo_id))
+app.config["DEBUG"] = True
+api = Api(app)   
 
 parser = reqparse.RequestParser()
-parser.add_argument('task')
+parser.add_argument('UserInfo') 
+parser.add_argument('FileInfo') 
 
-# Todo: shows a single todo item and lets you delete a todo item
-class Todo(Resource):
-	def get(self, todo_id):
-		abort_if_todo_doesnt_exist(todo_id)
-		return TODOS[todo_id]
-
-	def delete(self, todo_id):
-		abort_if_todo_doesnt_exist(todo_id)
-		del TODOS[todo_id]
-		return '', 204
-
-	def put(self, todo_id):
-		args = parser.parse_args()
-		task = {'task': args['task']}
-		TODOS[todo_id] = task
-		return task, 201
-
-
-# TodoList: shows a list of all todos, and lets you POST to add new tasks
-class TodoList(Resource):
-	def get(self):
-		return TODOS
-
-	def post(self):
-		args = parser.parse_args()
-		todo_id = int(max(TODOS.keys()).lstrip('todo')) + 1
-		todo_id = 'todo%i' % todo_id
-		TODOS[todo_id] = {'task': args['task']}
-		return TODOS[todo_id], 201
-
-## Setup the Api resource routing here
-api.add_resource(TodoList, '/todos')
-api.add_resource(Todo, '/todos/<todo_id>')
-
-@app.route('/')
+@app.route('/', methods=['GET'])
 def home():
 	return render_template('home.html')
+
+class UserList(Resource):
+	#http://127.0.0.1:5000/users
+	def get(self):
+		return jsonify(users)
+
+	#curl http://127.0.0.1:5000/users -d "UserInfo=ljs123, Luke, Staib" -X POST -v
+	#Right now, in order: username, first name, last name
+	#then check GET method
+	def post(self):
+		args = parser.parse_args()
+		print(args)
+		max_uid = 0
+		for user in users:
+			if user.get('U_ID') > max_uid:
+				max_uid = user.get('U_ID')
+		new_uid = max_uid + 1
+		new_userinfo = list(args['UserInfo'].split(", "))
+		# print(new_userinfo)
+		new_uname = new_userinfo[0]
+		new_fname = new_userinfo[1]
+		new_lname = new_userinfo[2]
+		new_user = {
+			'U_ID': new_uid, 
+			'Username': new_uname, 
+			'FirstName': new_fname, 
+			'LastName': new_lname
+		}	
+		users.append(new_user)
+		return jsonify(users[-1:])
+
+class FileList(Resource):
+	#http://127.0.0.1:5000/users
+	def get(self):
+		return jsonify(files)
+
+	#curl http://127.0.0.1:5000/files -d "FileInfo=FileName1, TXT, John Doe, 01/02/1980 00:00:00, 0, 100, Uploaded" -X POST -v
+	#then check GET method
+	def post(self):
+		args = parser.parse_args()
+		print(args)
+		max_fid = 0
+		for file in files:
+			if file.get('F_ID') > max_fid:
+				max_fid = file.get('F_ID')
+		fid = max_fid + 1
+		new_fileinfo = list(args['FileInfo'].split(", "))
+		print(new_fileinfo)
+		filename = new_fileinfo[0]
+		filetype = new_fileinfo[1]
+		authors = new_fileinfo[2]
+		creation_time = new_fileinfo[3]
+		source = new_fileinfo[4]
+		filesize = new_fileinfo[5]
+		status = new_fileinfo[6]
+		upload_time = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
+		new_file = {
+			'F_ID': fid, 
+			'Name': filename, 
+			'Filetype': filetype, 
+			'Authors': authors, 
+			'CreationTime': creation_time,
+			'Source': source,
+			'Size': filesize,
+			'UploadTime': upload_time,
+			'Tags': {
+				'Status': status,
+			}
+		}	
+		files.append(new_file)
+		return jsonify(files[-1:])		
+
+api.add_resource(UserList, '/users')
+api.add_resource(FileList, '/files')				
 
 if __name__ == '__main__':
     app.run(debug=True)
