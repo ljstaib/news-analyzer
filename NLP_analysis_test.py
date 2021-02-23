@@ -9,7 +9,7 @@
 # Import NLP_analysis.py
 # ========================================================================
 
-files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
+test_files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
 uploadingCancelled = False
 userID = "0" #Will implement user ID's with secure user authentication system
 from NLP_analysis import *
@@ -19,8 +19,8 @@ from NLP_analysis import *
 # ========================================================================	
 
 def test_ConvertFilesToText():
-	assert ConvertFilesToText("10", files) == False
-	assert ConvertFilesToText("0", files) == [["txt", "Testing123..."], ["docx", "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."], ["pdf", "White House Briefing: Today on February 21.......\n \n"]]
+	assert ConvertFilesToText("10", test_files) == False
+	assert ConvertFilesToText("0", test_files) == [["txt", "Testing123..."], ["docx", "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."], ["pdf", "White House Briefing: Today on February 21.......\n \n"]]
 
 def test_CreateKeywords():
 	assert CreateKeywords("Placeholder") == (["The Earth is habitable in part due to its perfect distance from the Sun."], ["Sun", "Earth", "Solar System", "Planet", "Star"])
