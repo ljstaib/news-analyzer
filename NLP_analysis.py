@@ -27,8 +27,8 @@ tracemalloc.start()
 
 logging.basicConfig(filename='NLP_analysis.log', level=logging.DEBUG, format='%(levelname)s: %(message)s')
 
-# files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
-# userID = "0" #Will implement user ID's with secure user authentication system
+files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
+userID = "0" #Will implement user ID's with secure user authentication system
 
 # ========================================================================
 # Text NLP Analysis
@@ -89,7 +89,7 @@ def ConvertFilesToText(userID, files):
 
 			data_list.append([filetype, text_data])	
 	
-			return data_list
+		return data_list
 	else:
 		return False		
 
