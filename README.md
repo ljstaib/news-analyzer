@@ -1,6 +1,6 @@
 # Homework #2 for EC500 at BU: news-analyzer-ljstaib
 
-# Status: Phase 2 in progress 
+# Status: Phase 2 in progress, Phase 3 completed 
 
 Copyright @2021 
 Luke Staib 
@@ -40,6 +40,8 @@ Phase 2:
 Phase 3:
 --------------------------------------------------------------------------------------------------------------------------------
 
+Please see NLP_analysis.py for the ConvertFilesToText() function. I can currently convert from TXT and PDF files.
+
 - Focus on Ingestor module
 - Investigate PDF to Text conversions
   - How to Extract Data from PDF Forms Using Python
@@ -50,7 +52,7 @@ Phase 3:
   - Pdfplumber
 - Chose module you want to use and implement uploader and Ingester
 - For storage, use a folder.  No need for cloud storage.
-- For extracted text, store the data in files.  No database yet.  This will be phase 3.
+- For extracted text, store the data in files.  No database yet.  This will be phase 3. (?)
 - Due Date 2/28/2021.  It is strict this time because we want to use the database concept and implement other modules.
 
 --------------------------------------------------------------------------------------------------------------------------------
