@@ -31,7 +31,7 @@ def test_OrganizeContent():
 	assert OrganizeContent(["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"], "Something Else") == False
 
 def test_ReadLater():
-	assert ReadLater("1", "0010") == False
+	assert ReadLater("10", "0010") == False
 	assert ReadLater("0", "0001") == False
 	assert ReadLater("0", "0010") == "0010"
   

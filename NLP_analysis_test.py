@@ -19,7 +19,7 @@ from NLP_analysis import *
 # ========================================================================	
 
 def test_ConvertFilesToText():
-	assert ConvertFilesToText("1", files) == False
+	assert ConvertFilesToText("10", files) == False
 	assert ConvertFilesToText("0", files) == [["txt", "Testing123..."], ["docx", "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."], ["pdf", "White House Briefing: Today on February 21.......\n \n"]]
 
 def test_CreateKeywords():
@@ -32,11 +32,11 @@ def test_AssessData():
 	assert AssessData(["The Earth is habitable in part due to its perfect distance from the Sun."], ["Sun", "Earth", "Solar System", "Planet", "Star"], "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun.") == "The Sun is a yellow dwarf star at the center of our Solar System. The distance between the Sun and the Earth is one important reason why life can be sustained on Earth. At about 92 million miles away, the Earth is the third closest planet from the Sun out of 8 planets."
 
 def test_SaveSentiment():
-	assert SaveSentiment("1", "Placeholder") == False
+	assert SaveSentiment("10", "Placeholder") == False
 	assert SaveSentiment("0", "Placeholder") == True
 
 def test_EditSentiment():
-	assert EditSentiment("1", "Placeholder", "New placeholder") == False
+	assert EditSentiment("10", "Placeholder", "New placeholder") == False
 	assert EditSentiment("0", "Placeholder", "New placeholder") == False
 	assert EditSentiment("0", "The sky is yellow.", "The sky is blue.") == True
 
