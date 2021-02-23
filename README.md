@@ -1,15 +1,21 @@
 # Homework #2 for EC500 at BU: news-analyzer-ljstaib
 
-# Status: Phase 2 in progress, Phase 3 completed 
-
 Copyright @2021 
 Luke Staib 
 ljstaib@bu.edu
 
-Phase 1:
+Status: Phase 2 in progress, Phase 3 completed 
 --------------------------------------------------------------------------------------------------------------------------------
 
-Stub-API modules for Phase 1 are in their respective .py files. I also have psuedocode in newsanalyzer_pseudocode.txt.
+Phase 1: Completed
+- Stub-API modules for Phase 1 are in their respective .py files. I also have psuedocode in newsanalyzer_pseudocode.txt.
+Phase 2: In progress
+- Working on integrating my modules to be a RESTFUL system
+Phase 3: Completed
+- Please see NLP_analysis.py for the ConvertFilesToText() function. I can currently convert from TXT and PDF files.
+
+Phase 1:
+--------------------------------------------------------------------------------------------------------------------------------
 
 Phase 1, due 2/15/21:
   - Secure File Uploader/Ingest
@@ -22,6 +28,7 @@ Extra Requirements:
   - For each module, decide on operations, data and status
   - Implement a stub-API
   - Use Actions and unit test
+ 
 --------------------------------------------------------------------------------------------------------------------------------
 
 Phase 2:
@@ -39,8 +46,6 @@ Phase 2:
 
 Phase 3:
 --------------------------------------------------------------------------------------------------------------------------------
-
-Please see NLP_analysis.py for the ConvertFilesToText() function. I can currently convert from TXT and PDF files.
 
 - Focus on Ingestor module
 - Investigate PDF to Text conversions
