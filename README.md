@@ -4,7 +4,7 @@ Copyright @2021
 Luke Staib 
 ljstaib@bu.edu
 
-Status: Phase 2 in progress, Phase 3 completed 
+Status:
 --------------------------------------------------------------------------------------------------------------------------------
 
 Phase 1: Completed
