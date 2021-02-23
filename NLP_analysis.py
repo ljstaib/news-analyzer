@@ -16,6 +16,7 @@ import tracemalloc #Memory profiling
 from tqdm import tqdm
 import logging #Logging
 import PyPDF2 #PDF -> TXT
+import os
 #import docx2txt #DOC -> TXT
 
 tracemalloc.start()
@@ -36,6 +37,7 @@ def ConvertFilesToText(userID, files):
 	else:
 		logging.info("User account with userID " + userID + " verified.")
 		data_list = []
+		path_created = True
 		for file in tqdm(files, total=len(files), desc="File Conversion Progress"):
 			split_str = file.split(".")
 			filename = split_str[0]
@@ -67,10 +69,23 @@ def ConvertFilesToText(userID, files):
 				logging.info("Filetype = other")	
 				text_data = "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."	
 
-			new_file = open(filename, "w")
-			new_file.write(text_data)
-			new_file.close()
-			
+
+			try:
+				os.mkdir("File_Data")
+			except FileExistsError:
+				logging.info("File directory for uploading files already exists.")
+			except OSError:
+				logging.error("Creation of file directory for uploading files failed.")
+				path_created = False
+			else:
+				logging.info("File directory for uploading files created.")
+
+			if (path_created):
+				fullname = os.path.join("./File_Data/", filename)
+				new_file = open(fullname, "w")
+				new_file.write(text_data)
+				new_file.close()
+
 			data_list.append([filetype, text_data])	
 	
 	return data_list

@@ -15,3 +15,43 @@ INFO: /Users/luke/opt/miniconda3/lib/python3.8/socket.py:50: size=9248 B, count=
 INFO: [STATS] CPU Usage: Testing ConvertFilesToText()
 INFO: [STATS] Analyzing traffic and bandwidth... to be implemented...
 INFO: [STATS] Sending diagnostic information to the database interface... to be implemented...
+INFO: User account with userID 0 verified.
+DEBUG: Here, there is no conversion to do since it is already a .txt file
+INFO: Filetype = .txt
+DEBUG: File contents: Testing123...
+INFO: File directory for uploading files created.
+DEBUG: Here, I will use the docx2txt library to turn this .docx file into .txt
+INFO: Filetype = .docx
+ERROR: Creation of file directory for uploading files failed.
+DEBUG: Here, I will use the PyPDF2 library to turn this pdf file into .txt
+INFO: Filetype = .pdf
+ERROR: Creation of file directory for uploading files failed.
+INFO: [STATS] Memory Usage: Top 5 files allocating the most memory:
+INFO: <frozen importlib._bootstrap_external>:580: size=409 KiB, count=4390, average=95 B
+INFO: <frozen importlib._bootstrap>:219: size=115 KiB, count=905, average=130 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/abc.py:85: size=11.2 KiB, count=48, average=238 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/socket.py:213: size=9609 B, count=65, average=148 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/socket.py:50: size=9248 B, count=1, average=9248 B
+INFO: [STATS] CPU Usage: Testing ConvertFilesToText()
+INFO: [STATS] Analyzing traffic and bandwidth... to be implemented...
+INFO: [STATS] Sending diagnostic information to the database interface... to be implemented...
+INFO: User account with userID 0 verified.
+DEBUG: Here, there is no conversion to do since it is already a .txt file
+INFO: Filetype = .txt
+DEBUG: File contents: Testing123...
+INFO: File directory for uploading files created.
+DEBUG: Here, I will use the docx2txt library to turn this .docx file into .txt
+INFO: Filetype = .docx
+INFO: File directory for uploading files already exists.
+DEBUG: Here, I will use the PyPDF2 library to turn this pdf file into .txt
+INFO: Filetype = .pdf
+INFO: File directory for uploading files already exists.
+INFO: [STATS] Memory Usage: Top 5 files allocating the most memory:
+INFO: <frozen importlib._bootstrap_external>:580: size=409 KiB, count=4389, average=95 B
+INFO: <frozen importlib._bootstrap>:219: size=115 KiB, count=905, average=130 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/abc.py:85: size=11.2 KiB, count=48, average=238 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/socket.py:213: size=9609 B, count=65, average=148 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/socket.py:50: size=9248 B, count=1, average=9248 B
+INFO: [STATS] CPU Usage: Testing ConvertFilesToText()
+INFO: [STATS] Analyzing traffic and bandwidth... to be implemented...
+INFO: [STATS] Sending diagnostic information to the database interface... to be implemented...
