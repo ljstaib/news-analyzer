@@ -67,6 +67,10 @@ def ConvertFilesToText(userID, files):
 				logging.info("Filetype = other")	
 				text_data = "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."	
 
+			new_file = open(filename, "w")
+			new_file.write(text_data)
+			new_file.close()
+			
 			data_list.append([filetype, text_data])	
 	
 	return data_list

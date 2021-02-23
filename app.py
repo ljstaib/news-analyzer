@@ -1,13 +1,9 @@
 #Luke Staib 2021 - Using code from docs: flask_restful and marshmallow
 
-#import modules
-from file_uploader_ingest import *
-from NLP_analysis import *
-from newsfeed_ingest import *
-
 #flask_restful and marshmallow imports
 from flask import Flask, render_template
 from flask_restful import reqparse, abort, Api, Resource
+from marshmallow import Schema, fields
 
 #other imports
 import datetime as dt
@@ -15,12 +11,26 @@ import datetime as dt
 #################################
 
 app = Flask(__name__)
-api = Api(app)      
+api = Api(app)
+
+class User:
+	def __init__(self, name, email):
+		self.name = name
+		self.email = email
+		self.created_at = dt.datetime.now()
+
+	def __repr__(self):
+		return "<User(name={self.name!r})>".format(self=self)
+
+class UserSchema(Schema):
+	name = fields.Str()
+	email = fields.Email()
+	created_at = fields.DateTime()        
 
 TODOS = {
-	'todo1': {'task': 'Do homework'},
-	'todo2': {'task': 'Enjoy the weather'},
-	'todo3': {'task': 'Sleep'},
+	'todo1': {'task': 'go fishing'},
+	'todo2': {'task': '?????'},
+	'todo3': {'task': 'swag attained'},
 }
 
 def abort_if_todo_doesnt_exist(todo_id):
