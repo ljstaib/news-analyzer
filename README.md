@@ -56,7 +56,7 @@ Phase 3:
   - Pdfplumber
 - Chose module you want to use and implement uploader and Ingester
 - For storage, use a folder.  No need for cloud storage.
-- For extracted text, store the data in files.  No database yet.  This will be phase 3. (?)
+- For extracted text, store the data in files.  No database yet.
 - Due Date 2/28/2021.  It is strict this time because we want to use the database concept and implement other modules.
 
 - First Deliverable:  Due Date: **3/1/2021**
