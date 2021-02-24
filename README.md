@@ -59,14 +59,14 @@ Phase 3:
 - For extracted text, store the data in files.  No database yet.  This will be phase 3. (?)
 - Due Date 2/28/2021.  It is strict this time because we want to use the database concept and implement other modules.
 
-First Deliverable:  Due Date:  3/1/2021
-- Setup mysql or MongoDB
-- Create your database (Tables in case of mysql or containers in case of MongoDB)
-- Define your data storage strategy
-Second Deliverable:  Due Date 3/7/2021
-- Extract Text from PDF files
-- Store Data in Database
-- Dates this time are strict because we want to use the database concept and implement other modules.
+- First Deliverable:  Due Date: **3/1/2021**
+  - Setup mysql or MongoDB
+  - Create your database (Tables in case of mysql or containers in case of MongoDB)
+  - Define your data storage strategy
+- Second Deliverable:  Due Date: **3/7/2021**
+  - Extract Text from PDF files
+  - Store Data in Database
+  - Dates this time are strict because we want to use the database concept and implement other modules.
 
 
 --------------------------------------------------------------------------------------------------------------------------------
