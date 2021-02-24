@@ -11,7 +11,7 @@ Phase 1: Completed. Stub-API modules for Phase 1 are in their respective .py fil
 
 Phase 2: In progress. Working on integrating my modules to be a RESTFUL system. Currently I have made a simple website that you can add and look at a sample users and files list.
 
-Phase 3: Completed. Please see NLP_analysis.py for the ConvertFilesToText() function. I can currently convert from TXT and PDF files.
+Phase 3: In progress. Please see NLP_analysis.py for the ConvertFilesToText() function. I can currently convert from TXT and PDF files.
 
 Phase 1:
 --------------------------------------------------------------------------------------------------------------------------------
@@ -58,5 +58,15 @@ Phase 3:
 - For storage, use a folder.  No need for cloud storage.
 - For extracted text, store the data in files.  No database yet.  This will be phase 3. (?)
 - Due Date 2/28/2021.  It is strict this time because we want to use the database concept and implement other modules.
+
+First Deliverable:  Due Date:  3/1/2021
+- Setup mysql or MongoDB
+- Create your database (Tables in case of mysql or containers in case of MongoDB)
+- Define your data storage strategy
+Second Deliverable:  Due Date 3/7/2021
+- Extract Text from PDF files
+- Store Data in Database
+- Dates this time are strict because we want to use the database concept and implement other modules.
+
 
 --------------------------------------------------------------------------------------------------------------------------------
