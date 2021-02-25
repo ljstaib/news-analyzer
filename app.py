@@ -10,6 +10,7 @@ from file_uploader_ingest import *
 from NLP_analysis import *
 from newsfeed_ingest import *
 from newsanalyzer_data import *
+import db
 
 #flask, flask_restful
 from flask import Flask, render_template, request, jsonify
@@ -30,6 +31,17 @@ parser.add_argument('FileInfo')
 @app.route('/', methods=['GET'])
 def home():
 	return render_template('home.html')
+
+@app.route('/test_db')
+def test_db():
+	test_user = {
+		'U_ID': 100, 
+		'Username': "mongodb", 
+		'FirstName': "Data", 
+		'LastName': "Base"
+	}
+	db.users_db.test_collection.insert_one(test_user)	
+	return "Uploaded test user to MongoDB!"
 
 class UserList(Resource):
 	#http://127.0.0.1:5000/users
