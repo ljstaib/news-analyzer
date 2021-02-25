@@ -12,6 +12,7 @@ Phase 1: Completed. Stub-API modules for Phase 1 are in their respective .py fil
 Phase 2: In progress. Working on integrating my modules to be a RESTFUL system. Currently I have made a simple website that you can add and look at a sample users and files list.
 
 Phase 3: In progress. Please see NLP_analysis.py for the ConvertFilesToText() function. I can currently convert from TXT and PDF files.
+2/25: Turned extra newline characters into only one for converted PDFs. I will continue to edit PDF conversion.
 
 Phase 1:
 --------------------------------------------------------------------------------------------------------------------------------
