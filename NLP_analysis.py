@@ -21,13 +21,14 @@ from tqdm import tqdm
 import logging #Logging
 import PyPDF2 #PDF -> TXT
 import os
+import re
 #import docx2txt #DOC -> TXT
 
 tracemalloc.start()
 
 logging.basicConfig(filename='NLP_analysis.log', level=logging.DEBUG, format='%(levelname)s: %(message)s')
 
-files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
+files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf", "Operations.pdf"] #Sample list
 userID = "0" #Will implement user ID's with secure user authentication system
 
 # ========================================================================
@@ -60,10 +61,15 @@ def ConvertFilesToText(userID, files):
 				logging.info("Filetype = .pdf")
 				file_ref = open(file_path, "rb")
 				file_reader = PyPDF2.PdfFileReader(file_ref)
+				page_data = ""
 				text_data = ""
 				for i in range(file_reader.numPages):
 					page = file_reader.getPage(i)
-					text_data += page.extractText()
+					page_data = page.extractText()
+					#Get rid of multiple newline characters
+					page_data = re.sub(r'\n +', '\n', page_data)
+					page_data = re.sub(r'\n+', '\n', page_data)
+					text_data += page_data
 				file_ref.close()	
 			else:
 				logging.debug("I will implement support for other filetypes")
@@ -192,6 +198,6 @@ def DiagnosticsNLP():
 # =========================================================================================
 
 # print("To be completed...")
-# output = ConvertFilesToText("0", files)
-# print(output)
+output = ConvertFilesToText("0", files)
+print(output)
 # DiagnosticsNLP()

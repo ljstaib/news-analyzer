@@ -188,5 +188,5 @@ def DiagnosticsUploader():
 # =========================================================================================
 
 # print("To be completed...")
-# UploadFiles("0", files)
+UploadFiles("0", files)
 # DiagnosticsUploader()
