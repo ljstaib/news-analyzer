@@ -9,7 +9,7 @@
 # Import newsfeed_ingest.py
 # ========================================================================
 
-# files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
+files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
 # uploadingCancelled = False
 # userID = "0" #Will implement user ID's with secure user authentication system
 from newsfeed_ingest import *

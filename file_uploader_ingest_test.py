@@ -9,7 +9,7 @@
 # Import file_uploader_ingest.py
 # ========================================================================
 
-# files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
+files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
 # uploadingCancelled = False
 # userID = "0" #Will implement user ID's with secure user authentication system
 from file_uploader_ingest import *
@@ -31,20 +31,20 @@ def test_CancelUpload():
 	assert CancelUpload() == True
 
 def test_FileDelete():	
-	assert FileDelete(10, 0, "Sample.txt") == False
+	assert FileDelete(10, 0, files) == False
 	#assert FileDelete("0") == False
-	assert FileDelete(0, 0, "File.txt") == False
-	assert FileDelete(0, 0, "Sample.txt") == True
+	assert FileDelete(0, 0, files) == False
+	assert FileDelete(0, 0, files) == True
 
 def test_FileEditName():
-	assert FileEditName(10, 0, "Sample.txt", "Example.txt") == False
-	assert FileEditName(0, 0, "Test.txt", "Testing.txt") == False
-	assert FileEditName(0, 0, "Sample.txt", "Example.txt") == "Example.txt"
+	assert FileEditName(10, 0, files, "Example.txt") == False
+	assert FileEditName(0, 0, files, "Testing.txt") == False
+	assert FileEditName(0, 0, files, "Example.txt") == "Example.txt"
 
 def test_OrganizeFileList():
 	assert OrganizeFileList(0, files, "Test") == False
 	assert OrganizeFileList(10, files, "Alphabetical") == False
-	assert OrganizeFileList(0, files, "Alphabetical") == ["DONOTREAD.docx", "Sample.txt", "WhiteHouseBriefing.pdf"]
-	assert OrganizeFileList(0, files, "Reverse Alphabetical") == ["WhiteHouseBriefing.pdf", "Sample.txt", "DONOTREAD.docx"]
+	assert OrganizeFileList(0, files, "Alphabetical") == ["DONOTREAD", "Sample", "WhiteHouseBriefing"]
+	assert OrganizeFileList(0, files, "Reverse Alphabetical") == ["WhiteHouseBriefing", "Sample", "DONOTREAD"]
 	assert OrganizeFileList(0, files, "Earliest Uploaded") == files
 	assert OrganizeFileList(0, files, "Latest Uploaded") == files
