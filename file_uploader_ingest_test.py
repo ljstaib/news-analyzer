@@ -44,5 +44,5 @@ def test_OrganizeFileList():
 	assert OrganizeFileList(10, files, "Alphabetical") == False
 	assert OrganizeFileList(0, files, "Alphabetical") == ["DONOTREAD", "Sample", "WhiteHouseBriefing"]
 	assert OrganizeFileList(0, files, "Reverse Alphabetical") == ["WhiteHouseBriefing", "Sample", "DONOTREAD"]
-	assert OrganizeFileList(0, files, "Earliest Uploaded") == files
-	assert OrganizeFileList(0, files, "Latest Uploaded") == files
+	assert OrganizeFileList(0, files, "Earliest Uploaded") == ["Sample", "DONOTREAD", "WhiteHouseBriefing"]
+	assert OrganizeFileList(0, files, "Latest Uploaded") == ["Sample", "DONOTREAD", "WhiteHouseBriefing"]
