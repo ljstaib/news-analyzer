@@ -9,9 +9,9 @@
 # Import newsfeed_ingest.py
 # ========================================================================
 
-files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
-uploadingCancelled = False
-userID = "0" #Will implement user ID's with secure user authentication system
+# files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
+# uploadingCancelled = False
+# userID = "0" #Will implement user ID's with secure user authentication system
 from newsfeed_ingest import *
 
 # ========================================================================
@@ -31,7 +31,7 @@ def test_OrganizeContent():
 	assert OrganizeContent(["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"], "Something Else") == False
 
 def test_ReadLater():
-	assert ReadLater("10", "0010") == False
-	assert ReadLater("0", "0001") == False
-	assert ReadLater("0", "0010") == "0010"
+	assert ReadLater(10, "0010") == False
+	assert ReadLater(0, "0001") == False
+	assert ReadLater(0, "0010") == "0010"
   

@@ -9,7 +9,6 @@
 from file_uploader_ingest import *
 from NLP_analysis import *
 from newsfeed_ingest import *
-from newsanalyzer_data import *
 import db
 
 #flask, flask_restful
@@ -42,6 +41,21 @@ def test_db():
 	}
 	db.users_db.users_collection.insert_one(test_user)	
 	return "Uploaded test user to MongoDB!"
+
+def doesUserExist(uid):
+	valid_user = False
+	for user in users:
+		for key, value in user.items():
+			if key == "U_ID":
+				logging.debug("User ID: " + str(value))
+				if str(value) == str(uid):
+					valid_user = True
+	if not valid_user:
+		logging.error("User account with userID " + str(uid) + " not found.")
+		return False
+	else:
+		logging.info("User account with userID " + str(uid) + " verified.")
+		return True		
 
 class UserList(Resource):
 	#http://127.0.0.1:5000/users

@@ -12,7 +12,7 @@
 # ========================================================================
 
 #Import Data (in future from database)
-from newsanalyzer_data import *
+from db import *
 
 #Import libraries
 import cProfile
@@ -20,6 +20,8 @@ import tracemalloc #Memory profiling
 import logging #Logging
 
 tracemalloc.start()
+
+users = users_collection.find()
 
 logging.basicConfig(filename='newsfeed_ingest.log', level=logging.INFO, format='%(levelname)s: %(message)s')
 
@@ -117,4 +119,6 @@ def DiagnosticsNewsfeed():
 # print("To be completed...")
 # result = DiscoverContent("Our Sun")
 # print(result)
+# test = ReadLater(0, "0004")
+# print(test)
 # DiagnosticsNewsfeed()

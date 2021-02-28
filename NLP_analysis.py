@@ -12,7 +12,7 @@
 # ========================================================================
 
 #Import Data (in future from database)
-from newsanalyzer_data import *
+from db import *
 
 #Import libraries
 import cProfile
@@ -26,10 +26,15 @@ import re
 
 tracemalloc.start()
 
+files_db = files_collection.find()
+files = []
+for file in files_db:
+	files.append(file)
+
 logging.basicConfig(filename='NLP_analysis.log', level=logging.DEBUG, format='%(levelname)s: %(message)s')
 
-files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf", "Operations.pdf"] #Sample list
-userID = "0" #Will implement user ID's with secure user authentication system
+filenames = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf", "Operations.pdf"] #Sample list
+# userID = "0" #Will implement user ID's with secure user authentication system
 
 # ========================================================================
 # Text NLP Analysis
@@ -198,6 +203,10 @@ def DiagnosticsNLP():
 # =========================================================================================
 
 # print("To be completed...")
-output = ConvertFilesToText("0", files)
-print(output)
+# test1 = ConvertFilesToText(0, filenames)
+# print(test1)
+# test2 = SaveSentiment(0, "Sentiment")
+# print(test2)
+# test3 = EditSentiment(0, "The sky is yellow.", "The sky is blue.")
+# print(test3)
 # DiagnosticsNLP()

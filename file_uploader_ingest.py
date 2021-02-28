@@ -12,7 +12,7 @@
 # ========================================================================
 
 #Import Data (in future from database)
-from newsanalyzer_data import *
+from db import *
 
 #Import libraries
 import cProfile #CPU
@@ -24,13 +24,19 @@ tracemalloc.start()
 
 logging.basicConfig(filename='file_uploader_ingest.log', level=logging.INFO, format='%(levelname)s: %(message)s')
 
-files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
-uploadingCancelled = False
-userID = "0" #Will implement user ID's with secure user authentication system
+# files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
+users = users_collection.find()
+user_names = []
+for user in users:
+	user_names.append(user.get("U_ID"))
+# print(user_names)	
 
-# class ProgressBar:
-# 	def __init__(self, percent):
-# 		self.percent = percent				
+files_db = files_collection.find()
+files = []
+for file in files_db:
+	files.append(file)
+
+uploadingCancelled = False		
 
 # ========================================================================
 # File Uploader/Ingest
@@ -40,19 +46,24 @@ def UploadFiles(userID, files):
 	#Inputs: userID is a string, files[] is a string list
 
 	result = doesUserExist(userID)
-	if (result):	
-		for file in tqdm(files, total=len(files), desc="File Upload Progress"):
+	if (result):
+		filenames = []
+		files_num = 0
+		for file in files: #put tqdm back
 			#print("Retrieved file " + str(file))
-			split_str = file.split(".")
-			filename = split_str[0]
-			filetype = split_str[1]
+			files_num += 1
+			print("File:")
+			print(file)
+			filename = file.get("Name")
+			filenames.append(filename)
+			filetype = file.get("Filetype")
 			filetype = filetype.lower()
-			logging.info("Uploading file " + str(file) + " with name " + filename)
+			logging.info("Uploading file " + str(filename + filetype) + " with name " + filename)
 			uploadSuccess = True
 			if (uploadSuccess):
-				logging.info("File %s uploaded.", file)
+				logging.info("File %s uploaded.", filename + filetype)
 			else:
-				logging.error("Problem uploading %s", file)
+				logging.error("Problem uploading %s", filename + filetype)
 				return False
 			if (uploadingCancelled == True):
 				break
@@ -64,11 +75,11 @@ def UploadFiles(userID, files):
 			print("Alert to user: Upload successfully cancelled.")
 			return False
 		else:				
-			if (len(files) == 1):
-				logging.info("Uploading of file " + files[0] + " completed!")
-				print("Alert to user: Uploading of file " + files[0] + " completed!")
+			if (files_num == 1):
+				logging.info("Uploading of file " + filename + " completed!")
+				print("Alert to user: Uploading of file " + filename + " completed!")
 			else:
-				file_list = str(files)[1:-1]
+				file_list = str(filenames)[1:-1]
 				logging.info("Uploading of files completed: " + file_list + "!")
 				print("Alert to user: Uploading of files completed: " + file_list + "!")	
 			return True	
@@ -91,11 +102,18 @@ def CancelUpload():
 	uploadingCancelled = True
 	return True	
 
-def FileDelete(userID, file):
+def FileDelete(userID, fileID, files):
 	result = doesUserExist(userID)
 	if (result):
-		#print("Retrieving files list from user with userID " + userID)
-		if file in files:
+		fileExists = False
+		saved_file = ""
+		for file in files:
+			if fileID == file.get("F_ID"):
+				fileExists = True
+				saved_file = str(file.get("Name"))
+				break
+		file = saved_file
+		if (fileExists):
 			logging.info("Deleting file " + file)
 			success = True
 			if success:
@@ -110,21 +128,27 @@ def FileDelete(userID, file):
 	else:
 		return False				
 
-def FileEditName(userID, file, new_name):
+def FileEditName(userID, fileID, files, new_name):
 	result = doesUserExist(userID)
+	fileExists = False
 	if (result):
 		#print("Retrieving files list from user with userID " + userID)
-		if file in files:
-			logging.info("Changing name of " + file + " to " + new_name)
+		for file in files:
+			fid = file.get("F_ID")
+			if (fid == fileID):
+				fileExists = True
+				filename = file.get("Name")
+		if (fileExists):
+			logging.info("Changing name of " + filename + " to " + new_name)
 			success = True
 			if success:
-				logging.info("File " + file + " was edited successfully.")
+				logging.info("File " + filename + " was edited successfully.")
 				return new_name
 			else:
-				logging.error("ERROR: File " + file + " could not be edited.")
+				logging.error("ERROR: File " + filename + " could not be edited.")
 				return False
 		else:
-			logging.error("File " + file + " not found")
+			logging.error("File " + filename + " not found")
 			return False	
 	else:
 		return False			
@@ -133,29 +157,36 @@ def OrganizeFileList(userID, files, organize_type):
 	result = doesUserExist(userID)
 	if (result):
 		#print("Retrieving files list from user with userID " + userID)
-		if (len(files) == 1):
+		files_num = 0
+		filenames = []
+
+		for file in files:
+			files_num += 1
+			filenames.append(file.get("Name"))
+
+		if (files_num == 1):
 			logging.warning("Only 1 file, there is nothing to sort.")
 			return False
 		else:
-			file_list = str(files)[1:-1]
+			file_list = str(filenames)[1:-1]
 			logging.info("Current order of files: " + file_list)
 
 		if organize_type == "Alphabetical":
-			new_files = sorted(files, key=None)
+			new_filenames = sorted(filenames, key=None)
 		elif organize_type == "Reverse Alphabetical":
-			new_files = sorted(files, key=None, reverse=True)
+			new_filenames = sorted(filenames, key=None, reverse=True)
 		elif organize_type == "Earliest Uploaded":
 			print("Organized content by earliest uploaded")
-			new_files = files
+			new_filenames = filenames
 		elif organize_type == "Latest Uploaded":
 			print("Organized content by latest uploaded")
-			new_files = files
+			new_filenames = filenames
 		else:
 			return False
 
-		new_file_list = str(new_files)[1:-1]
+		new_file_list = str(new_filenames)[1:-1]
 		logging.info("New order of files (" + organize_type +"): " + new_file_list)	
-		return new_files
+		return new_filenames
 	else:
 		return False		
 
@@ -187,6 +218,12 @@ def DiagnosticsUploader():
 # Testing with Command Line (will move to Website using ex. Django, Flask, Heroku to host)
 # =========================================================================================
 
-# print("To be completed...")
-UploadFiles("0", files)
+# test1 = UploadFiles(0, files)
+# print(test1)
+# test2 = OrganizeFileList(0, files, "Alphabetical")
+# print(test2)
+# test3 = FileDelete(0, 0, files)
+# print(test3)
+# test4 = FileEditName(0, 0, files, "Demo.txt")
+# print(test4)
 # DiagnosticsUploader()

@@ -259,3 +259,70 @@ INFO: File directory for uploading files already exists.
 DEBUG: Here, I will use the PyPDF2 library to turn this pdf file into .txt
 INFO: Filetype = .pdf
 INFO: File directory for uploading files already exists.
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+INFO: User account with userID 0 verified.
+DEBUG: Here, there is no conversion to do since it is already a .txt file
+INFO: Filetype = .txt
+DEBUG: File contents: Testing123...
+INFO: File directory for uploading files created.
+DEBUG: Here, I will use the docx2txt library to turn this .docx file into .txt
+INFO: Filetype = .docx
+INFO: File directory for uploading files already exists.
+DEBUG: Here, I will use the PyPDF2 library to turn this pdf file into .txt
+INFO: Filetype = .pdf
+INFO: File directory for uploading files already exists.
+DEBUG: Here, I will use the PyPDF2 library to turn this pdf file into .txt
+INFO: Filetype = .pdf
+INFO: File directory for uploading files already exists.
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+INFO: User account with userID 0 verified.
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+INFO: User account with userID 0 verified.
+DEBUG: Here, there is no conversion to do since it is already a .txt file
+INFO: Filetype = .txt
+DEBUG: File contents: Testing123...
+INFO: File directory for uploading files already exists.
+DEBUG: Here, I will use the docx2txt library to turn this .docx file into .txt
+INFO: Filetype = .docx
+INFO: File directory for uploading files already exists.
+DEBUG: Here, I will use the PyPDF2 library to turn this pdf file into .txt
+INFO: Filetype = .pdf
+INFO: File directory for uploading files already exists.
+DEBUG: Here, I will use the PyPDF2 library to turn this pdf file into .txt
+INFO: Filetype = .pdf
+INFO: File directory for uploading files already exists.
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+INFO: User account with userID 0 verified.
+INFO: Sentiment "Sentiment" saved.
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+INFO: User account with userID 0 verified.
+INFO: Sentiment "Old Sentiment" not found
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+INFO: User account with userID 0 verified.
+DEBUG: Here, there is no conversion to do since it is already a .txt file
+INFO: Filetype = .txt
+DEBUG: File contents: Testing123...
+INFO: File directory for uploading files already exists.
+DEBUG: Here, I will use the docx2txt library to turn this .docx file into .txt
+INFO: Filetype = .docx
+INFO: File directory for uploading files already exists.
+DEBUG: Here, I will use the PyPDF2 library to turn this pdf file into .txt
+INFO: Filetype = .pdf
+INFO: File directory for uploading files already exists.
+DEBUG: Here, I will use the PyPDF2 library to turn this pdf file into .txt
+INFO: Filetype = .pdf
+INFO: File directory for uploading files already exists.
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+INFO: User account with userID 0 verified.
+INFO: Sentiment "Sentiment" saved.
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+INFO: User account with userID 0 verified.
+INFO: Sentiment "The sky is yellow." replaced with "The sky is blue.".
