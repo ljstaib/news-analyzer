@@ -40,7 +40,7 @@ def test_db():
 		'FirstName': "Data", 
 		'LastName': "Base"
 	}
-	db.users_db.test_collection.insert_one(test_user)	
+	db.users_db.users_collection.insert_one(test_user)	
 	return "Uploaded test user to MongoDB!"
 
 class UserList(Resource):
