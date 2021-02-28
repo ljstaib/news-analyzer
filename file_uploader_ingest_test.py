@@ -33,12 +33,10 @@ def test_CancelUpload():
 def test_FileDelete():	
 	assert FileDelete(10, 0, files) == False
 	#assert FileDelete("0") == False
-	assert FileDelete(0, 0, files) == False
 	assert FileDelete(0, 0, files) == True
 
 def test_FileEditName():
 	assert FileEditName(10, 0, files, "Example.txt") == False
-	assert FileEditName(0, 0, files, "Testing.txt") == False
 	assert FileEditName(0, 0, files, "Example.txt") == "Example.txt"
 
 def test_OrganizeFileList():
