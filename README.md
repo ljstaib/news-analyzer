@@ -14,6 +14,8 @@ Phase 2: In progress. Working on integrating my modules to be a RESTFUL system. 
 Phase 3: In progress. Please see NLP_analysis.py for the ConvertFilesToText() function. I can currently convert from TXT and PDF files.
 2/25: Turned extra newline characters into only one for converted PDFs. I will continue to edit PDF conversion.
 
+Phase 3 Deliverable 1: Data storage defined in DataStorageStrategy.pdf. Code has started to be updated to incorporate MongoDB.
+
 Phase 1:
 --------------------------------------------------------------------------------------------------------------------------------
 
