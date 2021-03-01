@@ -12,8 +12,12 @@ from newsfeed_ingest import *
 import db
 
 #flask, flask_restful
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, make_response
 from flask_restful import reqparse, abort, Api, Resource
+
+#MongoDB JSON encoder
+import json
+from bson import ObjectId
 
 from datetime import datetime
 
@@ -21,7 +25,29 @@ from datetime import datetime
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
-api = Api(app)   
+api = Api(app) 
+
+class encodeJSON(json.JSONEncoder):
+	def default(self, obj):
+		if isinstance(obj, ObjectId):
+			return str(obj)	
+		return json.JSONEncoder.default(self, obj)	
+
+#Download and convert data from users database
+data_users = users_collection.find()
+app_users = []
+for user in data_users:
+	app_users.append(user)
+app_users = (encodeJSON().encode(app_users)).replace(r'\"', '"')
+app_users = json.JSONDecoder().decode(app_users)
+
+#Download and convert data from files database
+data_files = files_collection.find()
+app_files = []
+for file in data_files:
+	app_files.append(file)
+app_files = (encodeJSON().encode(app_files)).replace(r'\"', '"')
+app_files = json.JSONDecoder().decode(app_files)		 		 
 
 parser = reqparse.RequestParser()
 parser.add_argument('UserInfo') 
@@ -40,36 +66,21 @@ def test_db():
 		'LastName': "Base"
 	}
 	db.users_db.users_collection.insert_one(test_user)	
-	return "Uploaded test user to MongoDB!"
-
-def doesUserExist(uid):
-	valid_user = False
-	for user in users:
-		for key, value in user.items():
-			if key == "U_ID":
-				logging.debug("User ID: " + str(value))
-				if str(value) == str(uid):
-					valid_user = True
-	if not valid_user:
-		logging.error("User account with userID " + str(uid) + " not found.")
-		return False
-	else:
-		logging.info("User account with userID " + str(uid) + " verified.")
-		return True		
+	return "Uploaded test user to MongoDB!"	
 
 class UserList(Resource):
 	#http://127.0.0.1:5000/users
 	def get(self):
-		return jsonify(users)
+		return app_users
 
 	#curl http://127.0.0.1:5000/users -d "UserInfo=ljs123, Luke, Staib" -X POST -v
 	#Right now, in order: username, first name, last name
 	#then check GET method
 	def post(self):
 		args = parser.parse_args()
-		print(args)
+		# print(args)
 		max_uid = 0
-		for user in users:
+		for user in app_users:
 			if user.get('U_ID') > max_uid:
 				max_uid = user.get('U_ID')
 		new_uid = max_uid + 1
@@ -84,21 +95,21 @@ class UserList(Resource):
 			'FirstName': new_fname, 
 			'LastName': new_lname
 		}	
-		users.append(new_user)
-		return jsonify(users[-1:])
+		app_users.append(new_user)
+		return jsonify(app_users[-1:])
 
 class FileList(Resource):
 	#http://127.0.0.1:5000/files
 	def get(self):
-		return jsonify(files)
+		return app_files
 
 	#curl http://127.0.0.1:5000/files -d "FileInfo=FileName1, TXT, John Doe, 01/02/1980 00:00:00, 0, 100, Uploaded" -X POST -v
 	#then check GET method
 	def post(self):
 		args = parser.parse_args()
-		print(args)
+		# print(args)
 		max_fid = 0
-		for file in files:
+		for file in app_files:
 			if file.get('F_ID') > max_fid:
 				max_fid = file.get('F_ID')
 		fid = max_fid + 1
@@ -125,10 +136,11 @@ class FileList(Resource):
 				'Status': status,
 			}
 		}	
-		files.append(new_file)
-		return jsonify(files[-1:])		
+		app_files.append(new_file)
+		return jsonify(app_files[-1:])		
 
 api.add_resource(UserList, '/users')
+# api.add_resource(User, '/users/<user_id>')
 api.add_resource(FileList, '/files')				
 
 if __name__ == '__main__':
