@@ -14,7 +14,13 @@ Phase 2: Mostly done. Working on integrating my modules to be a RESTFUL system. 
 Phase 3: In progress. Please see NLP_analysis.py for the ConvertFilesToText() function. I can currently convert from TXT and PDF files.
 2/25: Turned extra newline characters into only one for converted PDFs. I will continue to edit PDF conversion.
 
-Phase 3 Deliverable 1: Completed. Data storage defined in DataStorageStrategy.pdf. Code has started to be updated to incorporate MongoDB. Please see NewsAnalyzerDemo3_1.mov for a demonstration of my current API. Data is pulled from MongoDB. Next, I need an authentication system and button commands on the actual webpage.
+Phase 3 Deliverable 1: Completed. Data storage defined in DataStorageStrategy.pdf. Code has started to be updated to incorporate MongoDB. Please see NewsAnalyzerDemo3_1.mov for a demonstration of my current API. Data is pulled from MongoDB. 
+
+TODO:
+- Authentication system
+- Webpage functionality
+- Finish RESTFUL API, just need to be able to edit users/files
+- Host new website on S3
 
 Phase 1:
 --------------------------------------------------------------------------------------------------------------------------------
