@@ -31,27 +31,33 @@ class encodeJSON(json.JSONEncoder):
 	def default(self, obj):
 		if isinstance(obj, ObjectId):
 			return str(obj)	
-		return json.JSONEncoder.default(self, obj)	
-
-#Download and convert data from users database
-data_users = users_collection.find()
-app_users = []
-for user in data_users:
-	app_users.append(user)
-app_users = (encodeJSON().encode(app_users)).replace(r'\"', '"')
-app_users = json.JSONDecoder().decode(app_users)
-
-#Download and convert data from files database
-data_files = files_collection.find()
-app_files = []
-for file in data_files:
-	app_files.append(file)
-app_files = (encodeJSON().encode(app_files)).replace(r'\"', '"')
-app_files = json.JSONDecoder().decode(app_files)		 		 
+		return json.JSONEncoder.default(self, obj)
 
 parser = reqparse.RequestParser()
 parser.add_argument('UserInfo') 
-parser.add_argument('FileInfo') 
+parser.add_argument('FileInfo')
+app_users = []
+app_files = []			
+
+def updateDB():
+	#Download and convert data from users database
+	data_users = users_collection.find()
+	app_users = []
+	for user in data_users:
+		app_users.append(user)
+	app_users = (encodeJSON().encode(app_users)).replace(r'\"', '"')
+	app_users = json.JSONDecoder().decode(app_users)
+
+	#Download and convert data from files database
+	data_files = files_collection.find()
+	app_files = []
+	for file in data_files:
+		app_files.append(file)
+	app_files = (encodeJSON().encode(app_files)).replace(r'\"', '"')
+	app_files = json.JSONDecoder().decode(app_files)
+	return app_users, app_files	 		 
+
+app_users, app_files = updateDB()
 
 @app.route('/', methods=['GET'])
 def home():
@@ -65,8 +71,38 @@ def test_db():
 		'FirstName': "Data", 
 		'LastName': "Base"
 	}
-	db.users_db.users_collection.insert_one(test_user)	
+	db.users_db.user_collection.insert_one(test_user)	
 	return "Uploaded test user to MongoDB!"	
+
+class User(Resource):
+	#http://127.0.0.1:5000/users/0
+	def get(self, uid):
+		try:
+		    uid = int(uid)
+		except ValueError:
+		    return "Please enter a valid U_ID (int)"
+		else: 
+			for user in app_users:
+				if user.get('U_ID') == uid:
+					return user
+			return "U_ID does not exist"
+
+	#curl http://127.0.0.1:5000/users/2 -X DELETE -v
+	def delete(self, uid):
+		try:
+		    uid = int(uid)
+		except ValueError:
+		    return "Please enter a valid U_ID (int)"
+		else: 
+			global app_users
+			global app_files
+			for user in app_users:
+				if user.get('U_ID') == uid:
+					query = {"U_ID": uid}
+					db.users_db.user_collection.delete_one(query)
+					app_users, app_files = updateDB() 
+					return f"Deleted user with U_ID: {uid}"
+			return "F_ID does not exist"						
 
 class UserList(Resource):
 	#http://127.0.0.1:5000/users
@@ -77,6 +113,8 @@ class UserList(Resource):
 	#Right now, in order: username, first name, last name
 	#then check GET method
 	def post(self):
+		global app_users
+		global app_files
 		args = parser.parse_args()
 		# print(args)
 		max_uid = 0
@@ -95,8 +133,42 @@ class UserList(Resource):
 			'FirstName': new_fname, 
 			'LastName': new_lname
 		}	
-		app_users.append(new_user)
-		return jsonify(app_users[-1:])
+		db.users_db.user_collection.insert_one(new_user)
+		app_users, app_files = updateDB()
+		# new_user = (encodeJSON().encode(new_user)).replace(r'\"', '"')
+		# new_user = json.JSONDecoder().decode(new_user)
+		# app_users.append(new_user)
+		return f'User uploaded successfully: {new_user}'
+
+class File(Resource):
+	#http://127.0.0.1:5000/files/0
+	def get(self, fid):
+		try:
+		    fid = int(fid)
+		except ValueError:
+		    return "Please enter a valid F_ID (int)"
+		else: 
+			for file in app_files:
+				if file.get('F_ID') == fid:
+					return file
+			return "F_ID does not exist"
+
+	#curl http://127.0.0.1:5000/files/3 -X DELETE -v
+	def delete(self, fid):
+		try:
+		    fid = int(fid)
+		except ValueError:
+		    return "Please enter a valid F_ID (int)"
+		else: 
+			global app_users
+			global app_files
+			for file in app_files:
+				if file.get('F_ID') == fid:
+					query = {"F_ID": fid}
+					db.files_db.file_collection.delete_one(query)
+					app_users, app_files = updateDB() 
+					return f"Deleted file with F_ID: {fid}"
+			return "F_ID does not exist"		
 
 class FileList(Resource):
 	#http://127.0.0.1:5000/files
@@ -106,6 +178,8 @@ class FileList(Resource):
 	#curl http://127.0.0.1:5000/files -d "FileInfo=FileName1, TXT, John Doe, 01/02/1980 00:00:00, 0, 100, Uploaded" -X POST -v
 	#then check GET method
 	def post(self):
+		global app_users
+		global app_files
 		args = parser.parse_args()
 		# print(args)
 		max_fid = 0
@@ -136,12 +210,14 @@ class FileList(Resource):
 				'Status': status,
 			}
 		}	
-		app_files.append(new_file)
-		return jsonify(app_files[-1:])		
+		files_collection.insert_one(new_file)
+		app_users, app_files = updateDB()
+		return f'File uploaded successfully: {new_file}'	
 
 api.add_resource(UserList, '/users')
-# api.add_resource(User, '/users/<user_id>')
-api.add_resource(FileList, '/files')				
+api.add_resource(User, '/users/<uid>')
+api.add_resource(FileList, '/files')
+api.add_resource(File, '/files/<fid>')				
 
 if __name__ == '__main__':
     app.run(debug=True)
