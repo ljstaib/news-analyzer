@@ -9,18 +9,20 @@ Status:
 
 Phase 1: Completed. Stub-API modules for Phase 1 are in their respective .py files. I also have psuedocode in newsanalyzer_pseudocode.txt.
 
-Phase 2: Mostly done. Working on integrating my modules to be a RESTFUL system. Currently I have made a simple website that you can add and look at a sample users and files list. The users and files data pulls from MongoDB.
+Phase 2: Completed. Files and users database has been connected and GET, POST, PUT, DELETE operations are possible.
 
-Phase 3: In progress. Please see NLP_analysis.py for the ConvertFilesToText() function. I can currently convert from TXT and PDF files.
-2/25: Turned extra newline characters into only one for converted PDFs. I will continue to edit PDF conversion.
+Phase 3: Completed. Please see NLP_analysis.py for the ConvertFilesToText() function. I can currently convert from TXT and PDF files.
+2/25: Turned extra newline characters into only one for converted PDFs. Just need to modify the output a little bit.
 
 Phase 3 Deliverable 1: Completed. Data storage defined in DataStorageStrategy.pdf. Code has started to be updated to incorporate MongoDB. Please see NewsAnalyzerDemo3_1.mov for a demonstration of my current API. Data is pulled from MongoDB. 
+
+Phase 3 Deliverable 2: In progress. Data being stored in database, can store PDF files as TXT. Just need to add text field to files database or create separate text database.
 
 TODO:
 - Authentication system
 - Webpage functionality
-- Finish RESTFUL API, just need to be able to edit users/files
 - Host new website on S3
+- Store file data (text)
 
 Phase 1:
 --------------------------------------------------------------------------------------------------------------------------------
