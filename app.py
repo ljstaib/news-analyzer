@@ -102,7 +102,38 @@ class User(Resource):
 					db.users_db.user_collection.delete_one(query)
 					app_users, app_files = updateDB() 
 					return f"Deleted user with U_ID: {uid}"
-			return "F_ID does not exist"						
+			return "U_ID does not exist"
+
+	#curl http://127.0.0.1:5000/users/0 -d "UserInfo=ljstaib12345, Luke, Staib" -X PUT -v
+	def put(self, uid): #edit info
+		try:
+		    uid = int(uid)
+		except ValueError:
+		    return "Please enter a valid U_ID (int)"
+		else: 
+			global app_users
+			global app_files
+			args = parser.parse_args()
+			for user in app_users:
+				if user.get('U_ID') == uid:
+					query = {"U_ID": uid}
+					userinfo = list(args['UserInfo'].split(", "))
+					if (len(userinfo) != 3):
+						return "To edit an existing user, UserInfo is a list of THREE arguments."
+
+					uname = userinfo[0]
+					fname = userinfo[1]
+					lname = userinfo[2]
+					updated_user = { "$set": {
+						'Username': uname, 
+						'FirstName': fname, 
+						'LastName': lname
+					}}
+					db.users_db.user_collection.update_one(query, updated_user)
+					app_users, app_files = updateDB()
+					return updated_user
+			return "U_ID does not exist"
+
 
 class UserList(Resource):
 	#http://127.0.0.1:5000/users
@@ -123,6 +154,8 @@ class UserList(Resource):
 				max_uid = user.get('U_ID')
 		new_uid = max_uid + 1
 		new_userinfo = list(args['UserInfo'].split(", "))
+		if (len(new_userinfo) != 3):
+			return "To create a new user, UserInfo is a list of THREE arguments."
 		# print(new_userinfo)
 		new_uname = new_userinfo[0]
 		new_fname = new_userinfo[1]
@@ -168,7 +201,45 @@ class File(Resource):
 					db.files_db.file_collection.delete_one(query)
 					app_users, app_files = updateDB() 
 					return f"Deleted file with F_ID: {fid}"
-			return "F_ID does not exist"		
+			return "F_ID does not exist"
+
+	#curl http://127.0.0.1:5000/files/2 -d "FileInfo=WhiteHouseBriefing, PDF, Luke Staib, 1, 6264, Analyzed" -X PUT -v
+	def put(self, fid): #edit info
+		try:
+		    fid = int(fid)
+		except ValueError:
+		    return "Please enter a valid F_ID (int)"
+		else: 
+			global app_users
+			global app_files
+			args = parser.parse_args()
+			for file in app_files:
+				if file.get('F_ID') == fid:
+					query = {"F_ID": fid}
+					fileinfo = list(args['FileInfo'].split(", "))
+					if (len(fileinfo) != 6):
+						return "To edit an existing file, FileInfo is a list of SIX arguments."
+					filename = fileinfo[0]
+					filetype = fileinfo[1]
+					authors = fileinfo[2]
+					source = fileinfo[3] #user who uploaded
+					filesize = fileinfo[4]
+					status = fileinfo[5]
+					#Upload time and creation time have no reason to be touched
+					updated_file = { "$set": {
+						'Name': filename, 
+						'Filetype': filetype, 
+						'Authors': authors, 
+						'Source': source,
+						'Size': filesize,
+						'Tags': {
+							'Status': status,
+						}
+					}}
+					db.files_db.file_collection.update_one(query, updated_file)
+					app_users, app_files = updateDB()
+					return updated_file
+			return "F_ID does not exist"				
 
 class FileList(Resource):
 	#http://127.0.0.1:5000/files
@@ -188,7 +259,9 @@ class FileList(Resource):
 				max_fid = file.get('F_ID')
 		fid = max_fid + 1
 		new_fileinfo = list(args['FileInfo'].split(", "))
-		print(new_fileinfo)
+		if (len(new_fileinfo) != 7):
+			return "To create a new file, FileInfo is a list of SEVEN arguments."
+		#print(new_fileinfo)
 		filename = new_fileinfo[0]
 		filetype = new_fileinfo[1]
 		authors = new_fileinfo[2]
