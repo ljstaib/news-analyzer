@@ -34,8 +34,8 @@ class encodeJSON(json.JSONEncoder):
 		return json.JSONEncoder.default(self, obj)
 
 parser = reqparse.RequestParser()
-parser.add_argument('UserInfo') 
-parser.add_argument('FileInfo')
+parser.add_argument('UserInfo', location='form')
+parser.add_argument('FileInfo', location='form')
 app_users = []
 app_files = []			
 
@@ -141,25 +141,34 @@ class UserList(Resource):
 		return app_users
 
 	#curl http://127.0.0.1:5000/users -d "UserInfo=ljs123, Luke, Staib" -X POST -v
+	#CURL is outdated, use website to post now
 	#Right now, in order: username, first name, last name
 	#then check GET method
 	def post(self):
 		global app_users
 		global app_files
-		args = parser.parse_args()
-		# print(args)
 		max_uid = 0
 		for user in app_users:
 			if user.get('U_ID') > max_uid:
 				max_uid = user.get('U_ID')
 		new_uid = max_uid + 1
-		new_userinfo = list(args['UserInfo'].split(", "))
-		if (len(new_userinfo) != 3):
-			return "To create a new user, UserInfo is a list of THREE arguments."
-		# print(new_userinfo)
-		new_uname = new_userinfo[0]
-		new_fname = new_userinfo[1]
-		new_lname = new_userinfo[2]
+		# print('Request: ')
+		# print(request)
+
+		new_uname = request.form.get("create_username")
+		new_fname = request.form.get("create_firstname")
+		new_lname = request.form.get("create_lastname")
+
+		# args = parser.parse_args()
+		# print("args:")
+		# print(args)
+		# new_userinfo = list(args['UserInfo'].split(", "))
+		# if (len(new_userinfo) != 3):
+		# 	return "To create a new user, UserInfo is a list of THREE arguments."
+		# # print(new_userinfo)
+		# new_uname = new_userinfo[0]
+		# new_fname = new_userinfo[1]
+		# new_lname = new_userinfo[2]
 		new_user = {
 			'U_ID': new_uid, 
 			'Username': new_uname, 

@@ -1,3 +1,4 @@
+<!-- Luke Staib @2021 -->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -9,6 +10,24 @@
 	</head>
 	<body>
 		<div class="bigText">News Analyzer</div>
-		<div class="smallText">Welcome!</div>
+		<div class="smallText">Welcome! Please press some buttons to test what I have so far...</div>
+		<a href="/users" target="_blank">View users</a>
+		<br><br>
+		<a href="/files" target="_blank">View files</a>
+		<br><br>
+		<form action="/users" method="post">
+			<div class="smallText">Create a sample user:</div>
+			<br>
+			<div class="smallText">Username</div>
+			<input type="text" name="create_username" required>
+			<br>
+			<div class="smallText">First Name</div>
+			<input type="text" name="create_firstname" required>
+			<div>
+			<div class="smallText">Last Name</div>
+			<input type="text" name="create_lastname" required>
+			<br><br>
+			<input type="submit" value="Create Account">
+		</form>
 	</body>
 </html>

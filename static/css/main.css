@@ -1,4 +1,4 @@
-/*Luke Staib 2021*/
+/*Luke Staib @2021*/
 body {
   background-color: #B7F7FF;
 }
@@ -14,5 +14,14 @@ body {
 .smallText {
 	line-height: 50px;
 	color: #05006B;
-	font-size: 36px;
+	font-size: 24px;
+}
+
+a {
+	background-color: #FFFBCB;
+	border: 1px solid black;
+	color: #000000;
+	font-size: 24px;
+	font-family: Arial;
+	text-decoration: none;
 }
