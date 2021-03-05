@@ -42,14 +42,14 @@ uploadingCancelled = False
 # File Uploader/Ingest
 # ========================================================================
 
-def UploadFiles(userID, files):
+def UploadFiles(userID, files_in):
 	#Inputs: userID is a string, files[] is a string list
 
 	result = doesUserExist(userID)
 	if (result):
 		filenames = []
 		files_num = 0
-		for file in files: #put tqdm back
+		for file in files_in: #put tqdm back
 			#print("Retrieved file " + str(file))
 			files_num += 1
 			print("File:")

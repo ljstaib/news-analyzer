@@ -12,19 +12,26 @@ from newsfeed_ingest import *
 import db
 
 #flask, flask_restful
-from flask import Flask, render_template, request, jsonify, make_response
+from flask import Flask, flash, render_template, redirect, request, jsonify, make_response, url_for
 from flask_restful import reqparse, abort, Api, Resource
+from werkzeug.utils import secure_filename
+
+UPLOAD_FOLDER = './File_Data'
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'docx'}
 
 #MongoDB JSON encoder
 import json
 from bson import ObjectId
 
+#other libraries
 from datetime import datetime
+import os
 
 #################################
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 api = Api(app) 
 
 class encodeJSON(json.JSONEncoder):
@@ -55,7 +62,12 @@ def updateDB():
 		app_files.append(file)
 	app_files = (encodeJSON().encode(app_files)).replace(r'\"', '"')
 	app_files = json.JSONDecoder().decode(app_files)
-	return app_users, app_files	 		 
+	return app_users, app_files	 	
+
+def allowed_file(filename):
+	#Make sure file being uploaded is allowed
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS		 
 
 app_users, app_files = updateDB()
 
@@ -63,16 +75,28 @@ app_users, app_files = updateDB()
 def home():
 	return render_template('home.html')
 
-@app.route('/test_db')
-def test_db():
-	test_user = {
-		'U_ID': 100, 
-		'Username': "mongodb", 
-		'FirstName': "Data", 
-		'LastName': "Base"
-	}
-	db.users_db.user_collection.insert_one(test_user)	
-	return "Uploaded test user to MongoDB!"	
+@app.route('/signup', methods=['GET'])
+def signup():
+	return render_template('signup.html')
+
+@app.route('/success', methods=['GET'])
+def success():
+	return render_template('success.html')	
+
+@app.route('/login', methods=['GET'])
+def login():
+	return render_template('login.html')		
+
+# @app.route('/test_db')
+# def test_db():
+# 	test_user = {
+# 		'U_ID': 100, 
+# 		'Username': "mongodb", 
+# 		'FirstName': "Data", 
+# 		'LastName': "Base"
+# 	}
+# 	db.users_db.user_collection.insert_one(test_user)	
+# 	return "Uploaded test user to MongoDB!"	
 
 class User(Resource):
 	#http://127.0.0.1:5000/users/0
@@ -118,14 +142,15 @@ class User(Resource):
 				if user.get('U_ID') == uid:
 					query = {"U_ID": uid}
 					userinfo = list(args['UserInfo'].split(", "))
-					if (len(userinfo) != 3):
+					if (len(userinfo) != 4):
 						return "To edit an existing user, UserInfo is a list of THREE arguments."
-
 					uname = userinfo[0]
-					fname = userinfo[1]
-					lname = userinfo[2]
+					pword = userinfo[1]
+					fname = userinfo[2]
+					lname = userinfo[3]
 					updated_user = { "$set": {
-						'Username': uname, 
+						'Username': uname,
+						'Password': pword, 
 						'FirstName': fname, 
 						'LastName': lname
 					}}
@@ -156,6 +181,7 @@ class UserList(Resource):
 		# print(request)
 
 		new_uname = request.form.get("create_username")
+		new_pword = request.form.get("create_password")
 		new_fname = request.form.get("create_firstname")
 		new_lname = request.form.get("create_lastname")
 
@@ -172,6 +198,7 @@ class UserList(Resource):
 		new_user = {
 			'U_ID': new_uid, 
 			'Username': new_uname, 
+			'Password': new_pword,
 			'FirstName': new_fname, 
 			'LastName': new_lname
 		}	
@@ -180,7 +207,7 @@ class UserList(Resource):
 		# new_user = (encodeJSON().encode(new_user)).replace(r'\"', '"')
 		# new_user = json.JSONDecoder().decode(new_user)
 		# app_users.append(new_user)
-		return f'User uploaded successfully: {new_user}'
+		return redirect(url_for("success"))
 
 class File(Resource):
 	#http://127.0.0.1:5000/files/0
@@ -262,28 +289,50 @@ class FileList(Resource):
 		global app_files
 		args = parser.parse_args()
 		# print(args)
-		max_fid = 0
+		max_fid = -1
 		for file in app_files:
 			if file.get('F_ID') > max_fid:
 				max_fid = file.get('F_ID')
 		fid = max_fid + 1
-		new_fileinfo = list(args['FileInfo'].split(", "))
-		if (len(new_fileinfo) != 7):
-			return "To create a new file, FileInfo is a list of SEVEN arguments."
-		#print(new_fileinfo)
-		filename = new_fileinfo[0]
-		filetype = new_fileinfo[1]
-		authors = new_fileinfo[2]
-		creation_time = new_fileinfo[3]
-		source = new_fileinfo[4]
-		filesize = new_fileinfo[5]
-		status = new_fileinfo[6]
+
+		if 'file' not in request.files:
+			flash('No file part')
+			return redirect("/")
+		file = request.files['file']
+		if file.filename == '':
+			flash('No selected file')
+			return redirect("/")
+		if file and allowed_file(file.filename):
+			filename = secure_filename(file.filename)
+			file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+		# new_fileinfo = list(args['FileInfo'].split(", "))
+		# if (len(new_fileinfo) != 7):
+		# 	return "To create a new file, FileInfo is a list of SEVEN arguments."
+		# #print(new_fileinfo)
+		# filename = new_fileinfo[0]
+		# filetype = new_fileinfo[1]
+		# authors = new_fileinfo[2]
+		# text = ""
+		# creation_time = new_fileinfo[3]
+		# source = new_fileinfo[4]
+		# filesize = new_fileinfo[5]
+		# status = new_fileinfo[6]
+		# upload_time = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
+		filename = file.filename
+		filetype = file.filename.rsplit('.', 1)[1].lower()
+		authors = request.form.get("authors")
+		text = "" #Working on this part next
+		creation_time = str(request.form.get("month") + "/" + request.form.get("day") + "/" + request.form.get("year"))
+		source = 0 #will assign userIDs when user auth is done
+		filesize = os.stat(UPLOAD_FOLDER + "/" + filename).st_size
+		status = "Uploaded"
 		upload_time = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
 		new_file = {
 			'F_ID': fid, 
 			'Name': filename, 
 			'Filetype': filetype, 
-			'Authors': authors, 
+			'Authors': authors,
+			'Text': text,
 			'CreationTime': creation_time,
 			'Source': source,
 			'Size': filesize,
