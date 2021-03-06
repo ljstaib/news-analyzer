@@ -16,13 +16,12 @@ Phase 3: Completed. Please see NLP_analysis.py for the ConvertFilesToText() func
 
 Phase 3 Deliverable 1: Completed. Data storage defined in DataStorageStrategy.pdf. Code has started to be updated to incorporate MongoDB. Please see NewsAnalyzerDemo3_1.mov for a demonstration of my current API. Data is pulled from MongoDB. 
 
-Phase 3 Deliverable 2: In progress. Data being stored in database, can store PDF files as TXT. Just need to add text field to files database or create separate text database.
+Phase 3 Deliverable 2: Completed. Data being stored in database, can store text data of PDF files and TXT files. Created separate field "Text" in files database for each file. Please see "TextConversionWithFileUpload.mov" for my latest demo. Also please see "MongoDBFiles.png" for a view of the updated database.
 
 TODO:
+- Add more testing
 - Authentication system
-- Webpage functionality
-- Host new website on S3
-- Store file data (text)
+- Host website on S3
 
 Phase 1:
 --------------------------------------------------------------------------------------------------------------------------------
