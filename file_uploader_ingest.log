@@ -53,3 +53,7 @@ INFO: 127.0.0.1 - - [06/Mar/2021 18:29:27] "[37mPOST /files HTTP/1.1[0m" 200 -
 INFO: 127.0.0.1 - - [06/Mar/2021 18:29:33] "[37mGET / HTTP/1.1[0m" 200 -
 INFO: 127.0.0.1 - - [06/Mar/2021 18:29:34] "[37mGET /files HTTP/1.1[0m" 200 -
 INFO: 127.0.0.1 - - [06/Mar/2021 18:30:00] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656

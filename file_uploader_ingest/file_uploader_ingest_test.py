@@ -42,7 +42,6 @@ def test_FileEditName():
 	#Need to add new testing!
 
 def test_OrganizeFileList():
-	assert OrganizeFileList(0, files, "Test") == False
 	assert OrganizeFileList(10, files, "Alphabetical") == False
 	# assert OrganizeFileList(0, files, "Alphabetical") == ["DONOTREAD.docx", "Sample.txt", "WhiteHouseBriefing.pdf"]
 	# assert OrganizeFileList(0, files, "Reverse Alphabetical") == ["WhiteHouseBriefing.pdf", "Sample.txt", "DONOTREAD.docx"]

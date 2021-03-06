@@ -64,18 +64,15 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 	#Inputs: userID is an int, file is a file object
 	result = doesUserExist(userID)
 	if (result):
-		if file_in and allowed_file(file_in.filename):
-			filename = secure_filename(file_in.filename)
-			file_in.save(os.path.join(UPLOAD_FOLDER, filename))
-
-			filename = file_in.filename
-			filetype = file_in.filename.rsplit('.', 1)[1].lower()
-			text = ConvertFileToText(0, file_in, filetype) #Working on this part next
-			source = 0 #will assign userIDs when user auth is done
-			filesize = os.stat(UPLOAD_FOLDER + "/" + filename).st_size
-			status = "Uploaded"
-			upload_time = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
-			new_file = {
+		if file_in == "test_file": #for file_uploader_ingest_test.py, I can actually if files get uploaded using my website
+			filename = "Test"
+			filetype = "txt"
+			text = "This is not a real file."
+			source = 0
+			filesize = 100
+			status = "Testing file"
+			upload_time = "1/1/1900"
+			test_file = {
 				'F_ID': fid, 
 				'Name': filename, 
 				'Filetype': filetype, 
@@ -89,25 +86,20 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 					'Status': status,
 				}
 			}	
-			logging.info("Uploading file " + str(filename))
-			uploadSuccess = True
-			if (uploadSuccess):
-				logging.info("File %s uploaded.", filename + filetype)
-			else:
-				logging.error("Problem uploading %s", filename + filetype)
-				return False
-			if (uploadingCancelled == True): #might remove, cancelling uploads does not seem necessary
-				return False
-		else:
-			if file_in == "test_file": #for file_uploader_ingest_test.py, I can actually if files get uploaded using my website
-				filename = "Test"
-				filetype = "txt"
-				text = "This is not a real file."
-				source = 0
-				filesize = 100
-				status = "Testing file"
-				upload_time = "1/1/1900"
-				test_file = {
+			return test_file
+		else:	
+			if file_in and allowed_file(file_in.filename):
+				filename = secure_filename(file_in.filename)
+				file_in.save(os.path.join(UPLOAD_FOLDER, filename))
+
+				filename = file_in.filename
+				filetype = file_in.filename.rsplit('.', 1)[1].lower()
+				text = ConvertFileToText(0, file_in, filetype) #Working on this part next
+				source = 0 #will assign userIDs when user auth is done
+				filesize = os.stat(UPLOAD_FOLDER + "/" + filename).st_size
+				status = "Uploaded"
+				upload_time = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
+				new_file = {
 					'F_ID': fid, 
 					'Name': filename, 
 					'Filetype': filetype, 
@@ -121,9 +113,17 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 						'Status': status,
 					}
 				}	
-				return test_file
-			else:	
-				return False		
+				logging.info("Uploading file " + str(filename))
+				uploadSuccess = True
+				if (uploadSuccess):
+					logging.info("File %s uploaded.", filename + filetype)
+				else:
+					logging.error("Problem uploading %s", filename + filetype)
+					return False
+				if (uploadingCancelled == True): #might remove, cancelling uploads does not seem necessary
+					return False
+			else:
+				return False			
 
 		if (uploadingCancelled == True):
 			logging.info("User requested to cancel upload.")
