@@ -42,7 +42,7 @@ def test_FileEditName():
 def test_OrganizeFileList():
 	assert OrganizeFileList(0, files, "Test") == False
 	assert OrganizeFileList(10, files, "Alphabetical") == False
-	assert OrganizeFileList(0, files, "Alphabetical") == ["DONOTREAD", "Sample", "WhiteHouseBriefing"]
-	assert OrganizeFileList(0, files, "Reverse Alphabetical") == ["WhiteHouseBriefing", "Sample", "DONOTREAD"]
-	assert OrganizeFileList(0, files, "Earliest Uploaded") == ["Sample", "DONOTREAD", "WhiteHouseBriefing"]
-	assert OrganizeFileList(0, files, "Latest Uploaded") == ["Sample", "DONOTREAD", "WhiteHouseBriefing"]
+	assert OrganizeFileList(0, files, "Alphabetical") == ["DONOTREAD.docx", "Sample.txt", "WhiteHouseBriefing.pdf"]
+	assert OrganizeFileList(0, files, "Reverse Alphabetical") == ["WhiteHouseBriefing.pdf", "Sample.txt", "DONOTREAD.docx"]
+	assert OrganizeFileList(0, files, "Earliest Uploaded") == ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"]
+	assert OrganizeFileList(0, files, "Latest Uploaded") == ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"]
