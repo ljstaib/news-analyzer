@@ -34,7 +34,6 @@ ALLOWED_EXTENSIONS = {'txt', 'pdf', 'docx'}
 import sys
 sys.path.append('./NLP_analysis')
 from NLP_analysis import ConvertFileToText
-from db import updateDB
 
 # files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
 # users = users_collection.find()
