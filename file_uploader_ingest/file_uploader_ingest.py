@@ -11,7 +11,7 @@
 # Imports/Constants
 # ========================================================================
 
-#Import Data (in future from database)
+#Import Data
 from db import *
 
 #Import libraries
@@ -19,54 +19,87 @@ import cProfile #CPU
 import tracemalloc #Memory profiling
 from tqdm import tqdm #Percent bar
 import logging #Logging
+import os
+from datetime import datetime
+
+from werkzeug.utils import secure_filename
 
 tracemalloc.start()
 
 logging.basicConfig(filename='file_uploader_ingest.log', level=logging.INFO, format='%(levelname)s: %(message)s')
 
-# files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
-users = users_collection.find()
-user_names = []
-for user in users:
-	user_names.append(user.get("U_ID"))
-# print(user_names)	
+UPLOAD_FOLDER = './File_Data'
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'docx'}
 
-files_db = files_collection.find()
-files = []
-for file in files_db:
-	files.append(file)
+import sys
+sys.path.append('./NLP_analysis')
+from NLP_analysis import ConvertFileToText
+
+# files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
+# users = users_collection.find()
+# user_names = []
+# for user in users:
+# 	user_names.append(user.get("U_ID"))
+# # print(user_names)	
+
+# files_db = files_collection.find()
+# files = []
+# for file in files_db:
+# 	files.append(file)
+
+app_users, app_files = updateDB()	
 
 uploadingCancelled = False		
+
+def allowed_file(filename):
+	#Make sure file being uploaded is allowed
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 # ========================================================================
 # File Uploader/Ingest
 # ========================================================================
 
-def UploadFiles(userID, files_in):
-	#Inputs: userID is a string, files[] is a string list
-
+def UploadFiles(userID, file_in, fid, authors, creation_time):
+	#Inputs: userID is an int, file is a file object
 	result = doesUserExist(userID)
 	if (result):
-		filenames = []
-		files_num = 0
-		for file in files_in: #put tqdm back
-			#print("Retrieved file " + str(file))
-			files_num += 1
-			print("File:")
-			print(file)
-			filename = file.get("Name")
-			filenames.append(filename)
-			filetype = file.get("Filetype")
-			filetype = filetype.lower()
-			logging.info("Uploading file " + str(filename + filetype) + " with name " + filename)
+		if file_in and allowed_file(file_in.filename):
+			filename = secure_filename(file_in.filename)
+			file_in.save(os.path.join(UPLOAD_FOLDER, filename))
+
+			filename = file_in.filename
+			filetype = file_in.filename.rsplit('.', 1)[1].lower()
+			text = ConvertFileToText(0, file_in, filetype) #Working on this part next
+			source = 0 #will assign userIDs when user auth is done
+			filesize = os.stat(UPLOAD_FOLDER + "/" + filename).st_size
+			status = "Uploaded"
+			upload_time = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
+			new_file = {
+				'F_ID': fid, 
+				'Name': filename, 
+				'Filetype': filetype, 
+				'Authors': authors,
+				'Text': text,
+				'CreationTime': creation_time,
+				'Source': source,
+				'Size': filesize,
+				'UploadTime': upload_time,
+				'Tags': {
+					'Status': status,
+				}
+			}	
+			logging.info("Uploading file " + str(filename))
 			uploadSuccess = True
 			if (uploadSuccess):
 				logging.info("File %s uploaded.", filename + filetype)
 			else:
 				logging.error("Problem uploading %s", filename + filetype)
 				return False
-			if (uploadingCancelled == True):
-				break
+			if (uploadingCancelled == True): #might remove, cancelling uploads does not seem necessary
+				return False
+		else:
+			return False		
 
 		if (uploadingCancelled == True):
 			logging.info("User requested to cancel upload.")
@@ -75,14 +108,10 @@ def UploadFiles(userID, files_in):
 			print("Alert to user: Upload successfully cancelled.")
 			return False
 		else:				
-			if (files_num == 1):
-				logging.info("Uploading of file " + filename + " completed!")
-				print("Alert to user: Uploading of file " + filename + " completed!")
-			else:
-				file_list = str(filenames)[1:-1]
-				logging.info("Uploading of files completed: " + file_list + "!")
-				print("Alert to user: Uploading of files completed: " + file_list + "!")	
-			return True	
+			logging.info("Uploading of file " + filename + " completed!")
+			print("Alert to user: Uploading of file " + filename + " completed!")
+			#files_collection.insert_one(new_file)
+			return new_file
 	else:
 		return False		
 

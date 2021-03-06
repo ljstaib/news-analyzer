@@ -5,11 +5,17 @@
 # Flask Restful Website
 # ========================================================================
 
-#import modules
+#import modules, I use the sys library to use files in different folders
+import sys
+sys.path.append('./file_uploader_ingest')
 from file_uploader_ingest import *
+sys.path.append('./NLP_analysis')
 from NLP_analysis import *
+sys.path.append('./newsfeed_ingest')
 from newsfeed_ingest import *
 import db
+from db import updateDB
+from db import encodeJSON
 
 #flask, flask_restful
 from flask import Flask, flash, render_template, redirect, request, jsonify, make_response, url_for
@@ -34,40 +40,11 @@ app.config["DEBUG"] = True
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 api = Api(app) 
 
-class encodeJSON(json.JSONEncoder):
-	def default(self, obj):
-		if isinstance(obj, ObjectId):
-			return str(obj)	
-		return json.JSONEncoder.default(self, obj)
-
 parser = reqparse.RequestParser()
 parser.add_argument('UserInfo', location='form')
 parser.add_argument('FileInfo', location='form')
 app_users = []
-app_files = []			
-
-def updateDB():
-	#Download and convert data from users database
-	data_users = users_collection.find()
-	app_users = []
-	for user in data_users:
-		app_users.append(user)
-	app_users = (encodeJSON().encode(app_users)).replace(r'\"', '"')
-	app_users = json.JSONDecoder().decode(app_users)
-
-	#Download and convert data from files database
-	data_files = files_collection.find()
-	app_files = []
-	for file in data_files:
-		app_files.append(file)
-	app_files = (encodeJSON().encode(app_files)).replace(r'\"', '"')
-	app_files = json.JSONDecoder().decode(app_files)
-	return app_users, app_files	 	
-
-def allowed_file(filename):
-	#Make sure file being uploaded is allowed
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS		 
+app_files = []				 		 
 
 app_users, app_files = updateDB()
 
@@ -287,7 +264,7 @@ class FileList(Resource):
 	def post(self):
 		global app_users
 		global app_files
-		args = parser.parse_args()
+		#args = parser.parse_args()
 		# print(args)
 		max_fid = -1
 		for file in app_files:
@@ -302,9 +279,12 @@ class FileList(Resource):
 		if file.filename == '':
 			flash('No selected file')
 			return redirect("/")
-		if file and allowed_file(file.filename):
-			filename = secure_filename(file.filename)
-			file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+
+		authors = request.form.get("authors")
+		creation_time = str(request.form.get("month") + "/" + request.form.get("day") + "/" + request.form.get("year"))	
+		new_file = UploadFiles(0, file, fid, authors, creation_time) #will incorporate userID auth 
+
+		#Command line method:
 		# new_fileinfo = list(args['FileInfo'].split(", "))
 		# if (len(new_fileinfo) != 7):
 		# 	return "To create a new file, FileInfo is a list of SEVEN arguments."
@@ -318,32 +298,13 @@ class FileList(Resource):
 		# filesize = new_fileinfo[5]
 		# status = new_fileinfo[6]
 		# upload_time = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
-		filename = file.filename
-		filetype = file.filename.rsplit('.', 1)[1].lower()
-		authors = request.form.get("authors")
-		text = "" #Working on this part next
-		creation_time = str(request.form.get("month") + "/" + request.form.get("day") + "/" + request.form.get("year"))
-		source = 0 #will assign userIDs when user auth is done
-		filesize = os.stat(UPLOAD_FOLDER + "/" + filename).st_size
-		status = "Uploaded"
-		upload_time = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
-		new_file = {
-			'F_ID': fid, 
-			'Name': filename, 
-			'Filetype': filetype, 
-			'Authors': authors,
-			'Text': text,
-			'CreationTime': creation_time,
-			'Source': source,
-			'Size': filesize,
-			'UploadTime': upload_time,
-			'Tags': {
-				'Status': status,
-			}
-		}	
-		files_collection.insert_one(new_file)
-		app_users, app_files = updateDB()
-		return f'File uploaded successfully: {new_file}'	
+
+		if (new_file == False):
+			return f'There was a problem uploading your file.'
+		else:	
+			files_collection.insert_one(new_file)
+			app_users, app_files = updateDB()
+			return f'File uploaded successfully: {new_file}'	
 
 api.add_resource(UserList, '/users')
 api.add_resource(User, '/users/<uid>')

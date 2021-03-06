@@ -26,81 +26,83 @@ import re
 
 tracemalloc.start()
 
-files_db = files_collection.find()
-files = []
-for file in files_db:
-	files.append(file)
+# files_db = files_collection.find()
+# files = []
+# for file in files_db:
+# 	files.append(file)
 
 logging.basicConfig(filename='NLP_analysis.log', level=logging.DEBUG, format='%(levelname)s: %(message)s')
 
 filenames = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf", "Operations.pdf"] #Sample list
+UPLOAD_FOLDER = './File_Data'
 # userID = "0" #Will implement user ID's with secure user authentication system
 
 # ========================================================================
 # Text NLP Analysis
 # ========================================================================
 
-def ConvertFilesToText(userID, files):
+def ConvertFileToText(userID, file_in, filetype):
 	result = doesUserExist(userID)
 	if (result):
-		data_list = []
-		path_created = True
-		for file in tqdm(files, total=len(files), desc="File Conversion Progress"):
-			split_str = file.split(".")
-			filename = split_str[0]
-			filetype = split_str[1]
-			filetype = filetype.lower()
-			file_path = "./test_files/" + file
-			if filetype == "docx":
-				logging.debug("Here, I will use the docx2txt library to turn this .docx file into .txt")
-				logging.info("Filetype = .docx")
-				text_data = "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."	
-			elif filetype == "txt":
-				logging.debug("Here, there is no conversion to do since it is already a .txt file")
-				logging.info("Filetype = .txt")
-				file_ref = open(file_path, "r")
-				text_data = file_ref.read()
-				logging.debug("File contents: " + text_data)
-			elif filetype == "pdf":
-				logging.debug("Here, I will use the PyPDF2 library to turn this pdf file into .txt")
-				logging.info("Filetype = .pdf")
-				file_ref = open(file_path, "rb")
-				file_reader = PyPDF2.PdfFileReader(file_ref)
-				page_data = ""
-				text_data = ""
-				for i in range(file_reader.numPages):
-					page = file_reader.getPage(i)
-					page_data = page.extractText()
-					#Get rid of multiple newline characters
-					page_data = re.sub(r'\n +', '\n', page_data)
-					page_data = re.sub(r'\n+', '\n', page_data)
-					text_data += page_data
-				file_ref.close()	
-			else:
-				logging.debug("I will implement support for other filetypes")
-				logging.info("Filetype = other")	
-				text_data = "The Sun is the star at the center of our Solar System. Earth is the third closest planet to the Sun."	
+		# data_list = []
+		# path_created = True
+		# for file in tqdm(files, total=len(files), desc="File Conversion Progress"):
+			# split_str = file.split(".")
+			# filename = split_str[0]
+			# filetype = split_str[1]
+			# filetype = filetype.lower()
+		file_path = UPLOAD_FOLDER + "/" + file_in.filename
+		if filetype == "docx":
+			logging.debug("Here, I will use the docx2txt library to turn this .docx file into .txt")
+			logging.info("Filetype = .docx")
+			text_data = "Placeholder text for a docx file. I have not implemented conversion from docx yet."	
+		elif filetype == "txt":
+			logging.debug("Here, there is no conversion to do since it is already a .txt file")
+			logging.info("Filetype = .txt")
+			file_ref = open(file_path, "r")
+			text_data = file_ref.read()
+			logging.debug("File contents: " + text_data)
+		elif filetype == "pdf":
+			logging.debug("Here, I use the PyPDF2 library to turn this pdf file into .txt")
+			logging.info("Filetype = .pdf")
+			file_ref = open(file_path, "rb")
+			file_reader = PyPDF2.PdfFileReader(file_ref)
+			page_data = ""
+			text_data = ""
+			for i in range(file_reader.numPages):
+				page = file_reader.getPage(i)
+				page_data = page.extractText()
+				#Get rid of multiple newline characters
+				page_data = re.sub(r'\n +', '\n', page_data)
+				page_data = re.sub(r'\n+', '\n', page_data)
+				page_data = re.sub(r'\n', ' ', page_data)
+				text_data += page_data
+			file_ref.close()	
+		else:
+			logging.debug("I will implement support for other filetypes")
+			logging.info("Filetype = other")	
+			text_data = "Placeholder text for an unsupported file. Supported files are currently txt, pdf."	
 
 
-			try:
-				os.mkdir("File_Data")
-			except FileExistsError:
-				logging.info("File directory for uploading files already exists.")
-			except OSError:
-				logging.error("Creation of file directory for uploading files failed.")
-				path_created = False
-			else:
-				logging.info("File directory for uploading files created.")
+			# try:
+			# 	os.mkdir("File_Data")
+			# except FileExistsError:
+			# 	logging.info("File directory for uploading files already exists.")
+			# except OSError:
+			# 	logging.error("Creation of file directory for uploading files failed.")
+			# 	path_created = False
+			# else:
+			# 	logging.info("File directory for uploading files created.")
 
-			if (path_created):
-				fullname = os.path.join("./File_Data/", filename)
-				new_file = open(fullname, "w")
-				new_file.write(text_data)
-				new_file.close()
+			# if (path_created):
+			# 	fullname = os.path.join("./File_Data/", filename)
+			# 	new_file = open(fullname, "w")
+			# 	new_file.write(text_data)
+			# 	new_file.close()
 
-			data_list.append([filetype, text_data])	
+			# data_list.append([filetype, text_data])	
 	
-		return data_list
+		return text_data
 	else:
 		return False		
 
