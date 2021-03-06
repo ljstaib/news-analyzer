@@ -99,7 +99,31 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 			if (uploadingCancelled == True): #might remove, cancelling uploads does not seem necessary
 				return False
 		else:
-			return False		
+			if file_in == "test_file": #for file_uploader_ingest_test.py, I can actually if files get uploaded using my website
+				filename = "Test"
+				filetype = "txt"
+				text = "This is not a real file."
+				source = 0
+				filesize = 100
+				status = "Testing file"
+				upload_time = "1/1/1900"
+				test_file = {
+					'F_ID': fid, 
+					'Name': filename, 
+					'Filetype': filetype, 
+					'Authors': authors,
+					'Text': text,
+					'CreationTime': creation_time,
+					'Source': source,
+					'Size': filesize,
+					'UploadTime': upload_time,
+					'Tags': {
+						'Status': status,
+					}
+				}	
+				return test_file
+			else:	
+				return False		
 
 		if (uploadingCancelled == True):
 			logging.info("User requested to cancel upload.")

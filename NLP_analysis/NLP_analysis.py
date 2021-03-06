@@ -51,6 +51,27 @@ def ConvertFileToText(userID, file_in, filetype):
 			# filename = split_str[0]
 			# filetype = split_str[1]
 			# filetype = filetype.lower()
+		if file_in == "test file txt":
+			file_ref = open("./test_files/Sample.txt", "r")
+			text_data = file_ref.read()
+			return text_data
+
+		if file_in == "test file pdf":
+			file_ref = open("./test_files/Operations.pdf", "rb")
+			file_reader = PyPDF2.PdfFileReader(file_ref)
+			page_data = ""
+			text_data = ""
+			for i in range(file_reader.numPages):
+				page = file_reader.getPage(i)
+				page_data = page.extractText()
+				#Get rid of multiple newline characters
+				page_data = re.sub(r'\n +', '\n', page_data)
+				page_data = re.sub(r'\n+', '\n', page_data)
+				page_data = re.sub(r'\n', ' ', page_data)
+				text_data += page_data
+			file_ref.close()	
+			return text_data
+			
 		file_path = UPLOAD_FOLDER + "/" + file_in.filename
 		if filetype == "docx":
 			logging.debug("Here, I will use the docx2txt library to turn this .docx file into .txt")

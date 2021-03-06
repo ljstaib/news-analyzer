@@ -1,0 +1,55 @@
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [06/Mar/2021 18:27:20] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [06/Mar/2021 18:27:22] "[37mGET /files HTTP/1.1[0m" 200 -
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Filetype = .txt
+INFO: Uploading file Sample.txt
+INFO: File Sample.txttxt uploaded.
+INFO: Uploading of file Sample.txt completed!
+INFO: 127.0.0.1 - - [06/Mar/2021 18:27:35] "[37mPOST /files HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [06/Mar/2021 18:27:45] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [06/Mar/2021 18:27:46] "[37mGET /files HTTP/1.1[0m" 200 -
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Filetype = .docx
+INFO: Uploading file DONOTREAD.docx
+INFO: File DONOTREAD.docxdocx uploaded.
+INFO: Uploading of file DONOTREAD.docx completed!
+INFO: 127.0.0.1 - - [06/Mar/2021 18:27:57] "[37mPOST /files HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [06/Mar/2021 18:28:02] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Filetype = .pdf
+INFO: Uploading file WhiteHouseBriefing.pdf
+INFO: File WhiteHouseBriefing.pdfpdf uploaded.
+INFO: Uploading of file WhiteHouseBriefing.pdf completed!
+INFO: 127.0.0.1 - - [06/Mar/2021 18:28:16] "[37mPOST /files HTTP/1.1[0m" 200 -
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [06/Mar/2021 18:28:43] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [06/Mar/2021 18:28:45] "[37mGET /files HTTP/1.1[0m" 200 -
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Filetype = .pdf
+INFO: Uploading file WhiteHouseBriefing.pdf
+INFO: File WhiteHouseBriefing.pdfpdf uploaded.
+INFO: Uploading of file WhiteHouseBriefing.pdf completed!
+INFO: 127.0.0.1 - - [06/Mar/2021 18:28:57] "[37mPOST /files HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [06/Mar/2021 18:29:12] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [06/Mar/2021 18:29:13] "[37mGET /files HTTP/1.1[0m" 200 -
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Filetype = .pdf
+INFO: Uploading file Operations.pdf
+INFO: File Operations.pdfpdf uploaded.
+INFO: Uploading of file Operations.pdf completed!
+INFO: 127.0.0.1 - - [06/Mar/2021 18:29:27] "[37mPOST /files HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [06/Mar/2021 18:29:33] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [06/Mar/2021 18:29:34] "[37mGET /files HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [06/Mar/2021 18:30:00] "[37mGET / HTTP/1.1[0m" 200 -
