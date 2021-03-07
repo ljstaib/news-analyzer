@@ -13,7 +13,7 @@
 
 #Import Data (in future from database)
 import sys
-sys.path.append('../')
+sys.path.append('/home/runner/work/news-analyzer-ljstaib/news-analyzer-ljstaib')
 from db import *
 
 #Import libraries

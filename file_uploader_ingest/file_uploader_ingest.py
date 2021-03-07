@@ -31,8 +31,7 @@ UPLOAD_FOLDER = './File_Data'
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'docx'}
 
 import sys
-print(sys.path)
-sys.path.append('../')
+sys.path.append('/home/runner/work/news-analyzer-ljstaib/news-analyzer-ljstaib')
 from db import *
 sys.path.append('../NLP_analysis')
 from NLP_analysis import ConvertFileToText
