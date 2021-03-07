@@ -61,7 +61,7 @@ def allowed_file(filename):
 # ========================================================================
 
 def UploadFiles(userID, file_in, fid, authors, creation_time):
-	#Inputs: userID is an int, file is a file object
+	#Inputs: userID is an int, file_in is a file object
 	result = doesUserExist(userID)
 	if (result):
 		if file_in == "test_file": #for file_uploader_ingest_test.py, I can actually if files get uploaded using my website
@@ -155,42 +155,46 @@ def CancelUpload():
 	uploadingCancelled = True
 	return True	
 
-def FileDelete(userID, fileID, files):
+def FileDelete(userID, fileID, file_in):
 	result = doesUserExist(userID)
 	if (result):
 		fileExists = False
+		if (file_in == "test_file"):
+			return "I need to figure out how to test with a file object."
 		saved_file = ""
 		for file in files:
-			if fileID == file.get("F_ID"):
+			if fileID == file_in.get("F_ID"):
 				fileExists = True
-				saved_file = str(file.get("Name"))
+				saved_file = str(file_in.get("Name"))
 				break
-		file = saved_file
+		file_in = saved_file
 		if (fileExists):
-			logging.info("Deleting file " + file)
+			logging.info("Deleting file " + file_in)
 			success = True
 			if success:
-				logging.info("File " + file + " was deleted successfully.")
+				logging.info("File " + file_in + " was deleted successfully.")
 				return True
 			else:
-				logging.error("File " + file + " was not deleted.")
+				logging.error("File " + file_in + " was not deleted.")
 				return False
 		else:
-			logging.error("File " + file + " does not exist in user\'s library")
+			logging.error("File " + file_in + " does not exist in user\'s library")
 			return False
 	else:
 		return False				
 
-def FileEditName(userID, fileID, files, new_name):
+def FileEditName(userID, fileID, file_in, new_name):
 	result = doesUserExist(userID)
-	fileExists = False
 	if (result):
+		fileExists = False
+		if (file_in == "test_file"):
+			return "I need to figure out how to test with a file object."
 		#print("Retrieving files list from user with userID " + userID)
-		for file in files:
-			fid = file.get("F_ID")
+		for file_in in files:
+			fid = file_in.get("F_ID")
 			if (fid == fileID):
 				fileExists = True
-				filename = file.get("Name")
+				filename = file_in.get("Name")
 		if (fileExists):
 			logging.info("Changing name of " + filename + " to " + new_name)
 			success = True
@@ -209,6 +213,8 @@ def FileEditName(userID, fileID, files, new_name):
 def OrganizeFileList(userID, files, organize_type):
 	result = doesUserExist(userID)
 	if (result):
+		if (files == "test_file"):
+			return "I need to figure out how to test with a file object."
 		#print("Retrieving files list from user with userID " + userID)
 		files_num = 0
 		filenames = []

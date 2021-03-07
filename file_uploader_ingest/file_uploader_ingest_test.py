@@ -31,18 +31,19 @@ def test_CancelUpload():
 	assert CancelUpload() == True
 
 def test_FileDelete():	
-	assert FileDelete(10, 0, files) == False
+	assert FileDelete(10, 0, "test_file") == False
 	#assert FileDelete("0") == False
-	#assert FileDelete(0, 0, files) == True
+	assert FileDelete(0, 0, "test_file") == "I need to figure out how to test with a file object."
 	#Need to add new testing!
 
 def test_FileEditName():
-	assert FileEditName(10, 0, files, "Example.txt") == False
-	#assert FileEditName(0, 0, files, "Example.txt") == "Example.txt"
+	assert FileEditName(10, 0, "test_file", "Example.txt") == False
+	assert FileEditName(0, 0, "test_file", "Example.txt") == "I need to figure out how to test with a file object."
 	#Need to add new testing!
 
 def test_OrganizeFileList():
-	assert OrganizeFileList(10, files, "Alphabetical") == False
+	assert OrganizeFileList(10, "test_file", "Alphabetical") == False
+	assert OrganizeFileList(0, "test_file", "Alphabetical") == "I need to figure out how to test with a file object."
 	# assert OrganizeFileList(0, files, "Alphabetical") == ["DONOTREAD.docx", "Sample.txt", "WhiteHouseBriefing.pdf"]
 	# assert OrganizeFileList(0, files, "Reverse Alphabetical") == ["WhiteHouseBriefing.pdf", "Sample.txt", "DONOTREAD.docx"]
 	# assert OrganizeFileList(0, files, "Earliest Uploaded") == ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"]
