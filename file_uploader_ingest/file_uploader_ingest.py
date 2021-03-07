@@ -12,7 +12,11 @@
 # ========================================================================
 
 #Import Data
+import sys
+sys.path.append('../')
 from db import *
+sys.path.append('../NLP_analysis')
+from NLP_analysis import ConvertFileToText
 
 #Import libraries
 import cProfile #CPU
@@ -30,10 +34,6 @@ logging.basicConfig(filename='file_uploader_ingest.log', level=logging.INFO, for
 
 UPLOAD_FOLDER = './File_Data'
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'docx'}
-
-import sys
-sys.path.append('./NLP_analysis')
-from NLP_analysis import ConvertFileToText
 
 # files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
 # users = users_collection.find()
