@@ -13,7 +13,7 @@
 
 #Import Data (in future from database)
 import sys
-sys.path.append('..')
+sys.path.append('../')
 from db import *
 
 #Import libraries
