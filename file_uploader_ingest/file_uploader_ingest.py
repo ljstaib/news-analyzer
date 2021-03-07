@@ -12,7 +12,6 @@
 # ========================================================================
 
 #Import Data
-from db import *
 
 #Import libraries
 import cProfile #CPU
@@ -34,7 +33,7 @@ ALLOWED_EXTENSIONS = {'txt', 'pdf', 'docx'}
 import sys
 sys.path.append('../')
 from db import *
-sys.path.append('./NLP_analysis')
+sys.path.append('../NLP_analysis')
 from NLP_analysis import ConvertFileToText
 
 # files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
