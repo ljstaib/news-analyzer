@@ -98,3 +98,91 @@ INFO: 127.0.0.1 - - [06/Mar/2021 18:46:25] "[37mPOST /files HTTP/1.1[0m" 200 -
 INFO: 127.0.0.1 - - [06/Mar/2021 18:46:29] "[37mGET / HTTP/1.1[0m" 200 -
 INFO: 127.0.0.1 - - [06/Mar/2021 18:46:30] "[37mGET /files HTTP/1.1[0m" 200 -
 INFO: 127.0.0.1 - - [06/Mar/2021 18:46:43] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [14/Mar/2021 16:29:40] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:29:40] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:29:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Filetype = .docx
+INFO: 127.0.0.1 - - [14/Mar/2021 16:30:05] "[35m[1mPOST /files HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:30:05] "[37mGET /files?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:30:05] "[37mGET /files?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:30:05] "[37mGET /files?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:30:05] "[37mGET /files?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:30:05] "[37mGET /files?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:30:05] "[37mGET /files?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [14/Mar/2021 16:31:00] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Filetype = .docx
+INFO: 127.0.0.1 - - [14/Mar/2021 16:31:20] "[35m[1mPOST /files HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:31:20] "[37mGET /files?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:31:20] "[37mGET /files?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:31:20] "[37mGET /files?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:31:20] "[37mGET /files?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:31:20] "[37mGET /files?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [14/Mar/2021 16:32:18] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Filetype = .docx
+INFO: 127.0.0.1 - - [14/Mar/2021 16:32:25] "[35m[1mPOST /files HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:32:25] "[37mGET /files?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:32:25] "[37mGET /files?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:32:25] "[37mGET /files?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:32:25] "[37mGET /files?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:32:25] "[37mGET /files?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Filetype = .docx
+INFO: 127.0.0.1 - - [14/Mar/2021 16:36:02] "[35m[1mPOST /files HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:36:02] "[37mGET /files?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:36:02] "[37mGET /files?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:36:02] "[37mGET /files?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:36:02] "[37mGET /files?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:36:02] "[37mGET /files?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [14/Mar/2021 16:41:34] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Filetype = .docx
+INFO: Uploading file DONOTREAD.docx
+INFO: File DONOTREAD.docxdocx uploaded.
+INFO: Uploading of file DONOTREAD.docx completed!
+INFO: 127.0.0.1 - - [14/Mar/2021 16:41:42] "[37mPOST /files HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:41:52] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [14/Mar/2021 16:41:53] "[37mGET /files HTTP/1.1[0m" 200 -

@@ -24,7 +24,7 @@ import logging #Logging
 import PyPDF2 #PDF -> TXT
 import os
 import re
-#import docx2txt #DOC -> TXT
+import docx2txt #DOC -> TXT
 
 tracemalloc.start()
 
@@ -76,9 +76,10 @@ def ConvertFileToText(userID, file_in, filetype):
 			
 		file_path = UPLOAD_FOLDER + "/" + file_in.filename
 		if filetype == "docx":
-			logging.debug("Here, I will use the docx2txt library to turn this .docx file into .txt")
+			logging.debug("Here, I use the docx2txt library to turn this .docx file into .txt")
 			logging.info("Filetype = .docx")
-			text_data = "Placeholder text for a docx file. I have not implemented conversion from docx yet."	
+			text_data = docx2txt.process(file_path)	
+			logging.debug("File contents: " + text_data)
 		elif filetype == "txt":
 			logging.debug("Here, there is no conversion to do since it is already a .txt file")
 			logging.info("Filetype = .txt")
@@ -101,10 +102,11 @@ def ConvertFileToText(userID, file_in, filetype):
 				page_data = re.sub(r'\n', ' ', page_data)
 				text_data += page_data
 			file_ref.close()	
+			logging.debug("File contents: " + text_data)
 		else:
 			logging.debug("I will implement support for other filetypes")
 			logging.info("Filetype = other")	
-			text_data = "Placeholder text for an unsupported file. Supported files are currently txt, pdf."	
+			text_data = "Placeholder text for an unsupported file. Supported files are currently txt, pdf, docx."	
 
 
 			# try:
