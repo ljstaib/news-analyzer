@@ -16,10 +16,11 @@ Phase 3: Completed. Please see NLP_analysis.py for the ConvertFilesToText() func
 Phase 3 Deliverable 1: Completed. Data storage defined in DataStorageStrategy.pdf. Code has started to be updated to incorporate MongoDB. Please see NewsAnalyzerDemo3_1.mov for a demonstration of my current API. Data is pulled from MongoDB.
 
 Phase 3 Deliverable 2: Completed. Data being stored in database, can store text data of PDF files and TXT files. Created separate field "Text" in files database for each file. Please see "TextConversionWithFileUpload.mov" for my latest demo. Also please see "MongoDBFiles.png" for a view of the updated database.
+- 3/14: I can now convert from DOCX to text
 
 Hosting: I was able to get my website up on AWS EC2 on HTTP protocol (might need to change to HTTPS)
 
-Queues (Mini Project): In progress. I made a demo program for subprocesses and multithreading: https://github.com/BUEC500C1/queues-ljstaib . 
+Queues (Mini Project): In progress. I made a demo program for subprocesses and multithreading. Please see my repository for more information: https://github.com/BUEC500C1/queues-ljstaib . 
 
 TODO:
 
