@@ -13,7 +13,9 @@
 
 #Import Data (in future from database)
 import sys
+#Sys line below is so that the program works in GitHub Actions testing
 sys.path.append('/home/runner/work/news-analyzer-ljstaib/news-analyzer-ljstaib')
+sys.path.append('../')
 from db import *
 
 #Import libraries
@@ -25,6 +27,8 @@ import PyPDF2 #PDF -> TXT
 import os
 import re
 import docx2txt #DOC -> TXT
+
+from google.cloud import language
 
 tracemalloc.start()
 
@@ -131,16 +135,26 @@ def ConvertFileToText(userID, file_in, filetype):
 	else:
 		return False		
 
-def CreateKeywords(text_data):	
-	articles = ObtainArticles(text_data) #get articles/links using Google API 
+def CreateKeywords(text_data): 
+	#articles = ObtainArticles(text_data) #get articles/links using Google API 
 	#article_data = extra relevant information gathered from the articles
 	#use results -> names of Internet links/articles, to generate 5 keywords -> a list of 5 strings
 	#some Google NLP function
-	
-	article_data = ["The Earth is habitable in part due to its perfect distance from the Sun."]
-	keywords = ["Sun", "Earth", "Solar System", "Planet", "Star"]
+	client = language.LanguageServiceClient()
+	document = language.Document(content=text_data, type_=language.Document.Type.PLAIN_TEXT)
 
-	return article_data, keywords
+	response = client.analyze_entities(document=document)
+	keywords = []
+	for entity in response.entities:
+		keywords.append(entity.name)
+	
+	#article_data = ["The Earth is habitable in part due to its perfect distance from the Sun."]
+	#keywords = ["Sun", "Earth", "Solar System", "Planet", "Star"]
+	logging.info("Keywords of text entered:")
+	for k in keywords:
+		logging.info("\t" + k)
+
+	return keywords
 
 def ObtainArticles(text_data):
 	#use text_data to search for specific parts on Google
@@ -149,11 +163,24 @@ def ObtainArticles(text_data):
 	article_links = ["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"]
 	return article_links
 
-def AssessData(article_data, keywords, text_data):
-	#use GoogleAPI, keywords, and original text_data to create a universal common sentiment
-	sentiment = "The Sun is a yellow dwarf star at the center of our Solar System. The distance between the Sun and the Earth is one important reason why life can be sustained on Earth. At about 92 million miles away, the Earth is the third closest planet from the Sun out of 8 planets."
-	logging.info("Sentiment of text information entered: " + sentiment)
-	return sentiment
+def AssessData(text_data):
+	#use text_data to create a sentiment
+	#sentiment = "The Sun is a yellow dwarf star at the center of our Solar System. The distance between the Sun and the Earth is one important reason why life can be sustained on Earth. At about 92 million miles away, the Earth is the third closest planet from the Sun out of 8 planets."
+
+	client = language.LanguageServiceClient()
+	document = language.Document(content=text_data, type_=language.Document.Type.PLAIN_TEXT)
+
+	response = client.analyze_sentiment(document=document)
+
+	sentiment = response.document_sentiment
+	results = dict(
+		text=text_data,
+		score=f"{sentiment.score:.1%}",
+		magnitude=f"{sentiment.magnitude:.1%}",
+	)
+
+	logging.info("Sentiment of text information entered: " + str(sentiment))
+	return results
 
 def SaveSentiment(userID, sentiment):
 	result = doesUserExist(userID)
@@ -237,3 +264,13 @@ def DiagnosticsNLP():
 # test3 = EditSentiment(0, "The sky is yellow.", "The sky is blue.")
 # print(test3)
 # DiagnosticsNLP()
+
+keywords = CreateKeywords("The Sun is a yellow dwarf star at the center of our Solar System. The distance between the Sun and the Earth is one important reason why life can be sustained on Earth. At about 92 million miles away, the Earth is the third closest planet from the Sun out of 8 planets.")
+print("Keywords:")
+for keyword in keywords:
+	print(keyword)
+
+sentiment_results = AssessData("The Sun is a yellow dwarf star at the center of our Solar System. The distance between the Sun and the Earth is one important reason why life can be sustained on Earth. At about 92 million miles away, the Earth is the third closest planet from the Sun out of 8 planets.")
+print(sentiment_results)
+for k, v in sentiment_results.items():
+	print(f"{k}: {v}")
