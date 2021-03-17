@@ -22,6 +22,10 @@ Hosting: I was able to get my website up on AWS EC2 on HTTP protocol (might need
 
 Queues (Mini Project): In progress. I made a demo program for subprocesses and multithreading. Please see my repository for more information: https://github.com/BUEC500C1/queues-ljstaib . 
 
+My findings and what I have learned from the Queues Mini Project: 
+- For less function calls, use multithreading, for more function calls, use multiprocessing if your machine has multiple CPU cores. However, with my demonstration files in my queues-ljstaib repository, I had greater success with function calls within my program than with multithreading or multiprocessing. I'm sure this is just something wrong I was doing on my end.
+- I have learned how to use multiple threads and multiple processes to set a queue for functions. In my example, I created a prime numbers function and I reused the FileUploader() function from my code in this library. Utilizing queuing would be beneficial for my application if I have time to implement.
+
 TODO:
 
 - Add more testing
@@ -88,4 +92,5 @@ Extra Requirements:
     - Test it with different paramters
   - Include tracking interface to show how many processes are going on and success of each
 - Due March 17th 2021
+- Please see status for an explanation of my findings and what I have learned
 
