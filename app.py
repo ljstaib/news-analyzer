@@ -36,6 +36,7 @@ import os
 #################################
 
 app = Flask(__name__)
+app.secret_key = "testing"
 app.config["DEBUG"] = True
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 api = Api(app) 
@@ -62,7 +63,11 @@ def success():
 
 @app.route('/login', methods=['GET'])
 def login():
-	return render_template('login.html')		
+	return render_template('login.html')
+
+@app.route('/homepage', methods=['GET'])
+def homepage():
+	return render_template('homepage.html')			
 
 # @app.route('/test_db')
 # def test_db():
@@ -87,6 +92,28 @@ class User(Resource):
 				if user.get('U_ID') == uid:
 					return user
 			return "U_ID does not exist"
+
+	#http://127.0.0.1:5000/users/login
+	def post(self, uid):
+		method = uid
+		error = None
+		if (method == "login"):
+			uname = request.form.get("login_username")
+			pword = request.form.get("login_password")
+			# print("uname and pword:")
+			# print(request)
+			# print(uname)
+			# print(pword)
+			for user in app_users:
+				if ((user.get('Username') == uname) and (user.get('Password') == pword)):
+					flash("You were successfully logged in, " + str(user.get('FirstName')) + " " + str(user.get('LastName')))
+					return redirect(url_for("homepage"))
+				else:
+					# print("Failure")
+					flash("Credentials do not match.")
+					return redirect(url_for("login"))	
+		else:
+			return redirect(url_for("login"))			
 
 	#curl http://127.0.0.1:5000/users/2 -X DELETE -v
 	def delete(self, uid):
@@ -197,7 +224,7 @@ class File(Resource):
 			for file in app_files:
 				if file.get('F_ID') == fid:
 					return file
-			return "F_ID does not exist"
+			return "F_ID does not exist"				
 
 	#curl http://127.0.0.1:5000/files/3 -X DELETE -v
 	def delete(self, fid):
