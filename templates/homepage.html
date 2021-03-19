@@ -10,5 +10,16 @@
 	</head>
 	<body>
 		<div class="bigText">Home</div>
+		<div class="smallText">
+			Welcome, {{session['firstname']}} {{session['lastname']}}
+		</div>	
+		<br>
+		<div class="button">
+			<a href="/upload" target="_blank">Upload a file</a>
+			<br><br>
+			<a href="/fileview" target="_blank">View your files</a>
+			<br><br>
+			<a href="/" target="_blank">Analyze uploaded files</a>
+		</div>	
 	</body>
 </html>

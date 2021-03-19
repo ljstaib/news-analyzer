@@ -1,0 +1,28 @@
+<!-- Luke Staib @2021 -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		<title>Files of {{ session['username'] }} - News Analyzer</title>
+		<script>
+			function userURL() {
+				var uid = {{ session['uid'] }};
+				window.location = "/ufiles/" + uid;
+			}
+		</script>
+	</head>
+	<body>
+		<div class="bigText">Files of user {{session['username']}}</div>
+		<a onclick="userURL()" id="generate_files">View Files!</a>
+		{% with messages = get_flashed_messages() %}
+		  {% if messages %}
+			{% for message in messages %}
+				<div class="smallText">{{ message }}</div>
+			{% endfor %}
+		  {% endif %}
+		{% endwith %}
+	</body>
+</html>

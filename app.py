@@ -18,7 +18,7 @@ from db import updateDB
 from db import encodeJSON
 
 #flask, flask_restful
-from flask import Flask, flash, render_template, redirect, request, jsonify, make_response, url_for
+from flask import Flask, flash, render_template, redirect, request, url_for, session
 from flask_restful import reqparse, abort, Api, Resource
 from werkzeug.utils import secure_filename
 
@@ -36,7 +36,12 @@ import os
 #################################
 
 app = Flask(__name__)
-app.secret_key = "testing"
+
+try:
+	app.secret_key = open("../.keys/flask_key.txt", "r").read()
+except FileNotFoundError: 
+	app.secret_key = open("../../.keys/flask_key.txt", "r").read()
+
 app.config["DEBUG"] = True
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 api = Api(app) 
@@ -67,8 +72,15 @@ def login():
 
 @app.route('/homepage', methods=['GET'])
 def homepage():
-	return render_template('homepage.html')			
+	return render_template('homepage.html')	
 
+@app.route('/upload', methods=['GET'])
+def upload():
+	return render_template('upload.html')			
+
+@app.route('/fileview', methods=['GET'])
+def fileview():
+	return render_template('fileview.html')
 # @app.route('/test_db')
 # def test_db():
 # 	test_user = {
@@ -106,12 +118,14 @@ class User(Resource):
 			# print(pword)
 			for user in app_users:
 				if ((user.get('Username') == uname) and (user.get('Password') == pword)):
-					flash("You were successfully logged in, " + str(user.get('FirstName')) + " " + str(user.get('LastName')))
+					session['username'] = uname
+					session['firstname'] = user.get('FirstName')
+					session['lastname'] = user.get('LastName')
+					session['uid'] = user.get('U_ID')
 					return redirect(url_for("homepage"))
-				else:
-					# print("Failure")
-					flash("Credentials do not match.")
-					return redirect(url_for("login"))	
+			# print("Failure")
+			flash("Credentials do not match.")
+			return redirect(url_for("login"))	
 		else:
 			return redirect(url_for("login"))			
 
@@ -308,9 +322,11 @@ class FileList(Resource):
 			return redirect("/")
 
 		authors = request.form.get("authors")
-		creation_time = str(request.form.get("month") + "/" + request.form.get("day") + "/" + request.form.get("year"))	
-		new_file = UploadFiles(0, file, fid, authors, creation_time) #will incorporate userID auth 
-
+		creation_time = str(request.form.get("month") + "/" + request.form.get("day") + "/" + request.form.get("year"))
+		if session['uid'] != None:	
+			new_file = UploadFiles(session['uid'], file, fid, authors, creation_time) 
+		else:
+			new_file = UploadFiles(-1, file, fid, authors, creation_time) #-1 is not authenticated
 		#Command line method:
 		# new_fileinfo = list(args['FileInfo'].split(", "))
 		# if (len(new_fileinfo) != 7):
@@ -327,16 +343,40 @@ class FileList(Resource):
 		# upload_time = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
 
 		if (new_file == False):
-			return f'There was a problem uploading your file.'
+			flash(f'There was a problem uploading your file. Please try again later.')
+			return redirect(url_for("upload"))
 		else:	
 			files_collection.insert_one(new_file)
 			app_users, app_files = updateDB()
-			return f'File uploaded successfully: {new_file}'	
+			flash(f'File uploaded successfully')
+			return redirect(url_for("upload"))
+
+class UserFiles(Resource):
+	#http://127.0.0.1:5000/ufiles/0
+	def get(self, uid):
+		try:
+		    uid = int(uid)
+		except ValueError:
+		    return "Please enter a valid U_ID (int)"
+		else: 
+			user_files = []
+			for user in app_users:
+				if user.get('U_ID') == uid:
+					for file in app_files:
+						if file.get('Source') == uid:
+							user_files.append(file)
+
+			if (len(user_files) > 0):
+				return user_files
+			else:			
+				flash("No files to display.")
+				return redirect(url_for("fileview"))		
 
 api.add_resource(UserList, '/users')
 api.add_resource(User, '/users/<uid>')
 api.add_resource(FileList, '/files')
-api.add_resource(File, '/files/<fid>')				
+api.add_resource(File, '/files/<fid>')
+api.add_resource(UserFiles, '/ufiles/<uid>')			
 
 if __name__ == '__main__':
     app.run(debug=True)

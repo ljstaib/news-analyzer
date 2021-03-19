@@ -69,7 +69,7 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 			filename = "Test"
 			filetype = "txt"
 			text = "This is not a real file."
-			source = 0
+			source = userID
 			filesize = 100
 			status = "Testing file"
 			upload_time = "1/1/1900"
@@ -96,7 +96,7 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 				filename = file_in.filename
 				filetype = file_in.filename.rsplit('.', 1)[1].lower()
 				text = ConvertFileToText(0, file_in, filetype) #Working on this part next
-				source = 0 #will assign userIDs when user auth is done
+				source = userID #will assign userIDs when user auth is done
 				filesize = os.stat(UPLOAD_FOLDER + "/" + filename).st_size
 				status = "Uploaded"
 				upload_time = datetime.now().strftime("%m/%d/%Y %H:%M:%S")

@@ -28,6 +28,7 @@ import os
 import re
 import docx2txt #DOC -> TXT
 
+#export GOOGLE_APPLICATION_CREDENTIALS=/Users/luke/Documents/Code/EC500/HW2/.keys/key.json
 from google.cloud import language
 
 tracemalloc.start()
@@ -60,6 +61,9 @@ def ConvertFileToText(userID, file_in, filetype):
 		if file_in == "test file txt":
 			file_ref = open("./test_files/Sample.txt", "r")
 			text_data = file_ref.read()
+			text_data = re.sub(r' +', ' ', text_data)
+			text_data = re.sub(r'\n', ' ', text_data)
+			text_data = re.sub(r'\t', ' ', text_data)
 			return text_data
 
 		if file_in == "test file pdf":
@@ -71,9 +75,9 @@ def ConvertFileToText(userID, file_in, filetype):
 				page = file_reader.getPage(i)
 				page_data = page.extractText()
 				#Get rid of multiple newline characters
-				page_data = re.sub(r'\n +', '\n', page_data)
-				page_data = re.sub(r'\n+', '\n', page_data)
+				page_data = re.sub(r' +', ' ', page_data)
 				page_data = re.sub(r'\n', ' ', page_data)
+				page_data = re.sub(r'\t', ' ', page_data)
 				text_data += page_data
 			file_ref.close()	
 			return text_data
@@ -89,6 +93,9 @@ def ConvertFileToText(userID, file_in, filetype):
 			logging.info("Filetype = .txt")
 			file_ref = open(file_path, "r")
 			text_data = file_ref.read()
+			text_data = re.sub(r' +', ' ', text_data)
+			text_data = re.sub(r'\n', ' ', text_data)
+			text_data = re.sub(r'\t', ' ', text_data)
 			logging.debug("File contents: " + text_data)
 		elif filetype == "pdf":
 			logging.debug("Here, I use the PyPDF2 library to turn this pdf file into .txt")
@@ -265,12 +272,12 @@ def DiagnosticsNLP():
 # print(test3)
 # DiagnosticsNLP()
 
-keywords = CreateKeywords("The Sun is a yellow dwarf star at the center of our Solar System. The distance between the Sun and the Earth is one important reason why life can be sustained on Earth. At about 92 million miles away, the Earth is the third closest planet from the Sun out of 8 planets.")
-print("Keywords:")
-for keyword in keywords:
-	print(keyword)
+# keywords = CreateKeywords("The Sun is a yellow dwarf star at the center of our Solar System. The distance between the Sun and the Earth is one important reason why life can be sustained on Earth. At about 92 million miles away, the Earth is the third closest planet from the Sun out of 8 planets.")
+# print("Keywords:")
+# for keyword in keywords:
+# 	print(keyword)
 
-sentiment_results = AssessData("The Sun is a yellow dwarf star at the center of our Solar System. The distance between the Sun and the Earth is one important reason why life can be sustained on Earth. At about 92 million miles away, the Earth is the third closest planet from the Sun out of 8 planets.")
-print(sentiment_results)
-for k, v in sentiment_results.items():
-	print(f"{k}: {v}")
+# sentiment_results = AssessData("The Sun is a yellow dwarf star at the center of our Solar System. The distance between the Sun and the Earth is one important reason why life can be sustained on Earth. At about 92 million miles away, the Earth is the third closest planet from the Sun out of 8 planets.")
+# print(sentiment_results)
+# for k, v in sentiment_results.items():
+# 	print(f"{k}: {v}")
