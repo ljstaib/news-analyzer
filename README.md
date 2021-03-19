@@ -26,11 +26,12 @@ My findings and what I have learned from the Queues Mini Project:
 - For less function calls, use multithreading, for more function calls, use multiprocessing if your machine has multiple CPU cores. However, with my demonstration files in my queues-ljstaib repository, I had greater success with function calls within my program than with multithreading or multiprocessing. I'm sure this is just something wrong I was doing on my end.
 - I have learned how to use multiple threads and multiple processes to set a queue for functions. In my example, I created a prime numbers function and I reused the FileUploader() function from my code in this library. Utilizing queuing would be beneficial for my application if I have time to implement.
 
-TODO:
+Week of 3/22: In progress.
+- 3/19: User authentication, file uploader, and viewing of files fully functional on website.
 
-- Add more testing
-- Authentication system
-- Queues Mini Project
+TODO:
+- Add more testing, GitHub issues
+- Add NLP analysis to website
 
 # Phase 1:
 Phase 1, due 2/15/21:
@@ -94,3 +95,7 @@ Extra Requirements:
 - Due March 17th 2021
 - Please see status for an explanation of my findings and what I have learned
 
+# Week of 3/22
+- Complete the file uploader
+- Complete Sentiment analysis based on Google NLP. Make sure it runs on your machine.
+- Complete newsfeed search section of application
