@@ -16,13 +16,9 @@
 	</head>
 	<body>
 		<div class="bigText">Files of user {{session['username']}}</div>
-		<a onclick="userURL()" id="generate_files">View Files!</a>
-		{% with messages = get_flashed_messages() %}
-		  {% if messages %}
-			{% for message in messages %}
-				<div class="smallText">{{ message }}</div>
-			{% endfor %}
-		  {% endif %}
-		{% endwith %}
+		{% for file in session['files'] %}
+			<br>
+			<div class="file">{{loop.index}}. {{ file }}</div>
+		{% endfor %}
 	</body>
 </html>
