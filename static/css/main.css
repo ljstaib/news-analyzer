@@ -28,10 +28,19 @@ body {
 	display: inline-block;
 }
 
+.file {
+	color: #000b47;
+	font-family: Courier;
+	font-size: 20px;
+	line-height: 50px;
+	margin-left: 20px;
+}
+
 a {
 	background-color: #FFFBCB;
 	border: 1px solid black;
 	color: #000000;
+	cursor: pointer;
 	font-size: 24px;
 	font-family: Arial;
 	padding: 5px;

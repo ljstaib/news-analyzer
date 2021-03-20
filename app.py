@@ -81,10 +81,14 @@ def upload():
 @app.route('/fileview', methods=['GET'])
 def fileview():
 	return render_template('fileview.html')
+
+@app.route('/analyzer', methods=['GET'])
+def analyzer():
+	return render_template('analyzer.html')	
 # @app.route('/test_db')
 # def test_db():
 # 	test_user = {
-# 		'U_ID': 100, 
+# 		'U_ID': -1, 
 # 		'Username': "mongodb", 
 # 		'FirstName': "Data", 
 # 		'LastName': "Base"
@@ -229,16 +233,32 @@ class UserList(Resource):
 
 class File(Resource):
 	#http://127.0.0.1:5000/files/0
-	def get(self, fid):
+	def get(self, fid, method):
 		try:
-		    fid = int(fid)
+			fid = int(fid)
 		except ValueError:
-		    return "Please enter a valid F_ID (int)"
+			try:
+				fname = str(fid)
+			except ValueError:
+				return "Invalid F_ID or filename"
+			else:
+				for file in app_files:
+					if file.get('Name') == fname:
+						if (method == "analyze"):
+							print(file.get('Text'))
+							text_data = file.get('Text')
+							keywords = CreateKeywords(text_data)
+							sentiment = AssessData(text_data)
+							return 'Keywords: ' + ', '.join(map(str, keywords)) + '    Sentiment:' + str(sentiment)
+						else:	
+							return file	
+				return f'File with name {fname} does not exist'		
+
 		else: 
 			for file in app_files:
 				if file.get('F_ID') == fid:
 					return file
-			return "F_ID does not exist"				
+			return f'F_ID {fid} does not exist'				
 
 	#curl http://127.0.0.1:5000/files/3 -X DELETE -v
 	def delete(self, fid):
@@ -360,23 +380,28 @@ class UserFiles(Resource):
 		    return "Please enter a valid U_ID (int)"
 		else: 
 			user_files = []
+			filenames = []
 			for user in app_users:
 				if user.get('U_ID') == uid:
 					for file in app_files:
 						if file.get('Source') == uid:
 							user_files.append(file)
+							filenames.append(file.get('Name'))
 
 			if (len(user_files) > 0):
-				return user_files
+				session['files'] = filenames
+				session['file_check'] = True #Tells website files have been loaded (saved session variable "files")
+				return redirect(url_for("fileview"))
 			else:			
-				flash("No files to display.")
+				session['files'] = "No files to display."
+				session['file_check'] = True
 				return redirect(url_for("fileview"))		
 
 api.add_resource(UserList, '/users')
 api.add_resource(User, '/users/<uid>')
 api.add_resource(FileList, '/files')
-api.add_resource(File, '/files/<fid>')
-api.add_resource(UserFiles, '/ufiles/<uid>')			
+api.add_resource(File, '/files/<fid>/<method>')
+api.add_resource(UserFiles, '/ufiles/<uid>') #used to get files by a user ID		
 
 if __name__ == '__main__':
     app.run(debug=True)
