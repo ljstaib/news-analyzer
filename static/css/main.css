@@ -46,3 +46,23 @@ a {
 	padding: 5px;
 	text-decoration: none;
 }
+
+table {
+  font-family: Courier;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color: #bde8ff;
+}
+
+tr:nth-child(even) {
+  background-color: #ccdfff;
+}

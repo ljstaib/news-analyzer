@@ -234,6 +234,8 @@ class UserList(Resource):
 class File(Resource):
 	#http://127.0.0.1:5000/files/0
 	def get(self, fid, method):
+		global app_users
+		global app_files
 		try:
 			fid = int(fid)
 		except ValueError:
@@ -248,8 +250,21 @@ class File(Resource):
 							print(file.get('Text'))
 							text_data = file.get('Text')
 							keywords = CreateKeywords(text_data)
-							sentiment = AssessData(text_data)
-							return 'Keywords: ' + ', '.join(map(str, keywords)) + '    Sentiment:' + str(sentiment)
+							keywords = ', '.join(map(str, keywords))
+							sentiment = str(AssessData(text_data))
+
+							updated_file = { "$set": {
+								'Sentiment': sentiment, 
+								'Tags': {
+									'Status': "Analyzed",
+									'Keywords': keywords,
+								}
+							}}
+							query = {"F_ID": file.get('F_ID')}
+							db.files_db.file_collection.update_one(query, updated_file)
+							app_users, app_files = updateDB()
+							flash('File with name ' + fname + ' successfully analyzed.')
+							return redirect(url_for("analyzer"))
 						else:	
 							return file	
 				return f'File with name {fname} does not exist'		

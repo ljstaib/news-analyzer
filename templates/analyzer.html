@@ -17,10 +17,24 @@
 	<body>
 		<div class="bigText">Text Analysis</div>
 		<div class="smallText">Select which file you would like to analyze:</div>
+		{% with messages = get_flashed_messages() %}
+		  {% if messages %}
+			{% for message in messages %}
+				<div class="smallText">
+					{{message}}
+				</div>
+			{% endfor %}
+		  {% endif %}
+		{% endwith %}
 		{% for file in session['files'] %}
-			<a class="file" onclick="analyzeText({{loop.index}})">{{ loop.index }}. {{ file }}</div>
+			<a class="file" onclick="analyzeText({{loop.index}})">{{ loop.index }}. {{ file }}</a>
 			<input type="hidden"  id="{{loop.index}}" value="{{file}}">
 			<br>
-		{% endfor %}	
+		{% endfor %}
+		</div>
+		<br><br>
+		<div class="button">
+			<a href="/homepage">Return to Home</a>
+		</div>	
 	</body>
 </html>

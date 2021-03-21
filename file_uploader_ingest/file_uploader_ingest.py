@@ -55,7 +55,7 @@ uploadingCancelled = False
 def allowed_file(filename):
 	#Make sure file being uploaded is allowed
     return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+        filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 # ========================================================================
 # File Uploader/Ingest
@@ -98,8 +98,10 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 				text = ConvertFileToText(0, file_in, filetype) #Working on this part next
 				source = userID #will assign userIDs when user auth is done
 				filesize = os.stat(UPLOAD_FOLDER + "/" + filename).st_size
-				status = "Uploaded"
 				upload_time = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
+				sentiment = None
+				status = "Uploaded"
+				keywords = None
 				new_file = {
 					'F_ID': fid, 
 					'Name': filename, 
@@ -110,8 +112,10 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 					'Source': source,
 					'Size': filesize,
 					'UploadTime': upload_time,
+					'Sentiment': sentiment,
 					'Tags': {
 						'Status': status,
+						'Keywords': keywords,
 					}
 				}	
 				logging.info("Uploading file " + str(filename))

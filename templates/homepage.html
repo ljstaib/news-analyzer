@@ -22,11 +22,11 @@
 		</div>	
 		<br>
 		<div class="button">
-			<a href="/upload" target="_blank">Upload a file</a>
+			<a href="/upload">Upload a file</a>
 			<br><br>
-			<a href="/fileview" target="_blank">View your files</a>
+			<a href="/fileview">View your files</a>
 			<br><br>
-			<a href="/analyzer" target="_blank">Analyze uploaded files</a>
+			<a href="/analyzer">Analyze uploaded files</a>
 			{% if session['file_check'] != True %}
 				<a style="display: none" id="load_files" onclick="loadFiles()"></a>
 			{% endif %}	

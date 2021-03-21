@@ -186,3 +186,1191 @@ INFO: Uploading of file DONOTREAD.docx completed!
 INFO: 127.0.0.1 - - [14/Mar/2021 16:41:42] "[37mPOST /files HTTP/1.1[0m" 200 -
 INFO: 127.0.0.1 - - [14/Mar/2021 16:41:52] "[37mGET / HTTP/1.1[0m" 200 -
 INFO: 127.0.0.1 - - [14/Mar/2021 16:41:53] "[37mGET /files HTTP/1.1[0m" 200 -
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [21/Mar/2021 16:24:03] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:24:04] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [21/Mar/2021 16:29:33] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:29:34] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:30:10] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:30:18] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:30:18] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:30:20] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:30:23] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+WARNING: Compute Engine Metadata server unavailable onattempt 1 of 3. Reason: timed out
+WARNING: Compute Engine Metadata server unavailable onattempt 2 of 3. Reason: timed out
+WARNING: Compute Engine Metadata server unavailable onattempt 3 of 3. Reason: [Errno 64] Host is down
+WARNING: Authentication failed using Compute Engine authentication due to unavailable metadata server.
+INFO: 127.0.0.1 - - [21/Mar/2021 16:30:31] "[35m[1mGET /files/Sample.txt/analyze HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:30:31] "[37mGET /files/Sample.txt/analyze?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:30:31] "[37mGET /files/Sample.txt/analyze?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:30:31] "[37mGET /files/Sample.txt/analyze?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:30:31] "[37mGET /files/Sample.txt/analyze?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:30:31] "[37mGET /files/Sample.txt/analyze?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:30:31] "[37mGET /files/Sample.txt/analyze?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [21/Mar/2021 16:32:05] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: Sentiment of text information entered: magnitude: 0.10000000149011612
+score: 0.10000000149011612
+
+INFO: 127.0.0.1 - - [21/Mar/2021 16:32:07] "[37mGET /files/Sample.txt/analyze HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:32:14] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	Placeholder text
+INFO: 	file
+INFO: 	conversion
+INFO: Sentiment of text information entered: magnitude: 0.5
+score: -0.20000000298023224
+
+INFO: 127.0.0.1 - - [21/Mar/2021 16:32:15] "[37mGET /files/DONOTREAD.docx/analyze HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:32:22] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	userID
+INFO: 	user
+INFO: 	Google API
+INFO: 	UploadError
+INFO: 	file
+INFO: 	progress
+INFO: 	FileEditName
+INFO: 	TXT
+INFO: 	o Display Upload Status
+INFO: 	files
+INFO: 	files
+INFO: 	files
+INFO: 	file s(
+INFO: 	FileDelete
+INFO: 	type
+INFO: 	Type
+INFO: 	Operations
+INFO: 	operation
+INFO: 	o UploadFile
+INFO: 	Operations
+INFO: 	file list
+INFO: 	Renders
+INFO: 	Shows
+INFO: 	Professor
+INFO: 	function
+INFO: 	loop
+INFO: 	o RenderProgressBar
+INFO: 	switch
+INFO: 	progress bar
+INFO: 	number
+INFO: 	times
+INFO: 	o
+INFO: 	API d isplay
+INFO: 	file
+INFO: 	files
+INFO: 	files
+INFO: 	file
+INFO: 	list files
+INFO: 	CancelUpload
+INFO: 	Text NLP Analysis
+INFO: 	Secure File Uploader/Ingest
+INFO: 	organize_type
+INFO: 	JSON
+INFO: 	articles
+INFO: 	error
+INFO: 	Luke Staib
+INFO: 	EC500
+INFO: 	Osama Homework 2 Phase 1
+INFO: 	DeleteSentiment
+INFO: 	SaveSentiment
+INFO: 	list
+INFO: 	Newsfeed Ingest Secure File Uploader
+INFO: 	array
+INFO: 	o
+INFO: 	o
+INFO: 	options
+INFO: 	name
+INFO: 	ReadLater
+INFO: 	AssessData
+INFO: 	ame
+INFO: 	n
+INFO: 	Status
+INFO: 	ObtainArticles
+INFO: 	articles
+INFO: 	text
+INFO: 	o
+INFO: 	o
+INFO: 	o
+INFO: 	OrganizeFileList
+INFO: 	files
+INFO: 	development logs o Files
+INFO: 	files
+INFO: 	files
+INFO: 	files
+INFO: 	program
+INFO: 	o
+INFO: 	user
+INFO: 	error
+INFO: 	Data
+INFO: 	file
+INFO: 	files
+INFO: 	upload
+INFO: 	text
+INFO: 	text
+INFO: 	text
+INFO: 	Text
+INFO: 	EditSentiment
+INFO: 	user
+INFO: 	user
+INFO: 	ab il ity
+INFO: 	text
+INFO: 	data
+INFO: 	articles
+INFO: 	data
+INFO: 	file data
+INFO: 	API data
+INFO: 	article data
+INFO: 	Text data
+INFO: 	errors
+INFO: 	errors
+INFO: 	Error
+INFO: 	ways
+INFO: 	errors
+INFO: 	program
+INFO: 	o Text d ata
+INFO: 	d ata
+INFO: 	Data
+INFO: 	o Extract data
+INFO: 	Data
+INFO: 	user
+INFO: 	sentiment
+INFO: 	sentiment
+INFO: 	sentiment
+INFO: 	status
+INFO: 	Type
+INFO: 	text
+INFO: 	RAR
+INFO: 	XLS
+INFO: 	RTF
+INFO: 	ZIP
+INFO: 	TAR
+INFO: 	PPTX
+INFO: 	PDF
+INFO: 	DOC
+INFO: 	CSV
+INFO: 	PPT
+INFO: 	program
+INFO: 	text analysis
+INFO: 	Operations
+INFO: 	keywords
+INFO: 	keywords
+INFO: 	Keywords
+INFO: 	keywords
+INFO: 	uploads
+INFO: 	NLP Analysis
+INFO: 	input
+INFO: 	process
+INFO: 	articles
+INFO: 	articles
+INFO: 	articles
+INFO: 	article
+INFO: 	usage Error information
+INFO: 	data
+INFO: 	display
+INFO: 	language
+INFO: 	languages
+INFO: 	languages
+INFO: 	aspects
+INFO: 	file
+INFO: 	topic
+INFO: 	name
+INFO: 	articles
+INFO: 	user
+INFO: 	Option
+INFO: 	tex t
+INFO: 	o
+INFO: 	Takes
+INFO: 	news websites
+INFO: 	file/s
+INFO: 	details
+INFO: 	multimedia
+INFO: 	hows
+INFO: 	b een
+INFO: 	DOCX
+INFO: 	XLSM
+INFO: 	NLP analysis
+INFO: 	keywords
+INFO: 	message
+INFO: 	searches
+INFO: 	searches
+INFO: 	d
+INFO: 	searches
+INFO: 	list
+INFO: 	Translate
+INFO: 	parameters
+INFO: 	article
+INFO: 	articles
+INFO: 	types
+INFO: 	error
+INFO: 	error
+INFO: 	errors
+INFO: 	error
+INFO: 	XL SX
+INFO: 	Internet
+INFO: 	content
+INFO: 	topic
+INFO: 	information
+INFO: 	example o API r
+INFO: 	Status
+INFO: 	database statistics
+INFO: 	NLP o CreateKeywords
+INFO: 	o ption
+INFO: 	Wil
+INFO: 	files
+INFO: 	files
+INFO: 	error types
+INFO: 	Uses
+INFO: 	text field
+INFO: 	result
+INFO: 	terms
+INFO: 	user account
+INFO: 	Google
+INFO: 	user ability
+INFO: 	input
+INFO: 	search
+INFO: 	process
+INFO: 	text
+INFO: 	text
+INFO: 	text
+INFO: 	text
+INFO: 	text analysis API
+INFO: 	graphical user interface
+INFO: 	memory usage
+INFO: 	CPU usage
+INFO: 	ConvertFilesToText
+INFO: 	Obtai nArticles
+INFO: 	command
+INFO: 	NLP
+INFO: 	Diagnostics
+INFO: 	Diagnostic
+INFO: 	o Profiling
+INFO: 	OrganizeContent
+INFO: 	Japanese
+INFO: 	German
+INFO: 	Russian
+INFO: 	Portuguese
+INFO: 	English
+INFO: 	Danish
+INFO: 	Spanish
+INFO: 	Chinese
+INFO: 	French
+INFO: 	Hindi
+INFO: 	XLSX
+INFO: 	DisplayContent
+INFO: 	Status
+INFO: 	debugging purposes
+INFO: 	API grants
+INFO: 	indicator
+INFO: 	Logging
+INFO: 	class
+INFO: 	show traces
+INFO: 	o Logs
+INFO: 	warnings
+INFO: 	progress
+INFO: 	Returns
+INFO: 	Operations
+INFO: 	status
+INFO: 	o Input
+INFO: 	Type
+INFO: 	progress
+INFO: 	interface
+INFO: 	T
+INFO: 	system
+INFO: 	system
+INFO: 	Functions - SendLogReport
+INFO: 	reviews
+INFO: 	emails
+INFO: 	sources
+INFO: 	social media posts
+INFO: 	report
+INFO: 	Tweets
+INFO: 	search_text
+INFO: 	user sentiment
+INFO: 	DiscoverContent
+INFO: 	one
+INFO: 	21
+INFO: 	2
+INFO: 	7
+INFO: 	11
+INFO: 	7
+INFO: 	1
+INFO: 	2
+INFO: Sentiment of text information entered: magnitude: 0.699999988079071
+
+INFO: 127.0.0.1 - - [21/Mar/2021 16:32:27] "[37mGET /files/Operations.pdf/analyze HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [21/Mar/2021 16:33:45] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:33:46] "[37mGET /files HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/file_uploader_ingest/file_uploader_ingest.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/file_uploader_ingest/file_uploader_ingest.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/file_uploader_ingest/file_uploader_ingest.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [21/Mar/2021 16:37:19] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:37:22] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Filetype = .pdf
+INFO: Uploading file WhiteHouseBriefing.pdf
+INFO: File WhiteHouseBriefing.pdfpdf uploaded.
+INFO: Uploading of file WhiteHouseBriefing.pdf completed!
+INFO: 127.0.0.1 - - [21/Mar/2021 16:37:45] "[32mPOST /files HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:37:45] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:37:49] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:37:53] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:37:54] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:38:04] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:38:06] "[37mGET /files HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [21/Mar/2021 16:41:01] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:41:03] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [21/Mar/2021 16:42:45] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [21/Mar/2021 16:43:12] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:43:15] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:43:21] "[37mGET /files HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [21/Mar/2021 16:44:26] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:44:28] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [21/Mar/2021 16:44:43] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:44:44] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:44:50] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:44:50] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:44:52] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [21/Mar/2021 16:47:39] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:47:46] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:47:55] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: Sentiment of text information entered: magnitude: 0.10000000149011612
+score: 0.10000000149011612
+
+INFO: 127.0.0.1 - - [21/Mar/2021 16:47:58] "[37mGET /files/Sample.txt/analyze HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:48:01] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	White House
+INFO: 	Briefing
+INFO: 	February 21
+INFO: 	21
+INFO: Sentiment of text information entered: 
+INFO: 127.0.0.1 - - [21/Mar/2021 16:48:03] "[37mGET /files/WhiteHouseBriefing.pdf/analyze HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:48:12] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:48:14] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:48:19] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:48:19] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:48:21] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:48:30] "[37mGET /files HTTP/1.1[0m" 200 -
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [21/Mar/2021 16:48:41] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:48:43] "[37mGET /files HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:48:48] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:48:55] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:48:55] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:48:56] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:49:18] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:49:18] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:49:19] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	White House
+INFO: 	Briefing
+INFO: 	February 21
+INFO: 	21
+INFO: Sentiment of text information entered: 
+INFO: 127.0.0.1 - - [21/Mar/2021 16:49:21] "[37mGET /files/WhiteHouseBriefing.pdf/analyze HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:49:34] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [21/Mar/2021 16:54:12] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:54:13] "[35m[1mGET /files/DONOTREAD.docx/analyze HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:54:13] "[37mGET /files/DONOTREAD.docx/analyze?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:54:13] "[37mGET /files/DONOTREAD.docx/analyze?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:54:13] "[37mGET /files/DONOTREAD.docx/analyze?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:54:13] "[37mGET /files/DONOTREAD.docx/analyze?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:54:13] "[37mGET /files/DONOTREAD.docx/analyze?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:54:13] "[37mGET /files/DONOTREAD.docx/analyze?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [21/Mar/2021 16:54:41] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: Sentiment of text information entered: magnitude: 0.10000000149011612
+score: 0.10000000149011612
+
+INFO: 127.0.0.1 - - [21/Mar/2021 16:54:43] "[35m[1mGET /files/Sample.txt/analyze HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:54:44] "[37mGET /files/Sample.txt/analyze?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:54:44] "[37mGET /files/Sample.txt/analyze?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:54:44] "[37mGET /files/Sample.txt/analyze?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:54:44] "[37mGET /files/Sample.txt/analyze?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:54:44] "[37mGET /files/Sample.txt/analyze?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:54:44] "[37mGET /files/Sample.txt/analyze?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [21/Mar/2021 16:55:24] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: Sentiment of text information entered: magnitude: 0.10000000149011612
+score: 0.10000000149011612
+
+INFO: 127.0.0.1 - - [21/Mar/2021 16:55:26] "[37mGET /files/Sample.txt/analyze HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:55:38] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [21/Mar/2021 16:57:18] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:57:19] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:57:25] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:57:25] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:57:27] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: Sentiment of text information entered: magnitude: 0.10000000149011612
+score: 0.10000000149011612
+
+INFO: 127.0.0.1 - - [21/Mar/2021 16:57:29] "[37mGET /files/Sample.txt/analyze HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [21/Mar/2021 16:58:16] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:58:17] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:58:20] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: Sentiment of text information entered: magnitude: 0.10000000149011612
+score: 0.10000000149011612
+
+INFO: 127.0.0.1 - - [21/Mar/2021 16:58:24] "[32mGET /files/Sample.txt/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:58:24] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	Placeholder text
+INFO: 	file
+INFO: 	conversion
+INFO: Sentiment of text information entered: magnitude: 0.5
+score: -0.20000000298023224
+
+INFO: 127.0.0.1 - - [21/Mar/2021 16:58:26] "[32mGET /files/DONOTREAD.docx/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:58:26] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	White House
+INFO: 	Briefing
+INFO: 	February 21
+INFO: 	21
+INFO: Sentiment of text information entered: 
+INFO: 127.0.0.1 - - [21/Mar/2021 16:58:28] "[32mGET /files/WhiteHouseBriefing.pdf/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:58:28] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	userID
+INFO: 	user
+INFO: 	Google API
+INFO: 	UploadError
+INFO: 	file
+INFO: 	progress
+INFO: 	FileEditName
+INFO: 	TXT
+INFO: 	o Display Upload Status
+INFO: 	files
+INFO: 	files
+INFO: 	files
+INFO: 	file s(
+INFO: 	FileDelete
+INFO: 	type
+INFO: 	Type
+INFO: 	Operations
+INFO: 	operation
+INFO: 	o UploadFile
+INFO: 	Operations
+INFO: 	file list
+INFO: 	Renders
+INFO: 	Shows
+INFO: 	Professor
+INFO: 	function
+INFO: 	loop
+INFO: 	o RenderProgressBar
+INFO: 	switch
+INFO: 	progress bar
+INFO: 	number
+INFO: 	times
+INFO: 	o
+INFO: 	API d isplay
+INFO: 	file
+INFO: 	files
+INFO: 	files
+INFO: 	file
+INFO: 	list files
+INFO: 	CancelUpload
+INFO: 	Text NLP Analysis
+INFO: 	Secure File Uploader/Ingest
+INFO: 	organize_type
+INFO: 	JSON
+INFO: 	articles
+INFO: 	error
+INFO: 	Luke Staib
+INFO: 	EC500
+INFO: 	Osama Homework 2 Phase 1
+INFO: 	DeleteSentiment
+INFO: 	SaveSentiment
+INFO: 	list
+INFO: 	Newsfeed Ingest Secure File Uploader
+INFO: 	array
+INFO: 	o
+INFO: 	o
+INFO: 	options
+INFO: 	name
+INFO: 	ReadLater
+INFO: 	AssessData
+INFO: 	ame
+INFO: 	n
+INFO: 	Status
+INFO: 	ObtainArticles
+INFO: 	articles
+INFO: 	text
+INFO: 	o
+INFO: 	o
+INFO: 	o
+INFO: 	OrganizeFileList
+INFO: 	files
+INFO: 	development logs o Files
+INFO: 	files
+INFO: 	files
+INFO: 	files
+INFO: 	program
+INFO: 	o
+INFO: 	user
+INFO: 	error
+INFO: 	Data
+INFO: 	file
+INFO: 	files
+INFO: 	upload
+INFO: 	text
+INFO: 	text
+INFO: 	text
+INFO: 	Text
+INFO: 	EditSentiment
+INFO: 	user
+INFO: 	user
+INFO: 	ab il ity
+INFO: 	text
+INFO: 	data
+INFO: 	articles
+INFO: 	data
+INFO: 	file data
+INFO: 	API data
+INFO: 	article data
+INFO: 	Text data
+INFO: 	errors
+INFO: 	errors
+INFO: 	Error
+INFO: 	ways
+INFO: 	errors
+INFO: 	program
+INFO: 	o Text d ata
+INFO: 	d ata
+INFO: 	Data
+INFO: 	o Extract data
+INFO: 	Data
+INFO: 	user
+INFO: 	sentiment
+INFO: 	sentiment
+INFO: 	sentiment
+INFO: 	status
+INFO: 	Type
+INFO: 	text
+INFO: 	RAR
+INFO: 	XLS
+INFO: 	RTF
+INFO: 	ZIP
+INFO: 	TAR
+INFO: 	PPTX
+INFO: 	PDF
+INFO: 	DOC
+INFO: 	CSV
+INFO: 	PPT
+INFO: 	program
+INFO: 	text analysis
+INFO: 	Operations
+INFO: 	keywords
+INFO: 	keywords
+INFO: 	Keywords
+INFO: 	keywords
+INFO: 	uploads
+INFO: 	NLP Analysis
+INFO: 	input
+INFO: 	process
+INFO: 	articles
+INFO: 	articles
+INFO: 	articles
+INFO: 	article
+INFO: 	usage Error information
+INFO: 	data
+INFO: 	display
+INFO: 	language
+INFO: 	languages
+INFO: 	languages
+INFO: 	aspects
+INFO: 	file
+INFO: 	topic
+INFO: 	name
+INFO: 	articles
+INFO: 	user
+INFO: 	Option
+INFO: 	tex t
+INFO: 	o
+INFO: 	Takes
+INFO: 	news websites
+INFO: 	file/s
+INFO: 	details
+INFO: 	multimedia
+INFO: 	hows
+INFO: 	b een
+INFO: 	DOCX
+INFO: 	XLSM
+INFO: 	NLP analysis
+INFO: 	keywords
+INFO: 	message
+INFO: 	searches
+INFO: 	searches
+INFO: 	d
+INFO: 	searches
+INFO: 	list
+INFO: 	Translate
+INFO: 	parameters
+INFO: 	article
+INFO: 	articles
+INFO: 	types
+INFO: 	error
+INFO: 	error
+INFO: 	errors
+INFO: 	error
+INFO: 	XL SX
+INFO: 	Internet
+INFO: 	content
+INFO: 	topic
+INFO: 	information
+INFO: 	example o API r
+INFO: 	Status
+INFO: 	database statistics
+INFO: 	NLP o CreateKeywords
+INFO: 	o ption
+INFO: 	Wil
+INFO: 	files
+INFO: 	files
+INFO: 	error types
+INFO: 	Uses
+INFO: 	text field
+INFO: 	result
+INFO: 	terms
+INFO: 	user account
+INFO: 	Google
+INFO: 	user ability
+INFO: 	input
+INFO: 	search
+INFO: 	process
+INFO: 	text
+INFO: 	text
+INFO: 	text
+INFO: 	text
+INFO: 	text analysis API
+INFO: 	graphical user interface
+INFO: 	memory usage
+INFO: 	CPU usage
+INFO: 	ConvertFilesToText
+INFO: 	Obtai nArticles
+INFO: 	command
+INFO: 	NLP
+INFO: 	Diagnostics
+INFO: 	Diagnostic
+INFO: 	o Profiling
+INFO: 	OrganizeContent
+INFO: 	Japanese
+INFO: 	German
+INFO: 	Russian
+INFO: 	Portuguese
+INFO: 	English
+INFO: 	Danish
+INFO: 	Spanish
+INFO: 	Chinese
+INFO: 	French
+INFO: 	Hindi
+INFO: 	XLSX
+INFO: 	DisplayContent
+INFO: 	Status
+INFO: 	debugging purposes
+INFO: 	API grants
+INFO: 	indicator
+INFO: 	Logging
+INFO: 	class
+INFO: 	show traces
+INFO: 	o Logs
+INFO: 	warnings
+INFO: 	progress
+INFO: 	Returns
+INFO: 	Operations
+INFO: 	status
+INFO: 	o Input
+INFO: 	Type
+INFO: 	progress
+INFO: 	interface
+INFO: 	T
+INFO: 	system
+INFO: 	system
+INFO: 	Functions - SendLogReport
+INFO: 	reviews
+INFO: 	emails
+INFO: 	sources
+INFO: 	social media posts
+INFO: 	report
+INFO: 	Tweets
+INFO: 	search_text
+INFO: 	user sentiment
+INFO: 	DiscoverContent
+INFO: 	2
+INFO: 	1
+INFO: 	11
+INFO: 	7
+INFO: 	2
+INFO: 	21
+INFO: 	7
+INFO: 	one
+INFO: Sentiment of text information entered: magnitude: 0.699999988079071
+
+INFO: 127.0.0.1 - - [21/Mar/2021 16:58:32] "[32mGET /files/Operations.pdf/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:58:32] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:58:36] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:58:40] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:58:42] "[37mGET /files HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:59:21] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:59:23] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 16:59:54] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:00:45] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:00:47] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:00:49] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:00:50] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:00:51] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	userID
+INFO: 	user
+INFO: 	Google API
+INFO: 	UploadError
+INFO: 	file
+INFO: 	progress
+INFO: 	FileEditName
+INFO: 	TXT
+INFO: 	o Display Upload Status
+INFO: 	files
+INFO: 	files
+INFO: 	files
+INFO: 	file s(
+INFO: 	FileDelete
+INFO: 	type
+INFO: 	Type
+INFO: 	Operations
+INFO: 	operation
+INFO: 	o UploadFile
+INFO: 	Operations
+INFO: 	file list
+INFO: 	Renders
+INFO: 	Shows
+INFO: 	Professor
+INFO: 	function
+INFO: 	loop
+INFO: 	o RenderProgressBar
+INFO: 	switch
+INFO: 	progress bar
+INFO: 	number
+INFO: 	times
+INFO: 	o
+INFO: 	API d isplay
+INFO: 	file
+INFO: 	files
+INFO: 	files
+INFO: 	file
+INFO: 	list files
+INFO: 	CancelUpload
+INFO: 	Text NLP Analysis
+INFO: 	Secure File Uploader/Ingest
+INFO: 	organize_type
+INFO: 	JSON
+INFO: 	articles
+INFO: 	error
+INFO: 	Luke Staib
+INFO: 	EC500
+INFO: 	Osama Homework 2 Phase 1
+INFO: 	DeleteSentiment
+INFO: 	SaveSentiment
+INFO: 	list
+INFO: 	Newsfeed Ingest Secure File Uploader
+INFO: 	array
+INFO: 	o
+INFO: 	o
+INFO: 	options
+INFO: 	name
+INFO: 	ReadLater
+INFO: 	AssessData
+INFO: 	ame
+INFO: 	n
+INFO: 	Status
+INFO: 	ObtainArticles
+INFO: 	articles
+INFO: 	text
+INFO: 	o
+INFO: 	o
+INFO: 	o
+INFO: 	OrganizeFileList
+INFO: 	files
+INFO: 	development logs o Files
+INFO: 	files
+INFO: 	files
+INFO: 	files
+INFO: 	program
+INFO: 	o
+INFO: 	user
+INFO: 	error
+INFO: 	Data
+INFO: 	file
+INFO: 	files
+INFO: 	upload
+INFO: 	text
+INFO: 	text
+INFO: 	text
+INFO: 	Text
+INFO: 	EditSentiment
+INFO: 	user
+INFO: 	user
+INFO: 	ab il ity
+INFO: 	text
+INFO: 	data
+INFO: 	articles
+INFO: 	data
+INFO: 	file data
+INFO: 	API data
+INFO: 	article data
+INFO: 	Text data
+INFO: 	errors
+INFO: 	errors
+INFO: 	Error
+INFO: 	ways
+INFO: 	errors
+INFO: 	program
+INFO: 	o Text d ata
+INFO: 	d ata
+INFO: 	Data
+INFO: 	o Extract data
+INFO: 	Data
+INFO: 	user
+INFO: 	sentiment
+INFO: 	sentiment
+INFO: 	sentiment
+INFO: 	status
+INFO: 	Type
+INFO: 	text
+INFO: 	RAR
+INFO: 	XLS
+INFO: 	RTF
+INFO: 	ZIP
+INFO: 	TAR
+INFO: 	PPTX
+INFO: 	PDF
+INFO: 	DOC
+INFO: 	CSV
+INFO: 	PPT
+INFO: 	program
+INFO: 	text analysis
+INFO: 	Operations
+INFO: 	keywords
+INFO: 	keywords
+INFO: 	Keywords
+INFO: 	keywords
+INFO: 	uploads
+INFO: 	NLP Analysis
+INFO: 	input
+INFO: 	process
+INFO: 	articles
+INFO: 	articles
+INFO: 	articles
+INFO: 	article
+INFO: 	usage Error information
+INFO: 	data
+INFO: 	display
+INFO: 	language
+INFO: 	languages
+INFO: 	languages
+INFO: 	aspects
+INFO: 	file
+INFO: 	topic
+INFO: 	name
+INFO: 	articles
+INFO: 	user
+INFO: 	Option
+INFO: 	tex t
+INFO: 	o
+INFO: 	Takes
+INFO: 	news websites
+INFO: 	file/s
+INFO: 	details
+INFO: 	multimedia
+INFO: 	hows
+INFO: 	b een
+INFO: 	DOCX
+INFO: 	XLSM
+INFO: 	NLP analysis
+INFO: 	keywords
+INFO: 	message
+INFO: 	searches
+INFO: 	searches
+INFO: 	d
+INFO: 	searches
+INFO: 	list
+INFO: 	Translate
+INFO: 	parameters
+INFO: 	article
+INFO: 	articles
+INFO: 	types
+INFO: 	error
+INFO: 	error
+INFO: 	errors
+INFO: 	error
+INFO: 	XL SX
+INFO: 	Internet
+INFO: 	content
+INFO: 	topic
+INFO: 	information
+INFO: 	example o API r
+INFO: 	Status
+INFO: 	database statistics
+INFO: 	NLP o CreateKeywords
+INFO: 	o ption
+INFO: 	Wil
+INFO: 	files
+INFO: 	files
+INFO: 	error types
+INFO: 	Uses
+INFO: 	text field
+INFO: 	result
+INFO: 	terms
+INFO: 	user account
+INFO: 	Google
+INFO: 	user ability
+INFO: 	input
+INFO: 	search
+INFO: 	process
+INFO: 	text
+INFO: 	text
+INFO: 	text
+INFO: 	text
+INFO: 	text analysis API
+INFO: 	graphical user interface
+INFO: 	memory usage
+INFO: 	CPU usage
+INFO: 	ConvertFilesToText
+INFO: 	Obtai nArticles
+INFO: 	command
+INFO: 	NLP
+INFO: 	Diagnostics
+INFO: 	Diagnostic
+INFO: 	o Profiling
+INFO: 	OrganizeContent
+INFO: 	Japanese
+INFO: 	German
+INFO: 	Russian
+INFO: 	Portuguese
+INFO: 	English
+INFO: 	Danish
+INFO: 	Spanish
+INFO: 	Chinese
+INFO: 	French
+INFO: 	Hindi
+INFO: 	XLSX
+INFO: 	DisplayContent
+INFO: 	Status
+INFO: 	debugging purposes
+INFO: 	API grants
+INFO: 	indicator
+INFO: 	Logging
+INFO: 	class
+INFO: 	show traces
+INFO: 	o Logs
+INFO: 	warnings
+INFO: 	progress
+INFO: 	Returns
+INFO: 	Operations
+INFO: 	status
+INFO: 	o Input
+INFO: 	Type
+INFO: 	progress
+INFO: 	interface
+INFO: 	T
+INFO: 	system
+INFO: 	system
+INFO: 	Functions - SendLogReport
+INFO: 	reviews
+INFO: 	emails
+INFO: 	sources
+INFO: 	social media posts
+INFO: 	report
+INFO: 	Tweets
+INFO: 	search_text
+INFO: 	user sentiment
+INFO: 	DiscoverContent
+INFO: 	11
+INFO: 	2
+INFO: 	one
+INFO: 	7
+INFO: 	7
+INFO: 	2
+INFO: 	1
+INFO: 	21
+INFO: Sentiment of text information entered: magnitude: 0.699999988079071
+
+INFO: 127.0.0.1 - - [21/Mar/2021 17:00:55] "[32mGET /files/Operations.pdf/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:00:55] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:00:59] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:01:24] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:01:26] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:01:41] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:01:44] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:01:45] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:01:46] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:01:50] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:01:51] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:02:06] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:02:07] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:02:09] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:02:10] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:02:19] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:02:20] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:02:38] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:02:39] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:02:40] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:02:41] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:02:42] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:02:43] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:03:19] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:03:28] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:03:31] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:03:32] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:03:33] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:03:33] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:03:34] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:03:43] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:03:44] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:03:46] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:03:47] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:03:49] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:03:49] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	Placeholder text
+INFO: 	file
+INFO: 	conversion
+INFO: Sentiment of text information entered: magnitude: 0.5
+score: -0.20000000298023224
+
+INFO: 127.0.0.1 - - [21/Mar/2021 17:03:53] "[32mGET /files/DONOTREAD.docx/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:03:53] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:03:55] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:04:12] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:04:14] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:04:27] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:08:39] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:09:22] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:11:09] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:11:23] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:11:23] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:11:53] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:12:06] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:12:06] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:12:41] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:12:41] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:14:29] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:14:37] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:14:37] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:15:24] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:15:24] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:16:06] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:16:06] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:16:51] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:16:51] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:17:00] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:17:01] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:17:02] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:17:03] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:17:03] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:17:04] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [21/Mar/2021 17:17:05] "[37mGET /homepage HTTP/1.1[0m" 200 -
