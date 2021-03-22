@@ -8,10 +8,12 @@
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 		<title>Home - News Analyzer</title>
 		<script>
-			document.getElementById("load_files").click();
+			window.onload=function() {
+				document.getElementById("load_files").click();
+			}	
 			function loadFiles() {
 				var uid = {{ session['uid'] }};
-				window.location = "/ufiles/" + uid;
+				window.location = "/ufiles/" + uid + "/homepage";
 			}
 		</script>
 	</head>
@@ -27,7 +29,11 @@
 			<a href="/fileview">View your files</a>
 			<br><br>
 			<a href="/analyzer">Analyze uploaded files</a>
-			{% if session['file_check'] != True %}
+			<br><br>
+			<a href="/newsfeed">Search for articles</a>
+			<br><br>
+			<a onclick="loadFiles()">Files not displaying? Reload files!</a>
+			{% if session['load_lock'] != True %}
 				<a style="display: none" id="load_files" onclick="loadFiles()"></a>
 			{% endif %}	
 		</div>	

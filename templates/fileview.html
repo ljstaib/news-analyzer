@@ -8,9 +8,12 @@
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 		<title>Files of {{ session['username'] }} - News Analyzer</title>
 		<script>
-			function userURL() {
+			window.onload=function() {
+				document.getElementById("load_files").click();
+			}	
+			function loadFiles() {
 				var uid = {{ session['uid'] }};
-				window.location = "/ufiles/" + uid;
+				window.location = "/ufiles/" + uid + "/fileview";
 			}
 		</script>
 	</head>
@@ -20,11 +23,15 @@
 			<tr>
 				<th>Number</th>
 				<th>Name</th>
+				<th>Sentiment</th>
+				<th>Status</th>
 			</tr>
-			{% for file in session['files'] %}
+			{% for file in session['filenames'] %}
 				<tr>
 					<td>{{loop.index}}</td>
 					<td>{{ file }}</td>
+					<td>{{ session['files_sentiment'][loop.index - 1] }}</td>
+					<td>{{ session['files_status'][loop.index - 1] }}</td>
 				</tr>
 			{% endfor %}
 		</table>	
@@ -32,5 +39,8 @@
 		<div class="button">
 			<a href="/homepage">Return to Home</a>
 		</div>
+		{% if session['load_lock'] != True %}
+			<a style="display: none" id="load_files" onclick="loadFiles()"></a>
+		{% endif %}	
 	</body>
 </html>

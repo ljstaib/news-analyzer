@@ -1,0 +1,37 @@
+<!-- Luke Staib @2021 -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		<title>Newsfeed Ingest - News Analyzer</title>	
+		<script>
+			function search_google() {
+				alert("Search goes here")
+			}
+		</script>
+	</head>
+	<body>
+		<div class="bigText">Newsfeed Ingest
+			<a href="/homepage">Return to Home</a>
+		</div>
+		<div style="text-align: center;">
+			<input type="text" style="width: 300px; margin-right: 20px;" name="search_query">
+			<a onclick="search_google()">Search for Articles</a>
+		</div>	
+		<div id="content"></div>
+		<!-- <script>
+		function handler(response) {
+			for (var i = 0; i < response.items.length; i++) {
+				var item = response.items[i];
+				//alert(JSON.stringify(item))
+				document.getElementById("content").innerHTML += "<br>" + item.htmlTitle + "<br>" + item.link + "<br><br>";
+			}
+		}
+		</script>
+		<script src="https://www.googleapis.com/customsearch/v1?key=AIzaSyC25ZPA5pssIGtPhBwLM351vIkBWe8nqAI&cx=017576662512468239146:omuauf_lfve&q=computer science&callback=handler">
+		</script> -->
+	</body>
+</html>

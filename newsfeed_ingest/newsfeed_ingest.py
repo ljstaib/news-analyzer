@@ -27,6 +27,11 @@ users = users_collection.find()
 
 logging.basicConfig(filename='newsfeed_ingest.log', level=logging.INFO, format='%(levelname)s: %(message)s')
 
+try:
+	search_key = open("../.keys/search_key.txt", "r").read()
+except FileNotFoundError: 
+	search_key = open("../../.keys/search_key.txt", "r").read()
+
 # ========================================================================
 # Newsfeed Ingest
 # ========================================================================

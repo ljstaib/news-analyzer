@@ -85,6 +85,14 @@ def fileview():
 @app.route('/analyzer', methods=['GET'])
 def analyzer():
 	return render_template('analyzer.html')	
+
+@app.route('/newsfeed', methods=['GET'])
+def newsfeed():
+	return render_template('newsfeed.html')
+
+@app.route('/search', methods=['GET'])
+def search():
+	DiscoverContent()
 # @app.route('/test_db')
 # def test_db():
 # 	test_user = {
@@ -250,8 +258,7 @@ class File(Resource):
 							print(file.get('Text'))
 							text_data = file.get('Text')
 							keywords = CreateKeywords(text_data)
-							keywords = ', '.join(map(str, keywords))
-							sentiment = str(AssessData(text_data))
+							sentiment = AssessData(text_data)
 
 							updated_file = { "$set": {
 								'Sentiment': sentiment, 
@@ -387,8 +394,8 @@ class FileList(Resource):
 			return redirect(url_for("upload"))
 
 class UserFiles(Resource):
-	#http://127.0.0.1:5000/ufiles/0
-	def get(self, uid):
+	#http://127.0.0.1:5000/ufiles/0/homepage
+	def get(self, uid, page):
 		try:
 		    uid = int(uid)
 		except ValueError:
@@ -396,27 +403,37 @@ class UserFiles(Resource):
 		else: 
 			user_files = []
 			filenames = []
+			statuses = []
+			sentiments = []
 			for user in app_users:
 				if user.get('U_ID') == uid:
 					for file in app_files:
 						if file.get('Source') == uid:
 							user_files.append(file)
 							filenames.append(file.get('Name'))
+							statuses.append(file.get('Tags').get('Status'))
+							if file.get('Sentiment') != None:
+								sentiments.append("Score: " + str(file.get('Sentiment').get('score')) + "   |   Magnitude: " + str(file.get('Sentiment').get('magnitude')))
+							else:
+								sentiments.append("N/A")
 
 			if (len(user_files) > 0):
-				session['files'] = filenames
-				session['file_check'] = True #Tells website files have been loaded (saved session variable "files")
-				return redirect(url_for("fileview"))
+				session['filenames'] = filenames
+				session['files_status'] = statuses
+				session['files_sentiment'] = sentiments
+				session['load_lock'] = True
+				return redirect(url_for(page))
 			else:			
 				session['files'] = "No files to display."
-				session['file_check'] = True
-				return redirect(url_for("fileview"))		
+				session['files_status'] = ""
+				session['load_lock'] = True
+				return redirect(url_for(page))		
 
 api.add_resource(UserList, '/users')
 api.add_resource(User, '/users/<uid>')
 api.add_resource(FileList, '/files')
 api.add_resource(File, '/files/<fid>/<method>')
-api.add_resource(UserFiles, '/ufiles/<uid>') #used to get files by a user ID		
+api.add_resource(UserFiles, '/ufiles/<uid>/<page>') #used to get files by a user ID		
 
 if __name__ == '__main__':
     app.run(debug=True)
