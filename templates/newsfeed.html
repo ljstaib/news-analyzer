@@ -6,10 +6,38 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-		<title>Newsfeed Ingest - News Analyzer</title>	
+		<title>Newsfeed Ingest - News Analyzer</title>
 		<script>
+			function getJSONP(url, success) { //This function was obtained online: https://stackoverflow.com/questions/2499567/how-to-make-a-json-call-to-a-url/2499647#2499647
+
+			    var ud = '_' + +new Date,
+			        script = document.createElement('script'),
+			        head = document.getElementsByTagName('head')[0] || document.documentElement;
+
+			    window[ud] = function(data) {
+			        head.removeChild(script);
+			        success && success(data);
+			    };
+
+			    script.src = url.replace('callback=?', 'callback=' + ud);
+			    head.appendChild(script);
+
+			}
 			function search_google() {
-				alert("Search goes here")
+				var query = document.getElementById("search_query").value;
+				var search_url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyC25ZPA5pssIGtPhBwLM351vIkBWe8nqAI&cx=000888210889775888983:y9tkcjel090&q=" + String(query) + "&callback=handler&num=10";
+				getJSONP(search_url, function(data) {
+					console.log(data);
+				});
+			}
+
+			function handler(response) {
+				document.getElementById("results").innerHTML = "<br>" //Clear with every search
+				for (var i = 0; i < response.items.length; i++) {
+					var item = response.items[i];
+					//alert(JSON.stringify(item))
+					document.getElementById("results").innerHTML += "<br>" + item.htmlTitle + "<br>" + item.link + "<br><br>";
+				}
 			}
 		</script>
 	</head>
@@ -18,20 +46,9 @@
 			<a href="/homepage">Return to Home</a>
 		</div>
 		<div style="text-align: center;">
-			<input type="text" style="width: 300px; margin-right: 20px;" name="search_query">
+			<input type="text" style="width: 300px; margin-right: 20px;" id="search_query">
 			<a onclick="search_google()">Search for Articles</a>
 		</div>	
-		<div id="content"></div>
-		<!-- <script>
-		function handler(response) {
-			for (var i = 0; i < response.items.length; i++) {
-				var item = response.items[i];
-				//alert(JSON.stringify(item))
-				document.getElementById("content").innerHTML += "<br>" + item.htmlTitle + "<br>" + item.link + "<br><br>";
-			}
-		}
-		</script>
-		<script src="https://www.googleapis.com/customsearch/v1?key=AIzaSyC25ZPA5pssIGtPhBwLM351vIkBWe8nqAI&cx=017576662512468239146:omuauf_lfve&q=computer science&callback=handler">
-		</script> -->
+		<div id="results"></div>
 	</body>
 </html>
