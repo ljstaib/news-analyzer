@@ -1,7 +1,5 @@
 # Homework #2 for EC500 at BU: news-analyzer-ljstaib
 
-# Stub-API modules for Phase 1 are in "newsanalyzer_psuedocode.py".
-
 Copyright @2021 
 Luke Staib 
 ljstaib@bu.edu
