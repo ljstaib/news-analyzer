@@ -93,6 +93,10 @@ def newsfeed():
 @app.route('/search', methods=['GET'])
 def search():
 	DiscoverContent()
+
+@app.route('/editfile', methods=['GET'])
+def editfile():
+	return render_template('editfile.html')	
 # @app.route('/test_db')
 # def test_db():
 # 	test_user = {
@@ -255,7 +259,6 @@ class File(Resource):
 				for file in app_files:
 					if file.get('Name') == fname:
 						if (method == "analyze"):
-							print(file.get('Text'))
 							text_data = file.get('Text')
 							keywords = CreateKeywords(text_data)
 							sentiment = AssessData(text_data)
@@ -272,6 +275,22 @@ class File(Resource):
 							app_users, app_files = updateDB()
 							flash('File with name ' + fname + ' successfully analyzed.')
 							return redirect(url_for("analyzer"))
+						if (method == "edit"):
+							edit_data = [] #set edit data as a list
+							edit_data.append(file.get('F_ID')) #index 0
+							edit_data.append(str(file.get('Name'))) #index 1
+							edit_data.append(str(file.get('Authors'))) #index 2
+							edit_data.append(str(file.get('CreationTime'))) #index 3
+							session['edit_data'] = edit_data
+							return redirect(url_for("editfile"))
+						if (method == "delete"):
+							if (FileDelete(int(file.get('F_ID'))) == True):
+								app_users, app_files = updateDB()
+								flash('File with name ' + fname + ' successfully deleted.')
+								return redirect(url_for("homepage"))
+							else:
+								flash('There was a problem deleting ' + fname + '. Please try again later.')
+								return redirect(url_for("homepage"))		
 						else:	
 							return file	
 				return f'File with name {fname} does not exist'		
@@ -280,10 +299,10 @@ class File(Resource):
 			for file in app_files:
 				if file.get('F_ID') == fid:
 					return file
-			return f'F_ID {fid} does not exist'				
+			return f'F_ID {fid} does not exist'
 
-	#curl http://127.0.0.1:5000/files/3 -X DELETE -v
-	def delete(self, fid):
+	def post(self, fid, method):
+		#edit info
 		try:
 		    fid = int(fid)
 		except ValueError:
@@ -291,51 +310,22 @@ class File(Resource):
 		else: 
 			global app_users
 			global app_files
-			for file in app_files:
-				if file.get('F_ID') == fid:
-					query = {"F_ID": fid}
-					db.files_db.file_collection.delete_one(query)
-					app_users, app_files = updateDB() 
-					return f"Deleted file with F_ID: {fid}"
-			return "F_ID does not exist"
-
-	#curl http://127.0.0.1:5000/files/2 -d "FileInfo=WhiteHouseBriefing, PDF, Luke Staib, 1, 6264, Analyzed" -X PUT -v
-	def put(self, fid): #edit info
-		try:
-		    fid = int(fid)
-		except ValueError:
-		    return "Please enter a valid F_ID (int)"
-		else: 
-			global app_users
-			global app_files
-			args = parser.parse_args()
-			for file in app_files:
-				if file.get('F_ID') == fid:
-					query = {"F_ID": fid}
-					fileinfo = list(args['FileInfo'].split(", "))
-					if (len(fileinfo) != 6):
-						return "To edit an existing file, FileInfo is a list of SIX arguments."
-					filename = fileinfo[0]
-					filetype = fileinfo[1]
-					authors = fileinfo[2]
-					source = fileinfo[3] #user who uploaded
-					filesize = fileinfo[4]
-					status = fileinfo[5]
-					#Upload time and creation time have no reason to be touched
-					updated_file = { "$set": {
-						'Name': filename, 
-						'Filetype': filetype, 
-						'Authors': authors, 
-						'Source': source,
-						'Size': filesize,
-						'Tags': {
-							'Status': status,
-						}
-					}}
-					db.files_db.file_collection.update_one(query, updated_file)
-					app_users, app_files = updateDB()
-					return updated_file
-			return "F_ID does not exist"				
+			if (method == "edit"):
+				for file in app_files:
+					if file.get('F_ID') == fid:
+						authors = request.form.get("edit_authors")
+						filename = session['edit_data'][1]
+						creation_time = str(request.form.get("edit_month") + "/" + request.form.get("edit_day") + "/" + request.form.get("edit_year"))
+						if (FileEdit(fid, authors, creation_time) == True):
+							app_users, app_files = updateDB()
+							flash(f'File {filename} successfully edited.')
+							return redirect(url_for('homepage'))
+						else:
+							flash(f'File {filename} could not be edited. Please try again later.')
+							return redirect(url_for('homepage'))
+			else:
+				return "Invalid method"		
+			return "F_ID does not exist"										
 
 class FileList(Resource):
 	#http://127.0.0.1:5000/files
@@ -391,7 +381,7 @@ class FileList(Resource):
 			files_collection.insert_one(new_file)
 			app_users, app_files = updateDB()
 			flash(f'File uploaded successfully')
-			return redirect(url_for("upload"))
+			return redirect(url_for("upload"))					
 
 class UserFiles(Resource):
 	#http://127.0.0.1:5000/ufiles/0/homepage
@@ -401,6 +391,7 @@ class UserFiles(Resource):
 		except ValueError:
 		    return "Please enter a valid U_ID (int)"
 		else: 
+			fids = []
 			user_files = []
 			filenames = []
 			statuses = []
@@ -409,6 +400,7 @@ class UserFiles(Resource):
 				if user.get('U_ID') == uid:
 					for file in app_files:
 						if file.get('Source') == uid:
+							fids.append(file.get('F_ID'))
 							user_files.append(file)
 							filenames.append(file.get('Name'))
 							statuses.append(file.get('Tags').get('Status'))
@@ -418,14 +410,17 @@ class UserFiles(Resource):
 								sentiments.append("N/A")
 
 			if (len(user_files) > 0):
+				session['fids'] = fids
 				session['filenames'] = filenames
 				session['files_status'] = statuses
 				session['files_sentiment'] = sentiments
 				session['load_lock'] = True
 				return redirect(url_for(page))
-			else:			
-				session['files'] = "No files to display."
+			else:	
+				session['fids'] = ""
+				session['filenames'] = "No files to display."
 				session['files_status'] = ""
+				session['files_sentiment'] = ""
 				session['load_lock'] = True
 				return redirect(url_for(page))		
 

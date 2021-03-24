@@ -95,7 +95,7 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 
 				filename = file_in.filename
 				filetype = file_in.filename.rsplit('.', 1)[1].lower()
-				text = ConvertFileToText(0, file_in, filetype) #Working on this part next
+				text = ConvertFileToText(userID, file_in, filetype) #Working on this part next
 				source = userID #will assign userIDs when user auth is done
 				filesize = os.stat(UPLOAD_FOLDER + "/" + filename).st_size
 				upload_time = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
@@ -144,76 +144,41 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 	else:
 		return False		
 
-def RenderProgressBar(switch):
-	progressBarVisible = True
-	if (switch):
-		progressBarVisible = False
-		if not progressBarVisible:
-			print("Progress bar showing!")
-	else:
-		if (progressBarVisible):
-			print("Progress bar not showing!")
+# def RenderProgressBar(switch):
+# 	progressBarVisible = True
+# 	if (switch):
+# 		progressBarVisible = False
+# 		if not progressBarVisible:
+# 			print("Progress bar showing!")
+# 	else:
+# 		if (progressBarVisible):
+# 			print("Progress bar not showing!")
 
-	return True
+# 	return True
 
-def CancelUpload():
-	uploadingCancelled = True
-	return True	
+# def CancelUpload():
+# 	uploadingCancelled = True
+# 	return True	
 
-def FileDelete(userID, fileID, file_in):
-	result = doesUserExist(userID)
-	if (result):
-		fileExists = False
-		if (file_in == "test_file"):
-			return "I need to figure out how to test with a file object."
-		saved_file = ""
-		for file in files:
-			if fileID == file_in.get("F_ID"):
-				fileExists = True
-				saved_file = str(file_in.get("Name"))
-				break
-		file_in = saved_file
-		if (fileExists):
-			logging.info("Deleting file " + file_in)
-			success = True
-			if success:
-				logging.info("File " + file_in + " was deleted successfully.")
-				return True
-			else:
-				logging.error("File " + file_in + " was not deleted.")
-				return False
-		else:
-			logging.error("File " + file_in + " does not exist in user\'s library")
-			return False
-	else:
+def FileDelete(fileID): #revamped to work with app.py
+	try:
+		query = {"F_ID": fileID} 
+		files_collection.delete_one(query)
+		return True
+	except:
+		return False					
+
+def FileEdit(fileID, authors, creation_time): #revamped to work with app.py, will add more things to edit
+	try:
+		query = {"F_ID": fileID}
+		updated_file = { "$set": { 
+			'Authors': authors, 
+			'CreationTime': creation_time,
+		}}
+		files_collection.update_one(query, updated_file)
+		return True
+	except:
 		return False				
-
-def FileEditName(userID, fileID, file_in, new_name):
-	result = doesUserExist(userID)
-	if (result):
-		fileExists = False
-		if (file_in == "test_file"):
-			return "I need to figure out how to test with a file object."
-		#print("Retrieving files list from user with userID " + userID)
-		for file_in in files:
-			fid = file_in.get("F_ID")
-			if (fid == fileID):
-				fileExists = True
-				filename = file_in.get("Name")
-		if (fileExists):
-			logging.info("Changing name of " + filename + " to " + new_name)
-			success = True
-			if success:
-				logging.info("File " + filename + " was edited successfully.")
-				return new_name
-			else:
-				logging.error("ERROR: File " + filename + " could not be edited.")
-				return False
-		else:
-			logging.error("File " + filename + " not found")
-			return False	
-	else:
-		return False			
 
 def OrganizeFileList(userID, files, organize_type):
 	result = doesUserExist(userID)

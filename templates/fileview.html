@@ -15,6 +15,14 @@
 				var uid = {{ session['uid'] }};
 				window.location = "/ufiles/" + uid + "/fileview";
 			}
+			function editFile(num) {
+				var file = document.getElementById("file" + num).innerHTML;
+				window.location = "/files/" + file + "/edit";
+			}
+			function deleteFile(num) {
+				var file = document.getElementById("file" + num).innerHTML;
+				window.location = "/files/" + file + "/delete";
+			}
 		</script>
 	</head>
 	<body>
@@ -25,13 +33,15 @@
 				<th>Name</th>
 				<th>Sentiment</th>
 				<th>Status</th>
+				<th>Options</th>
 			</tr>
 			{% for file in session['filenames'] %}
 				<tr>
 					<td>{{loop.index}}</td>
-					<td>{{ file }}</td>
+					<td type="text" id="file{{session['fids'][loop.index - 1]}}">{{ file }}</td>
 					<td>{{ session['files_sentiment'][loop.index - 1] }}</td>
 					<td>{{ session['files_status'][loop.index - 1] }}</td>
+					<td><a onclick="editFile({{session['fids'][loop.index - 1]}})">Edit</a>&nbsp;<a onclick="deleteFile({{session['fids'][loop.index - 1]}})">Delete</a></td>
 				</tr>
 			{% endfor %}
 		</table>	

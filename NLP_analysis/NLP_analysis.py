@@ -23,12 +23,12 @@ import cProfile
 import tracemalloc #Memory profiling
 from tqdm import tqdm
 import logging #Logging
-import PyPDF2 #PDF -> TXT
+import slate3k #PDF -> TXT
 import os
 import re
 import docx2txt #DOC -> TXT
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "/Users/luke/Documents/Code/EC500/HW2/.keys/key.json"
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "/Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json"
 from google.cloud import language
 
 tracemalloc.start()
@@ -67,19 +67,20 @@ def ConvertFileToText(userID, file_in, filetype):
 			return text_data
 
 		if file_in == "test file pdf":
-			file_ref = open("./test_files/Operations.pdf", "rb")
-			file_reader = PyPDF2.PdfFileReader(file_ref)
-			page_data = ""
+			file_path = "./test_files/Operations.pdf"
 			text_data = ""
-			for i in range(file_reader.numPages):
-				page = file_reader.getPage(i)
-				page_data = page.extractText()
-				#Get rid of multiple newline characters
-				page_data = re.sub(r' +', ' ', page_data)
-				page_data = re.sub(r'\n', ' ', page_data)
-				page_data = re.sub(r'\t', ' ', page_data)
-				text_data += page_data
-			file_ref.close()	
+			with open(file_path, "rb") as f:
+				text_data = slate3k.PDF(f)
+
+			#Get rid of multiple newline characters
+			text_data = str("".join(text_data))
+			text_data = re.sub(r'\n +', '\n', text_data)
+			text_data = re.sub(r'\n+', '\n', text_data)
+			text_data = re.sub(r'\n', ' ', text_data)
+			text_data = re.sub(r' +', ' ', text_data)
+			text_data = re.sub(r':', ' ', text_data)
+			text_data = re.sub(r'"', '\"', text_data)
+			text_data = re.sub(r"'", '\'', text_data)
 			return text_data
 			
 		file_path = UPLOAD_FOLDER + "/" + file_in.filename
@@ -98,21 +99,18 @@ def ConvertFileToText(userID, file_in, filetype):
 			text_data = re.sub(r'\t', ' ', text_data)
 			logging.debug("File contents: " + text_data)
 		elif filetype == "pdf":
-			logging.debug("Here, I use the PyPDF2 library to turn this pdf file into .txt")
+			logging.debug("Here, I use the slate3k library to turn this .pdf file into .txt")
 			logging.info("Filetype = .pdf")
-			file_ref = open(file_path, "rb")
-			file_reader = PyPDF2.PdfFileReader(file_ref)
-			page_data = ""
 			text_data = ""
-			for i in range(file_reader.numPages):
-				page = file_reader.getPage(i)
-				page_data = page.extractText()
-				#Get rid of multiple newline characters
-				page_data = re.sub(r'\n +', '\n', page_data)
-				page_data = re.sub(r'\n+', '\n', page_data)
-				page_data = re.sub(r'\n', ' ', page_data)
-				text_data += page_data
-			file_ref.close()	
+			with open(file_path, "rb") as f:
+				text_data = slate3k.PDF(f)
+
+			#Get rid of multiple newline characters
+			text_data = str("".join(text_data))
+			text_data = re.sub(r'\n +', '\n', text_data)
+			text_data = re.sub(r'\n+', '\n', text_data)
+			text_data = re.sub(r'\n', ' ', text_data)
+			text_data = re.sub(r' +', ' ', text_data)
 			logging.debug("File contents: " + text_data)
 		else:
 			logging.debug("I will implement support for other filetypes")

@@ -21,7 +21,16 @@
 		<div class="bigText">Home</div>
 		<div class="smallText">
 			Welcome, {{session['firstname']}} {{session['lastname']}}
-		</div>	
+		</div>
+		{% with messages = get_flashed_messages() %}
+		  {% if messages %}
+			{% for message in messages %}
+				<div class="smallText">
+					{{message}}
+				</div>
+			{% endfor %}
+		  {% endif %}
+		{% endwith %}
 		<br>
 		<div class="button">
 			<a href="/upload">Upload a file</a>

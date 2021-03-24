@@ -36,6 +36,13 @@ body {
 	margin-left: 20px;
 }
 
+.searchResults {
+	border-bottom: 1px solid black;
+	color: #000b47;
+	font-family: Courier;
+	font-size: 16px;
+}
+
 a {
 	background-color: #FFFBCB;
 	border: 1px solid black;

@@ -26,7 +26,7 @@
 			{% endfor %}
 		  {% endif %}
 		{% endwith %}
-		{% for file in session['files'] %}
+		{% for file in session['filenames'] %}
 			<a class="file" onclick="analyzeText({{loop.index}})">{{ loop.index }}. {{ file }}</a>
 			<input type="hidden"  id="{{loop.index}}" value="{{file}}">
 			<br>

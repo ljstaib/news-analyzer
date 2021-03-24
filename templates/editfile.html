@@ -6,25 +6,29 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-		<title>Upload - News Analyzer</title>
+		<title>Files of {{ session['username'] }} - News Analyzer</title>
+		<script>
+			window.onload=function() {
+				var authors = "{{session['edit_data'][2]}}";
+				document.getElementById("authors").value = authors;
+				var date = "{{session['edit_data'][3]}}".split("/");
+				var month = date[0];
+				var day = date[1];
+				var year = date[2];
+				document.getElementById("month").value = month;
+				document.getElementById("day").value = day;
+				document.getElementById("year").value = year;
+			}
+		</script>
 	</head>
 	<body>
-		<div class="bigText">Upload a File</div>
-		{% with messages = get_flashed_messages() %}
-		  {% if messages %}
-			{% for message in messages %}
-				<div class="smallText">
-					{{message}}
-				</div>
-			{% endfor %}
-		  {% endif %}
-		{% endwith %}
-		<form action="/files" method="post" enctype="multipart/form-data">
-			<input type="file" name="file" required>
+		<div class="bigText">Editing {{session['edit_data'][1]}}</div>	
+		<br><br>
+		<form action="/files/{{session['edit_data'][0]}}/edit"  method="post" enctype="multipart/form-data">
 			<div class="smallText">Author/s</div>
-			<input type="text" name="authors" required>
+			<input type="text" name="edit_authors" id="authors" required>
 			<div class="smallText">Date Created</div>
-			<select name="month">
+			<select name="edit_month" id="month">
 				<option value="1">January</option>
 				<option value="2">February</option>
 				<option value="3">March</option>
@@ -38,7 +42,7 @@
 				<option value="11">November</option>
 				<option value="12">December</option>
 			</select>
-			<select name="day">
+			<select name="edit_day" id="day">
 				<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
@@ -71,7 +75,7 @@
 				<option value="30">30</option>
 				<option value="31">31</option>
 			</select>
-			<select name="year">
+			<select name="edit_year" id="year">
 				<option value="2021">2021</option>
 				<option value="2020">2020</option>
 				<option value="2019">2019</option>
@@ -189,13 +193,13 @@
 				<option value="1907">1907</option>
 				<option value="1906">1906</option>
 				<option value="1905">1905</option>
-			</select>	
+			</select>
 			<br><br>
-			<input type="submit" value="Upload">
-		</form>
+			<input type="submit" value="Save Changes">
+		</form>	
 		<br><br>
 		<div class="button">
-			<a href="/homepage">Return to Home</a>
-		</div>	
+			<a href="/fileview">Return to File List</a>
+		</div>
 	</body>
-</html>		
+</html>
