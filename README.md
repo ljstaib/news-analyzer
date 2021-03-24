@@ -1,5 +1,7 @@
 # Homework #2 for EC500 at BU: news-analyzer-ljstaib
 
+# Please email me if there is a deliverable that you do not see
+
 Copyright @2021 
 Luke Staib 
 ljstaib@bu.edu
