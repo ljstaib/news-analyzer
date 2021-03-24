@@ -10,13 +10,11 @@
 	</head>
 	<script>
 		function analyzeText(num) {
-			var file = document.getElementById(num).value;
-			window.location = "/files/" + file + "/analyze";
+			window.location = "/files/" + num + "/analyze";
 		}
 	</script>
 	<body>
 		<div class="bigText">Text Analysis</div>
-		<div class="smallText">Select which file you would like to analyze:</div>
 		{% with messages = get_flashed_messages() %}
 		  {% if messages %}
 			{% for message in messages %}
@@ -26,11 +24,15 @@
 			{% endfor %}
 		  {% endif %}
 		{% endwith %}
-		{% for file in session['filenames'] %}
-			<a class="file" onclick="analyzeText({{loop.index}})">{{ loop.index }}. {{ file }}</a>
-			<input type="hidden"  id="{{loop.index}}" value="{{file}}">
-			<br>
-		{% endfor %}
+		{% if session['files_data'] %}
+			<div class="smallText">Select which file you would like to analyze:</div>
+			{% for file in session['files_data'] %}
+				<a class="file" onclick="analyzeText({{ file[0] }})">{{ loop.index }}. {{ file[1] }}</a>
+				<br>
+			{% endfor %}
+		{% else %}
+			<div class="smallText">No files for user {{session['username']}}</div>
+		{% endif %}
 		</div>
 		<br><br>
 		<div class="button">

@@ -69,10 +69,13 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 			filename = "Test"
 			filetype = "txt"
 			text = "This is not a real file."
-			source = userID
-			filesize = 100
+			source = "test"+str(userID)
+			filesize = -1
 			status = "Testing file"
 			upload_time = "1/1/1900"
+			sentiment = None
+			keywords = None
+			categories = None
 			test_file = {
 				'F_ID': fid, 
 				'Name': filename, 
@@ -83,8 +86,11 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 				'Source': source,
 				'Size': filesize,
 				'UploadTime': upload_time,
+				'Sentiment': sentiment,
 				'Tags': {
 					'Status': status,
+					'Keywords': keywords,
+					'Categories': categories,
 				}
 			}	
 			return test_file
@@ -102,6 +108,7 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 				sentiment = None
 				status = "Uploaded"
 				keywords = None
+				categories = None
 				new_file = {
 					'F_ID': fid, 
 					'Name': filename, 
@@ -116,6 +123,7 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 					'Tags': {
 						'Status': status,
 						'Keywords': keywords,
+						'Categories': categories,
 					}
 				}	
 				logging.info("Uploading file " + str(filename))
@@ -180,44 +188,46 @@ def FileEdit(fileID, authors, creation_time): #revamped to work with app.py, wil
 	except:
 		return False				
 
-def OrganizeFileList(userID, files, organize_type):
-	result = doesUserExist(userID)
-	if (result):
-		if (files == "test_file"):
-			return "I need to figure out how to test with a file object."
-		#print("Retrieving files list from user with userID " + userID)
-		files_num = 0
-		filenames = []
+#Will implement after newsfeed ingest if time
 
-		for file in files:
-			files_num += 1
-			filenames.append(file.get("Name"))
+# def OrganizeFileList(userID, files, organize_type):
+# 	result = doesUserExist(userID)
+# 	if (result):
+# 		if (files == "test_file"):
+# 			return "I need to figure out how to test with a file object."
+# 		#print("Retrieving files list from user with userID " + userID)
+# 		files_num = 0
+# 		filenames = []
 
-		if (files_num == 1):
-			logging.warning("Only 1 file, there is nothing to sort.")
-			return False
-		else:
-			file_list = str(filenames)[1:-1]
-			logging.info("Current order of files: " + file_list)
+# 		for file in files:
+# 			files_num += 1
+# 			filenames.append(file.get("Name"))
 
-		if organize_type == "Alphabetical":
-			new_filenames = sorted(filenames, key=None)
-		elif organize_type == "Reverse Alphabetical":
-			new_filenames = sorted(filenames, key=None, reverse=True)
-		elif organize_type == "Earliest Uploaded":
-			print("Organized content by earliest uploaded")
-			new_filenames = filenames
-		elif organize_type == "Latest Uploaded":
-			print("Organized content by latest uploaded")
-			new_filenames = filenames
-		else:
-			return False
+# 		if (files_num == 1):
+# 			logging.warning("Only 1 file, there is nothing to sort.")
+# 			return False
+# 		else:
+# 			file_list = str(filenames)[1:-1]
+# 			logging.info("Current order of files: " + file_list)
 
-		new_file_list = str(new_filenames)[1:-1]
-		logging.info("New order of files (" + organize_type +"): " + new_file_list)	
-		return new_filenames
-	else:
-		return False		
+# 		if organize_type == "Alphabetical":
+# 			new_filenames = sorted(filenames, key=None)
+# 		elif organize_type == "Reverse Alphabetical":
+# 			new_filenames = sorted(filenames, key=None, reverse=True)
+# 		elif organize_type == "Earliest Uploaded":
+# 			print("Organized content by earliest uploaded")
+# 			new_filenames = filenames
+# 		elif organize_type == "Latest Uploaded":
+# 			print("Organized content by latest uploaded")
+# 			new_filenames = filenames
+# 		else:
+# 			return False
+
+# 		new_file_list = str(new_filenames)[1:-1]
+# 		logging.info("New order of files (" + organize_type +"): " + new_file_list)	
+# 		return new_filenames
+# 	else:
+# 		return False		
 
 def DiagnosticsUploader():
 	#CPU usage:

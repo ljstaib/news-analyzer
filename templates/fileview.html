@@ -16,35 +16,47 @@
 				window.location = "/ufiles/" + uid + "/fileview";
 			}
 			function editFile(num) {
-				var file = document.getElementById("file" + num).innerHTML;
-				window.location = "/files/" + file + "/edit";
+				window.location = "/files/" + num + "/edit";
 			}
 			function deleteFile(num) {
-				var file = document.getElementById("file" + num).innerHTML;
-				window.location = "/files/" + file + "/delete";
+				window.location = "/files/" + num + "/delete";
 			}
 		</script>
 	</head>
 	<body>
 		<div class="bigText">Files of user {{session['username']}}</div>
-		<table>
-			<tr>
-				<th>Number</th>
-				<th>Name</th>
-				<th>Sentiment</th>
-				<th>Status</th>
-				<th>Options</th>
-			</tr>
-			{% for file in session['filenames'] %}
+		{% if session['files_data'] %}
+			<table>
 				<tr>
-					<td>{{loop.index}}</td>
-					<td type="text" id="file{{session['fids'][loop.index - 1]}}">{{ file }}</td>
-					<td>{{ session['files_sentiment'][loop.index - 1] }}</td>
-					<td>{{ session['files_status'][loop.index - 1] }}</td>
-					<td><a onclick="editFile({{session['fids'][loop.index - 1]}})">Edit</a>&nbsp;<a onclick="deleteFile({{session['fids'][loop.index - 1]}})">Delete</a></td>
+					<th>Number</th>
+					<th>Name</th>
+					<th>Author/s</th>
+					<th>Upload Date</th>
+					<th>Creation Date</th>
+					<th>Status</th>
+					<th>1st 5 Keywords</th>
+					<th>Categories</th>
+					<th>Sentiment</th>
+					<th>Options</th>
 				</tr>
-			{% endfor %}
-		</table>	
+				{% for file in session['files_data'] %}
+					<tr>
+						<td>{{loop.index}}</td>
+						<td type="text" id="file{{session['files_data'][loop.index - 1][0]}}">{{ session['files_data'][loop.index - 1][1] }}</td>
+						<td>{{ session['files_data'][loop.index - 1][2] }}</td>
+						<td>{{ session['files_data'][loop.index - 1][3] }}</td>
+						<td>{{ session['files_data'][loop.index - 1][4] }}</td>
+						<td>{{ session['files_data'][loop.index - 1][5] }}</td>
+						<td>{{ session['files_data'][loop.index - 1][6] }}</td>
+						<td>{{ session['files_data'][loop.index - 1][7] }}</td>
+						<td>{{ session['files_data'][loop.index - 1][8] }}</td>
+						<td><a onclick="editFile({{session['files_data'][loop.index - 1][0]}})">Edit</a>&nbsp;<a onclick="deleteFile({{session['files_data'][loop.index - 1][0]}})">Delete</a></td>
+					</tr>
+				{% endfor %}
+			</table>
+		{% else %}
+			<div class="smallText">No files for user {{session['username']}}</div>
+		{% endif %}
 		<br><br>
 		<div class="button">
 			<a href="/homepage">Return to Home</a>

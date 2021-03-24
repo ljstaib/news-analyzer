@@ -1,0 +1,140 @@
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Making request: POST https://oauth2.googleapis.com/token
+DEBUG: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Making request: POST https://oauth2.googleapis.com/token
+DEBUG: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Making request: POST https://oauth2.googleapis.com/token
+DEBUG: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Making request: POST https://oauth2.googleapis.com/token
+DEBUG: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+INFO: Keywords of text entered:
+INFO: 	yellow dwarf star
+INFO: 	Sun
+INFO: 	Earth
+INFO: 	distance
+INFO: 	center
+INFO: 	Solar System
+INFO: 	life
+INFO: 	planets
+INFO: 	8
+INFO: 	92 million
+INFO: 	one
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Making request: POST https://oauth2.googleapis.com/token
+DEBUG: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+INFO: Sentiment of text information entered: magnitude: 0.5
+
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Making request: POST https://oauth2.googleapis.com/token
+DEBUG: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+INFO: Keywords of text entered:
+INFO: 	yellow dwarf star
+INFO: 	Sun
+INFO: 	Earth
+INFO: 	distance
+INFO: 	center
+INFO: 	Solar System
+INFO: 	life
+INFO: 	planets
+INFO: 	8
+INFO: 	one
+INFO: 	92 million
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Making request: POST https://oauth2.googleapis.com/token
+DEBUG: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+INFO: Sentiment of text information entered: magnitude: 0.5
+
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Making request: POST https://oauth2.googleapis.com/token
+DEBUG: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Making request: POST https://oauth2.googleapis.com/token
+DEBUG: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+INFO: Keywords of text entered:
+INFO: 	yellow dwarf star
+INFO: 	Sun
+INFO: 	Earth
+INFO: 	distance
+INFO: 	center
+INFO: 	Solar System
+INFO: 	life
+INFO: 	planets
+INFO: 	92 million
+INFO: 	one
+INFO: 	8
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Making request: POST https://oauth2.googleapis.com/token
+DEBUG: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+INFO: Sentiment of text information entered: magnitude: 0.5
+
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Making request: POST https://oauth2.googleapis.com/token
+DEBUG: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Making request: POST https://oauth2.googleapis.com/token
+DEBUG: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+INFO: Keywords of text entered:
+INFO: 	yellow dwarf star
+INFO: 	Sun
+INFO: 	Earth
+INFO: 	distance
+INFO: 	center
+INFO: 	Solar System
+INFO: 	life
+INFO: 	planets
+INFO: 	92 million
+INFO: 	8
+INFO: 	one
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Making request: POST https://oauth2.googleapis.com/token
+DEBUG: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+INFO: Sentiment of text information entered: magnitude: 0.5
+
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Making request: POST https://oauth2.googleapis.com/token
+DEBUG: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Making request: POST https://oauth2.googleapis.com/token
+DEBUG: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+INFO: Keywords of text entered:
+INFO: 	yellow dwarf star
+INFO: 	Sun
+INFO: 	Earth
+INFO: 	distance
+INFO: 	center
+INFO: 	Solar System
+INFO: 	life
+INFO: 	planets
+INFO: 	92 million
+INFO: 	8
+INFO: 	one
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Making request: POST https://oauth2.googleapis.com/token
+DEBUG: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+INFO: Sentiment of text information entered: magnitude: 0.5
+
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Making request: POST https://oauth2.googleapis.com/token
+DEBUG: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None

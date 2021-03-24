@@ -161,12 +161,26 @@ def CreateKeywords(text_data):
 
 	return keywords
 
-def ObtainArticles(text_data):
+def ObtainCategories(text_data):
 	#use text_data to search for specific parts on Google
 	#take information received to pull specific articles for CreateKeywords() to use to generate keywords
+    client = language.LanguageServiceClient()
+    document = language.Document(content=text_data, type_=language.Document.Type.PLAIN_TEXT)
+    response = client.classify_text(request={'document': document})
+    categories = response.categories
 
-	article_links = ["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"]
-	return article_links
+    result = {}
+
+    for category in categories:
+        result[category.name] = category.confidence
+
+    if (result != {}):
+    	return result
+    else:
+    	return "N/A"
+
+	#article_links = ["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"]
+	#return article_links
 
 def AssessData(text_data):
 	#use text_data to create a sentiment
@@ -187,51 +201,26 @@ def AssessData(text_data):
 	logging.info("Sentiment of text information entered: " + str(sentiment))
 	return results
 
-def SaveSentiment(userID, sentiment):
-	result = doesUserExist(userID)
-	if (result):
-		#save sentiment to user ID sentiment[] list of strings in database
-		logging.info("Sentiment \"" + sentiment + "\" saved.")
-		return True
-	else:
-		return False	
+#SaveAnalysis in app.py, in /file GET method=analyze
+# def SaveAnalysis(file):
+# 	text_data = file.get('Text')
+# 	keywords = CreateKeywords(text_data)
+# 	sentiment = AssessData(text_data)
+# 	try:
+# 		categories = ObtainCategories(text_data)
+# 	except:
+# 		categories = {}
 
-def EditSentiment(userID, sentiment, new_sentiment):
-	result = doesUserExist(userID)
-	if (result):
-		sentiments = ["The sky is yellow.", "The Sun is cold."]
-		if sentiment in sentiments:
-			for i, x in enumerate(sentiments):
-				if x == sentiment:
-					sentiments[i] = new_sentiment
-			logging.info("Sentiment \"" + sentiment + "\" replaced with \"" + new_sentiment + "\".")
-			return True		
-		else:
-			logging.info("Sentiment \"" + sentiment + "\" not found")
-			return False	
-	else:
-		return False		
-
-def Translate(text, language):
-	# use Google Translate API to take in text or sentiment and translate into any language in Google translate API
-	# translated_text = GoogleTranslateAPI(text, language)
-	if language == "English":
-		translated_text = "Hello"
-		logging.info("Text translated into English.")
-	elif language == "Spanish":
-		translated_text = "Hola"
-		logging.info("Text translated into Spanish.")
-	elif language == "Chinese":
-		translated_text = "你好"
-		logging.info("Text translated into Chinese.")
-	elif language == "French":
-		translated_text = "Bonjour"
-		logging.info("Text translated into French.")
-	else:
-		logging.error("Unrecognized Language: " + language)
-		return False			
-
-	return translated_text	
+# 	updated_file = { "$set": {
+# 		'Sentiment': sentiment, 
+# 		'Tags': {
+# 			'Status': "Analyzed",
+# 			'Keywords': keywords,
+# 			'Categories': categories,
+# 		}
+# 	}}
+# 	query = {"F_ID": file.get('F_ID')}
+# 	return updated_file, query	
 
 def DiagnosticsNLP():
 	#CPU usage:
@@ -258,17 +247,8 @@ def DiagnosticsNLP():
 # ========================================================================	
 
 # =========================================================================================
-# Testing with Command Line (will move to Website using ex. Django, Flask, Heroku to host)
+# Testing with Command Line
 # =========================================================================================
-
-# print("To be completed...")
-# test1 = ConvertFilesToText(0, filenames)
-# print(test1)
-# test2 = SaveSentiment(0, "Sentiment")
-# print(test2)
-# test3 = EditSentiment(0, "The sky is yellow.", "The sky is blue.")
-# print(test3)
-# DiagnosticsNLP()
 
 # keywords = CreateKeywords("The Sun is a yellow dwarf star at the center of our Solar System. The distance between the Sun and the Earth is one important reason why life can be sustained on Earth. At about 92 million miles away, the Earth is the third closest planet from the Sun out of 8 planets.")
 # print("Keywords:")
@@ -279,3 +259,7 @@ def DiagnosticsNLP():
 # print(sentiment_results)
 # for k, v in sentiment_results.items():
 # 	print(f"{k}: {v}")
+
+# category_results = ObtainCategories("Google Home enables users to speak voice commands to interact with services through the Home's intelligent personal assistant called Google Assistant. A large number of services, both in-house and third-party, are integrated, allowing users to listen to music, look at videos or photos, or receive news updates entirely by voice.")
+# print("Category Results: ")
+# print(category_results)

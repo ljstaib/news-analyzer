@@ -9,8 +9,6 @@
 # Import NLP_analysis.py
 # ========================================================================
 
-# uploadingCancelled = False
-# userID = "0" #Will implement user ID's with secure user authentication system
 from NLP_analysis import *
 
 # ========================================================================
@@ -28,12 +26,17 @@ def test_ConvertFileToText():
 # def test_CreateKeywords():
 # 	assert CreateKeywords("The Sun is a yellow dwarf star at the center of our Solar System. The distance between the Sun and the Earth is one important reason why life can be sustained on Earth. At about 92 million miles away, the Earth is the third closest planet from the Sun out of 8 planets.") == ""
 
-def test_ObtainArticles():
-	assert ObtainArticles("Placeholder") == ["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"]
+#Google Cloud API will not work with GitHub Action Testing
+# def test_ObtainCategories():
+# 	assert ObtainCategories("Placeholder") == ["https://solarsystem.nasa.gov/solar-system/sun/overview/", "https://en.wikipedia.org/wiki/Sun"]
 
 #Google Cloud API will not work with GitHub Action Testing
 # def test_AssessData():
 # 	assert AssessData("The Sun is a yellow dwarf star at the center of our Solar System. The distance between the Sun and the Earth is one important reason why life can be sustained on Earth. At about 92 million miles away, the Earth is the third closest planet from the Sun out of 8 planets.") == {'text': 'The Sun is a yellow dwarf star at the center of our Solar System. The distance between the Sun and the Earth is one important reason why life can be sustained on Earth. At about 92 million miles away, the Earth is the third closest planet from the Sun out of 8 planets.', 'score': '0.0%', 'magnitude': '50.0%'}
+
+#Google Cloud API will not work with GitHub Action Testing
+# def ObtainCategories(text_data):
+# 	assert ObtainCategories("Google Home enables users to speak voice commands to interact with services through the Home's intelligent personal assistant called Google Assistant. A large number of services, both in-house and third-party, are integrated, allowing users to listen to music, look at videos or photos, or receive news updates entirely by voice.") == {'/Computers & Electronics/Software': 0.550000011920929, '/Internet & Telecom': 0.5099999904632568}
 
 def test_SaveSentiment():
 	assert SaveSentiment(10, "Placeholder") == False

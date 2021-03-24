@@ -53,7 +53,7 @@ app_users = []
 app_files = []				 		 
 
 app_users, app_files = updateDB()
-
+	
 @app.route('/', methods=['GET'])
 def home():
 	return render_template('home.html')
@@ -138,6 +138,7 @@ class User(Resource):
 					session['firstname'] = user.get('FirstName')
 					session['lastname'] = user.get('LastName')
 					session['uid'] = user.get('U_ID')
+					session['load_lock'] = False
 					return redirect(url_for("homepage"))
 			# print("Failure")
 			flash("Credentials do not match.")
@@ -251,55 +252,55 @@ class File(Resource):
 		try:
 			fid = int(fid)
 		except ValueError:
-			try:
-				fname = str(fid)
-			except ValueError:
-				return "Invalid F_ID or filename"
-			else:
-				for file in app_files:
-					if file.get('Name') == fname:
-						if (method == "analyze"):
-							text_data = file.get('Text')
-							keywords = CreateKeywords(text_data)
-							sentiment = AssessData(text_data)
-
-							updated_file = { "$set": {
-								'Sentiment': sentiment, 
-								'Tags': {
-									'Status': "Analyzed",
-									'Keywords': keywords,
-								}
-							}}
-							query = {"F_ID": file.get('F_ID')}
-							db.files_db.file_collection.update_one(query, updated_file)
-							app_users, app_files = updateDB()
-							flash('File with name ' + fname + ' successfully analyzed.')
-							return redirect(url_for("analyzer"))
-						if (method == "edit"):
-							edit_data = [] #set edit data as a list
-							edit_data.append(file.get('F_ID')) #index 0
-							edit_data.append(str(file.get('Name'))) #index 1
-							edit_data.append(str(file.get('Authors'))) #index 2
-							edit_data.append(str(file.get('CreationTime'))) #index 3
-							session['edit_data'] = edit_data
-							return redirect(url_for("editfile"))
-						if (method == "delete"):
-							if (FileDelete(int(file.get('F_ID'))) == True):
-								app_users, app_files = updateDB()
-								flash('File with name ' + fname + ' successfully deleted.')
-								return redirect(url_for("homepage"))
-							else:
-								flash('There was a problem deleting ' + fname + '. Please try again later.')
-								return redirect(url_for("homepage"))		
-						else:	
-							return file	
-				return f'File with name {fname} does not exist'		
-
-		else: 
+			return "Invalid F_ID, must be an int"
+		else:	
 			for file in app_files:
 				if file.get('F_ID') == fid:
-					return file
-			return f'F_ID {fid} does not exist'
+					if (method == "analyze"):
+						text_data = file.get('Text')
+						keywords = CreateKeywords(text_data)
+						sentiment = AssessData(text_data)
+						try:
+							categories = ObtainCategories(text_data)
+						except:
+							categories = {}
+
+						updated_file = { "$set": {
+							'Sentiment': sentiment, 
+							'Tags': {
+								'Status': "Analyzed",
+								'Keywords': keywords,
+								'Categories': categories,
+							}
+						}}
+						query = {"F_ID": fid}
+						print(query)
+						print(updated_file)
+						files_collection.update_one(query, updated_file)
+						app_users, app_files = updateDB()
+						flash('File with name ' + str(file.get('Name')) + ' successfully analyzed.')
+						session['load_lock'] = False
+						return redirect(url_for("homepage"))
+					if (method == "edit"):
+						edit_data = [] #set edit data as a list
+						edit_data.append(fid) #index 0
+						edit_data.append(str(file.get('Name'))) #index 1
+						edit_data.append(str(file.get('Authors'))) #index 2
+						edit_data.append(str(file.get('CreationTime'))) #index 3
+						session['edit_data'] = edit_data
+						return redirect(url_for("editfile"))
+					if (method == "delete"):
+						if (FileDelete(fid) == True):
+							app_users, app_files = updateDB()
+							flash('File with name ' + str(file.get('Name')) + ' successfully deleted.')
+							session['load_lock'] = False
+							return redirect(url_for("homepage"))
+						else:
+							flash('There was a problem deleting ' + str(file.get('Name')) + '. Please try again later.')
+							return redirect(url_for("homepage"))		
+					else:	
+						return file	
+			return f'File with ID {fid} does not exist'
 
 	def post(self, fid, method):
 		#edit info
@@ -319,6 +320,7 @@ class File(Resource):
 						if (FileEdit(fid, authors, creation_time) == True):
 							app_users, app_files = updateDB()
 							flash(f'File {filename} successfully edited.')
+							session['load_lock'] = False
 							return redirect(url_for('homepage'))
 						else:
 							flash(f'File {filename} could not be edited. Please try again later.')
@@ -378,10 +380,11 @@ class FileList(Resource):
 			flash(f'There was a problem uploading your file. Please try again later.')
 			return redirect(url_for("upload"))
 		else:	
+			session['load_lock'] = False
 			files_collection.insert_one(new_file)
 			app_users, app_files = updateDB()
-			flash(f'File uploaded successfully')
-			return redirect(url_for("upload"))					
+			flash(f'File uploaded successfully.')
+			return redirect(url_for("homepage"))					
 
 class UserFiles(Resource):
 	#http://127.0.0.1:5000/ufiles/0/homepage
@@ -391,37 +394,44 @@ class UserFiles(Resource):
 		except ValueError:
 		    return "Please enter a valid U_ID (int)"
 		else: 
-			fids = []
-			user_files = []
-			filenames = []
-			statuses = []
-			sentiments = []
+			files_data = [] #For all files, list of lists
 			for user in app_users:
 				if user.get('U_ID') == uid:
 					for file in app_files:
 						if file.get('Source') == uid:
-							fids.append(file.get('F_ID'))
-							user_files.append(file)
-							filenames.append(file.get('Name'))
-							statuses.append(file.get('Tags').get('Status'))
-							if file.get('Sentiment') != None:
-								sentiments.append("Score: " + str(file.get('Sentiment').get('score')) + "   |   Magnitude: " + str(file.get('Sentiment').get('magnitude')))
-							else:
-								sentiments.append("N/A")
 
-			if (len(user_files) > 0):
-				session['fids'] = fids
-				session['filenames'] = filenames
-				session['files_status'] = statuses
-				session['files_sentiment'] = sentiments
-				session['load_lock'] = True
+							file_data = [] #For each file
+							file_data.append(file.get('F_ID')) #fid, 0
+							#file_data.append(file) #file
+							file_data.append(file.get('Name')) #filename, 1
+							file_data.append(file.get('Authors')) #authors, 2
+							upload_time = str(file.get('UploadTime'))
+							upload_time = upload_time.split(" ")
+							upload_time = upload_time[0]
+							file_data.append(upload_time) #upload time, 3
+							file_data.append(file.get('CreationTime')) #date of article, 4
+							file_data.append(file.get('Tags').get('Status')) #status, 5
+							if (file.get('Tags').get('Keywords')):
+								file_data.append(", ".join(file.get('Tags').get('Keywords')[:5])) #1st 5 keywords, 6
+							else:	
+								file_data.append("N/A")
+							if (file.get('Tags').get('Categories') != {}):
+								file_data.append(file.get('Tags').get('Categories')) #1st 5 categories, 7
+							else:	
+								file_data.append("N/A")	
+							if file.get('Sentiment') != None: #score and magnitude of sentiment, 8
+								file_data.append("Score: " + str(file.get('Sentiment').get('score')) + "   |   Magnitude: " + str(file.get('Sentiment').get('magnitude')))
+							else:
+								file_data.append("N/A")
+
+							files_data.append(file_data)	
+
+			session['load_lock'] = True
+			session['files_data'] = files_data
+			if (len(files_data) > 0):
 				return redirect(url_for(page))
 			else:	
-				session['fids'] = ""
-				session['filenames'] = "No files to display."
-				session['files_status'] = ""
-				session['files_sentiment'] = ""
-				session['load_lock'] = True
+				session['files_data'] = None
 				return redirect(url_for(page))		
 
 api.add_resource(UserList, '/users')

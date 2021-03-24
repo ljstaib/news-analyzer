@@ -9,11 +9,13 @@
 		<title>Home - News Analyzer</title>
 		<script>
 			window.onload=function() {
+				//alert("{{session['load_lock']}}");
 				document.getElementById("load_files").click();
 			}	
 			function loadFiles() {
 				var uid = {{ session['uid'] }};
 				window.location = "/ufiles/" + uid + "/homepage";
+				//alert("/ufiles/" + uid + "/homepage");
 			}
 		</script>
 	</head>
@@ -42,7 +44,9 @@
 			<a href="/newsfeed">Search for articles</a>
 			<br><br>
 			<a onclick="loadFiles()">Files not displaying? Reload files!</a>
-			{% if session['load_lock'] != True %}
+			<br><br>
+			<a href="/">Logout</a>
+			{% if session['load_lock'] == False %}
 				<a style="display: none" id="load_files" onclick="loadFiles()"></a>
 			{% endif %}	
 		</div>	
