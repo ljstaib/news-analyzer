@@ -28,6 +28,8 @@ My findings and what I have learned from the Queues Mini Project:
 
 Week of 3/22: In progress.
 - 3/19: User authentication, file uploader, and viewing of files fully functional on website.
+- 3/21-3/22: Basic sentiment and keyword analysis implemented. Newsfeed ingest can take in a keyword to search the web.
+- 3/23: File uploading, editing, deleting finalized. Upgraded PDF conversion. Added new webpages.
 
 TODO:
 - Add more testing, GitHub issues
