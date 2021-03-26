@@ -79,11 +79,12 @@ def ConvertFileToText(userID, file_in, filetype):
 		if file_in == "test file pdf":
 			try:
 				file_path = "../test_files/WhiteHouseBriefing.pdf"
+				with open(file_path, "rb") as f:
+					text_data = slate3k.PDF(f)
 			except FileNotFoundError:
 				file_path = "/home/runner/work/news-analyzer-ljstaib/news-analyzer-ljstaib/test_files/WhiteHouseBriefing.pdf"
-			text_data = ""
-			with open(file_path, "rb") as f:
-				text_data = slate3k.PDF(f)
+				with open(file_path, "rb") as f:
+					text_data = slate3k.PDF(f)
 
 			#Get rid of multiple newline characters
 			text_data = str("".join(text_data))
@@ -100,9 +101,11 @@ def ConvertFileToText(userID, file_in, filetype):
 		if file_in == "test file docx":
 			try:
 				file_path = "../test_files/DONOTREAD.docx"
+				text_data = docx2txt.process(file_path)
 			except FileNotFoundError:
 				file_path = "/home/runner/work/news-analyzer-ljstaib/news-analyzer-ljstaib/test_files/DONOTREAD.docx"
-			text_data = docx2txt.process(file_path)
+				text_data = docx2txt.process(file_path)
+
 			text_data = re.sub(r'\n +', '\n', text_data)
 			text_data = re.sub(r'\n+', '\n', text_data)
 			text_data = re.sub(r'\n', ' ', text_data)
