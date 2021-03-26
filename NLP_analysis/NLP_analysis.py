@@ -80,7 +80,7 @@ def ConvertFileToText(userID, file_in, filetype):
 			try:
 				file_path = open("../test_files/WhiteHouseBriefing.pdf", "r")
 			except FileNotFoundError:
-				file_ref = open("/home/runner/work/news-analyzer-ljstaib/news-analyzer-ljstaib/test_files/WhiteHouseBriefing.pdf", "r")	
+				file_path = open("/home/runner/work/news-analyzer-ljstaib/news-analyzer-ljstaib/test_files/WhiteHouseBriefing.pdf", "r")	
 			text_data = ""
 			with open(file_path, "rb") as f:
 				text_data = slate3k.PDF(f)
@@ -101,7 +101,7 @@ def ConvertFileToText(userID, file_in, filetype):
 			try:
 				file_path = open("../test_files/DONOTREAD.docx", "r")
 			except FileNotFoundError:
-				file_ref = open("/home/runner/work/news-analyzer-ljstaib/news-analyzer-ljstaib/test_files/DONOTREAD.docx", "r")
+				file_path = open("/home/runner/work/news-analyzer-ljstaib/news-analyzer-ljstaib/test_files/DONOTREAD.docx", "r")
 			text_data = docx2txt.process(file_path)
 			text_data = re.sub(r'\n +', '\n', text_data)
 			text_data = re.sub(r'\n+', '\n', text_data)
