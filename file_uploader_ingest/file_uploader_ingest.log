@@ -1,0 +1,780 @@
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [25/Mar/2021 20:55:56] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:56:00] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:56:02] "[37mGET /users HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:56:07] "[37mGET /signup HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:57:02] "[32mPOST /users HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:57:02] "[37mGET /success HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:57:04] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:57:10] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:57:10] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:57:12] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:57:12] "[32mGET /ufiles/3/fileview HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:57:12] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:57:14] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:57:15] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:57:16] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:57:16] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:57:18] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:57:19] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: User account with userID 3 verified.
+INFO: User account with userID 3 verified.
+INFO: Here, I use the slate3k library to turn this .pdf file into .txt
+INFO: Filetype = .pdf
+INFO: 127.0.0.1 - - [25/Mar/2021 20:57:38] "[35m[1mPOST /files HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:57:38] "[37mGET /files?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:57:38] "[37mGET /files?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:57:38] "[37mGET /files?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:57:38] "[37mGET /files?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:57:38] "[37mGET /files?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:57:38] "[37mGET /files?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: User account with userID 3 verified.
+INFO: User account with userID 3 verified.
+INFO: Here, I use the slate3k library to turn this .pdf file into .txt
+INFO: Filetype = .pdf
+INFO: 127.0.0.1 - - [25/Mar/2021 20:58:55] "[35m[1mPOST /files HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:58:56] "[37mGET /files?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:58:56] "[37mGET /files?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:58:56] "[37mGET /files?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:58:56] "[37mGET /files?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:58:56] "[37mGET /files?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO: User account with userID 3 verified.
+INFO: User account with userID 3 verified.
+INFO: Here, I use the slate3k library to turn this .pdf file into .txt
+INFO: Filetype = .pdf
+INFO: 127.0.0.1 - - [25/Mar/2021 20:59:31] "[35m[1mPOST /files HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:59:31] "[37mGET /files?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:59:31] "[37mGET /files?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:59:31] "[37mGET /files?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:59:31] "[37mGET /files?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:59:31] "[37mGET /files?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [25/Mar/2021 20:59:48] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:59:50] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:59:51] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 20:59:51] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: User account with userID 3 verified.
+INFO: User account with userID 3 verified.
+INFO: Here, I use the slate3k library to turn this .pdf file into .txt
+INFO: Filetype = .pdf
+INFO: 127.0.0.1 - - [25/Mar/2021 21:00:00] "[35m[1mPOST /files HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:00:00] "[37mGET /files?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:00:00] "[37mGET /files?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:00:00] "[37mGET /files?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:00:00] "[37mGET /files?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:00:00] "[37mGET /files?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: User account with userID 3 verified.
+INFO: User account with userID 3 verified.
+INFO: Here, I use the slate3k library to turn this .pdf file into .txt
+INFO: Filetype = .pdf
+INFO: Uploading file giants.pdf
+INFO: 127.0.0.1 - - [25/Mar/2021 21:00:33] "[35m[1mPOST /files HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:00:33] "[37mGET /files?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:00:33] "[37mGET /files?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:00:33] "[37mGET /files?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:00:33] "[37mGET /files?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:00:33] "[37mGET /files?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: User account with userID 3 verified.
+INFO: User account with userID 3 verified.
+INFO: Here, I use the slate3k library to turn this .pdf file into .txt
+INFO: Filetype = .pdf
+INFO: 127.0.0.1 - - [25/Mar/2021 21:01:08] "[35m[1mPOST /files HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:01:08] "[37mGET /files?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:01:08] "[37mGET /files?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:01:08] "[37mGET /files?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:01:08] "[37mGET /files?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:01:08] "[37mGET /files?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: User account with userID 3 verified.
+INFO: User account with userID 3 verified.
+INFO: Here, I use the slate3k library to turn this .pdf file into .txt
+INFO: Filetype = .pdf
+INFO: Uploading file giants.pdf
+INFO: 127.0.0.1 - - [25/Mar/2021 21:01:54] "[35m[1mPOST /files HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:01:54] "[37mGET /files?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:01:54] "[37mGET /files?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:01:54] "[37mGET /files?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:01:54] "[37mGET /files?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:01:55] "[37mGET /files?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: User account with userID 3 verified.
+INFO: User account with userID 3 verified.
+INFO: Here, I use the slate3k library to turn this .pdf file into .txt
+INFO: Filetype = .pdf
+INFO: Uploading file giants.pdf
+INFO: 127.0.0.1 - - [25/Mar/2021 21:04:40] "[35m[1mPOST /files HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:04:40] "[37mGET /files?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:04:40] "[37mGET /files?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:04:40] "[37mGET /files?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:04:40] "[37mGET /files?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:04:40] "[37mGET /files?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:04:50] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [25/Mar/2021 21:04:58] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:05:00] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:05:00] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:05:02] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: User account with userID 3 verified.
+INFO: User account with userID 3 verified.
+INFO: Here, I use the slate3k library to turn this .pdf file into .txt
+INFO: Filetype = .pdf
+INFO: Uploading file giants.pdf
+INFO: 127.0.0.1 - - [25/Mar/2021 21:05:11] "[35m[1mPOST /files HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:05:11] "[37mGET /files?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:05:11] "[37mGET /files?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:05:11] "[37mGET /files?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:05:11] "[37mGET /files?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:05:11] "[37mGET /files?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/file_uploader_ingest/file_uploader_ingest.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: User account with userID 3 verified.
+INFO: User account with userID 3 verified.
+INFO: Here, I use the slate3k library to turn this .pdf file into .txt
+INFO: Filetype = .pdf
+INFO: Uploading file giants.pdf
+INFO: 127.0.0.1 - - [25/Mar/2021 21:07:03] "[35m[1mPOST /files HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:07:03] "[37mGET /files?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:07:03] "[37mGET /files?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:07:03] "[37mGET /files?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:07:03] "[37mGET /files?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:07:03] "[37mGET /files?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/file_uploader_ingest/file_uploader_ingest.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/file_uploader_ingest/file_uploader_ingest.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: User account with userID 3 verified.
+INFO: User account with userID 3 verified.
+INFO: Here, I use the slate3k library to turn this .pdf file into .txt
+INFO: Filetype = .pdf
+INFO: Uploading file giants.pdf
+INFO: 127.0.0.1 - - [25/Mar/2021 21:07:46] "[32mPOST /files HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:07:46] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:07:48] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:07:48] "[32mGET /ufiles/3/fileview HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:07:48] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:07:53] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:07:55] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:07:56] "[37mGET /files HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:08:27] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	New York Giants
+INFO: 	Edge Ifeadi Odenigbo
+INFO: 	David Mayo
+INFO: 	spots
+INFO: 	Dave Gettleman
+INFO: 	BIG BLUE+ Takeaways
+INFO: 	team
+INFO: 	BBLUE
+INFO: 	deal
+INFO: 	video
+INFO: 	Free Agency
+INFO: 	Veteran Salary Benefit deal
+INFO: 	season
+INFO: 	Leonard Williams
+INFO: 	deal
+INFO: 	some
+INFO: 	cornerback
+INFO: 	Reggie Ragland
+INFO: 	Dion Lewis
+INFO: 	deal
+INFO: 	Austin Johnson
+INFO: 	Evan Engram
+INFO: 	draft class
+INFO: 	Nate Ebner
+INFO: 	one
+INFO: 	players
+INFO: 	non-decisions
+INFO: 	contracts decisions
+INFO: 	HOME
+INFO: 	teams
+INFO: 	rookie deals
+INFO: 	Mike Glennon
+INFO: 	credit
+INFO: 	deal
+INFO: 	deals
+INFO: 	draft
+INFO: 	draft
+INFO: 	linebacker
+INFO: 	Joe Judge
+INFO: 	way
+INFO: 	players
+INFO: 	agency
+INFO: 	Adoree' Jackson
+INFO: 	start
+INFO: 	The Giants
+INFO: 	prelude
+INFO: 	star
+INFO: 	tight end
+INFO: 	backup quarterback
+INFO: 	quarterback
+INFO: 	cap space
+INFO: 	space
+INFO: 	free agency moves
+INFO: 	edge rusher
+INFO: 	Jim Mora Jr
+INFO: 	chart
+INFO: 	Devontae Booker
+INFO: 	roles
+INFO: 	league
+INFO: 	fact
+INFO: 	running back
+INFO: 	offense
+INFO: 	league
+INFO: 	guessing game
+INFO: 	chance
+INFO: 	running back
+INFO: 	backup
+INFO: 	Devante Downs
+INFO: 	stretch
+INFO: 	tackling efficiency rate
+INFO: 	contract
+INFO: 	free agency scorecard
+INFO: 	process
+INFO: 	position
+INFO: 	nitpick
+INFO: 	someone
+INFO: 	teams
+INFO: 	C.J. Board
+INFO: 	shopping spree
+INFO: 	bottom
+INFO: 	odds
+INFO: 	Hill
+INFO: 	plan
+INFO: 	activity
+INFO: 	stories
+INFO: 	contract breakdowns
+INFO: 	links
+INFO: 	ability
+INFO: 	scheme
+INFO: 	difference
+INFO: 	need
+INFO: 	receiver
+INFO: 	productivity score
+INFO: 	Nate Solder
+INFO: 	Cap
+INFO: 	EDGE
+INFO: 	Kyle Rudolph
+INFO: 	Cullen Gillaspia
+INFO: 	injury
+INFO: 	Rob Sale
+INFO: 	team
+INFO: 	deal
+INFO: 	deal
+INFO: 	nothing
+INFO: 	Eli Penny
+INFO: 	salary cap
+INFO: 	PATRICIA TRAINA
+INFO: 	offensive line
+INFO: 	draft
+INFO: 	Cody Core
+INFO: 	player
+INFO: 	contract
+INFO: 	contract
+INFO: 	player
+INFO: 	way
+INFO: 	moves
+INFO: 	cap money
+INFO: 	money
+INFO: 	money
+INFO: 	linebacker
+INFO: 	Colt McCoy
+INFO: 	People
+INFO: 	player
+INFO: 	role
+INFO: 	teammates
+INFO: 	team
+INFO: 	leadership
+INFO: 	deal
+INFO: 	deal
+INFO: 	contract
+INFO: 	teams
+INFO: 	teams
+INFO: 	cap
+INFO: 	cap
+INFO: 	guard
+INFO: 	things
+INFO: 	NFL
+INFO: 	roster bonuses
+INFO: 	signing bonus
+INFO: 	incentives
+INFO: 	incentive
+INFO: 	linebacker
+INFO: 	deal
+INFO: 	deal
+INFO: 	objectives
+INFO: 	veteran
+INFO: 	contract
+INFO: 	Pro Bowl
+INFO: 	bath
+INFO: 	roster building
+INFO: 	process
+INFO: 	contract builder
+INFO: 	benefits
+INFO: 	hook
+INFO: 	berths
+INFO: 	Kyle Rudolph I
+INFO: 	teammates
+INFO: 	way
+INFO: 	team
+INFO: 	NCAA
+INFO: 	contracts
+INFO: 	Jason Garrett
+INFO: 	Pat Flaherty
+INFO: 	deal
+INFO: 	money hit
+INFO: 	role
+INFO: 	coaches
+INFO: 	depth
+INFO: 	principle
+INFO: 	option
+INFO: 	way
+INFO: 	hip ailment
+INFO: 	response
+INFO: 	way
+INFO: 	way
+INFO: 	proration
+INFO: 	salary cap exploding
+INFO: 	nature
+INFO: 	timing
+INFO: 	cap savings
+INFO: 	gobs
+INFO: 	career
+INFO: 	twists
+INFO: 	money
+INFO: 	teams
+INFO: 	backup quarterback
+INFO: 	upgrade
+INFO: 	move
+INFO: 	reason
+INFO: 	reason
+INFO: 	Some
+INFO: 	guess
+INFO: 	passing
+INFO: 	Downs
+INFO: 	third-down
+INFO: 	edge rushers
+INFO: 	pass-rush snaps
+INFO: 	pass
+INFO: 	rusher
+INFO: 	moves
+INFO: 	much
+INFO: 	running back
+INFO: 	promise
+INFO: 	character
+INFO: 	offensive line
+INFO: 	draft
+INFO: 	offensive line
+INFO: 	field
+INFO: 	guy
+INFO: 	season
+INFO: 	guy
+INFO: 	team
+INFO: 	league
+INFO: 	Core
+INFO: 	offense
+INFO: 	offense
+INFO: 	fullback
+INFO: 	fullback
+INFO: 	snaps
+INFO: 	physical
+INFO: 	hope
+INFO: 	Wayne Gallman
+INFO: 	players
+INFO: 	leadership role
+INFO: 	edition
+INFO: 	dent
+INFO: 	free agents
+INFO: 	signing
+INFO: 	money hit
+INFO: 	factors
+INFO: 	arm
+INFO: 	people
+INFO: 	playtime incentives
+INFO: 	base defense
+INFO: 	lot
+INFO: 	kickoff returner
+INFO: 	upgrade
+INFO: 	production
+INFO: 	rate
+INFO: 	career
+INFO: 	defense
+INFO: 	Kenny Golladay
+INFO: 	expectation
+INFO: 	arm strength
+INFO: 	lack
+INFO: 	quarterback
+INFO: 	season
+INFO: 	one
+INFO: 	Super Bowl
+INFO: 	fit
+INFO: 	lot
+INFO: 	Dalvin Tomlinson
+INFO: 	Kyler Fackrell
+INFO: 	hook
+INFO: 	position
+INFO: 	Kyle Pitts
+INFO: 	money hit
+INFO: 	role
+INFO: 	snaps
+INFO: 	Carter Coughlin
+INFO: 	VSB
+INFO: 	more
+INFO: 	rocket
+INFO: 	athleticism
+INFO: 	addition
+INFO: 	center
+INFO: 	drop-off
+INFO: 	no one
+INFO: 	criteria
+INFO: 	multimillions
+INFO: 	bit
+INFO: 	coaching staff
+INFO: 	quarterback hits
+INFO: 	cards
+INFO: 	designation
+INFO: 	point
+INFO: 	direction
+INFO: 	table
+INFO: 	team
+INFO: 	team
+INFO: 	end
+INFO: 	tight end
+INFO: 	increase
+INFO: 	rookie deals
+INFO: 	deals
+INFO: 	news
+INFO: 	steal
+INFO: 	mind
+INFO: 	performance escalator
+INFO: 	combination
+INFO: 	words
+INFO: 	fabric
+INFO: 	heart
+INFO: 	raise
+INFO: 	departure
+INFO: 	retrospect
+INFO: 	details
+INFO: 	rotation
+INFO: 	part
+INFO: 	problem
+INFO: 	sense
+INFO: 	cap
+INFO: 	team
+INFO: 	Jonotthan Harrison
+INFO: 	NFILMIG 2
+INFO: 	draft
+INFO: 	LTBEs
+INFO: 	NLTBE
+INFO: 	draft
+INFO: 	people
+INFO: 	guards
+INFO: 	guards
+INFO: 	picks
+INFO: 	playoff contender
+INFO: 	matter
+INFO: 	roster
+INFO: 	free agency
+INFO: 	free agency
+INFO: 	value
+INFO: 	roster spots
+INFO: 	scouts
+INFO: 	return
+INFO: 	feed
+INFO: 	LockedOn Giants
+INFO: 	way
+INFO: 	season
+INFO: 	cap space
+INFO: 	Lorenzo Carter
+INFO: 	good
+INFO: 	New York
+INFO: 	package
+INFO: 	everyone
+INFO: 	bank
+INFO: 	cutting
+INFO: 	locker room
+INFO: 	doubt
+INFO: 	kids
+INFO: 	none
+INFO: 	exception
+INFO: 	imbalance
+INFO: 	start
+INFO: 	star
+INFO: 	start
+INFO: 	draft picks
+INFO: 	draft picks
+INFO: 	picks
+INFO: 	comp draft picks
+INFO: 	draft class
+INFO: 	salary cap space
+INFO: 	snaps
+INFO: 	fact
+INFO: 	thing
+INFO: 	thinking
+INFO: 	running back
+INFO: 	change
+INFO: 	Daniel Jones
+INFO: 	Tae Crowder
+INFO: 	rule
+INFO: 	Saquon Barkley
+INFO: 	Vikings
+INFO: 	Achilles
+INFO: 	Pro Football Focus
+INFO: 	Hercules Mata'afa
+INFO: 	Patrick Graham
+INFO: 	chances
+INFO: 	cap
+INFO: 	lineman
+INFO: 	linemen
+INFO: 	formula
+INFO: 	rookie pool
+INFO: 	Rookie Pool
+INFO: 	formula
+INFO: 	newsletter
+INFO: 	questions
+INFO: 	podcasts
+INFO: 	Thoughts
+INFO: 	Twitter
+INFO: 	B.J.
+INFO: 	Kevin Zeitler
+INFO: 	free agency
+INFO: 	eyebrows
+INFO: 	mistakes
+INFO: 	window
+INFO: 	fuss
+INFO: 	effect
+INFO: 	number
+INFO: 	radar
+INFO: 	latest
+INFO: 	mailbag
+INFO: 	subscription
+INFO: 	podcast
+INFO: 	head coach
+INFO: 	roster
+INFO: 	heck
+INFO: 	first
+INFO: 	total
+INFO: 	Kaden Smith
+INFO: 	New England
+INFO: 	Jabaal Sheard
+INFO: 	Alfred Morris
+INFO: 	Adrian Colbert
+INFO: 	Spencer Pulley
+INFO: 	RT Cameron Fleming
+INFO: 	OC
+INFO: 	draft class
+INFO: 	training
+INFO: 	no-brainer
+INFO: 	set
+INFO: 	personnel
+INFO: 	field
+INFO: 	hog molly
+INFO: 	person
+INFO: 	both
+INFO: 	scout
+INFO: 	video
+INFO: 	top
+INFO: 	questions
+INFO: 	mentor
+INFO: 	mentor
+INFO: 	berth
+INFO: 	reaction
+INFO: 	Levine Toilolo
+INFO: 	history
+INFO: 	eye
+INFO: 	series
+INFO: 	article
+INFO: 	track
+INFO: 	pants
+INFO: 	seat
+INFO: 	body
+INFO: 	habits
+INFO: 	practice
+INFO: 	peer
+INFO: 	tight ends
+INFO: 	Facebook
+INFO: 	sense
+INFO: 	way
+INFO: 	showing
+INFO: 	claim
+INFO: 	Giants view Rudolph
+INFO: 	Florida
+INFO: 	Q&As
+INFO: 	2021
+INFO: 	2022
+INFO: 	2025
+INFO: 	2023
+INFO: 	2021
+INFO: 	2022
+INFO: 	$250,000
+INFO: 	$17 million
+INFO: 	$4.25 million
+INFO: 	$3.4 million
+INFO: 	$3.4 million
+INFO: 	$1.127 million
+INFO: 	$987,500
+INFO: 	$137,500
+INFO: 	$2.3 million
+INFO: 	$6 million
+INFO: 	$1 million
+INFO: 	$250,000
+INFO: 	$1.5 million
+INFO: 	$3 million
+INFO: 	$3.5 million
+INFO: 	$1.35 million
+INFO: 	$650K
+INFO: 	$650,000
+INFO: 	$8,063,304
+INFO: 	$660,000
+INFO: 	$4.103 million
+INFO: 	one
+INFO: 	6.4
+INFO: 	8,063,304
+INFO: 	2.3 million
+INFO: 	1.35 million
+INFO: 	4.25 million
+INFO: 	137,500
+INFO: 	one
+INFO: 	6 million
+INFO: 	2022
+INFO: 	650,000
+INFO: 	4.103 million
+INFO: 	4.103 million
+INFO: 	3.4 million
+INFO: 	1.5 million
+INFO: 	12
+INFO: 	10
+INFO: 	14
+INFO: 	2
+INFO: 	2021
+INFO: 	2025
+INFO: 	3
+INFO: 	12
+INFO: 	2022
+INFO: 	7
+INFO: 	11
+INFO: 	five
+INFO: 	4
+INFO: 	one
+INFO: 	5
+INFO: 	10.5
+INFO: 	2
+INFO: 	one
+INFO: 	two
+INFO: 	one
+INFO: 	1 million
+INFO: 	9
+INFO: 	400
+INFO: 	Two
+INFO: 	1.127 million
+INFO: 	1.127 million
+INFO: 	11
+INFO: 	650K
+INFO: 	6
+INFO: 	13
+INFO: 	660,000
+INFO: 	one
+INFO: 	17 million
+INFO: 	one
+INFO: 	one
+INFO: 	23
+INFO: 	2
+INFO: 	28
+INFO: 	31
+INFO: 	15.0
+INFO: 	5.6
+INFO: 	8
+INFO: 	One
+INFO: 	1
+INFO: 	2
+INFO: 	2023
+INFO: 	51
+INFO: 	3.4 million
+INFO: 	250,000
+INFO: 	2021
+INFO: 	6.4
+INFO: 	six
+INFO: 	1
+INFO: 	987,500
+INFO: 	two
+INFO: 	3.5 million
+INFO: 	3 million
+INFO: 	20250
+INFO: 	three
+INFO: 	250,000
+INFO: Sentiment of text information entered: magnitude: 48.0
+
+INFO: 127.0.0.1 - - [25/Mar/2021 21:08:32] "[32mGET /files/4/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:08:32] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:08:34] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:08:34] "[32mGET /ufiles/3/fileview HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:08:34] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:08:48] "[32mGET /files/4/edit HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:08:48] "[37mGET /editfile HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:08:54] "[32mPOST /files/4/edit HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:08:54] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:08:56] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:08:56] "[32mGET /ufiles/3/fileview HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:08:56] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:09:13] "[32mGET /files/4/delete HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:09:13] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:09:14] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:09:14] "[32mGET /ufiles/3/fileview HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:09:14] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:09:15] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:09:16] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:09:17] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:09:22] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:09:23] "[37mGET /files HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:09:38] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: Search text is covid
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [25/Mar/2021 21:09:46] "[32mGET /search/covid HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:09:46] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:09:52] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:09:53] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [25/Mar/2021 21:10:28] "[37mGET / HTTP/1.1[0m" 200 -

@@ -143,7 +143,7 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 					}
 				}	
 				logging.info("Uploading file " + str(filename))
-				return True
+				return new_file
 			else:
 				return False			
 	else:

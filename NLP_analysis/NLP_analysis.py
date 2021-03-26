@@ -104,21 +104,18 @@ def ConvertFileToText(userID, file_in, filetype):
 			logging.info("Here, I use the docx2txt library to turn this .docx file into .txt")
 			logging.info("Filetype = .docx")
 			text_data = docx2txt.process(file_path)	
-			logging.debug("File contents: " + text_data)
 		elif filetype == "txt":
 			logging.info("Here, there is no conversion to do since it is already a .txt file")
 			logging.info("Filetype = .txt")
 			file_ref = open(file_path, "r")
 			text_data = file_ref.read()
-			logging.debug("File contents: " + text_data)
 		elif filetype == "pdf":
 			logging.info("Here, I use the slate3k library to turn this .pdf file into .txt")
 			logging.info("Filetype = .pdf")
 			text_data = ""
 			with open(file_path, "rb") as f:
 				text_data = slate3k.PDF(f)
-
-			logging.debug("File contents: " + text_data)
+			text_data = str("".join(text_data))	
 		else:
 			logging.debug("I will implement support for other filetypes")
 			logging.info("Filetype = other")	
