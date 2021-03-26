@@ -26,8 +26,9 @@ import os
 import re
 import docx2txt #DOC -> TXT
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "/Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json"
-from google.cloud import language
+try:
+	os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "/Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json"
+	from google.cloud import language
 
 tracemalloc.start()
 
