@@ -61,7 +61,10 @@ def ConvertFileToText(userID, file_in, filetype):
 	result = doesUserExist(userID)
 	if (result):
 		if file_in == "test file txt":
-			file_ref = open("../test_files/Sample.txt", "r")
+			try:
+				file_ref = open("../test_files/Sample.txt", "r")
+			except FileNotFoundError:
+				file_ref = open("/home/runner/work/news-analyzer-ljstaib/news-analyzer-ljstaib/test_files/Sample.txt", "r")	
 			text_data = file_ref.read()
 			text_data = re.sub(r'\n +', '\n', text_data)
 			text_data = re.sub(r'\n+', '\n', text_data)
@@ -74,7 +77,10 @@ def ConvertFileToText(userID, file_in, filetype):
 			return text_data
 
 		if file_in == "test file pdf":
-			file_path = "../test_files/WhiteHouseBriefing.pdf"
+			try:
+				file_path = "../test_files/WhiteHouseBriefing.pdf"
+			except FileNotFoundError:
+				file_ref = open("/home/runner/work/news-analyzer-ljstaib/news-analyzer-ljstaib/test_files/WhiteHouseBriefing.pdf", "r")	
 			text_data = ""
 			with open(file_path, "rb") as f:
 				text_data = slate3k.PDF(f)
@@ -92,7 +98,10 @@ def ConvertFileToText(userID, file_in, filetype):
 			return text_data
 
 		if file_in == "test file docx":
-			file_path = "../test_files/DONOTREAD.docx"
+			try:
+				file_path = "../test_files/DONOTREAD.docx"
+			except FileNotFoundError:
+				file_ref = open("/home/runner/work/news-analyzer-ljstaib/news-analyzer-ljstaib/test_files/DONOTREAD.docx", "r")
 			text_data = docx2txt.process(file_path)
 			text_data = re.sub(r'\n +', '\n', text_data)
 			text_data = re.sub(r'\n+', '\n', text_data)
