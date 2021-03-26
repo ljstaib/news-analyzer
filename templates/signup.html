@@ -11,14 +11,14 @@
 	<body>
 		<div class="bigText">Sign Up</div>
 		<form action="/users" style="text-align: center" method="post">
-			<div class="smallText">Username</div>
-			<input type="text" name="create_username" required>
-			<div class="smallText">Password</div>
-			<input type="password" name="create_password" required>
+			<div class="smallText">Username (4-32 characters)</div>
+			<input type="text" name="create_username" minlength="4" maxlength="32" required>
+			<div class="smallText">Password (8-256 characters)</div>
+			<input type="password" name="create_password" minlength="8" maxlength="256" required>
 			<div class="smallText">First Name</div>
-			<input type="text" name="create_firstname" required>
+			<input type="text" name="create_firstname" maxlength="32" required>
 			<div class="smallText">Last Name</div>
-			<input type="text" name="create_lastname" required>
+			<input type="text" name="create_lastname" maxlength="32" required>
 			<br><br>
 			<input type="submit" value="Create Account">
 		</form>

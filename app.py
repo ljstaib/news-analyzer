@@ -273,8 +273,8 @@ class File(Resource):
 							}
 						}}
 						query = {"F_ID": fid}
-						print(query)
-						print(updated_file)
+						#print(query)
+						#print(updated_file)
 						files_collection.update_one(query, updated_file)
 						app_users, app_files = updateDB()
 						flash('File with name ' + str(file.get('Name')) + ' successfully analyzed.')
