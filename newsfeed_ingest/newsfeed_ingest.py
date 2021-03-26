@@ -30,12 +30,9 @@ users = users_collection.find()
 
 logging.basicConfig(filename='newsfeed_ingest.log', level=logging.INFO, format='%(levelname)s: %(message)s')
 
-try:
-	search_key = open("../.keys/search_key.txt", "r").read()
-	nyt_key = open("../.keys/nyt.txt", "r").read()
-except FileNotFoundError: 
-	search_key = open("../../.keys/search_key.txt", "r").read()
-	nyt_key = open("../../.keys/nyt.txt", "r").read()
+for key in keys_collection.find():
+	if (key.get('name') == "NYT"):
+		nyt_key = key.get('key')	
 
 # ========================================================================
 # Newsfeed Ingest

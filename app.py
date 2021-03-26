@@ -37,10 +37,9 @@ import os
 
 app = Flask(__name__)
 
-try:
-	app.secret_key = open("../.keys/flask_key.txt", "r").read()
-except FileNotFoundError: 
-	app.secret_key = open("../../.keys/flask_key.txt", "r").read()
+for key in keys_collection.find():
+	if (key.get('name') == "Flask"):
+		app.secret_key = key.get('key')
 
 app.config["DEBUG"] = True
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
