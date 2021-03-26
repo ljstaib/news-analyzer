@@ -24,6 +24,8 @@ import logging #Logging
 import slate3k #PDF -> TXT
 import os
 import re
+import psutil
+import time
 import docx2txt #DOC -> TXT
 
 try:
@@ -247,7 +249,7 @@ def DiagnosticsNLP():
 		    logging.info(stat)
 
 		#Memory usage:
-		logging.info("[STATS] CPU Usage: Testing ConvertFilesToText()")
+		logging.info("[STATS] CPU Usage: Testing ConvertFileToText()")
 		#output = cProfile.run('ConvertFilesToText(str(0), files)')  #-> needs to be in main part, not in a function
 		#logging.info(output)
 

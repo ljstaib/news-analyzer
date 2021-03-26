@@ -18,3 +18,14 @@ INFO: [STATS] Analyzing bandwidth over 1 second
 INFO: Bandwidth used: 0.00037384033203125
 INFO: Search text is election
 INFO: Successful retrieval of news articles!
+WARNING: Entered search text is not a string.
+WARNING: Entered search text is not a string.
+INFO: [STATS] Memory Usage: Top 5 files allocating the most memory:
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/site-packages/bson/__init__.py:1089: size=10053 B, count=152, average=66 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/logging/__init__.py:1172: size=5290 B, count=12, average=441 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/site-packages/pymongo/pool.py:683: size=3200 B, count=4, average=800 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/site-packages/pymongo/message.py:714: size=2972 B, count=22, average=135 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/site-packages/pymongo/pool.py:509: size=2464 B, count=13, average=190 B
+INFO: [STATS] CPU Usage: Testing DiscoverContent()
+INFO: [STATS] Analyzing bandwidth over 1 second
+INFO: Bandwidth used: 0.00023651123046875

@@ -778,3 +778,34 @@ INFO: 127.0.0.1 - - [25/Mar/2021 21:09:46] "[37mGET /newsfeed HTTP/1.1[0m" 200
 INFO: 127.0.0.1 - - [25/Mar/2021 21:09:52] "[37mGET /homepage HTTP/1.1[0m" 200 -
 INFO: 127.0.0.1 - - [25/Mar/2021 21:09:53] "[37mGET / HTTP/1.1[0m" 200 -
 INFO: 127.0.0.1 - - [25/Mar/2021 21:10:28] "[37mGET / HTTP/1.1[0m" 200 -
+ERROR: User account with userID 10 not found.
+WARNING: UploadFiles: file ID (F_ID) should be an integer
+WARNING: UploadFiles: "authors" should be a string
+WARNING: UploadFiles: "creation_time" should be a string
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+ERROR: User account with userID 10 not found.
+WARNING: UploadFiles: file ID (F_ID) should be an integer
+WARNING: UploadFiles: "authors" should be a string
+WARNING: UploadFiles: "creation_time" should be a string
+INFO: User account with userID 0 verified.
+ERROR: User account with userID 10 not found.
+WARNING: UploadFiles: file ID (F_ID) should be an integer
+WARNING: UploadFiles: "authors" should be a string
+WARNING: UploadFiles: "creation_time" should be a string
+INFO: User account with userID 0 verified.
+WARNING: FileDelete(): File ID (F_ID) should be an integer
+INFO: Testing FileDelete()
+WARNING: FileDelete(): File ID (F_ID) should be an integer
+WARNING: FileDelete(): "authors" should be a string
+WARNING: FileDelete(): "creation_time" should be a string
+INFO: Testing FileEdit()
+INFO: [STATS] Memory Usage: Top 5 files allocating the most memory:
+INFO: <frozen importlib._bootstrap_external>:580: size=12.6 MiB, count=134010, average=99 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/linecache.py:137: size=781 KiB, count=7594, average=105 B
+INFO: <frozen importlib._bootstrap>:219: size=724 KiB, count=6819, average=109 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/abc.py:85: size=416 KiB, count=2005, average=212 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/site-packages/cryptography/hazmat/bindings/openssl/binding.py:93: size=413 KiB, count=2647, average=160 B
+INFO: [STATS] CPU Usage: Testing FileDelete()
+INFO: [STATS] Analyzing bandwidth over 1 second
+INFO: Bandwidth used: 1.52587890625e-05

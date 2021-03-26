@@ -25,7 +25,10 @@ from werkzeug.utils import secure_filename
 
 tracemalloc.start()
 
-logging.basicConfig(filename='./file_uploader_ingest/file_uploader_ingest.log', level=logging.INFO, format='%(levelname)s: %(message)s')
+try:
+	logging.basicConfig(filename='./file_uploader_ingest/file_uploader_ingest.log', level=logging.INFO, format='%(levelname)s: %(message)s')
+except FileNotFoundError:
+	logging.basicConfig(filename='file_uploader_ingest.log', level=logging.INFO, format='%(levelname)s: %(message)s')
 
 UPLOAD_FOLDER = './File_Data'
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'docx'}

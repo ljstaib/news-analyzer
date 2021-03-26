@@ -24,7 +24,7 @@ def test_UploadFiles():
 	assert UploadFiles(0, "test_file", "test", "Luke Staib", "3/6/21") == False
 	assert UploadFiles(0, "test_file", 1000, 1, "3/6/21") == False
 	assert UploadFiles(0, "test_file", 1000, "Luke Staib", 1) == False
-	assert UploadFiles(0, "test_file", 1000, "Luke Staib", "3/6/21") == {'F_ID': 1000, 'Name': "Test", 'Filetype': "txt", 'Authors': "Luke Staib",'Text': "This is not a real file.", 'CreationTime': "3/6/21", 'Source': 0, 'Size': 100, 'UploadTime': "1/1/1900", 'Sentiment': None, 'Tags': { 'Status': "Testing file", 'Keywords': None, 'Categories': None } }
+	assert UploadFiles(0, "test_file", 1000, "Luke Staib", "3/6/21") == {'F_ID': 1000, 'Name': 'Test', 'Filetype': 'txt', 'Authors': 'Luke Staib', 'Text': 'This is not a real file.', 'CreationTime': '3/6/21', 'Source': 'test0', 'Size': -1, 'UploadTime': '1/1/1900', 'Sentiment': None, 'Tags': {'Status': 'Testing file', 'Keywords': None, 'Categories': None}}
 
 # def test_RenderProgressBar():
 # 	assert RenderProgressBar(True) == True

@@ -81914,3 +81914,701 @@ DEBUG: User ID: 0
 DEBUG: User ID: 1
 DEBUG: User ID: 2
 INFO: User account with userID 0 verified.
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+DEBUG: User ID: 2
+DEBUG: User ID: 3
+ERROR: User account with userID 10 not found.
+INFO: ConvertFileToText: userID (U_ID) should be an integer.
+INFO: ConvertFileToText: "filetype" should be a string.
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+DEBUG: User ID: 2
+DEBUG: User ID: 3
+INFO: User account with userID 0 verified.
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+DEBUG: User ID: 2
+DEBUG: User ID: 3
+INFO: User account with userID 0 verified.
+DEBUG: xref found: pos='6089'
+DEBUG: xref objects: {}
+DEBUG: do_keyword: pos=6129, token=R, stack=[(6111, /Size), (6117, 22), (6119, /Root), (6125, 1), (6127, 0)]
+DEBUG: do_keyword: pos=6140, token=R, stack=[(6111, /Size), (6117, 22), (6119, /Root), (6129, <PDFObjRef:1>), (6130, /Info), (6136, 9), (6138, 0)]
+DEBUG: do_keyword: pos=6242, token=startxref, stack=[(6109, {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Prev': 5494, 'XRefStm': 5213})]
+DEBUG: nextobject: (6109, {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Prev': 5494, 'XRefStm': 5213})
+DEBUG: trailer: {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Prev': 5494, 'XRefStm': 5213}
+DEBUG: do_keyword: pos=5264, token=R, stack=[(5225, /Type), (5230, /XRef), (5235, /Size), (5241, 21), (5243, /W), (5245, [1, 4, 2]), (5254, /Root), (5260, 1), (5262, 0)]
+DEBUG: do_keyword: pos=5275, token=R, stack=[(5225, /Type), (5230, /XRef), (5235, /Size), (5241, 21), (5243, /W), (5245, [1, 4, 2]), (5254, /Root), (5264, <PDFObjRef:1>), (5265, /Info), (5271, 9), (5273, 0)]
+DEBUG: do_keyword: pos=5383, token=stream, stack=[(5223, {'Type': /XRef, 'Size': 21, 'W': [1, 4, 2], 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Filter': /FlateDecode, 'Length': 82})]
+DEBUG: do_keyword: pos=5486, token=endobj, stack=[(5391, <PDFStream(None): raw=82, {'Type': /XRef, 'Size': 21, 'W': [1, 4, 2], 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Filter': /FlateDecode, 'Length': 82}>)]
+DEBUG: nextobject: (5391, <PDFStream(None): raw=82, {'Type': /XRef, 'Size': 21, 'W': [1, 4, 2], 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Filter': /FlateDecode, 'Length': 82}>)
+DEBUG: xref stream: objid=<ObjIdRange: 0-20>, fields=1,4,2
+DEBUG: trailer: {'Type': /XRef, 'Size': 21, 'W': [1, 4, 2], 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Filter': /FlateDecode, 'Length': 82}
+DEBUG: xref objects: {1: (0, 17), 2: (0, 166), 3: (0, 222), 4: (0, 486), 5: (0, 779), 6: (0, 950), 7: (0, 1186), 8: (0, 1239), 9: (0, 1292), 18: (0, 1829), 19: (0, 2082), 20: (0, 5168), 21: (0, 5213)}
+DEBUG: do_keyword: pos=5975, token=R, stack=[(5957, /Size), (5963, 22), (5965, /Root), (5971, 1), (5973, 0)]
+DEBUG: do_keyword: pos=5986, token=R, stack=[(5957, /Size), (5963, 22), (5965, /Root), (5975, <PDFObjRef:1>), (5976, /Info), (5982, 9), (5984, 0)]
+DEBUG: do_keyword: pos=6065, token=startxref, stack=[(5955, {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet']})]
+DEBUG: nextobject: (5955, {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet']})
+DEBUG: trailer: {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet']}
+DEBUG: do_keyword: pos=1425, token=endobj, stack=[(1301, {'Author': 'Luke Staib', 'Creator': 'Microsoft Word', 'CreationDate': "D:20210221214845+00'00'", 'ModDate': "D:20210221214845+00'00'"})]
+DEBUG: nextobject: (1301, {'Author': 'Luke Staib', 'Creator': 'Microsoft Word', 'CreationDate': "D:20210221214845+00'00'", 'ModDate': "D:20210221214845+00'00'"})
+DEBUG: do_keyword: pos=52, token=R, stack=[(28, /Type), (33, /Catalog), (41, /Pages), (48, 2), (50, 0)]
+DEBUG: do_keyword: pos=87, token=R, stack=[(28, /Type), (33, /Catalog), (41, /Pages), (52, <PDFObjRef:2>), (53, /Lang), (58, 'en-US'), (66, /StructTreeRoot), (82, 10), (85, 0)]
+DEBUG: do_keyword: pos=128, token=R, stack=[(28, /Type), (33, /Catalog), (41, /Pages), (52, <PDFObjRef:2>), (53, /Lang), (58, 'en-US'), (66, /StructTreeRoot), (87, <PDFObjRef:10>), (88, /MarkInfo), (97, {'Marked': True}), (113, /Metadata), (123, 19), (126, 0)]
+DEBUG: do_keyword: pos=153, token=R, stack=[(28, /Type), (33, /Catalog), (41, /Pages), (52, <PDFObjRef:2>), (53, /Lang), (58, 'en-US'), (66, /StructTreeRoot), (87, <PDFObjRef:10>), (88, /MarkInfo), (97, {'Marked': True}), (113, /Metadata), (128, <PDFObjRef:19>), (129, /ViewerPreferences), (148, 20), (151, 0)]
+DEBUG: do_keyword: pos=158, token=endobj, stack=[(26, {'Type': /Catalog, 'Pages': <PDFObjRef:2>, 'Lang': 'en-US', 'StructTreeRoot': <PDFObjRef:10>, 'MarkInfo': {'Marked': True}, 'Metadata': <PDFObjRef:19>, 'ViewerPreferences': <PDFObjRef:20>})]
+DEBUG: nextobject: (26, {'Type': /Catalog, 'Pages': <PDFObjRef:2>, 'Lang': 'en-US', 'StructTreeRoot': <PDFObjRef:10>, 'MarkInfo': {'Marked': True}, 'Metadata': <PDFObjRef:19>, 'ViewerPreferences': <PDFObjRef:20>})
+DEBUG: do_keyword: pos=207, token=R, stack=[(203, 3), (205, 0)]
+DEBUG: do_keyword: pos=214, token=endobj, stack=[(175, {'Type': /Pages, 'Count': 1, 'Kids': [<PDFObjRef:3>]})]
+DEBUG: nextobject: (175, {'Type': /Pages, 'Count': 1, 'Kids': [<PDFObjRef:3>]})
+DEBUG: Pages: Kids=[<PDFObjRef:3>]
+DEBUG: do_keyword: pos=255, token=R, stack=[(233, /Type), (238, /Page), (243, /Parent), (251, 2), (253, 0)]
+DEBUG: do_keyword: pos=283, token=R, stack=[(275, /F1), (279, 5), (281, 0)]
+DEBUG: do_keyword: pos=307, token=R, stack=[(298, /GS7), (303, 7), (305, 0)]
+DEBUG: do_keyword: pos=317, token=R, stack=[(298, /GS7), (307, <PDFObjRef:7>), (308, /GS8), (313, 8), (315, 0)]
+DEBUG: do_keyword: pos=401, token=R, stack=[(233, /Type), (238, /Page), (243, /Parent), (255, <PDFObjRef:2>), (256, /Resources), (266, {'Font': {'F1': <PDFObjRef:5>}, 'ExtGState': {'GS7': <PDFObjRef:7>, 'GS8': <PDFObjRef:8>}, 'ProcSet': [/PDF, /Text, /ImageB, /ImageC, /ImageI]}), (363, /MediaBox), (372, [0, 0, 612, 792]), (387, /Contents), (397, 4), (399, 0)]
+DEBUG: do_keyword: pos=478, token=endobj, stack=[(231, {'Type': /Page, 'Parent': <PDFObjRef:2>, 'Resources': {'Font': {'F1': <PDFObjRef:5>}, 'ExtGState': {'GS7': <PDFObjRef:7>, 'GS8': <PDFObjRef:8>}, 'ProcSet': [/PDF, /Text, /ImageB, /ImageC, /ImageI]}, 'MediaBox': [0, 0, 612, 792], 'Contents': <PDFObjRef:4>, 'Group': {'Type': /Group, 'S': /Transparency, 'CS': /DeviceRGB}, 'Tabs': /S, 'StructParents': 0})]
+DEBUG: nextobject: (231, {'Type': /Page, 'Parent': <PDFObjRef:2>, 'Resources': {'Font': {'F1': <PDFObjRef:5>}, 'ExtGState': {'GS7': <PDFObjRef:7>, 'GS8': <PDFObjRef:8>}, 'ProcSet': [/PDF, /Text, /ImageB, /ImageC, /ImageI]}, 'MediaBox': [0, 0, 612, 792], 'Contents': <PDFObjRef:4>, 'Group': {'Type': /Group, 'S': /Transparency, 'CS': /DeviceRGB}, 'Tabs': /S, 'StructParents': 0})
+DEBUG: Page: {'Type': /Page, 'Parent': <PDFObjRef:2>, 'Resources': {'Font': {'F1': <PDFObjRef:5>}, 'ExtGState': {'GS7': <PDFObjRef:7>, 'GS8': <PDFObjRef:8>}, 'ProcSet': [/PDF, /Text, /ImageB, /ImageC, /ImageI]}, 'MediaBox': [0, 0, 612, 792], 'Contents': <PDFObjRef:4>, 'Group': {'Type': /Group, 'S': /Transparency, 'CS': /DeviceRGB}, 'Tabs': /S, 'StructParents': 0}
+DEBUG: do_keyword: pos=531, token=stream, stack=[(495, {'Filter': /FlateDecode, 'Length': 219})]
+DEBUG: do_keyword: pos=771, token=endobj, stack=[(539, <PDFStream(None): raw=219, {'Filter': /FlateDecode, 'Length': 219}>)]
+DEBUG: nextobject: (539, <PDFStream(None): raw=219, {'Filter': /FlateDecode, 'Length': 219}>)
+DEBUG: render_contents: resources={'Font': {'F1': <PDFObjRef:5>}, 'ExtGState': {'GS7': <PDFObjRef:7>, 'GS8': <PDFObjRef:8>}, 'ProcSet': [/PDF, /Text, /ImageB, /ImageC, /ImageI]}, streams=[<PDFStream(4): raw=219, {'Filter': /FlateDecode, 'Length': 219}>], ctm=(1, 0, 0, 1, 0, 0)
+DEBUG: do_keyword: pos=897, token=R, stack=[(790, /Type), (795, /Font), (800, /Subtype), (808, /TrueType), (817, /Name), (822, /F1), (825, /BaseFont), (834, /TimesNewRomanPSMT), (852, /Encoding), (861, /WinAnsiEncoding), (877, /FontDescriptor), (893, 6), (895, 0)]
+DEBUG: do_keyword: pos=937, token=R, stack=[(790, /Type), (795, /Font), (800, /Subtype), (808, /TrueType), (817, /Name), (822, /F1), (825, /BaseFont), (834, /TimesNewRomanPSMT), (852, /Encoding), (861, /WinAnsiEncoding), (877, /FontDescriptor), (897, <PDFObjRef:6>), (898, /FirstChar), (909, 32), (911, /LastChar), (921, 121), (924, /Widths), (932, 18), (935, 0)]
+DEBUG: do_keyword: pos=942, token=endobj, stack=[(788, {'Type': /Font, 'Subtype': /TrueType, 'Name': /F1, 'BaseFont': /TimesNewRomanPSMT, 'Encoding': /WinAnsiEncoding, 'FontDescriptor': <PDFObjRef:6>, 'FirstChar': 32, 'LastChar': 121, 'Widths': <PDFObjRef:18>})]
+DEBUG: nextobject: (788, {'Type': /Font, 'Subtype': /TrueType, 'Name': /F1, 'BaseFont': /TimesNewRomanPSMT, 'Encoding': /WinAnsiEncoding, 'FontDescriptor': <PDFObjRef:6>, 'FirstChar': 32, 'LastChar': 121, 'Widths': <PDFObjRef:18>})
+DEBUG: do_keyword: pos=1178, token=endobj, stack=[(959, {'Type': /FontDescriptor, 'FontName': /TimesNewRomanPSMT, 'Flags': 32, 'ItalicAngle': 0, 'Ascent': 891, 'Descent': -216, 'CapHeight': 693, 'AvgWidth': 401, 'MaxWidth': 2614, 'FontWeight': 400, 'XHeight': 250, 'Leading': 42, 'StemV': 40, 'FontBBox': [-568, -216, 2046, 693]})]
+DEBUG: nextobject: (959, {'Type': /FontDescriptor, 'FontName': /TimesNewRomanPSMT, 'Flags': 32, 'ItalicAngle': 0, 'Ascent': 891, 'Descent': -216, 'CapHeight': 693, 'AvgWidth': 401, 'MaxWidth': 2614, 'FontWeight': 400, 'XHeight': 250, 'Leading': 42, 'StemV': 40, 'FontBBox': [-568, -216, 2046, 693]})
+DEBUG: do_keyword: pos=2074, token=endobj, stack=[(1839, [250, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 250, 0, 0, 500, 500, 0, 0, 0, 0, 0, 0, 0, 278, 0, 0, 0, 0, 0, 0, 0, 667, 0, 0, 0, 556, 0, 722, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 611, 0, 0, 944, 0, 0, 0, 0, 0, 0, 0, 0, 0, 444, 500, 0, 500, 444, 333, 500, 500, 278, 0, 0, 0, 0, 500, 500, 0, 0, 333, 389, 278, 500, 0, 0, 0, 500])]
+DEBUG: nextobject: (1839, [250, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 250, 0, 0, 500, 500, 0, 0, 0, 0, 0, 0, 0, 278, 0, 0, 0, 0, 0, 0, 0, 667, 0, 0, 0, 556, 0, 722, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 611, 0, 0, 944, 0, 0, 0, 0, 0, 0, 0, 0, 0, 444, 500, 0, 500, 444, 333, 500, 500, 278, 0, 0, 0, 0, 500, 500, 0, 0, 333, 389, 278, 500, 0, 0, 0, 500])
+DEBUG: nextobject: (1, /P)
+DEBUG: nextobject: (4, {'MCID': 0})
+DEBUG: do_keyword: pos=16, token=BDC, stack=[]
+DEBUG: nextobject: (16, BDC)
+DEBUG: do_keyword: pos=20, token=q, stack=[]
+DEBUG: nextobject: (20, q)
+DEBUG: nextobject: (23, 9.12e-06)
+DEBUG: nextobject: (34, 0)
+DEBUG: nextobject: (36, 612)
+DEBUG: nextobject: (40, 792)
+DEBUG: do_keyword: pos=44, token=re, stack=[]
+DEBUG: nextobject: (44, re)
+DEBUG: do_keyword: pos=48, token=W*, stack=[]
+DEBUG: nextobject: (48, W*)
+DEBUG: do_keyword: pos=51, token=n, stack=[]
+DEBUG: nextobject: (51, n)
+DEBUG: do_keyword: pos=54, token=BT, stack=[]
+DEBUG: nextobject: (54, BT)
+DEBUG: nextobject: (58, /F1)
+DEBUG: nextobject: (62, 12)
+DEBUG: do_keyword: pos=65, token=Tf, stack=[]
+DEBUG: nextobject: (65, Tf)
+DEBUG: nextobject: (69, 1)
+DEBUG: nextobject: (71, 0)
+DEBUG: nextobject: (73, 0)
+DEBUG: nextobject: (75, 1)
+DEBUG: nextobject: (77, 72.025)
+DEBUG: nextobject: (84, 708.72)
+DEBUG: do_keyword: pos=91, token=Tm, stack=[]
+DEBUG: nextobject: (91, Tm)
+DEBUG: nextobject: (95, /GS7)
+DEBUG: do_keyword: pos=100, token=gs, stack=[]
+DEBUG: nextobject: (100, gs)
+DEBUG: nextobject: (104, 0)
+DEBUG: do_keyword: pos=106, token=g, stack=[]
+DEBUG: nextobject: (106, g)
+DEBUG: nextobject: (109, /GS8)
+DEBUG: do_keyword: pos=114, token=gs, stack=[]
+DEBUG: nextobject: (114, gs)
+DEBUG: nextobject: (118, 0)
+DEBUG: do_keyword: pos=120, token=G, stack=[]
+DEBUG: nextobject: (120, G)
+DEBUG: nextobject: (123, ['W', 7, 'hi', 7, 't', 7, 'e', 7, ' H', -6, 'ous', -6, 'e', 7, ' Bri', -13, 'e', 7, 'fi', 7, 'ng:', 7, ' ', -20, 'T', 7, 'oda', 7, 'y on ', -20, 'F', 14, 'e', 7, 'brua', 6, 'ry 21.......'])
+DEBUG: do_keyword: pos=240, token=TJ, stack=[]
+DEBUG: nextobject: (240, TJ)
+DEBUG: do_keyword: pos=244, token=ET, stack=[]
+DEBUG: nextobject: (244, ET)
+DEBUG: do_keyword: pos=248, token=Q, stack=[]
+DEBUG: nextobject: (248, Q)
+DEBUG: do_keyword: pos=251, token=q, stack=[]
+DEBUG: nextobject: (251, q)
+DEBUG: nextobject: (254, 9.12e-06)
+DEBUG: nextobject: (265, 0)
+DEBUG: nextobject: (267, 612)
+DEBUG: nextobject: (271, 792)
+DEBUG: do_keyword: pos=275, token=re, stack=[]
+DEBUG: nextobject: (275, re)
+DEBUG: do_keyword: pos=279, token=W*, stack=[]
+DEBUG: nextobject: (279, W*)
+DEBUG: do_keyword: pos=282, token=n, stack=[]
+DEBUG: nextobject: (282, n)
+DEBUG: do_keyword: pos=285, token=BT, stack=[]
+DEBUG: nextobject: (285, BT)
+DEBUG: nextobject: (289, /F1)
+DEBUG: nextobject: (293, 12)
+DEBUG: do_keyword: pos=296, token=Tf, stack=[]
+DEBUG: nextobject: (296, Tf)
+DEBUG: nextobject: (300, 1)
+DEBUG: nextobject: (302, 0)
+DEBUG: nextobject: (304, 0)
+DEBUG: nextobject: (306, 1)
+DEBUG: nextobject: (308, 312.38)
+DEBUG: nextobject: (315, 708.72)
+DEBUG: do_keyword: pos=322, token=Tm, stack=[]
+DEBUG: nextobject: (322, Tm)
+DEBUG: nextobject: (326, 0)
+DEBUG: do_keyword: pos=328, token=g, stack=[]
+DEBUG: nextobject: (328, g)
+DEBUG: nextobject: (331, 0)
+DEBUG: do_keyword: pos=333, token=G, stack=[]
+DEBUG: nextobject: (333, G)
+DEBUG: nextobject: (336, [' '])
+DEBUG: do_keyword: pos=342, token=TJ, stack=[]
+DEBUG: nextobject: (342, TJ)
+DEBUG: do_keyword: pos=346, token=ET, stack=[]
+DEBUG: nextobject: (346, ET)
+DEBUG: do_keyword: pos=350, token=Q, stack=[]
+DEBUG: nextobject: (350, Q)
+DEBUG: do_keyword: pos=354, token=EMC, stack=[]
+DEBUG: nextobject: (354, EMC)
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+DEBUG: User ID: 2
+DEBUG: User ID: 3
+INFO: User account with userID 0 verified.
+INFO: [STATS] Memory Usage: Top 5 files allocating the most memory:
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/abc.py:102: size=19.3 KiB, count=252, average=78 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/site-packages/pdfminer/layout.py:187: size=11.2 KiB, count=99, average=115 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/codecs.py:1071: size=9744 B, count=3, average=3248 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/encodings/cp437.py:441: size=9248 B, count=1, average=9248 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/site-packages/pdfminer/psparser.py:136: size=6337 B, count=1, average=6337 B
+INFO: [STATS] CPU Usage: Testing ConvertFilesToText()
+INFO: [STATS] Analyzing bandwidth over 1 second
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+DEBUG: User ID: 2
+DEBUG: User ID: 3
+ERROR: User account with userID 10 not found.
+INFO: ConvertFileToText: userID (U_ID) should be an integer.
+INFO: ConvertFileToText: "filetype" should be a string.
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+DEBUG: User ID: 2
+DEBUG: User ID: 3
+INFO: User account with userID 0 verified.
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+DEBUG: User ID: 2
+DEBUG: User ID: 3
+INFO: User account with userID 0 verified.
+DEBUG: xref found: pos='6089'
+DEBUG: xref objects: {}
+DEBUG: do_keyword: pos=6129, token=R, stack=[(6111, /Size), (6117, 22), (6119, /Root), (6125, 1), (6127, 0)]
+DEBUG: do_keyword: pos=6140, token=R, stack=[(6111, /Size), (6117, 22), (6119, /Root), (6129, <PDFObjRef:1>), (6130, /Info), (6136, 9), (6138, 0)]
+DEBUG: do_keyword: pos=6242, token=startxref, stack=[(6109, {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Prev': 5494, 'XRefStm': 5213})]
+DEBUG: nextobject: (6109, {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Prev': 5494, 'XRefStm': 5213})
+DEBUG: trailer: {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Prev': 5494, 'XRefStm': 5213}
+DEBUG: do_keyword: pos=5264, token=R, stack=[(5225, /Type), (5230, /XRef), (5235, /Size), (5241, 21), (5243, /W), (5245, [1, 4, 2]), (5254, /Root), (5260, 1), (5262, 0)]
+DEBUG: do_keyword: pos=5275, token=R, stack=[(5225, /Type), (5230, /XRef), (5235, /Size), (5241, 21), (5243, /W), (5245, [1, 4, 2]), (5254, /Root), (5264, <PDFObjRef:1>), (5265, /Info), (5271, 9), (5273, 0)]
+DEBUG: do_keyword: pos=5383, token=stream, stack=[(5223, {'Type': /XRef, 'Size': 21, 'W': [1, 4, 2], 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Filter': /FlateDecode, 'Length': 82})]
+DEBUG: do_keyword: pos=5486, token=endobj, stack=[(5391, <PDFStream(None): raw=82, {'Type': /XRef, 'Size': 21, 'W': [1, 4, 2], 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Filter': /FlateDecode, 'Length': 82}>)]
+DEBUG: nextobject: (5391, <PDFStream(None): raw=82, {'Type': /XRef, 'Size': 21, 'W': [1, 4, 2], 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Filter': /FlateDecode, 'Length': 82}>)
+DEBUG: xref stream: objid=<ObjIdRange: 0-20>, fields=1,4,2
+DEBUG: trailer: {'Type': /XRef, 'Size': 21, 'W': [1, 4, 2], 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Filter': /FlateDecode, 'Length': 82}
+DEBUG: xref objects: {1: (0, 17), 2: (0, 166), 3: (0, 222), 4: (0, 486), 5: (0, 779), 6: (0, 950), 7: (0, 1186), 8: (0, 1239), 9: (0, 1292), 18: (0, 1829), 19: (0, 2082), 20: (0, 5168), 21: (0, 5213)}
+DEBUG: do_keyword: pos=5975, token=R, stack=[(5957, /Size), (5963, 22), (5965, /Root), (5971, 1), (5973, 0)]
+DEBUG: do_keyword: pos=5986, token=R, stack=[(5957, /Size), (5963, 22), (5965, /Root), (5975, <PDFObjRef:1>), (5976, /Info), (5982, 9), (5984, 0)]
+DEBUG: do_keyword: pos=6065, token=startxref, stack=[(5955, {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet']})]
+DEBUG: nextobject: (5955, {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet']})
+DEBUG: trailer: {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet']}
+DEBUG: do_keyword: pos=1425, token=endobj, stack=[(1301, {'Author': 'Luke Staib', 'Creator': 'Microsoft Word', 'CreationDate': "D:20210221214845+00'00'", 'ModDate': "D:20210221214845+00'00'"})]
+DEBUG: nextobject: (1301, {'Author': 'Luke Staib', 'Creator': 'Microsoft Word', 'CreationDate': "D:20210221214845+00'00'", 'ModDate': "D:20210221214845+00'00'"})
+DEBUG: do_keyword: pos=52, token=R, stack=[(28, /Type), (33, /Catalog), (41, /Pages), (48, 2), (50, 0)]
+DEBUG: do_keyword: pos=87, token=R, stack=[(28, /Type), (33, /Catalog), (41, /Pages), (52, <PDFObjRef:2>), (53, /Lang), (58, 'en-US'), (66, /StructTreeRoot), (82, 10), (85, 0)]
+DEBUG: do_keyword: pos=128, token=R, stack=[(28, /Type), (33, /Catalog), (41, /Pages), (52, <PDFObjRef:2>), (53, /Lang), (58, 'en-US'), (66, /StructTreeRoot), (87, <PDFObjRef:10>), (88, /MarkInfo), (97, {'Marked': True}), (113, /Metadata), (123, 19), (126, 0)]
+DEBUG: do_keyword: pos=153, token=R, stack=[(28, /Type), (33, /Catalog), (41, /Pages), (52, <PDFObjRef:2>), (53, /Lang), (58, 'en-US'), (66, /StructTreeRoot), (87, <PDFObjRef:10>), (88, /MarkInfo), (97, {'Marked': True}), (113, /Metadata), (128, <PDFObjRef:19>), (129, /ViewerPreferences), (148, 20), (151, 0)]
+DEBUG: do_keyword: pos=158, token=endobj, stack=[(26, {'Type': /Catalog, 'Pages': <PDFObjRef:2>, 'Lang': 'en-US', 'StructTreeRoot': <PDFObjRef:10>, 'MarkInfo': {'Marked': True}, 'Metadata': <PDFObjRef:19>, 'ViewerPreferences': <PDFObjRef:20>})]
+DEBUG: nextobject: (26, {'Type': /Catalog, 'Pages': <PDFObjRef:2>, 'Lang': 'en-US', 'StructTreeRoot': <PDFObjRef:10>, 'MarkInfo': {'Marked': True}, 'Metadata': <PDFObjRef:19>, 'ViewerPreferences': <PDFObjRef:20>})
+DEBUG: do_keyword: pos=207, token=R, stack=[(203, 3), (205, 0)]
+DEBUG: do_keyword: pos=214, token=endobj, stack=[(175, {'Type': /Pages, 'Count': 1, 'Kids': [<PDFObjRef:3>]})]
+DEBUG: nextobject: (175, {'Type': /Pages, 'Count': 1, 'Kids': [<PDFObjRef:3>]})
+DEBUG: Pages: Kids=[<PDFObjRef:3>]
+DEBUG: do_keyword: pos=255, token=R, stack=[(233, /Type), (238, /Page), (243, /Parent), (251, 2), (253, 0)]
+DEBUG: do_keyword: pos=283, token=R, stack=[(275, /F1), (279, 5), (281, 0)]
+DEBUG: do_keyword: pos=307, token=R, stack=[(298, /GS7), (303, 7), (305, 0)]
+DEBUG: do_keyword: pos=317, token=R, stack=[(298, /GS7), (307, <PDFObjRef:7>), (308, /GS8), (313, 8), (315, 0)]
+DEBUG: do_keyword: pos=401, token=R, stack=[(233, /Type), (238, /Page), (243, /Parent), (255, <PDFObjRef:2>), (256, /Resources), (266, {'Font': {'F1': <PDFObjRef:5>}, 'ExtGState': {'GS7': <PDFObjRef:7>, 'GS8': <PDFObjRef:8>}, 'ProcSet': [/PDF, /Text, /ImageB, /ImageC, /ImageI]}), (363, /MediaBox), (372, [0, 0, 612, 792]), (387, /Contents), (397, 4), (399, 0)]
+DEBUG: do_keyword: pos=478, token=endobj, stack=[(231, {'Type': /Page, 'Parent': <PDFObjRef:2>, 'Resources': {'Font': {'F1': <PDFObjRef:5>}, 'ExtGState': {'GS7': <PDFObjRef:7>, 'GS8': <PDFObjRef:8>}, 'ProcSet': [/PDF, /Text, /ImageB, /ImageC, /ImageI]}, 'MediaBox': [0, 0, 612, 792], 'Contents': <PDFObjRef:4>, 'Group': {'Type': /Group, 'S': /Transparency, 'CS': /DeviceRGB}, 'Tabs': /S, 'StructParents': 0})]
+DEBUG: nextobject: (231, {'Type': /Page, 'Parent': <PDFObjRef:2>, 'Resources': {'Font': {'F1': <PDFObjRef:5>}, 'ExtGState': {'GS7': <PDFObjRef:7>, 'GS8': <PDFObjRef:8>}, 'ProcSet': [/PDF, /Text, /ImageB, /ImageC, /ImageI]}, 'MediaBox': [0, 0, 612, 792], 'Contents': <PDFObjRef:4>, 'Group': {'Type': /Group, 'S': /Transparency, 'CS': /DeviceRGB}, 'Tabs': /S, 'StructParents': 0})
+DEBUG: Page: {'Type': /Page, 'Parent': <PDFObjRef:2>, 'Resources': {'Font': {'F1': <PDFObjRef:5>}, 'ExtGState': {'GS7': <PDFObjRef:7>, 'GS8': <PDFObjRef:8>}, 'ProcSet': [/PDF, /Text, /ImageB, /ImageC, /ImageI]}, 'MediaBox': [0, 0, 612, 792], 'Contents': <PDFObjRef:4>, 'Group': {'Type': /Group, 'S': /Transparency, 'CS': /DeviceRGB}, 'Tabs': /S, 'StructParents': 0}
+DEBUG: do_keyword: pos=531, token=stream, stack=[(495, {'Filter': /FlateDecode, 'Length': 219})]
+DEBUG: do_keyword: pos=771, token=endobj, stack=[(539, <PDFStream(None): raw=219, {'Filter': /FlateDecode, 'Length': 219}>)]
+DEBUG: nextobject: (539, <PDFStream(None): raw=219, {'Filter': /FlateDecode, 'Length': 219}>)
+DEBUG: render_contents: resources={'Font': {'F1': <PDFObjRef:5>}, 'ExtGState': {'GS7': <PDFObjRef:7>, 'GS8': <PDFObjRef:8>}, 'ProcSet': [/PDF, /Text, /ImageB, /ImageC, /ImageI]}, streams=[<PDFStream(4): raw=219, {'Filter': /FlateDecode, 'Length': 219}>], ctm=(1, 0, 0, 1, 0, 0)
+DEBUG: do_keyword: pos=897, token=R, stack=[(790, /Type), (795, /Font), (800, /Subtype), (808, /TrueType), (817, /Name), (822, /F1), (825, /BaseFont), (834, /TimesNewRomanPSMT), (852, /Encoding), (861, /WinAnsiEncoding), (877, /FontDescriptor), (893, 6), (895, 0)]
+DEBUG: do_keyword: pos=937, token=R, stack=[(790, /Type), (795, /Font), (800, /Subtype), (808, /TrueType), (817, /Name), (822, /F1), (825, /BaseFont), (834, /TimesNewRomanPSMT), (852, /Encoding), (861, /WinAnsiEncoding), (877, /FontDescriptor), (897, <PDFObjRef:6>), (898, /FirstChar), (909, 32), (911, /LastChar), (921, 121), (924, /Widths), (932, 18), (935, 0)]
+DEBUG: do_keyword: pos=942, token=endobj, stack=[(788, {'Type': /Font, 'Subtype': /TrueType, 'Name': /F1, 'BaseFont': /TimesNewRomanPSMT, 'Encoding': /WinAnsiEncoding, 'FontDescriptor': <PDFObjRef:6>, 'FirstChar': 32, 'LastChar': 121, 'Widths': <PDFObjRef:18>})]
+DEBUG: nextobject: (788, {'Type': /Font, 'Subtype': /TrueType, 'Name': /F1, 'BaseFont': /TimesNewRomanPSMT, 'Encoding': /WinAnsiEncoding, 'FontDescriptor': <PDFObjRef:6>, 'FirstChar': 32, 'LastChar': 121, 'Widths': <PDFObjRef:18>})
+DEBUG: do_keyword: pos=1178, token=endobj, stack=[(959, {'Type': /FontDescriptor, 'FontName': /TimesNewRomanPSMT, 'Flags': 32, 'ItalicAngle': 0, 'Ascent': 891, 'Descent': -216, 'CapHeight': 693, 'AvgWidth': 401, 'MaxWidth': 2614, 'FontWeight': 400, 'XHeight': 250, 'Leading': 42, 'StemV': 40, 'FontBBox': [-568, -216, 2046, 693]})]
+DEBUG: nextobject: (959, {'Type': /FontDescriptor, 'FontName': /TimesNewRomanPSMT, 'Flags': 32, 'ItalicAngle': 0, 'Ascent': 891, 'Descent': -216, 'CapHeight': 693, 'AvgWidth': 401, 'MaxWidth': 2614, 'FontWeight': 400, 'XHeight': 250, 'Leading': 42, 'StemV': 40, 'FontBBox': [-568, -216, 2046, 693]})
+DEBUG: do_keyword: pos=2074, token=endobj, stack=[(1839, [250, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 250, 0, 0, 500, 500, 0, 0, 0, 0, 0, 0, 0, 278, 0, 0, 0, 0, 0, 0, 0, 667, 0, 0, 0, 556, 0, 722, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 611, 0, 0, 944, 0, 0, 0, 0, 0, 0, 0, 0, 0, 444, 500, 0, 500, 444, 333, 500, 500, 278, 0, 0, 0, 0, 500, 500, 0, 0, 333, 389, 278, 500, 0, 0, 0, 500])]
+DEBUG: nextobject: (1839, [250, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 250, 0, 0, 500, 500, 0, 0, 0, 0, 0, 0, 0, 278, 0, 0, 0, 0, 0, 0, 0, 667, 0, 0, 0, 556, 0, 722, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 611, 0, 0, 944, 0, 0, 0, 0, 0, 0, 0, 0, 0, 444, 500, 0, 500, 444, 333, 500, 500, 278, 0, 0, 0, 0, 500, 500, 0, 0, 333, 389, 278, 500, 0, 0, 0, 500])
+DEBUG: nextobject: (1, /P)
+DEBUG: nextobject: (4, {'MCID': 0})
+DEBUG: do_keyword: pos=16, token=BDC, stack=[]
+DEBUG: nextobject: (16, BDC)
+DEBUG: do_keyword: pos=20, token=q, stack=[]
+DEBUG: nextobject: (20, q)
+DEBUG: nextobject: (23, 9.12e-06)
+DEBUG: nextobject: (34, 0)
+DEBUG: nextobject: (36, 612)
+DEBUG: nextobject: (40, 792)
+DEBUG: do_keyword: pos=44, token=re, stack=[]
+DEBUG: nextobject: (44, re)
+DEBUG: do_keyword: pos=48, token=W*, stack=[]
+DEBUG: nextobject: (48, W*)
+DEBUG: do_keyword: pos=51, token=n, stack=[]
+DEBUG: nextobject: (51, n)
+DEBUG: do_keyword: pos=54, token=BT, stack=[]
+DEBUG: nextobject: (54, BT)
+DEBUG: nextobject: (58, /F1)
+DEBUG: nextobject: (62, 12)
+DEBUG: do_keyword: pos=65, token=Tf, stack=[]
+DEBUG: nextobject: (65, Tf)
+DEBUG: nextobject: (69, 1)
+DEBUG: nextobject: (71, 0)
+DEBUG: nextobject: (73, 0)
+DEBUG: nextobject: (75, 1)
+DEBUG: nextobject: (77, 72.025)
+DEBUG: nextobject: (84, 708.72)
+DEBUG: do_keyword: pos=91, token=Tm, stack=[]
+DEBUG: nextobject: (91, Tm)
+DEBUG: nextobject: (95, /GS7)
+DEBUG: do_keyword: pos=100, token=gs, stack=[]
+DEBUG: nextobject: (100, gs)
+DEBUG: nextobject: (104, 0)
+DEBUG: do_keyword: pos=106, token=g, stack=[]
+DEBUG: nextobject: (106, g)
+DEBUG: nextobject: (109, /GS8)
+DEBUG: do_keyword: pos=114, token=gs, stack=[]
+DEBUG: nextobject: (114, gs)
+DEBUG: nextobject: (118, 0)
+DEBUG: do_keyword: pos=120, token=G, stack=[]
+DEBUG: nextobject: (120, G)
+DEBUG: nextobject: (123, ['W', 7, 'hi', 7, 't', 7, 'e', 7, ' H', -6, 'ous', -6, 'e', 7, ' Bri', -13, 'e', 7, 'fi', 7, 'ng:', 7, ' ', -20, 'T', 7, 'oda', 7, 'y on ', -20, 'F', 14, 'e', 7, 'brua', 6, 'ry 21.......'])
+DEBUG: do_keyword: pos=240, token=TJ, stack=[]
+DEBUG: nextobject: (240, TJ)
+DEBUG: do_keyword: pos=244, token=ET, stack=[]
+DEBUG: nextobject: (244, ET)
+DEBUG: do_keyword: pos=248, token=Q, stack=[]
+DEBUG: nextobject: (248, Q)
+DEBUG: do_keyword: pos=251, token=q, stack=[]
+DEBUG: nextobject: (251, q)
+DEBUG: nextobject: (254, 9.12e-06)
+DEBUG: nextobject: (265, 0)
+DEBUG: nextobject: (267, 612)
+DEBUG: nextobject: (271, 792)
+DEBUG: do_keyword: pos=275, token=re, stack=[]
+DEBUG: nextobject: (275, re)
+DEBUG: do_keyword: pos=279, token=W*, stack=[]
+DEBUG: nextobject: (279, W*)
+DEBUG: do_keyword: pos=282, token=n, stack=[]
+DEBUG: nextobject: (282, n)
+DEBUG: do_keyword: pos=285, token=BT, stack=[]
+DEBUG: nextobject: (285, BT)
+DEBUG: nextobject: (289, /F1)
+DEBUG: nextobject: (293, 12)
+DEBUG: do_keyword: pos=296, token=Tf, stack=[]
+DEBUG: nextobject: (296, Tf)
+DEBUG: nextobject: (300, 1)
+DEBUG: nextobject: (302, 0)
+DEBUG: nextobject: (304, 0)
+DEBUG: nextobject: (306, 1)
+DEBUG: nextobject: (308, 312.38)
+DEBUG: nextobject: (315, 708.72)
+DEBUG: do_keyword: pos=322, token=Tm, stack=[]
+DEBUG: nextobject: (322, Tm)
+DEBUG: nextobject: (326, 0)
+DEBUG: do_keyword: pos=328, token=g, stack=[]
+DEBUG: nextobject: (328, g)
+DEBUG: nextobject: (331, 0)
+DEBUG: do_keyword: pos=333, token=G, stack=[]
+DEBUG: nextobject: (333, G)
+DEBUG: nextobject: (336, [' '])
+DEBUG: do_keyword: pos=342, token=TJ, stack=[]
+DEBUG: nextobject: (342, TJ)
+DEBUG: do_keyword: pos=346, token=ET, stack=[]
+DEBUG: nextobject: (346, ET)
+DEBUG: do_keyword: pos=350, token=Q, stack=[]
+DEBUG: nextobject: (350, Q)
+DEBUG: do_keyword: pos=354, token=EMC, stack=[]
+DEBUG: nextobject: (354, EMC)
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+DEBUG: User ID: 2
+DEBUG: User ID: 3
+INFO: User account with userID 0 verified.
+INFO: [STATS] Memory Usage: Top 5 files allocating the most memory:
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/abc.py:102: size=19.5 KiB, count=256, average=78 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/site-packages/pdfminer/layout.py:187: size=11.2 KiB, count=99, average=115 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/codecs.py:1071: size=9744 B, count=3, average=3248 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/encodings/cp437.py:441: size=9248 B, count=1, average=9248 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/site-packages/pdfminer/psparser.py:136: size=6337 B, count=1, average=6337 B
+INFO: [STATS] CPU Usage: Testing ConvertFileToText()
+INFO: [STATS] Analyzing bandwidth over 1 second
+INFO: Bandwidth used: 0.00026702880859375
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+DEBUG: User ID: 2
+DEBUG: User ID: 3
+ERROR: User account with userID 10 not found.
+INFO: ConvertFileToText: userID (U_ID) should be an integer.
+INFO: ConvertFileToText: "filetype" should be a string.
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+DEBUG: User ID: 2
+DEBUG: User ID: 3
+INFO: User account with userID 0 verified.
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+DEBUG: User ID: 2
+DEBUG: User ID: 3
+INFO: User account with userID 0 verified.
+DEBUG: xref found: pos='6089'
+DEBUG: xref objects: {}
+DEBUG: do_keyword: pos=6129, token=R, stack=[(6111, /Size), (6117, 22), (6119, /Root), (6125, 1), (6127, 0)]
+DEBUG: do_keyword: pos=6140, token=R, stack=[(6111, /Size), (6117, 22), (6119, /Root), (6129, <PDFObjRef:1>), (6130, /Info), (6136, 9), (6138, 0)]
+DEBUG: do_keyword: pos=6242, token=startxref, stack=[(6109, {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Prev': 5494, 'XRefStm': 5213})]
+DEBUG: nextobject: (6109, {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Prev': 5494, 'XRefStm': 5213})
+DEBUG: trailer: {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Prev': 5494, 'XRefStm': 5213}
+DEBUG: do_keyword: pos=5264, token=R, stack=[(5225, /Type), (5230, /XRef), (5235, /Size), (5241, 21), (5243, /W), (5245, [1, 4, 2]), (5254, /Root), (5260, 1), (5262, 0)]
+DEBUG: do_keyword: pos=5275, token=R, stack=[(5225, /Type), (5230, /XRef), (5235, /Size), (5241, 21), (5243, /W), (5245, [1, 4, 2]), (5254, /Root), (5264, <PDFObjRef:1>), (5265, /Info), (5271, 9), (5273, 0)]
+DEBUG: do_keyword: pos=5383, token=stream, stack=[(5223, {'Type': /XRef, 'Size': 21, 'W': [1, 4, 2], 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Filter': /FlateDecode, 'Length': 82})]
+DEBUG: do_keyword: pos=5486, token=endobj, stack=[(5391, <PDFStream(None): raw=82, {'Type': /XRef, 'Size': 21, 'W': [1, 4, 2], 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Filter': /FlateDecode, 'Length': 82}>)]
+DEBUG: nextobject: (5391, <PDFStream(None): raw=82, {'Type': /XRef, 'Size': 21, 'W': [1, 4, 2], 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Filter': /FlateDecode, 'Length': 82}>)
+DEBUG: xref stream: objid=<ObjIdRange: 0-20>, fields=1,4,2
+DEBUG: trailer: {'Type': /XRef, 'Size': 21, 'W': [1, 4, 2], 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Filter': /FlateDecode, 'Length': 82}
+DEBUG: xref objects: {1: (0, 17), 2: (0, 166), 3: (0, 222), 4: (0, 486), 5: (0, 779), 6: (0, 950), 7: (0, 1186), 8: (0, 1239), 9: (0, 1292), 18: (0, 1829), 19: (0, 2082), 20: (0, 5168), 21: (0, 5213)}
+DEBUG: do_keyword: pos=5975, token=R, stack=[(5957, /Size), (5963, 22), (5965, /Root), (5971, 1), (5973, 0)]
+DEBUG: do_keyword: pos=5986, token=R, stack=[(5957, /Size), (5963, 22), (5965, /Root), (5975, <PDFObjRef:1>), (5976, /Info), (5982, 9), (5984, 0)]
+DEBUG: do_keyword: pos=6065, token=startxref, stack=[(5955, {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet']})]
+DEBUG: nextobject: (5955, {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet']})
+DEBUG: trailer: {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet']}
+DEBUG: do_keyword: pos=1425, token=endobj, stack=[(1301, {'Author': 'Luke Staib', 'Creator': 'Microsoft Word', 'CreationDate': "D:20210221214845+00'00'", 'ModDate': "D:20210221214845+00'00'"})]
+DEBUG: nextobject: (1301, {'Author': 'Luke Staib', 'Creator': 'Microsoft Word', 'CreationDate': "D:20210221214845+00'00'", 'ModDate': "D:20210221214845+00'00'"})
+DEBUG: do_keyword: pos=52, token=R, stack=[(28, /Type), (33, /Catalog), (41, /Pages), (48, 2), (50, 0)]
+DEBUG: do_keyword: pos=87, token=R, stack=[(28, /Type), (33, /Catalog), (41, /Pages), (52, <PDFObjRef:2>), (53, /Lang), (58, 'en-US'), (66, /StructTreeRoot), (82, 10), (85, 0)]
+DEBUG: do_keyword: pos=128, token=R, stack=[(28, /Type), (33, /Catalog), (41, /Pages), (52, <PDFObjRef:2>), (53, /Lang), (58, 'en-US'), (66, /StructTreeRoot), (87, <PDFObjRef:10>), (88, /MarkInfo), (97, {'Marked': True}), (113, /Metadata), (123, 19), (126, 0)]
+DEBUG: do_keyword: pos=153, token=R, stack=[(28, /Type), (33, /Catalog), (41, /Pages), (52, <PDFObjRef:2>), (53, /Lang), (58, 'en-US'), (66, /StructTreeRoot), (87, <PDFObjRef:10>), (88, /MarkInfo), (97, {'Marked': True}), (113, /Metadata), (128, <PDFObjRef:19>), (129, /ViewerPreferences), (148, 20), (151, 0)]
+DEBUG: do_keyword: pos=158, token=endobj, stack=[(26, {'Type': /Catalog, 'Pages': <PDFObjRef:2>, 'Lang': 'en-US', 'StructTreeRoot': <PDFObjRef:10>, 'MarkInfo': {'Marked': True}, 'Metadata': <PDFObjRef:19>, 'ViewerPreferences': <PDFObjRef:20>})]
+DEBUG: nextobject: (26, {'Type': /Catalog, 'Pages': <PDFObjRef:2>, 'Lang': 'en-US', 'StructTreeRoot': <PDFObjRef:10>, 'MarkInfo': {'Marked': True}, 'Metadata': <PDFObjRef:19>, 'ViewerPreferences': <PDFObjRef:20>})
+DEBUG: do_keyword: pos=207, token=R, stack=[(203, 3), (205, 0)]
+DEBUG: do_keyword: pos=214, token=endobj, stack=[(175, {'Type': /Pages, 'Count': 1, 'Kids': [<PDFObjRef:3>]})]
+DEBUG: nextobject: (175, {'Type': /Pages, 'Count': 1, 'Kids': [<PDFObjRef:3>]})
+DEBUG: Pages: Kids=[<PDFObjRef:3>]
+DEBUG: do_keyword: pos=255, token=R, stack=[(233, /Type), (238, /Page), (243, /Parent), (251, 2), (253, 0)]
+DEBUG: do_keyword: pos=283, token=R, stack=[(275, /F1), (279, 5), (281, 0)]
+DEBUG: do_keyword: pos=307, token=R, stack=[(298, /GS7), (303, 7), (305, 0)]
+DEBUG: do_keyword: pos=317, token=R, stack=[(298, /GS7), (307, <PDFObjRef:7>), (308, /GS8), (313, 8), (315, 0)]
+DEBUG: do_keyword: pos=401, token=R, stack=[(233, /Type), (238, /Page), (243, /Parent), (255, <PDFObjRef:2>), (256, /Resources), (266, {'Font': {'F1': <PDFObjRef:5>}, 'ExtGState': {'GS7': <PDFObjRef:7>, 'GS8': <PDFObjRef:8>}, 'ProcSet': [/PDF, /Text, /ImageB, /ImageC, /ImageI]}), (363, /MediaBox), (372, [0, 0, 612, 792]), (387, /Contents), (397, 4), (399, 0)]
+DEBUG: do_keyword: pos=478, token=endobj, stack=[(231, {'Type': /Page, 'Parent': <PDFObjRef:2>, 'Resources': {'Font': {'F1': <PDFObjRef:5>}, 'ExtGState': {'GS7': <PDFObjRef:7>, 'GS8': <PDFObjRef:8>}, 'ProcSet': [/PDF, /Text, /ImageB, /ImageC, /ImageI]}, 'MediaBox': [0, 0, 612, 792], 'Contents': <PDFObjRef:4>, 'Group': {'Type': /Group, 'S': /Transparency, 'CS': /DeviceRGB}, 'Tabs': /S, 'StructParents': 0})]
+DEBUG: nextobject: (231, {'Type': /Page, 'Parent': <PDFObjRef:2>, 'Resources': {'Font': {'F1': <PDFObjRef:5>}, 'ExtGState': {'GS7': <PDFObjRef:7>, 'GS8': <PDFObjRef:8>}, 'ProcSet': [/PDF, /Text, /ImageB, /ImageC, /ImageI]}, 'MediaBox': [0, 0, 612, 792], 'Contents': <PDFObjRef:4>, 'Group': {'Type': /Group, 'S': /Transparency, 'CS': /DeviceRGB}, 'Tabs': /S, 'StructParents': 0})
+DEBUG: Page: {'Type': /Page, 'Parent': <PDFObjRef:2>, 'Resources': {'Font': {'F1': <PDFObjRef:5>}, 'ExtGState': {'GS7': <PDFObjRef:7>, 'GS8': <PDFObjRef:8>}, 'ProcSet': [/PDF, /Text, /ImageB, /ImageC, /ImageI]}, 'MediaBox': [0, 0, 612, 792], 'Contents': <PDFObjRef:4>, 'Group': {'Type': /Group, 'S': /Transparency, 'CS': /DeviceRGB}, 'Tabs': /S, 'StructParents': 0}
+DEBUG: do_keyword: pos=531, token=stream, stack=[(495, {'Filter': /FlateDecode, 'Length': 219})]
+DEBUG: do_keyword: pos=771, token=endobj, stack=[(539, <PDFStream(None): raw=219, {'Filter': /FlateDecode, 'Length': 219}>)]
+DEBUG: nextobject: (539, <PDFStream(None): raw=219, {'Filter': /FlateDecode, 'Length': 219}>)
+DEBUG: render_contents: resources={'Font': {'F1': <PDFObjRef:5>}, 'ExtGState': {'GS7': <PDFObjRef:7>, 'GS8': <PDFObjRef:8>}, 'ProcSet': [/PDF, /Text, /ImageB, /ImageC, /ImageI]}, streams=[<PDFStream(4): raw=219, {'Filter': /FlateDecode, 'Length': 219}>], ctm=(1, 0, 0, 1, 0, 0)
+DEBUG: do_keyword: pos=897, token=R, stack=[(790, /Type), (795, /Font), (800, /Subtype), (808, /TrueType), (817, /Name), (822, /F1), (825, /BaseFont), (834, /TimesNewRomanPSMT), (852, /Encoding), (861, /WinAnsiEncoding), (877, /FontDescriptor), (893, 6), (895, 0)]
+DEBUG: do_keyword: pos=937, token=R, stack=[(790, /Type), (795, /Font), (800, /Subtype), (808, /TrueType), (817, /Name), (822, /F1), (825, /BaseFont), (834, /TimesNewRomanPSMT), (852, /Encoding), (861, /WinAnsiEncoding), (877, /FontDescriptor), (897, <PDFObjRef:6>), (898, /FirstChar), (909, 32), (911, /LastChar), (921, 121), (924, /Widths), (932, 18), (935, 0)]
+DEBUG: do_keyword: pos=942, token=endobj, stack=[(788, {'Type': /Font, 'Subtype': /TrueType, 'Name': /F1, 'BaseFont': /TimesNewRomanPSMT, 'Encoding': /WinAnsiEncoding, 'FontDescriptor': <PDFObjRef:6>, 'FirstChar': 32, 'LastChar': 121, 'Widths': <PDFObjRef:18>})]
+DEBUG: nextobject: (788, {'Type': /Font, 'Subtype': /TrueType, 'Name': /F1, 'BaseFont': /TimesNewRomanPSMT, 'Encoding': /WinAnsiEncoding, 'FontDescriptor': <PDFObjRef:6>, 'FirstChar': 32, 'LastChar': 121, 'Widths': <PDFObjRef:18>})
+DEBUG: do_keyword: pos=1178, token=endobj, stack=[(959, {'Type': /FontDescriptor, 'FontName': /TimesNewRomanPSMT, 'Flags': 32, 'ItalicAngle': 0, 'Ascent': 891, 'Descent': -216, 'CapHeight': 693, 'AvgWidth': 401, 'MaxWidth': 2614, 'FontWeight': 400, 'XHeight': 250, 'Leading': 42, 'StemV': 40, 'FontBBox': [-568, -216, 2046, 693]})]
+DEBUG: nextobject: (959, {'Type': /FontDescriptor, 'FontName': /TimesNewRomanPSMT, 'Flags': 32, 'ItalicAngle': 0, 'Ascent': 891, 'Descent': -216, 'CapHeight': 693, 'AvgWidth': 401, 'MaxWidth': 2614, 'FontWeight': 400, 'XHeight': 250, 'Leading': 42, 'StemV': 40, 'FontBBox': [-568, -216, 2046, 693]})
+DEBUG: do_keyword: pos=2074, token=endobj, stack=[(1839, [250, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 250, 0, 0, 500, 500, 0, 0, 0, 0, 0, 0, 0, 278, 0, 0, 0, 0, 0, 0, 0, 667, 0, 0, 0, 556, 0, 722, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 611, 0, 0, 944, 0, 0, 0, 0, 0, 0, 0, 0, 0, 444, 500, 0, 500, 444, 333, 500, 500, 278, 0, 0, 0, 0, 500, 500, 0, 0, 333, 389, 278, 500, 0, 0, 0, 500])]
+DEBUG: nextobject: (1839, [250, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 250, 0, 0, 500, 500, 0, 0, 0, 0, 0, 0, 0, 278, 0, 0, 0, 0, 0, 0, 0, 667, 0, 0, 0, 556, 0, 722, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 611, 0, 0, 944, 0, 0, 0, 0, 0, 0, 0, 0, 0, 444, 500, 0, 500, 444, 333, 500, 500, 278, 0, 0, 0, 0, 500, 500, 0, 0, 333, 389, 278, 500, 0, 0, 0, 500])
+DEBUG: nextobject: (1, /P)
+DEBUG: nextobject: (4, {'MCID': 0})
+DEBUG: do_keyword: pos=16, token=BDC, stack=[]
+DEBUG: nextobject: (16, BDC)
+DEBUG: do_keyword: pos=20, token=q, stack=[]
+DEBUG: nextobject: (20, q)
+DEBUG: nextobject: (23, 9.12e-06)
+DEBUG: nextobject: (34, 0)
+DEBUG: nextobject: (36, 612)
+DEBUG: nextobject: (40, 792)
+DEBUG: do_keyword: pos=44, token=re, stack=[]
+DEBUG: nextobject: (44, re)
+DEBUG: do_keyword: pos=48, token=W*, stack=[]
+DEBUG: nextobject: (48, W*)
+DEBUG: do_keyword: pos=51, token=n, stack=[]
+DEBUG: nextobject: (51, n)
+DEBUG: do_keyword: pos=54, token=BT, stack=[]
+DEBUG: nextobject: (54, BT)
+DEBUG: nextobject: (58, /F1)
+DEBUG: nextobject: (62, 12)
+DEBUG: do_keyword: pos=65, token=Tf, stack=[]
+DEBUG: nextobject: (65, Tf)
+DEBUG: nextobject: (69, 1)
+DEBUG: nextobject: (71, 0)
+DEBUG: nextobject: (73, 0)
+DEBUG: nextobject: (75, 1)
+DEBUG: nextobject: (77, 72.025)
+DEBUG: nextobject: (84, 708.72)
+DEBUG: do_keyword: pos=91, token=Tm, stack=[]
+DEBUG: nextobject: (91, Tm)
+DEBUG: nextobject: (95, /GS7)
+DEBUG: do_keyword: pos=100, token=gs, stack=[]
+DEBUG: nextobject: (100, gs)
+DEBUG: nextobject: (104, 0)
+DEBUG: do_keyword: pos=106, token=g, stack=[]
+DEBUG: nextobject: (106, g)
+DEBUG: nextobject: (109, /GS8)
+DEBUG: do_keyword: pos=114, token=gs, stack=[]
+DEBUG: nextobject: (114, gs)
+DEBUG: nextobject: (118, 0)
+DEBUG: do_keyword: pos=120, token=G, stack=[]
+DEBUG: nextobject: (120, G)
+DEBUG: nextobject: (123, ['W', 7, 'hi', 7, 't', 7, 'e', 7, ' H', -6, 'ous', -6, 'e', 7, ' Bri', -13, 'e', 7, 'fi', 7, 'ng:', 7, ' ', -20, 'T', 7, 'oda', 7, 'y on ', -20, 'F', 14, 'e', 7, 'brua', 6, 'ry 21.......'])
+DEBUG: do_keyword: pos=240, token=TJ, stack=[]
+DEBUG: nextobject: (240, TJ)
+DEBUG: do_keyword: pos=244, token=ET, stack=[]
+DEBUG: nextobject: (244, ET)
+DEBUG: do_keyword: pos=248, token=Q, stack=[]
+DEBUG: nextobject: (248, Q)
+DEBUG: do_keyword: pos=251, token=q, stack=[]
+DEBUG: nextobject: (251, q)
+DEBUG: nextobject: (254, 9.12e-06)
+DEBUG: nextobject: (265, 0)
+DEBUG: nextobject: (267, 612)
+DEBUG: nextobject: (271, 792)
+DEBUG: do_keyword: pos=275, token=re, stack=[]
+DEBUG: nextobject: (275, re)
+DEBUG: do_keyword: pos=279, token=W*, stack=[]
+DEBUG: nextobject: (279, W*)
+DEBUG: do_keyword: pos=282, token=n, stack=[]
+DEBUG: nextobject: (282, n)
+DEBUG: do_keyword: pos=285, token=BT, stack=[]
+DEBUG: nextobject: (285, BT)
+DEBUG: nextobject: (289, /F1)
+DEBUG: nextobject: (293, 12)
+DEBUG: do_keyword: pos=296, token=Tf, stack=[]
+DEBUG: nextobject: (296, Tf)
+DEBUG: nextobject: (300, 1)
+DEBUG: nextobject: (302, 0)
+DEBUG: nextobject: (304, 0)
+DEBUG: nextobject: (306, 1)
+DEBUG: nextobject: (308, 312.38)
+DEBUG: nextobject: (315, 708.72)
+DEBUG: do_keyword: pos=322, token=Tm, stack=[]
+DEBUG: nextobject: (322, Tm)
+DEBUG: nextobject: (326, 0)
+DEBUG: do_keyword: pos=328, token=g, stack=[]
+DEBUG: nextobject: (328, g)
+DEBUG: nextobject: (331, 0)
+DEBUG: do_keyword: pos=333, token=G, stack=[]
+DEBUG: nextobject: (333, G)
+DEBUG: nextobject: (336, [' '])
+DEBUG: do_keyword: pos=342, token=TJ, stack=[]
+DEBUG: nextobject: (342, TJ)
+DEBUG: do_keyword: pos=346, token=ET, stack=[]
+DEBUG: nextobject: (346, ET)
+DEBUG: do_keyword: pos=350, token=Q, stack=[]
+DEBUG: nextobject: (350, Q)
+DEBUG: do_keyword: pos=354, token=EMC, stack=[]
+DEBUG: nextobject: (354, EMC)
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+DEBUG: User ID: 2
+DEBUG: User ID: 3
+INFO: User account with userID 0 verified.
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Making request: POST https://oauth2.googleapis.com/token
+DEBUG: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+INFO: Sentiment of text information entered: magnitude: 0.5
+
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+DEBUG: User ID: 2
+DEBUG: User ID: 3
+ERROR: User account with userID 10 not found.
+INFO: ConvertFileToText: userID (U_ID) should be an integer.
+INFO: ConvertFileToText: "filetype" should be a string.
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+DEBUG: User ID: 2
+DEBUG: User ID: 3
+INFO: User account with userID 0 verified.
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+DEBUG: User ID: 2
+DEBUG: User ID: 3
+INFO: User account with userID 0 verified.
+DEBUG: xref found: pos='6089'
+DEBUG: xref objects: {}
+DEBUG: do_keyword: pos=6129, token=R, stack=[(6111, /Size), (6117, 22), (6119, /Root), (6125, 1), (6127, 0)]
+DEBUG: do_keyword: pos=6140, token=R, stack=[(6111, /Size), (6117, 22), (6119, /Root), (6129, <PDFObjRef:1>), (6130, /Info), (6136, 9), (6138, 0)]
+DEBUG: do_keyword: pos=6242, token=startxref, stack=[(6109, {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Prev': 5494, 'XRefStm': 5213})]
+DEBUG: nextobject: (6109, {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Prev': 5494, 'XRefStm': 5213})
+DEBUG: trailer: {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Prev': 5494, 'XRefStm': 5213}
+DEBUG: do_keyword: pos=5264, token=R, stack=[(5225, /Type), (5230, /XRef), (5235, /Size), (5241, 21), (5243, /W), (5245, [1, 4, 2]), (5254, /Root), (5260, 1), (5262, 0)]
+DEBUG: do_keyword: pos=5275, token=R, stack=[(5225, /Type), (5230, /XRef), (5235, /Size), (5241, 21), (5243, /W), (5245, [1, 4, 2]), (5254, /Root), (5264, <PDFObjRef:1>), (5265, /Info), (5271, 9), (5273, 0)]
+DEBUG: do_keyword: pos=5383, token=stream, stack=[(5223, {'Type': /XRef, 'Size': 21, 'W': [1, 4, 2], 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Filter': /FlateDecode, 'Length': 82})]
+DEBUG: do_keyword: pos=5486, token=endobj, stack=[(5391, <PDFStream(None): raw=82, {'Type': /XRef, 'Size': 21, 'W': [1, 4, 2], 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Filter': /FlateDecode, 'Length': 82}>)]
+DEBUG: nextobject: (5391, <PDFStream(None): raw=82, {'Type': /XRef, 'Size': 21, 'W': [1, 4, 2], 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Filter': /FlateDecode, 'Length': 82}>)
+DEBUG: xref stream: objid=<ObjIdRange: 0-20>, fields=1,4,2
+DEBUG: trailer: {'Type': /XRef, 'Size': 21, 'W': [1, 4, 2], 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet'], 'Filter': /FlateDecode, 'Length': 82}
+DEBUG: xref objects: {1: (0, 17), 2: (0, 166), 3: (0, 222), 4: (0, 486), 5: (0, 779), 6: (0, 950), 7: (0, 1186), 8: (0, 1239), 9: (0, 1292), 18: (0, 1829), 19: (0, 2082), 20: (0, 5168), 21: (0, 5213)}
+DEBUG: do_keyword: pos=5975, token=R, stack=[(5957, /Size), (5963, 22), (5965, /Root), (5971, 1), (5973, 0)]
+DEBUG: do_keyword: pos=5986, token=R, stack=[(5957, /Size), (5963, 22), (5965, /Root), (5975, <PDFObjRef:1>), (5976, /Info), (5982, 9), (5984, 0)]
+DEBUG: do_keyword: pos=6065, token=startxref, stack=[(5955, {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet']})]
+DEBUG: nextobject: (5955, {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet']})
+DEBUG: trailer: {'Size': 22, 'Root': <PDFObjRef:1>, 'Info': <PDFObjRef:9>, 'ID': [b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet', b'\xdas\x13(\xf5\xb8\xed@\xada\xd2\xddu\xe6\xaet']}
+DEBUG: do_keyword: pos=1425, token=endobj, stack=[(1301, {'Author': 'Luke Staib', 'Creator': 'Microsoft Word', 'CreationDate': "D:20210221214845+00'00'", 'ModDate': "D:20210221214845+00'00'"})]
+DEBUG: nextobject: (1301, {'Author': 'Luke Staib', 'Creator': 'Microsoft Word', 'CreationDate': "D:20210221214845+00'00'", 'ModDate': "D:20210221214845+00'00'"})
+DEBUG: do_keyword: pos=52, token=R, stack=[(28, /Type), (33, /Catalog), (41, /Pages), (48, 2), (50, 0)]
+DEBUG: do_keyword: pos=87, token=R, stack=[(28, /Type), (33, /Catalog), (41, /Pages), (52, <PDFObjRef:2>), (53, /Lang), (58, 'en-US'), (66, /StructTreeRoot), (82, 10), (85, 0)]
+DEBUG: do_keyword: pos=128, token=R, stack=[(28, /Type), (33, /Catalog), (41, /Pages), (52, <PDFObjRef:2>), (53, /Lang), (58, 'en-US'), (66, /StructTreeRoot), (87, <PDFObjRef:10>), (88, /MarkInfo), (97, {'Marked': True}), (113, /Metadata), (123, 19), (126, 0)]
+DEBUG: do_keyword: pos=153, token=R, stack=[(28, /Type), (33, /Catalog), (41, /Pages), (52, <PDFObjRef:2>), (53, /Lang), (58, 'en-US'), (66, /StructTreeRoot), (87, <PDFObjRef:10>), (88, /MarkInfo), (97, {'Marked': True}), (113, /Metadata), (128, <PDFObjRef:19>), (129, /ViewerPreferences), (148, 20), (151, 0)]
+DEBUG: do_keyword: pos=158, token=endobj, stack=[(26, {'Type': /Catalog, 'Pages': <PDFObjRef:2>, 'Lang': 'en-US', 'StructTreeRoot': <PDFObjRef:10>, 'MarkInfo': {'Marked': True}, 'Metadata': <PDFObjRef:19>, 'ViewerPreferences': <PDFObjRef:20>})]
+DEBUG: nextobject: (26, {'Type': /Catalog, 'Pages': <PDFObjRef:2>, 'Lang': 'en-US', 'StructTreeRoot': <PDFObjRef:10>, 'MarkInfo': {'Marked': True}, 'Metadata': <PDFObjRef:19>, 'ViewerPreferences': <PDFObjRef:20>})
+DEBUG: do_keyword: pos=207, token=R, stack=[(203, 3), (205, 0)]
+DEBUG: do_keyword: pos=214, token=endobj, stack=[(175, {'Type': /Pages, 'Count': 1, 'Kids': [<PDFObjRef:3>]})]
+DEBUG: nextobject: (175, {'Type': /Pages, 'Count': 1, 'Kids': [<PDFObjRef:3>]})
+DEBUG: Pages: Kids=[<PDFObjRef:3>]
+DEBUG: do_keyword: pos=255, token=R, stack=[(233, /Type), (238, /Page), (243, /Parent), (251, 2), (253, 0)]
+DEBUG: do_keyword: pos=283, token=R, stack=[(275, /F1), (279, 5), (281, 0)]
+DEBUG: do_keyword: pos=307, token=R, stack=[(298, /GS7), (303, 7), (305, 0)]
+DEBUG: do_keyword: pos=317, token=R, stack=[(298, /GS7), (307, <PDFObjRef:7>), (308, /GS8), (313, 8), (315, 0)]
+DEBUG: do_keyword: pos=401, token=R, stack=[(233, /Type), (238, /Page), (243, /Parent), (255, <PDFObjRef:2>), (256, /Resources), (266, {'Font': {'F1': <PDFObjRef:5>}, 'ExtGState': {'GS7': <PDFObjRef:7>, 'GS8': <PDFObjRef:8>}, 'ProcSet': [/PDF, /Text, /ImageB, /ImageC, /ImageI]}), (363, /MediaBox), (372, [0, 0, 612, 792]), (387, /Contents), (397, 4), (399, 0)]
+DEBUG: do_keyword: pos=478, token=endobj, stack=[(231, {'Type': /Page, 'Parent': <PDFObjRef:2>, 'Resources': {'Font': {'F1': <PDFObjRef:5>}, 'ExtGState': {'GS7': <PDFObjRef:7>, 'GS8': <PDFObjRef:8>}, 'ProcSet': [/PDF, /Text, /ImageB, /ImageC, /ImageI]}, 'MediaBox': [0, 0, 612, 792], 'Contents': <PDFObjRef:4>, 'Group': {'Type': /Group, 'S': /Transparency, 'CS': /DeviceRGB}, 'Tabs': /S, 'StructParents': 0})]
+DEBUG: nextobject: (231, {'Type': /Page, 'Parent': <PDFObjRef:2>, 'Resources': {'Font': {'F1': <PDFObjRef:5>}, 'ExtGState': {'GS7': <PDFObjRef:7>, 'GS8': <PDFObjRef:8>}, 'ProcSet': [/PDF, /Text, /ImageB, /ImageC, /ImageI]}, 'MediaBox': [0, 0, 612, 792], 'Contents': <PDFObjRef:4>, 'Group': {'Type': /Group, 'S': /Transparency, 'CS': /DeviceRGB}, 'Tabs': /S, 'StructParents': 0})
+DEBUG: Page: {'Type': /Page, 'Parent': <PDFObjRef:2>, 'Resources': {'Font': {'F1': <PDFObjRef:5>}, 'ExtGState': {'GS7': <PDFObjRef:7>, 'GS8': <PDFObjRef:8>}, 'ProcSet': [/PDF, /Text, /ImageB, /ImageC, /ImageI]}, 'MediaBox': [0, 0, 612, 792], 'Contents': <PDFObjRef:4>, 'Group': {'Type': /Group, 'S': /Transparency, 'CS': /DeviceRGB}, 'Tabs': /S, 'StructParents': 0}
+DEBUG: do_keyword: pos=531, token=stream, stack=[(495, {'Filter': /FlateDecode, 'Length': 219})]
+DEBUG: do_keyword: pos=771, token=endobj, stack=[(539, <PDFStream(None): raw=219, {'Filter': /FlateDecode, 'Length': 219}>)]
+DEBUG: nextobject: (539, <PDFStream(None): raw=219, {'Filter': /FlateDecode, 'Length': 219}>)
+DEBUG: render_contents: resources={'Font': {'F1': <PDFObjRef:5>}, 'ExtGState': {'GS7': <PDFObjRef:7>, 'GS8': <PDFObjRef:8>}, 'ProcSet': [/PDF, /Text, /ImageB, /ImageC, /ImageI]}, streams=[<PDFStream(4): raw=219, {'Filter': /FlateDecode, 'Length': 219}>], ctm=(1, 0, 0, 1, 0, 0)
+DEBUG: do_keyword: pos=897, token=R, stack=[(790, /Type), (795, /Font), (800, /Subtype), (808, /TrueType), (817, /Name), (822, /F1), (825, /BaseFont), (834, /TimesNewRomanPSMT), (852, /Encoding), (861, /WinAnsiEncoding), (877, /FontDescriptor), (893, 6), (895, 0)]
+DEBUG: do_keyword: pos=937, token=R, stack=[(790, /Type), (795, /Font), (800, /Subtype), (808, /TrueType), (817, /Name), (822, /F1), (825, /BaseFont), (834, /TimesNewRomanPSMT), (852, /Encoding), (861, /WinAnsiEncoding), (877, /FontDescriptor), (897, <PDFObjRef:6>), (898, /FirstChar), (909, 32), (911, /LastChar), (921, 121), (924, /Widths), (932, 18), (935, 0)]
+DEBUG: do_keyword: pos=942, token=endobj, stack=[(788, {'Type': /Font, 'Subtype': /TrueType, 'Name': /F1, 'BaseFont': /TimesNewRomanPSMT, 'Encoding': /WinAnsiEncoding, 'FontDescriptor': <PDFObjRef:6>, 'FirstChar': 32, 'LastChar': 121, 'Widths': <PDFObjRef:18>})]
+DEBUG: nextobject: (788, {'Type': /Font, 'Subtype': /TrueType, 'Name': /F1, 'BaseFont': /TimesNewRomanPSMT, 'Encoding': /WinAnsiEncoding, 'FontDescriptor': <PDFObjRef:6>, 'FirstChar': 32, 'LastChar': 121, 'Widths': <PDFObjRef:18>})
+DEBUG: do_keyword: pos=1178, token=endobj, stack=[(959, {'Type': /FontDescriptor, 'FontName': /TimesNewRomanPSMT, 'Flags': 32, 'ItalicAngle': 0, 'Ascent': 891, 'Descent': -216, 'CapHeight': 693, 'AvgWidth': 401, 'MaxWidth': 2614, 'FontWeight': 400, 'XHeight': 250, 'Leading': 42, 'StemV': 40, 'FontBBox': [-568, -216, 2046, 693]})]
+DEBUG: nextobject: (959, {'Type': /FontDescriptor, 'FontName': /TimesNewRomanPSMT, 'Flags': 32, 'ItalicAngle': 0, 'Ascent': 891, 'Descent': -216, 'CapHeight': 693, 'AvgWidth': 401, 'MaxWidth': 2614, 'FontWeight': 400, 'XHeight': 250, 'Leading': 42, 'StemV': 40, 'FontBBox': [-568, -216, 2046, 693]})
+DEBUG: do_keyword: pos=2074, token=endobj, stack=[(1839, [250, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 250, 0, 0, 500, 500, 0, 0, 0, 0, 0, 0, 0, 278, 0, 0, 0, 0, 0, 0, 0, 667, 0, 0, 0, 556, 0, 722, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 611, 0, 0, 944, 0, 0, 0, 0, 0, 0, 0, 0, 0, 444, 500, 0, 500, 444, 333, 500, 500, 278, 0, 0, 0, 0, 500, 500, 0, 0, 333, 389, 278, 500, 0, 0, 0, 500])]
+DEBUG: nextobject: (1839, [250, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 250, 0, 0, 500, 500, 0, 0, 0, 0, 0, 0, 0, 278, 0, 0, 0, 0, 0, 0, 0, 667, 0, 0, 0, 556, 0, 722, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 611, 0, 0, 944, 0, 0, 0, 0, 0, 0, 0, 0, 0, 444, 500, 0, 500, 444, 333, 500, 500, 278, 0, 0, 0, 0, 500, 500, 0, 0, 333, 389, 278, 500, 0, 0, 0, 500])
+DEBUG: nextobject: (1, /P)
+DEBUG: nextobject: (4, {'MCID': 0})
+DEBUG: do_keyword: pos=16, token=BDC, stack=[]
+DEBUG: nextobject: (16, BDC)
+DEBUG: do_keyword: pos=20, token=q, stack=[]
+DEBUG: nextobject: (20, q)
+DEBUG: nextobject: (23, 9.12e-06)
+DEBUG: nextobject: (34, 0)
+DEBUG: nextobject: (36, 612)
+DEBUG: nextobject: (40, 792)
+DEBUG: do_keyword: pos=44, token=re, stack=[]
+DEBUG: nextobject: (44, re)
+DEBUG: do_keyword: pos=48, token=W*, stack=[]
+DEBUG: nextobject: (48, W*)
+DEBUG: do_keyword: pos=51, token=n, stack=[]
+DEBUG: nextobject: (51, n)
+DEBUG: do_keyword: pos=54, token=BT, stack=[]
+DEBUG: nextobject: (54, BT)
+DEBUG: nextobject: (58, /F1)
+DEBUG: nextobject: (62, 12)
+DEBUG: do_keyword: pos=65, token=Tf, stack=[]
+DEBUG: nextobject: (65, Tf)
+DEBUG: nextobject: (69, 1)
+DEBUG: nextobject: (71, 0)
+DEBUG: nextobject: (73, 0)
+DEBUG: nextobject: (75, 1)
+DEBUG: nextobject: (77, 72.025)
+DEBUG: nextobject: (84, 708.72)
+DEBUG: do_keyword: pos=91, token=Tm, stack=[]
+DEBUG: nextobject: (91, Tm)
+DEBUG: nextobject: (95, /GS7)
+DEBUG: do_keyword: pos=100, token=gs, stack=[]
+DEBUG: nextobject: (100, gs)
+DEBUG: nextobject: (104, 0)
+DEBUG: do_keyword: pos=106, token=g, stack=[]
+DEBUG: nextobject: (106, g)
+DEBUG: nextobject: (109, /GS8)
+DEBUG: do_keyword: pos=114, token=gs, stack=[]
+DEBUG: nextobject: (114, gs)
+DEBUG: nextobject: (118, 0)
+DEBUG: do_keyword: pos=120, token=G, stack=[]
+DEBUG: nextobject: (120, G)
+DEBUG: nextobject: (123, ['W', 7, 'hi', 7, 't', 7, 'e', 7, ' H', -6, 'ous', -6, 'e', 7, ' Bri', -13, 'e', 7, 'fi', 7, 'ng:', 7, ' ', -20, 'T', 7, 'oda', 7, 'y on ', -20, 'F', 14, 'e', 7, 'brua', 6, 'ry 21.......'])
+DEBUG: do_keyword: pos=240, token=TJ, stack=[]
+DEBUG: nextobject: (240, TJ)
+DEBUG: do_keyword: pos=244, token=ET, stack=[]
+DEBUG: nextobject: (244, ET)
+DEBUG: do_keyword: pos=248, token=Q, stack=[]
+DEBUG: nextobject: (248, Q)
+DEBUG: do_keyword: pos=251, token=q, stack=[]
+DEBUG: nextobject: (251, q)
+DEBUG: nextobject: (254, 9.12e-06)
+DEBUG: nextobject: (265, 0)
+DEBUG: nextobject: (267, 612)
+DEBUG: nextobject: (271, 792)
+DEBUG: do_keyword: pos=275, token=re, stack=[]
+DEBUG: nextobject: (275, re)
+DEBUG: do_keyword: pos=279, token=W*, stack=[]
+DEBUG: nextobject: (279, W*)
+DEBUG: do_keyword: pos=282, token=n, stack=[]
+DEBUG: nextobject: (282, n)
+DEBUG: do_keyword: pos=285, token=BT, stack=[]
+DEBUG: nextobject: (285, BT)
+DEBUG: nextobject: (289, /F1)
+DEBUG: nextobject: (293, 12)
+DEBUG: do_keyword: pos=296, token=Tf, stack=[]
+DEBUG: nextobject: (296, Tf)
+DEBUG: nextobject: (300, 1)
+DEBUG: nextobject: (302, 0)
+DEBUG: nextobject: (304, 0)
+DEBUG: nextobject: (306, 1)
+DEBUG: nextobject: (308, 312.38)
+DEBUG: nextobject: (315, 708.72)
+DEBUG: do_keyword: pos=322, token=Tm, stack=[]
+DEBUG: nextobject: (322, Tm)
+DEBUG: nextobject: (326, 0)
+DEBUG: do_keyword: pos=328, token=g, stack=[]
+DEBUG: nextobject: (328, g)
+DEBUG: nextobject: (331, 0)
+DEBUG: do_keyword: pos=333, token=G, stack=[]
+DEBUG: nextobject: (333, G)
+DEBUG: nextobject: (336, [' '])
+DEBUG: do_keyword: pos=342, token=TJ, stack=[]
+DEBUG: nextobject: (342, TJ)
+DEBUG: do_keyword: pos=346, token=ET, stack=[]
+DEBUG: nextobject: (346, ET)
+DEBUG: do_keyword: pos=350, token=Q, stack=[]
+DEBUG: nextobject: (350, Q)
+DEBUG: do_keyword: pos=354, token=EMC, stack=[]
+DEBUG: nextobject: (354, EMC)
+DEBUG: User ID: 0
+DEBUG: User ID: 1
+DEBUG: User ID: 2
+DEBUG: User ID: 3
+INFO: User account with userID 0 verified.
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Making request: POST https://oauth2.googleapis.com/token
+DEBUG: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+INFO: Sentiment of text information entered: magnitude: 0.5
+
+DEBUG: Checking /Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json for explicit credentials as part of auth process...
+DEBUG: Making request: POST https://oauth2.googleapis.com/token
+DEBUG: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+INFO: [STATS] Memory Usage: Top 5 files allocating the most memory:
+INFO: <frozen importlib._bootstrap_external>:580: size=122 KiB, count=1354, average=93 B
+INFO: /Users/luke/.local/lib/python3.8/site-packages/grpc/_channel.py:1211: size=73.7 KiB, count=10, average=7550 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/abc.py:102: size=27.3 KiB, count=328, average=85 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/abc.py:85: size=20.4 KiB, count=95, average=219 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/codecs.py:1071: size=9744 B, count=3, average=3248 B
+INFO: [STATS] CPU Usage: Testing ConvertFileToText()
+INFO: [STATS] Analyzing bandwidth over 1 second
+INFO: Bandwidth used: 0.0
