@@ -33,7 +33,11 @@ try:
 except:
 	pass	
 
-from google.cloud import language
+try:
+	from google.cloud import language
+except:
+	pass
+		
 tracemalloc.start()
 
 # files_db = files_collection.find()
