@@ -40,6 +40,6 @@ def test_DiscoverContent():
 def test_DiagnosticsNewsfeed():
 	assert DiagnosticsNewsfeed() == True
 
-test_DiscoverContent()
-test_DiagnosticsNewsfeed()	
+# test_DiscoverContent()
+# test_DiagnosticsNewsfeed()	
   

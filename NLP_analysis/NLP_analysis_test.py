@@ -61,7 +61,7 @@ def test_ConvertFileToText():
 def test_DiagnosticsNLP():
 	assert DiagnosticsNLP() == True
 
-test_ConvertFileToText()
-test_AssessData()
-test_ObtainCategories()
-test_DiagnosticsNLP()	
+# test_ConvertFileToText()
+# test_AssessData()
+# test_ObtainCategories()
+# test_DiagnosticsNLP()	
