@@ -20,7 +20,6 @@ from db import *
 #Import libraries
 import cProfile
 import tracemalloc #Memory profiling
-from tqdm import tqdm
 import logging #Logging
 import slate3k #PDF -> TXT
 import os

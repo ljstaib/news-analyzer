@@ -15,7 +15,6 @@
 #Import libraries
 import cProfile #CPU
 import tracemalloc #Memory profiling
-from tqdm import tqdm #Percent bar
 import logging #Logging
 import os
 import psutil
