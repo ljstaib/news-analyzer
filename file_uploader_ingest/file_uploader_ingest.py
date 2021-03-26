@@ -3,9 +3,8 @@
 # Luke Staib ljstaib@bu.edu 
 # Copyright @2021, for EC500: Software Engineering
 # File Uploader/Ingest
+# Website created with Flask, MongoDB used for database, S3 used to host
 # ========================================================================
-
-#I will create the website with Flask, I will use S3 or MongoDB for my database, I will use S3(?) to host
 
 # ========================================================================
 # Imports/Constants
@@ -19,6 +18,8 @@ import tracemalloc #Memory profiling
 from tqdm import tqdm #Percent bar
 import logging #Logging
 import os
+import psutil
+import time
 from datetime import datetime
 
 from werkzeug.utils import secure_filename
@@ -32,8 +33,11 @@ ALLOWED_EXTENSIONS = {'txt', 'pdf', 'docx'}
 
 import sys
 sys.path.append('/home/runner/work/news-analyzer-ljstaib/news-analyzer-ljstaib')
+sys.path.append('../')
 from db import *
+
 sys.path.append('./NLP_analysis')
+sys.path.append('../NLP_analysis')
 from NLP_analysis import ConvertFileToText
 
 # files = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf"] #Sample list
@@ -48,9 +52,7 @@ from NLP_analysis import ConvertFileToText
 # for file in files_db:
 # 	files.append(file)
 
-app_users, app_files = updateDB()	
-
-uploadingCancelled = False		
+app_users, app_files = updateDB()		
 
 def allowed_file(filename):
 	#Make sure file being uploaded is allowed
@@ -62,10 +64,23 @@ def allowed_file(filename):
 # ========================================================================
 
 def UploadFiles(userID, file_in, fid, authors, creation_time):
-	#Inputs: userID is an int, file_in is a file object
+	#Inputs: userID is an int, file_in is a file object, fid is an int, authors and creation time are strings from the website
+	if not isinstance(userID, int):
+		logging.warning("UploadFiles: user ID (U_ID) should be an integer")
+		return False
+	if not isinstance(fid, int):
+		logging.warning("UploadFiles: file ID (F_ID) should be an integer")
+		return False
+	if not isinstance(authors, str):
+		logging.warning("UploadFiles: \"authors\" should be a string")
+		return False
+	if not isinstance(creation_time, str):
+		logging.warning("UploadFiles: \"creation_time\" should be a string")
+		return False
+
 	result = doesUserExist(userID)
 	if (result):
-		if file_in == "test_file": #for file_uploader_ingest_test.py, I can actually if files get uploaded using my website
+		if file_in == "test_file": #for file_uploader_ingest_test.py
 			filename = "Test"
 			filetype = "txt"
 			text = "This is not a real file."
@@ -101,8 +116,10 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 
 				filename = file_in.filename
 				filetype = file_in.filename.rsplit('.', 1)[1].lower()
-				text = ConvertFileToText(userID, file_in, filetype) #Working on this part next
-				source = userID #will assign userIDs when user auth is done
+				text = ConvertFileToText(userID, file_in, filetype)
+				if text == False:
+					text = ""
+				source = userID
 				filesize = os.stat(UPLOAD_FOLDER + "/" + filename).st_size
 				upload_time = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
 				sentiment = None
@@ -127,28 +144,9 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 					}
 				}	
 				logging.info("Uploading file " + str(filename))
-				uploadSuccess = True
-				if (uploadSuccess):
-					logging.info("File %s uploaded.", filename + filetype)
-				else:
-					logging.error("Problem uploading %s", filename + filetype)
-					return False
-				if (uploadingCancelled == True): #might remove, cancelling uploads does not seem necessary
-					return False
+				return True
 			else:
 				return False			
-
-		if (uploadingCancelled == True):
-			logging.info("User requested to cancel upload.")
-			logging.info("Cancelling POST operation to database.")
-			logging.info("Upload successfully cancelled.")
-			print("Alert to user: Upload successfully cancelled.")
-			return False
-		else:				
-			logging.info("Uploading of file " + filename + " completed!")
-			print("Alert to user: Uploading of file " + filename + " completed!")
-			#files_collection.insert_one(new_file)
-			return new_file
 	else:
 		return False		
 
@@ -169,6 +167,12 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 # 	return True	
 
 def FileDelete(fileID): #revamped to work with app.py
+	if not (isinstance(fileID, int)):
+		logging.warning("FileDelete(): File ID (F_ID) should be an integer")
+		return False
+	if (fileID == -1):
+		logging.info("Testing FileDelete()")
+		return False
 	try:
 		query = {"F_ID": fileID} 
 		files_collection.delete_one(query)
@@ -177,6 +181,19 @@ def FileDelete(fileID): #revamped to work with app.py
 		return False					
 
 def FileEdit(fileID, authors, creation_time): #revamped to work with app.py, will add more things to edit
+	if not (isinstance(fileID, int)):
+		logging.warning("FileDelete(): File ID (F_ID) should be an integer")
+		return False
+	if not (isinstance(authors, str)):
+		logging.warning("FileDelete(): \"authors\" should be a string")
+		return False
+	if not (isinstance(creation_time, str)):
+		logging.warning("FileDelete(): \"creation_time\" should be a string")
+		return False
+	if (fileID == -1):
+		logging.info("Testing FileEdit()")
+		return False	
+
 	try:
 		query = {"F_ID": fileID}
 		updated_file = { "$set": { 
@@ -230,31 +247,35 @@ def FileEdit(fileID, authors, creation_time): #revamped to work with app.py, wil
 # 		return False		
 
 def DiagnosticsUploader():
-	#CPU usage:
-	logging.info("[STATS] Memory Usage: Top 5 files allocating the most memory:")
-	snapshot = tracemalloc.take_snapshot()
-	top_stats = snapshot.statistics('lineno')
-	for stat in top_stats[:5]:
-	    logging.info(stat)
+	try:
+		#CPU usage:
+		logging.info("[STATS] Memory Usage: Top 5 files allocating the most memory:")
+		snapshot = tracemalloc.take_snapshot()
+		top_stats = snapshot.statistics('lineno')
+		for stat in top_stats[:5]:
+		    logging.info(stat)
 
-	#Memory usage:
-	logging.info("[STATS] CPU Usage: Testing UploadFiles()")
-	#output = cProfile.run('UploadFiles(str(0), files)')  #-> needs to be in main part, not in a function
-	#logging.info(output)
+		#Memory usage:
+		logging.info("[STATS] CPU Usage: Testing FileDelete()")
+		#output = cProfile.run('FileDelete(100)')  #-> needs to be in main part, not in a function
+		#logging.info(output)
 
-	#Network traffic usage and bandwidth usage
-	logging.info("[STATS] Analyzing traffic and bandwidth... to be implemented...")
-
-	#Sends information to database interface	
-	logging.info("[STATS] Sending diagnostic information to the database interface... to be implemented...")	
-	return True		
-
-# ========================================================================
-# Implementation
-# ========================================================================	
+		#Network traffic usage and bandwidth usage
+		logging.info("[STATS] Analyzing bandwidth over 1 second")
+		now1 = psutil.net_io_counters().bytes_sent + psutil.net_io_counters().bytes_recv
+		time.sleep(1)
+		now2 = psutil.net_io_counters().bytes_sent + psutil.net_io_counters().bytes_recv
+		bwidth = ((now2 - now1) / 1024 / 1024 / 1024 * 8) #from bytes to gigabits
+		if (bwidth > 0.02):
+			logging.info(f'High amount of bandwidth used: {bwidth}')
+		else:
+			logging.info(f'Bandwidth used: {bwidth}')
+		return True	
+	except:
+		return False		
 
 # =========================================================================================
-# Testing with Command Line (will move to Website using ex. Django, Flask, Heroku to host)
+# Testing with Command Line
 # =========================================================================================
 
 # test1 = UploadFiles(0, files)

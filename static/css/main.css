@@ -37,10 +37,13 @@ body {
 }
 
 .searchResults {
-	border-bottom: 1px solid black;
 	color: #000b47;
 	font-family: Courier;
-	font-size: 16px;
+	font-size: 14px;
+}
+
+.searchElement {
+	border-bottom: 1px solid blue;
 }
 
 a {

@@ -11,6 +11,7 @@
 			window.onload=function() {
 				//alert("{{session['load_lock']}}");
 				document.getElementById("load_files").click();
+				{{ session['search_page'] }} = 0;
 			}	
 			function loadFiles() {
 				var uid = {{ session['uid'] }};

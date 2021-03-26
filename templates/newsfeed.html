@@ -8,35 +8,15 @@
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 		<title>Newsfeed Ingest - News Analyzer</title>
 		<script>
-			function getJSONP(url, success) { //This function was obtained online: https://stackoverflow.com/questions/2499567/how-to-make-a-json-call-to-a-url/2499647#2499647
-
-			    var ud = '_' + +new Date,
-			        script = document.createElement('script'),
-			        head = document.getElementsByTagName('head')[0] || document.documentElement;
-
-			    window[ud] = function(data) {
-			        head.removeChild(script);
-			        success && success(data);
-			    };
-
-			    script.src = url.replace('callback=?', 'callback=' + ud);
-			    head.appendChild(script);
-
-			}
-			function search_google() {
-				var query = document.getElementById("search_query").value;
-				var search_url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyC25ZPA5pssIGtPhBwLM351vIkBWe8nqAI&cx=000888210889775888983:y9tkcjel090&q=" + String(query) + "&callback=handler&num=10";
-				getJSONP(search_url, function(data) {
-					console.log(data);
-				});
-			}
-
-			function handler(response) {
-				document.getElementById("results").innerHTML = "<br>" //Clear with every search
-				for (var i = 0; i < response.items.length; i++) {
-					var item = response.items[i];
-					//alert(JSON.stringify(item))
-					document.getElementById("results").innerHTML += "<br>" + item.htmlTitle + "<br>" + item.link + "<br><p style='border-bottom: 1px solid black;'></p><br>";
+			function search_nyt() {
+				document.getElementById("results").innerHTML = "" //Clear with every search
+				var query = String(document.getElementById("search_query").value);
+				query = query.replace(/[!#$%^&*()\/\\.,:?+-=_~`'"<>{}]/g,'_'); //Get rid of all special chars
+				if (query) {
+					window.location = "/search/" + query;
+				}	
+				else {
+					document.getElementById("search_query").value = "";
 				}
 			}
 		</script>
@@ -47,8 +27,35 @@
 		</div>
 		<div style="text-align: center;">
 			<input type="text" style="width: 300px; margin-right: 20px;" id="search_query">
-			<a onclick="search_google()">Search for Articles</a>
+			<a onclick="search_nyt()">Search for Articles</a>
 		</div>	
-		<div id="results"></div>
+		<br><br>
+		<div id="results">
+		{% with messages = get_flashed_messages() %}
+		  {% if messages %}
+			{% for message in messages %}
+				{% for m in message %}
+					{% if loop.index == 1 %}
+						{% for article in m %}
+							{% if article %}
+								<div class="searchResults">
+									<div class="searchElement">
+										<br><br>
+										{{article}}
+										<br><br>
+										{{message[2][loop.index - 1]}}
+										<br><br>
+										<a href="{{message[1][loop.index - 1]}}" target="_blank">Link</a>
+										<br><br>
+									</div>	
+								</div>
+							{% endif %}	
+						{% endfor %}
+					{% endif %}	
+				{% endfor %}
+			{% endfor %}
+		  {% endif %}
+		{% endwith %}
+		</div>
 	</body>
 </html>

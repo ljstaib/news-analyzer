@@ -3,9 +3,8 @@
 # Luke Staib ljstaib@bu.edu 
 # Copyright @2021, for EC500: Software Engineering
 # NLP Analysis
+# Website created with Flask, MongoDB used for database, S3 used to host
 # ========================================================================
-
-#I will create the website with Flask, I will use S3 or MongoDB for my database, I will use S3(?) to host
 
 # ========================================================================
 # Imports/Constants
@@ -40,7 +39,7 @@ tracemalloc.start()
 
 logging.basicConfig(filename='NLP_analysis.log', level=logging.DEBUG, format='%(levelname)s: %(message)s')
 
-filenames = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf", "Operations.pdf"] #Sample list
+# filenames = ["Sample.txt", "DONOTREAD.docx", "WhiteHouseBriefing.pdf", "Operations.pdf"] #Sample list
 UPLOAD_FOLDER = './File_Data'
 # userID = "0" #Will implement user ID's with secure user authentication system
 
@@ -49,25 +48,29 @@ UPLOAD_FOLDER = './File_Data'
 # ========================================================================
 
 def ConvertFileToText(userID, file_in, filetype):
+	if not isinstance(userID, int):
+		logging.info("ConvertFileToText: userID (U_ID) should be an integer.")
+		return False
+	if not isinstance(filetype, str):
+		logging.info("ConvertFileToText: \"filetype\" should be a string.")	
+		return False
 	result = doesUserExist(userID)
 	if (result):
-		# data_list = []
-		# path_created = True
-		# for file in tqdm(files, total=len(files), desc="File Conversion Progress"):
-			# split_str = file.split(".")
-			# filename = split_str[0]
-			# filetype = split_str[1]
-			# filetype = filetype.lower()
 		if file_in == "test file txt":
-			file_ref = open("./test_files/Sample.txt", "r")
+			file_ref = open("../test_files/Sample.txt", "r")
 			text_data = file_ref.read()
-			text_data = re.sub(r' +', ' ', text_data)
+			text_data = re.sub(r'\n +', '\n', text_data)
+			text_data = re.sub(r'\n+', '\n', text_data)
 			text_data = re.sub(r'\n', ' ', text_data)
 			text_data = re.sub(r'\t', ' ', text_data)
+			text_data = re.sub(r' +', ' ', text_data)
+			text_data = re.sub(r':', ' ', text_data)
+			text_data = re.sub(r'"', '\"', text_data)
+			text_data = re.sub(r"'", '\'', text_data)
 			return text_data
 
 		if file_in == "test file pdf":
-			file_path = "./test_files/Operations.pdf"
+			file_path = "../test_files/WhiteHouseBriefing.pdf"
 			text_data = ""
 			with open(file_path, "rb") as f:
 				text_data = slate3k.PDF(f)
@@ -77,6 +80,20 @@ def ConvertFileToText(userID, file_in, filetype):
 			text_data = re.sub(r'\n +', '\n', text_data)
 			text_data = re.sub(r'\n+', '\n', text_data)
 			text_data = re.sub(r'\n', ' ', text_data)
+			text_data = re.sub(r'\t', ' ', text_data)
+			text_data = re.sub(r' +', ' ', text_data)
+			text_data = re.sub(r':', ' ', text_data)
+			text_data = re.sub(r'"', '\"', text_data)
+			text_data = re.sub(r"'", '\'', text_data)
+			return text_data
+
+		if file_in == "test file docx":
+			file_path = "../test_files/DONOTREAD.docx"
+			text_data = docx2txt.process(file_path)
+			text_data = re.sub(r'\n +', '\n', text_data)
+			text_data = re.sub(r'\n+', '\n', text_data)
+			text_data = re.sub(r'\n', ' ', text_data)
+			text_data = re.sub(r'\t', ' ', text_data)
 			text_data = re.sub(r' +', ' ', text_data)
 			text_data = re.sub(r':', ' ', text_data)
 			text_data = re.sub(r'"', '\"', text_data)
@@ -85,32 +102,23 @@ def ConvertFileToText(userID, file_in, filetype):
 			
 		file_path = UPLOAD_FOLDER + "/" + file_in.filename
 		if filetype == "docx":
-			logging.debug("Here, I use the docx2txt library to turn this .docx file into .txt")
+			logging.info("Here, I use the docx2txt library to turn this .docx file into .txt")
 			logging.info("Filetype = .docx")
 			text_data = docx2txt.process(file_path)	
 			logging.debug("File contents: " + text_data)
 		elif filetype == "txt":
-			logging.debug("Here, there is no conversion to do since it is already a .txt file")
+			logging.info("Here, there is no conversion to do since it is already a .txt file")
 			logging.info("Filetype = .txt")
 			file_ref = open(file_path, "r")
 			text_data = file_ref.read()
-			text_data = re.sub(r' +', ' ', text_data)
-			text_data = re.sub(r'\n', ' ', text_data)
-			text_data = re.sub(r'\t', ' ', text_data)
 			logging.debug("File contents: " + text_data)
 		elif filetype == "pdf":
-			logging.debug("Here, I use the slate3k library to turn this .pdf file into .txt")
+			logging.info("Here, I use the slate3k library to turn this .pdf file into .txt")
 			logging.info("Filetype = .pdf")
 			text_data = ""
 			with open(file_path, "rb") as f:
 				text_data = slate3k.PDF(f)
 
-			#Get rid of multiple newline characters
-			text_data = str("".join(text_data))
-			text_data = re.sub(r'\n +', '\n', text_data)
-			text_data = re.sub(r'\n+', '\n', text_data)
-			text_data = re.sub(r'\n', ' ', text_data)
-			text_data = re.sub(r' +', ' ', text_data)
 			logging.debug("File contents: " + text_data)
 		else:
 			logging.debug("I will implement support for other filetypes")
@@ -136,6 +144,14 @@ def ConvertFileToText(userID, file_in, filetype):
 
 			# data_list.append([filetype, text_data])	
 	
+		text_data = re.sub(r'\n +', '\n', text_data)
+		text_data = re.sub(r'\n+', '\n', text_data)
+		text_data = re.sub(r'\n', ' ', text_data)
+		text_data = re.sub(r'\t', ' ', text_data)
+		text_data = re.sub(r' +', ' ', text_data)
+		text_data = re.sub(r':', ' ', text_data)
+		text_data = re.sub(r'"', '\"', text_data)
+		text_data = re.sub(r"'", '\'', text_data)
 		return text_data
 	else:
 		return False		
@@ -223,32 +239,40 @@ def AssessData(text_data):
 # 	return updated_file, query	
 
 def DiagnosticsNLP():
-	#CPU usage:
-	logging.info("[STATS] Memory Usage: Top 5 files allocating the most memory:")
-	snapshot = tracemalloc.take_snapshot()
-	top_stats = snapshot.statistics('lineno')
-	for stat in top_stats[:5]:
-	    logging.info(stat)
+	try:
+		#CPU usage:
+		logging.info("[STATS] Memory Usage: Top 5 files allocating the most memory:")
+		snapshot = tracemalloc.take_snapshot()
+		top_stats = snapshot.statistics('lineno')
+		for stat in top_stats[:5]:
+		    logging.info(stat)
 
-	#Memory usage:
-	logging.info("[STATS] CPU Usage: Testing ConvertFilesToText()")
-	#output = cProfile.run('ConvertFilesToText(str(0), files)')  #-> needs to be in main part, not in a function
-	#logging.info(output)
+		#Memory usage:
+		logging.info("[STATS] CPU Usage: Testing ConvertFilesToText()")
+		#output = cProfile.run('ConvertFilesToText(str(0), files)')  #-> needs to be in main part, not in a function
+		#logging.info(output)
 
-	#Network traffic usage and bandwidth usage
-	logging.info("[STATS] Analyzing traffic and bandwidth... to be implemented...")
-
-	#Sends information to database interface	
-	logging.info("[STATS] Sending diagnostic information to the database interface... to be implemented...")	
-	return True		
-
-# ========================================================================
-# Implementation
-# ========================================================================	
+		#Network traffic usage and bandwidth usage
+		logging.info("[STATS] Analyzing bandwidth over 1 second")
+		now1 = psutil.net_io_counters().bytes_sent + psutil.net_io_counters().bytes_recv
+		time.sleep(1)
+		now2 = psutil.net_io_counters().bytes_sent + psutil.net_io_counters().bytes_recv
+		bwidth = ((now2 - now1) / 1024 / 1024 / 1024 * 8) #from bytes to gigabits
+		if (bwidth > 0.02):
+			logging.info(f'High amount of bandwidth used: {bwidth}')
+		else:
+			logging.info(f'Bandwidth used: {bwidth}')
+		return True	
+	except:
+		return False	
 
 # =========================================================================================
 # Testing with Command Line
 # =========================================================================================
+
+# print(ConvertFileToText(0, "test file txt", "txt"))
+# print(ConvertFileToText(0, "test file docx", "docx"))
+# print(repr(ConvertFileToText(0, "test file pdf", "pdf")))
 
 # keywords = CreateKeywords("The Sun is a yellow dwarf star at the center of our Solar System. The distance between the Sun and the Earth is one important reason why life can be sustained on Earth. At about 92 million miles away, the Earth is the third closest planet from the Sun out of 8 planets.")
 # print("Keywords:")

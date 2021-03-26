@@ -379,7 +379,7 @@ class FileList(Resource):
 		if (new_file == False):
 			flash(f'There was a problem uploading your file. Please try again later.')
 			return redirect(url_for("upload"))
-		else:	
+		else:
 			session['load_lock'] = False
 			files_collection.insert_one(new_file)
 			app_users, app_files = updateDB()
@@ -388,7 +388,7 @@ class FileList(Resource):
 
 class UserFiles(Resource):
 	#http://127.0.0.1:5000/ufiles/0/homepage
-	def get(self, uid, page):
+	def get(self, uid, page): #page refers to the webpage to redirect to
 		try:
 		    uid = int(uid)
 		except ValueError:
@@ -432,13 +432,25 @@ class UserFiles(Resource):
 				return redirect(url_for(page))
 			else:	
 				session['files_data'] = None
-				return redirect(url_for(page))		
+				return redirect(url_for(page))	
+
+class Searcher(Resource):	
+	#http://127.0.0.1:5000/search/election/0
+	def get(self, query): #page refers to search results page (0-99)	
+		results = DiscoverContent(query)
+		if (results == False):
+			flash("There was a problem searching. Please try again later.")	
+			return redirect(url_for('newsfeed'))
+		else:
+			flash(results)
+			return redirect(url_for('newsfeed'))	
 
 api.add_resource(UserList, '/users')
 api.add_resource(User, '/users/<uid>')
 api.add_resource(FileList, '/files')
 api.add_resource(File, '/files/<fid>/<method>')
-api.add_resource(UserFiles, '/ufiles/<uid>/<page>') #used to get files by a user ID		
+api.add_resource(UserFiles, '/ufiles/<uid>/<page>') #used to get files by a user ID	
+api.add_resource(Searcher, '/search/<query>') #used with newsfeed ingest to search	
 
 if __name__ == '__main__':
     app.run(debug=True)

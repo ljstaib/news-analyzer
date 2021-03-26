@@ -1,0 +1,20 @@
+WARNING: Entered search text or page number is not a string.
+INFO: [STATS] Memory Usage: Top 5 files allocating the most memory:
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/logging/__init__.py:1172: size=5290 B, count=12, average=441 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/site-packages/pymongo/cursor.py:187: size=1448 B, count=2, average=724 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/site-packages/pymongo/collection.py:1523: size=688 B, count=2, average=344 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/logging/__init__.py:1434: size=584 B, count=1, average=584 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/logging/__init__.py:325: size=576 B, count=1, average=576 B
+INFO: [STATS] CPU Usage: Testing DiscoverContent()
+INFO: [STATS] Analyzing bandwidth over 1 second
+INFO: [STATS] Memory Usage: Top 5 files allocating the most memory:
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/logging/__init__.py:1172: size=5290 B, count=12, average=441 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/site-packages/pymongo/cursor.py:187: size=1448 B, count=2, average=724 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/site-packages/pymongo/collection.py:1523: size=688 B, count=2, average=344 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/logging/__init__.py:1434: size=584 B, count=1, average=584 B
+INFO: /Users/luke/opt/miniconda3/lib/python3.8/logging/__init__.py:325: size=576 B, count=1, average=576 B
+INFO: [STATS] CPU Usage: Testing DiscoverContent()
+INFO: [STATS] Analyzing bandwidth over 1 second
+INFO: Bandwidth used: 0.00037384033203125
+INFO: Search text is election
+INFO: Successful retrieval of news articles!
