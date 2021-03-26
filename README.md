@@ -30,10 +30,12 @@ Week of 3/22: In progress.
 - 3/19: User authentication, file uploader, and viewing of files fully functional on website.
 - 3/21-3/22: Basic sentiment and keyword analysis implemented. Newsfeed ingest can take in a keyword to search the web.
 - 3/23: File uploading, editing, deleting finalized. Upgraded PDF conversion. Added new webpages.
+- 3/24-3/25: Finalized web application, finished NLP analysis, created newsfeed ingest using New York Times API
 
 TODO:
-- Add more testing, GitHub issues
-- Add NLP analysis to website
+- Write up documentation
+- Deploy to S3
+- Finish by Sunday, 3/28
 
 # Phase 1:
 Phase 1, due 2/15/21:
