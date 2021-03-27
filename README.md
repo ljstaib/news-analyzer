@@ -1,6 +1,6 @@
 # Homework #2 for EC500 at BU: news-analyzer-ljstaib
 
-# Please email me if there is a deliverable that you do not see (will be completed by Sunday, 3/28)
+# Please email me if there is a deliverable that you do not see (I should have everything completed)
 
 Copyright @2021 
 Luke Staib 
@@ -20,7 +20,7 @@ Phase 3 Deliverable 2: Completed. Data being stored in database, can store text 
 
 Hosting: I was able to get my website up on AWS EC2 on HTTP protocol (might need to change to HTTPS)
 
-Queues (Mini Project): In progress. I made a demo program for subprocesses and multithreading. Please see my repository for more information: https://github.com/BUEC500C1/queues-ljstaib . 
+Queues (Mini Project): Completed. I made a demo program for subprocesses and multithreading. Please see my repository for more information: https://github.com/BUEC500C1/queues-ljstaib . 
 
 My findings and what I have learned from the Queues Mini Project: 
 - For less function calls, use multithreading, for more function calls, use multiprocessing if your machine has multiple CPU cores. However, with my demonstration files in my queues-ljstaib repository, I had greater success with function calls within my program than with multithreading or multiprocessing. I'm sure this is just something wrong I was doing on my end.
@@ -31,11 +31,10 @@ Week of 3/22: In progress.
 - 3/21-3/22: Basic sentiment and keyword analysis implemented. Newsfeed ingest can take in a keyword to search the web.
 - 3/23: File uploading, editing, deleting finalized. Upgraded PDF conversion. Added new webpages.
 - 3/24-3/25: Finalized web application, finished NLP analysis, created newsfeed ingest using New York Times API
+- 3/27: Web app completed, documentation written up and a demonstration of the application was created. Please see Final_Information.
 
 TODO:
-- Write up documentation
 - Deploy to S3
-- Finish by Sunday, 3/28
 
 # Phase 1:
 Phase 1, due 2/15/21:
