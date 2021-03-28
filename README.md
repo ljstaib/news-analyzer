@@ -1,12 +1,12 @@
 # Homework #2 for EC500 at BU: news-analyzer-ljstaib
 
-# Please email me if there is a deliverable that you do not see (I should have everything completed)
+# Please email me if there is a deliverable that you do not see (I should have everything completed), email me to host the web application.
 
 Copyright @2021 
 Luke Staib 
 ljstaib@bu.edu
 
-# Status 
+# Status - HW2 Completed
 Phase 1: Completed. Stub-API modules for Phase 1 are in their respective .py files. I also have psuedocode in newsanalyzer_pseudocode.txt.
 
 Phase 2: Completed. Files and users database has been connected and GET, POST, PUT, DELETE operations are possible.
@@ -18,7 +18,7 @@ Phase 3 Deliverable 1: Completed. Data storage defined in DataStorageStrategy.pd
 Phase 3 Deliverable 2: Completed. Data being stored in database, can store text data of PDF files and TXT files. Created separate field "Text" in files database for each file. Please see "TextConversionWithFileUpload.mov" for my latest demo. Also please see "MongoDBFiles.png" for a view of the updated database.
 - 3/14: I can now convert from DOCX to text
 
-Hosting: I was able to get my website up on AWS EC2 on HTTP protocol (might need to change to HTTPS)
+Hosting: I was able to get my website up on AWS EC2 on HTTP protocol
 
 Queues (Mini Project): Completed. I made a demo program for subprocesses and multithreading. Please see my repository for more information: https://github.com/BUEC500C1/queues-ljstaib . 
 
@@ -26,15 +26,12 @@ My findings and what I have learned from the Queues Mini Project:
 - For less function calls, use multithreading, for more function calls, use multiprocessing if your machine has multiple CPU cores. However, with my demonstration files in my queues-ljstaib repository, I had greater success with function calls within my program than with multithreading or multiprocessing. I'm sure this is just something wrong I was doing on my end.
 - I have learned how to use multiple threads and multiple processes to set a queue for functions. In my example, I created a prime numbers function and I reused the FileUploader() function from my code in this library. Utilizing queuing would be beneficial for my application if I have time to implement.
 
-Week of 3/22: In progress.
+Week of 3/22: Completed.
 - 3/19: User authentication, file uploader, and viewing of files fully functional on website.
 - 3/21-3/22: Basic sentiment and keyword analysis implemented. Newsfeed ingest can take in a keyword to search the web.
 - 3/23: File uploading, editing, deleting finalized. Upgraded PDF conversion. Added new webpages.
 - 3/24-3/25: Finalized web application, finished NLP analysis, created newsfeed ingest using New York Times API
 - 3/27: Web app completed, documentation written up and a demonstration of the application was created. Please see Final_Information.
-
-TODO:
-- Deploy to S3
 
 # Phase 1:
 Phase 1, due 2/15/21:
