@@ -29,7 +29,7 @@ import time
 import docx2txt #DOC -> TXT
 
 try:
-	os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "/Users/luke/Documents/Code/EC500/HW2+3/.keys/key.json"
+	os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "../.keys/key.json"
 except:
 	pass	
 
