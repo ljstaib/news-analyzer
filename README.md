@@ -6,6 +6,8 @@ Copyright @2021
 Luke Staib 
 ljstaib@bu.edu
 
+# Hosted at http://34.227.178.224:80/
+
 # Status - HW2 Completed
 Phase 1: Completed. Stub-API modules for Phase 1 are in their respective .py files. I also have psuedocode in newsanalyzer_pseudocode.txt.
 
