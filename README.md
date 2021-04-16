@@ -1,16 +1,32 @@
-# Homework #2 for EC500 at BU: news-analyzer-ljstaib
+# Homework #2 / Final Project for EC500 at BU: news-analyzer-ljstaib
 
-# Please email me if there is a deliverable that you do not see (I should have everything completed), email me to host the web application.
+# Please email me if there is a deliverable that you do not see (I should have everything completed), email me to host the web application. Also, please see a demonstration of how the website is used in "UsageExample.mp4" in the folder labeled "Final_Information".
 
 Copyright @2021 
 Luke Staib 
 ljstaib@bu.edu
 
-# Hosted at http://34.227.178.224:80/ (currently offline)
+# Hosting information
+- Website hosted at http://34.227.178.224:80/ (currently offline)
 
-# Please see a demonstration of how the website is used in "UsageExample.mp4" in the folder labeled "Final_Information"
+# Final Project Status
+Features to add/improve upon for my Final Project:
+- Security
+  - Encrypting user information and file information (?) for storage in MongoDB Atlas
+  - Ensuring file upload is secure
+- File Uploader
+  - Adding new types of files (RTF, ODT?)
+  - Ability to upload more than one file at once
+- NLP Analysis
+  - More thorough final sentiment and analysis based off of data received (if possible)
+- Newsfeed ingest
+  - Adding more than one website for articles (NYT)
+  - Adding "Read Later" feature, create "article_links" field for each user in database, read/edit this list
+- Quality of Life Improvements
+  - Loading icons
+  - Improved styling
 
-# Status - HW2 Completed
+# HW2 Status - HW2
 Phase 1: Completed. Stub-API modules for Phase 1 are in their respective .py files. I also have psuedocode in newsanalyzer_pseudocode.txt.
 
 Phase 2: Completed. Files and users database has been connected and GET, POST, PUT, DELETE operations are possible.
