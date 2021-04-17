@@ -182,11 +182,13 @@ class User(Resource):
 					pword = userinfo[1]
 					fname = userinfo[2]
 					lname = userinfo[3]
+					readlater = userinfo[4]
 					updated_user = { "$set": {
 						'Username': uname,
 						'Password': pword, 
 						'FirstName': fname, 
-						'LastName': lname
+						'LastName': lname,
+						'ReadLaterList': readlater,
 					}}
 					db.users_db.user_collection.update_one(query, updated_user)
 					app_users, app_files = updateDB()
@@ -234,7 +236,8 @@ class UserList(Resource):
 			'Username': new_uname, 
 			'Password': new_pword,
 			'FirstName': new_fname, 
-			'LastName': new_lname
+			'LastName': new_lname,
+			'ReadLaterList': [],
 		}	
 		db.users_db.user_collection.insert_one(new_user)
 		app_users, app_files = updateDB()
@@ -444,12 +447,34 @@ class Searcher(Resource):
 			flash(results)
 			return redirect(url_for('newsfeed'))	
 
+class SaveReadLater(Resource):
+	#http://127.0.0.1:5000/savelink/0/'https://website.com/article.html'
+	def get(self, uid, url): #page refers to the webpage to redirect to
+		try:
+		    uid = int(uid)
+		except ValueError:
+		    return "Please enter a valid U_ID (int)"
+		else: 
+			for user in app_users:
+				if user.get('U_ID') == uid:
+					query = {"U_ID": uid}
+					readlater = query.get('ReadLaterList')
+					print("READLATER")
+					print(readlater)
+					updated_user = { "$set": {
+						'ReadLaterList': url,
+					}}
+			flash("Saved to your read later list!")
+			return redirect(url_for('newsfeed'))					
+
+
 api.add_resource(UserList, '/users')
 api.add_resource(User, '/users/<uid>')
 api.add_resource(FileList, '/files')
 api.add_resource(File, '/files/<fid>/<method>')
 api.add_resource(UserFiles, '/ufiles/<uid>/<page>') #used to get files by a user ID	
-api.add_resource(Searcher, '/search/<query>') #used with newsfeed ingest to search	
+api.add_resource(Searcher, '/search/<query>') #used with newsfeed ingest to search
+api.add_resource(SaveReadLater, '/savelink/<uid>/<url>') #used for read later feature in news analyzer
 
 if __name__ == '__main__':
     app.run(debug=True)

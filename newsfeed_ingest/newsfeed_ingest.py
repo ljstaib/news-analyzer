@@ -23,20 +23,34 @@ import time
 import psutil
 import logging #Logging
 import requests #retrieving articles
+from newsapi import NewsApiClient #newsapi.org
+import datetime #get dates for newsapi
 
 tracemalloc.start()
 
-users = users_collection.find()
-
-logging.basicConfig(filename='newsfeed_ingest.log', level=logging.INFO, format='%(levelname)s: %(message)s')
-
 for key in keys_collection.find():
 	if (key.get('name') == "NYT"):
-		nyt_key = key.get('key')	
+		nyt_key = key.get('key')
+	elif (key.get('name') == "NewsAPI"):
+		news_key = key.get('key')
+
+users = users_collection.find()
+
+logging.basicConfig(filename='newsfeed_ingest.log', level=logging.INFO, format='%(levelname)s: %(message)s')	
 
 # ========================================================================
 # Newsfeed Ingest
 # ========================================================================
+
+def get_dates():
+	today = datetime.date.today()
+	last_month = today
+	if (today.month == 1):
+		last_month.replace(month=12)
+	else:	
+		last_month.replace(month=today.month - 1)
+
+	return last_month, today	
 
 def DiscoverContent(search_text):
 	# Use NLP analysis from New York Times API
@@ -48,21 +62,43 @@ def DiscoverContent(search_text):
 	else:
 		search_text = search_text.lower()
 		logging.info("Search text is " + str(search_text))
-		reqs = []
-		for i in range(1,3): #30 results
-			url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + search_text + "&page=" + str(i - 1) + "&api-key=" + nyt_key
-			reqs.append((requests.get(url)).json())
 
 		result_titles = [] #List of 10 titles to display
 		result_urls = [] #List of 10 URLs to display
 		result_sources = [] #List of 10 Sources to display
 		results = [] #List of 3 lists above
 
-		for j in range(0, 2):
-			for i in range(1, len(reqs[j].get('response').get('docs'))):
-				result_titles.append(reqs[j].get('response').get('docs')[i].get('snippet'))
-				result_urls.append(reqs[j].get('response').get('docs')[i].get('web_url'))
-				result_sources.append(reqs[j].get('response').get('docs')[i].get('source'))
+		date_last_month, date_now = get_dates()
+		newsapi = NewsApiClient(api_key=news_key)
+		#search wide variety of websites for content within the last month, 20 results
+		some_articles = newsapi.get_everything(q=search_text, from_param=date_last_month, to=date_now, language='en', page=1)
+		print(some_articles)
+		all_articles = some_articles.get('articles')
+		article_titles = []
+		articles = []
+		for article in all_articles:
+			if article.get('title') not in article_titles:
+				article_titles.append(article.get('title'))
+				articles.append(article)
+
+		some_articles = articles[:20] #1st 20 results
+
+		for article in some_articles:
+			result_titles.append(article.get('title'))
+			result_urls.append(article.get('url'))
+			result_sources.append(article.get('source').get('name'))
+
+		#10 results
+		url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + search_text + "&page=1" + "&api-key=" + nyt_key
+		reqs = (requests.get(url)).json()
+		print(reqs)
+
+		for i in range(1, len(reqs.get('response').get('docs'))):
+			#print(reqs[j].get('response').get('docs')[i])
+			#print('='*80)
+			result_titles.append(reqs.get('response').get('docs')[i].get('snippet'))
+			result_urls.append(reqs.get('response').get('docs')[i].get('web_url'))
+			result_sources.append(reqs.get('response').get('docs')[i].get('source'))
 
 		results = [result_titles, result_urls, result_sources]
 		logging.info("Successful retrieval of news articles!")
