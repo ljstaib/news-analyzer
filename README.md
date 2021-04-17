@@ -10,7 +10,7 @@ ljstaib@bu.edu
 - Website hosted at http://34.227.178.224:80/ (currently offline)
 
 # Final Project Status
-Features to add/improve upon for my Final Project:
+## Features to add/improve upon for my Final Project:
 - Security
   - Encrypting user information and file information (?) for storage in MongoDB Atlas
   - Ensuring file upload is secure
@@ -21,10 +21,15 @@ Features to add/improve upon for my Final Project:
   - More thorough final sentiment and analysis based off of data received (if possible)
 - Newsfeed ingest
   - Adding more than one website for articles (NYT)
-  - Adding "Read Later" feature, create "article_links" field for each user in database, read/edit this list
+  - Adding "Read Later" feature, create "ReadLaterList" field for each user in database, read/edit this list
 - Quality of Life Improvements
   - Loading icons
   - Improved styling
+
+## In progress:
+- Added newsapi.org API to gather articles from more websites
+  - Application gathers ~20 unique articles from newsapi.org and ~10 unique articles from NYT
+- Working on "Read Later" feature
 
 # HW2 Status - HW2
 Phase 1: Completed. Stub-API modules for Phase 1 are in their respective .py files. I also have psuedocode in newsanalyzer_pseudocode.txt.
