@@ -1,0 +1,49 @@
+<!-- Luke Staib @2021 -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		<title>Newsfeed Ingest - Read Later List</title>
+		<script>
+			window.onload=function() {
+				document.getElementById("load_links").click();
+			}
+			function loadLinks() {
+				var uid = {{ session['uid'] }};
+				window.location = "/loadlinks/" + uid;
+			}
+		</script>
+	</head>
+	<body>
+		<div class="bigText">Read Later List
+			<a href="/homepage">Return to Home</a>
+		</div>
+		<br><br>
+		<table>
+			<tr>
+				<th>Number</th>
+				<th>Link</th>
+				<th>Options</th>
+			</tr>	
+			{% with messages = get_flashed_messages() %}
+				{% if messages %}
+					{% for message in messages %}
+						{% for link in message %}
+							<tr>
+								<th>{{loop.index}}</th>
+								<th>{{link}}</th>
+								<th><a href="{{link}}" target="_blank">View</a>&nbsp;<a>Remove</a></th>
+							</tr>
+						{% endfor %}		
+					{% endfor %}
+			  	{% endif %}
+			{% endwith %}
+		</table>
+		{% if session['readlater_lock'] != True %}
+			<a style="display: none" id="load_links" onclick="loadLinks()"></a>
+		{% endif %}	
+	</body>
+</html>
