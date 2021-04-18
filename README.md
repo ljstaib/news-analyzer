@@ -28,8 +28,11 @@ ljstaib@bu.edu
 
 ## In progress:
 - Added newsapi.org API to gather articles from more websites
-  - Application gathers ~20 unique articles from newsapi.org and ~10 unique articles from NYT
-- Working on "Read Later" feature
+  - Application gathers ~15 unique articles (only so many a flask session variable can hold) from newsapi.org and ~10 unique articles from NYT
+- Working on "Read Later" feature, 95% completed
+  - User can save a link to their saved links on the newsfeed ingest screen
+  - Can view their links from the homepage and read the article saved
+  - Just need to implement deleting links from ReadLaterList in user info in MongoDB
 
 # HW2 Status - HW2
 Phase 1: Completed. Stub-API modules for Phase 1 are in their respective .py files. I also have psuedocode in newsanalyzer_pseudocode.txt.
