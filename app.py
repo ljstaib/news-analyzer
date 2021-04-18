@@ -32,6 +32,7 @@ from bson import ObjectId
 #other libraries
 from datetime import datetime
 import os
+from urllib.parse import unquote #url parsing in readlater rest api component
 
 #################################
 
@@ -71,6 +72,7 @@ def login():
 
 @app.route('/homepage', methods=['GET'])
 def homepage():
+	session['readlater_lock'] = False #Make sure readlater list loads each time
 	return render_template('homepage.html')	
 
 @app.route('/upload', methods=['GET'])
@@ -95,7 +97,11 @@ def search():
 
 @app.route('/editfile', methods=['GET'])
 def editfile():
-	return render_template('editfile.html')	
+	return render_template('editfile.html')
+
+@app.route('/readlater', methods=['GET'])
+def readlater():
+	return render_template('readlater.html')		
 # @app.route('/test_db')
 # def test_db():
 # 	test_user = {
@@ -138,6 +144,7 @@ class User(Resource):
 					session['lastname'] = user.get('LastName')
 					session['uid'] = user.get('U_ID')
 					session['load_lock'] = False
+					session['readlater_lock'] = True
 					return redirect(url_for("homepage"))
 			# print("Failure")
 			flash("Credentials do not match.")
@@ -450,6 +457,8 @@ class Searcher(Resource):
 class SaveReadLater(Resource):
 	#http://127.0.0.1:5000/savelink/0/'https://website.com/article.html'
 	def get(self, uid, url): #page refers to the webpage to redirect to
+		global app_users
+		global app_files
 		try:
 		    uid = int(uid)
 		except ValueError:
@@ -458,14 +467,34 @@ class SaveReadLater(Resource):
 			for user in app_users:
 				if user.get('U_ID') == uid:
 					query = {"U_ID": uid}
-					readlater = query.get('ReadLaterList')
-					print("READLATER")
-					print(readlater)
-					updated_user = { "$set": {
+					url = unquote(url)
+					updated_user = { "$push": {
 						'ReadLaterList': url,
 					}}
-			flash("Saved to your read later list!")
-			return redirect(url_for('newsfeed'))					
+					db.users_db.user_collection.update_one(query, updated_user)
+					app_users, app_files = updateDB()
+					session['readlater_lock'] = False
+					flash("Saved article link to your read later list!")
+					return redirect(url_for('homepage'))
+
+class LoadReadLater(Resource):
+	#http://127.0.0.1:5000/savelink/0/'https://website.com/article.html'
+	def get(self, uid): #page refers to the webpage to redirect to
+		global app_users
+		global app_files
+		try:
+		    uid = int(uid)
+		except ValueError:
+		    return "Please enter a valid U_ID (int)"
+		else: 
+			for user in app_users:
+				if user.get('U_ID') == uid:
+					readlater = user.get('ReadLaterList')
+					print("READLATER")
+					print(readlater)
+					session['readlater_lock'] = True
+					flash(readlater)
+					return redirect(url_for('readlater'))								
 
 
 api.add_resource(UserList, '/users')
@@ -475,6 +504,7 @@ api.add_resource(File, '/files/<fid>/<method>')
 api.add_resource(UserFiles, '/ufiles/<uid>/<page>') #used to get files by a user ID	
 api.add_resource(Searcher, '/search/<query>') #used with newsfeed ingest to search
 api.add_resource(SaveReadLater, '/savelink/<uid>/<url>') #used for read later feature in news analyzer
+api.add_resource(LoadReadLater, '/loadlinks/<uid>') #used to retrieve read later links
 
 if __name__ == '__main__':
     app.run(debug=True)

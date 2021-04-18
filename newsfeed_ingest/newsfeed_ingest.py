@@ -42,6 +42,7 @@ logging.basicConfig(filename='newsfeed_ingest.log', level=logging.INFO, format='
 # Newsfeed Ingest
 # ========================================================================
 
+#Helper function used to retrieve dates for the newsapi.org search (searching within last month)
 def get_dates():
 	today = datetime.date.today()
 	last_month = today
@@ -63,14 +64,15 @@ def DiscoverContent(search_text):
 		search_text = search_text.lower()
 		logging.info("Search text is " + str(search_text))
 
-		result_titles = [] #List of 10 titles to display
-		result_urls = [] #List of 10 URLs to display
-		result_sources = [] #List of 10 Sources to display
+		result_titles = [] #List of 25 titles to display
+		result_urls = [] #List of 25 URLs to display
+		result_sources = [] #List of 25 Sources to display
 		results = [] #List of 3 lists above
+		#15 results from newsapi.org, 10 results from new york times
 
 		date_last_month, date_now = get_dates()
 		newsapi = NewsApiClient(api_key=news_key)
-		#search wide variety of websites for content within the last month, 20 results
+		#search wide variety of websites for content within the last month, 15 results because of size to hold in flash variable
 		some_articles = newsapi.get_everything(q=search_text, from_param=date_last_month, to=date_now, language='en', page=1)
 		print(some_articles)
 		all_articles = some_articles.get('articles')
@@ -81,7 +83,9 @@ def DiscoverContent(search_text):
 				article_titles.append(article.get('title'))
 				articles.append(article)
 
-		some_articles = articles[:20] #1st 20 results
+		some_articles = articles[:15] #1st 15 results
+		print("SOME ARTICLES")
+		print(some_articles)
 
 		for article in some_articles:
 			result_titles.append(article.get('title'))

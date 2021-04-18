@@ -22,13 +22,12 @@
 
 			function read_later(url) {
 				var uid = {{ session['uid'] }};
-				if (uid) {
+				if (uid !== -1) {
 					if (url) {
-						//window.location = "/savelink/" + uid + "/" + url;
-						console.log("UID");
-						console.log(uid);
-						console.log("URL");
-						console.log(url);
+						url = encodeURIComponent(url.trim()) //Encode url to use in REST api (app.py)
+						url = url.replaceAll("%2F", "%252F") //Prevent / from causing problems
+						url = url.replaceAll("%5C", "%255C") //Prevent \ from causing problems
+						window.location = "/savelink/" + uid + "/" + url;
 					}
 				}	
 			}
@@ -59,7 +58,7 @@
 										{{message[2][loop.index - 1]}}
 										<br><br>
 										<a href="{{message[1][loop.index - 1]}}" target="_blank">Link</a>
-										<a onclick="read_later({{ message[1][loop.index - 1] }})">Read Later</a>
+										<a onclick='read_later("{{message[1][loop.index - 1]}}")'>Read Later</a>
 										<br><br>
 									</div>	
 								</div>
