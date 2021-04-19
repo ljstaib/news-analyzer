@@ -26,13 +26,16 @@ ljstaib@bu.edu
   - Loading icons
   - Improved styling
 
-## In progress:
-- Added newsapi.org API to gather articles from more websites
+## Status/Progress:
+- Added newsapi.org API to gather articles from more websites (4/18)
   - Application gathers ~15 unique articles (only so many a flask session variable can hold) from newsapi.org and ~10 unique articles from NYT
-- Working on "Read Later" feature, 95% completed
+- Finished "Read Later" feature (4/18-4/19)
   - User can save a link to their saved links on the newsfeed ingest screen
-  - Can view their links from the homepage and read the article saved
-  - Just need to implement deleting links from ReadLaterList in user info in MongoDB
+  - Can view their links from the homepage and read the article saved, or delete the link from their list
+- Begun working on having multiple file uploads at once - 50% completed (4/19)
+  - A user will be able to upload 1-10 files instead of just 1 at a time
+  - Added new HTML page: numfiles.html so that a user can select the number of files to upload at once
+  - Just need to incorporate a for loop in my upload code to retrieve file data for up to 10 files at a time
 
 # HW2 Status - HW2
 Phase 1: Completed. Stub-API modules for Phase 1 are in their respective .py files. I also have psuedocode in newsanalyzer_pseudocode.txt.
