@@ -20,7 +20,11 @@
 		  {% endif %}
 		{% endwith %}
 		<form action="/files" method="post" enctype="multipart/form-data">
-			<input type="file" name="file" required>
+			{% for i in range(session['num_files']) %}
+				<div class="smallText">File {{i + 1}}:</div>
+				<input type="file" name="file{{i + 1}}" required>
+				<br><br>
+			{% endfor %}
 			<div class="smallText">Author/s</div>
 			<input type="text" name="authors" required>
 			<div class="smallText">Date Created</div>

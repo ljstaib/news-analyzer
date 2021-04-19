@@ -809,3 +809,313 @@ INFO: /Users/luke/opt/miniconda3/lib/python3.8/site-packages/cryptography/hazmat
 INFO: [STATS] CPU Usage: Testing FileDelete()
 INFO: [STATS] Analyzing bandwidth over 1 second
 INFO: Bandwidth used: 1.52587890625e-05
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [19/Apr/2021 14:41:16] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:41:16] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:41:18] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:41:23] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:41:23] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:41:24] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:41:24] "[32mGET /loadlinks/0 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:41:24] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:41:49] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:41:50] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:41:50] "[32mGET /loadlinks/0 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:41:50] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:41:57] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:42:28] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:42:33] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:42:41] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:42:43] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:42:43] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:42:43] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:42:44] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:42:44] "[32mGET /loadlinks/0 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:42:44] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:42:45] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:42:55] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:42:55] "[32mGET /loadlinks/0 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:42:55] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [19/Apr/2021 14:49:58] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:50:00] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:50:00] "[32mGET /loadlinks/0 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:50:00] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:50:20] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:50:21] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:50:21] "[32mGET /loadlinks/0 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:50:21] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:50:26] "[32mGET /updatelink/0/https%3A%252F%252Fwww.reuters.com%252Flifestyle%252Fscience%252Fmars-helicopter-flight-test-promises-wright-brothers-moment-nasa-2021-04-18%252F HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:50:26] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:50:29] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:50:29] "[32mGET /loadlinks/0 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:50:29] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:50:53] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:55:36] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:55:38] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:55:44] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:55:44] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:55:44] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:55:44] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:55:46] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: Sentiment of text information entered: magnitude: 0.10000000149011612
+score: 0.10000000149011612
+
+INFO: 127.0.0.1 - - [19/Apr/2021 14:55:50] "[32mGET /files/0/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:55:50] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:55:50] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:55:50] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:55:52] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	Top secret
+INFO: 	eyes
+INFO: Sentiment of text information entered: magnitude: 1.2999999523162842
+score: 0.20000000298023224
+
+INFO: 127.0.0.1 - - [19/Apr/2021 14:55:54] "[32mGET /files/1/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:55:54] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:55:54] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:55:54] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:55:55] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: Sentiment of text information entered: magnitude: 0.10000000149011612
+score: 0.10000000149011612
+
+INFO: 127.0.0.1 - - [19/Apr/2021 14:56:03] "[32mGET /files/0/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:56:03] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:56:03] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:56:03] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [19/Apr/2021 14:56:50] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: Sentiment of text information entered: magnitude: 0.10000000149011612
+score: 0.10000000149011612
+
+INFO: 127.0.0.1 - - [19/Apr/2021 14:56:52] "[32mGET /files/0/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:56:52] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:56:54] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:56:57] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [19/Apr/2021 14:57:15] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: Sentiment of text information entered: magnitude: 0.10000000149011612
+score: 0.10000000149011612
+
+INFO: 127.0.0.1 - - [19/Apr/2021 14:57:17] "[32mGET /files/0/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:57:17] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:57:17] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 14:57:17] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [19/Apr/2021 15:01:12] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:01:14] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:01:15] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:01:17] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:10:17] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:10:18] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:10:19] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:10:28] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:10:33] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:11:00] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:11:01] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:11:42] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:12:34] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:12:48] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:13:36] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:13:44] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:14:27] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:14:28] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:14:33] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:14:33] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:14:33] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:14:33] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:14:35] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:14:49] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:17:22] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:17:23] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:17:29] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:17:29] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:17:29] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:17:29] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:17:30] "[35m[1mGET /upload HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:17:30] "[37mGET /upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:17:30] "[37mGET /upload?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:17:30] "[37mGET /upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:17:30] "[37mGET /upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:17:30] "[37mGET /upload?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:17:30] "[37mGET /upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [19/Apr/2021 15:18:35] "[35m[1mGET /upload HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:18:35] "[37mGET /upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:18:35] "[37mGET /upload?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:18:35] "[37mGET /upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:18:35] "[37mGET /upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:18:35] "[37mGET /upload?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:18:39] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:18:40] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:18:46] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:18:46] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:18:46] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:18:46] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:18:47] "[33mGET /numfiles HTTP/1.1[0m" 404 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:18:57] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:19:00] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [19/Apr/2021 15:19:05] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:19:06] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:19:12] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:19:12] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:19:12] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:19:12] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:19:15] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:19:17] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [19/Apr/2021 15:20:55] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:20:57] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:20:59] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [19/Apr/2021 15:25:58] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:26:00] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:26:34] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:26:35] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:26:42] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:26:45] "[31m[1mPOST /upload HTTP/1.1[0m" 405 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [19/Apr/2021 15:29:09] "[31m[1mPOST /upload HTTP/1.1[0m" 405 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:29:11] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:29:12] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:29:15] "[33mPOST /setnumfiles HTTP/1.1[0m" 404 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:29:24] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [19/Apr/2021 15:29:35] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:29:37] "[35m[1mPOST /setnumfiles HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:29:37] "[37mGET /setnumfiles?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:29:37] "[37mGET /setnumfiles?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:29:37] "[37mGET /setnumfiles?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:29:37] "[37mGET /setnumfiles?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:29:37] "[37mGET /setnumfiles?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:29:37] "[37mGET /setnumfiles?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:29:50] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO: 127.0.0.1 - - [19/Apr/2021 15:30:01] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [19/Apr/2021 15:30:03] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:30:03] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:30:08] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:30:09] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:30:11] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:30:11] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:30:19] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:30:49] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:30:51] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:30:51] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:30:58] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:30:59] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:31:01] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:31:01] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:31:13] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:31:14] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:31:16] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:31:16] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:31:20] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:31:36] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:31:37] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:31:41] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:31:41] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:32:20] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:32:21] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:32:22] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:32:22] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:32:34] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:32:36] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:32:38] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:32:39] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [19/Apr/2021 15:33:46] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:33:47] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:33:48] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:33:48] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Here, I use the docx2txt library to turn this .docx file into .txt
+INFO: Filetype = .docx
+INFO: Uploading file UserStories.docx
+INFO: 127.0.0.1 - - [19/Apr/2021 15:37:35] "[32mPOST /files HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:37:35] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:37:35] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:37:35] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:37:37] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:37:44] "[32mGET /files/5/delete HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:37:44] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:37:44] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:37:44] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:37:46] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:37:46] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:37:47] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [19/Apr/2021 15:37:50] "[37mGET /homepage HTTP/1.1[0m" 200 -

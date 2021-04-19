@@ -1,0 +1,49 @@
+<!-- Luke Staib @2021 -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		<title>Upload - News Analyzer</title>
+		<script>
+			if (document.getElementById("extrafile1") !== null) {
+				console.log("WOAH")
+			}	
+		</script>
+	</head>
+	<body>
+		<div class="bigText">Upload a File</div>
+		{% with messages = get_flashed_messages() %}
+		  {% if messages %}
+			{% for message in messages %}
+				<div class="smallText">
+					{{message}}
+				</div>
+			{% endfor %}
+		  {% endif %}
+		{% endwith %}
+		<form action="/setnumfiles" method="post">
+			<div class="smallText">How many files would you like to upload (1-10 at once)</div>
+			<select name="file_num">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</select>
+			<br><br>
+			<input type="submit" value="Confirm">
+		</form>
+		<br><br>
+		<div class="button">
+			<a href="/homepage">Return to Home</a>
+		</div>	
+	</body>
+</html>		

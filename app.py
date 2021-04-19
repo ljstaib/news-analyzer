@@ -101,7 +101,11 @@ def editfile():
 
 @app.route('/readlater', methods=['GET'])
 def readlater():
-	return render_template('readlater.html')		
+	return render_template('readlater.html')
+
+@app.route('/numfiles', methods=['GET'])
+def numfiles():
+	return render_template('numfiles.html')			
 # @app.route('/test_db')
 # def test_db():
 # 	test_user = {
@@ -145,6 +149,7 @@ class User(Resource):
 					session['uid'] = user.get('U_ID')
 					session['load_lock'] = False
 					session['readlater_lock'] = True
+					session['num_files'] = 1 #default uploading 1 file on upload screen
 					return redirect(url_for("homepage"))
 			# print("Failure")
 			flash("Credentials do not match.")
@@ -356,10 +361,10 @@ class FileList(Resource):
 				max_fid = file.get('F_ID')
 		fid = max_fid + 1
 
-		if 'file' not in request.files:
+		if 'file1' not in request.files:
 			flash('No file part')
 			return redirect("/")
-		file = request.files['file']
+		file = request.files['file1']
 		if file.filename == '':
 			flash('No selected file')
 			return redirect("/")
@@ -478,7 +483,7 @@ class SaveReadLater(Resource):
 					return redirect(url_for('homepage'))
 
 class LoadReadLater(Resource):
-	#http://127.0.0.1:5000/savelink/0/'https://website.com/article.html'
+	#http://127.0.0.1:5000/loadlinks/0
 	def get(self, uid): #page refers to the webpage to redirect to
 		global app_users
 		global app_files
@@ -490,11 +495,46 @@ class LoadReadLater(Resource):
 			for user in app_users:
 				if user.get('U_ID') == uid:
 					readlater = user.get('ReadLaterList')
-					print("READLATER")
-					print(readlater)
 					session['readlater_lock'] = True
 					flash(readlater)
-					return redirect(url_for('readlater'))								
+					return redirect(url_for('readlater'))
+
+class UpdateReadLater(Resource):
+	#http://127.0.0.1:5000/updatelink/0/'https://website.com/article.html'
+	def get(self, uid, url): #page refers to the webpage to redirect to
+		global app_users
+		global app_files
+		try:
+		    uid = int(uid)
+		except ValueError:
+		    return "Please enter a valid U_ID (int)"
+		else: 
+			for user in app_users:
+				if user.get('U_ID') == uid:
+					query = {"U_ID": uid}
+					url = unquote(url)
+					updated_user = { "$pull": {
+						'ReadLaterList': url,
+					}}
+					db.users_db.user_collection.update_one(query, updated_user)
+					app_users, app_files = updateDB()
+					session['readlater_lock'] = False
+					flash("Article removed from your saved articles list.")
+					return redirect(url_for('homepage'))
+
+class SetNumFiles(Resource):	
+	def post(self):
+		num = request.form.get("file_num")
+		try:
+			num = int(num)
+		except ValueError:
+			return "Please enter an integer from 1-10." #Should be impossible unless messing with URL
+		else:
+			if (num < 1 or num > 10):
+				return "Please enter an integer from 1-10." #Should be impossible unless messing with URL
+			else:		
+				session['num_files'] = num
+				return redirect(url_for('upload'))																
 
 
 api.add_resource(UserList, '/users')
@@ -505,6 +545,8 @@ api.add_resource(UserFiles, '/ufiles/<uid>/<page>') #used to get files by a user
 api.add_resource(Searcher, '/search/<query>') #used with newsfeed ingest to search
 api.add_resource(SaveReadLater, '/savelink/<uid>/<url>') #used for read later feature in news analyzer
 api.add_resource(LoadReadLater, '/loadlinks/<uid>') #used to retrieve read later links
+api.add_resource(UpdateReadLater, '/updatelink/<uid>/<url>') #deleting a saved link
+api.add_resource(SetNumFiles, '/setnumfiles')
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -15,6 +15,17 @@
 				var uid = {{ session['uid'] }};
 				window.location = "/loadlinks/" + uid;
 			}
+			function removeLink(url) {
+				var uid = {{ session['uid'] }};
+				if (uid !== -1) {
+					if (url) {
+						url = encodeURIComponent(url.trim()) //Encode url to use in REST api (app.py)
+						url = url.replaceAll("%2F", "%252F") //Prevent / from causing problems
+						url = url.replaceAll("%5C", "%255C") //Prevent \ from causing problems
+						window.location = "/updatelink/" + uid + "/" + url;
+					}
+				}
+			}
 		</script>
 	</head>
 	<body>
@@ -35,7 +46,7 @@
 							<tr>
 								<th>{{loop.index}}</th>
 								<th>{{link}}</th>
-								<th><a href="{{link}}" target="_blank">View</a>&nbsp;<a>Remove</a></th>
+								<th><a href="{{link}}" target="_blank">View</a>&nbsp;<a onclick="removeLink('{{link}}')">Remove</a></th>
 							</tr>
 						{% endfor %}		
 					{% endfor %}

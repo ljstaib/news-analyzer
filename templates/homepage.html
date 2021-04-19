@@ -11,7 +11,7 @@
 			window.onload=function() {
 				//alert("{{session['load_lock']}}");
 				document.getElementById("load_files").click();
-				{{ session['search_page'] }} = 0;
+				//{{ session['search_page'] }} = 0;
 			}	
 			function loadFiles() {
 				var uid = {{ session['uid'] }};
@@ -36,7 +36,7 @@
 		{% endwith %}
 		<br>
 		<div class="button">
-			<a href="/upload">Upload a file</a>
+			<a href="/numfiles">Upload files</a>
 			<br><br>
 			<a href="/fileview">View your files</a>
 			<br><br>
