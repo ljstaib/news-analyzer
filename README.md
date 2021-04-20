@@ -32,10 +32,11 @@ ljstaib@bu.edu
 - Finished "Read Later" feature (4/18-4/19)
   - User can save a link to their saved links on the newsfeed ingest screen
   - Can view their links from the homepage and read the article saved, or delete the link from their list
-- Begun working on having multiple file uploads at once - 50% completed (4/19)
-  - A user will be able to upload 1-10 files instead of just 1 at a time
+- Can now upload multiple files at once (4/19-4/20)
+  - A user is able to upload 1-10 files instead of just 1 at a time
   - Added new HTML page: numfiles.html so that a user can select the number of files to upload at once
-  - Just need to incorporate a for loop in my upload code to retrieve file data for up to 10 files at a time
+  - Incorporated a for loop in my upload code to retrieve file data for up to 10 files at a time
+  - Limitation: Same authors, creation date for each file, but a user can edit this information when viewing a list of their files
 
 # HW2 Status - HW2
 Phase 1: Completed. Stub-API modules for Phase 1 are in their respective .py files. I also have psuedocode in newsanalyzer_pseudocode.txt.
