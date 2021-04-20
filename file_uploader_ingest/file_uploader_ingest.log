@@ -1119,3 +1119,476 @@ INFO: 127.0.0.1 - - [19/Apr/2021 15:37:46] "[37mGET /numfiles HTTP/1.1[0m" 200
 INFO: 127.0.0.1 - - [19/Apr/2021 15:37:46] "[37mGET /homepage HTTP/1.1[0m" 200 -
 INFO: 127.0.0.1 - - [19/Apr/2021 15:37:47] "[37mGET /fileview HTTP/1.1[0m" 200 -
 INFO: 127.0.0.1 - - [19/Apr/2021 15:37:50] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [20/Apr/2021 17:14:52] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:14:52] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:14:53] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:14:59] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:14:59] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:14:59] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:14:59] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:15:00] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:15:08] "[32mGET /files/0/edit HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:15:08] "[37mGET /editfile HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:15:11] "[32mPOST /files/0/edit HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:15:11] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:15:11] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:15:11] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:15:13] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:15:30] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [20/Apr/2021 17:23:45] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:23:48] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:23:48] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:24:06] "[32mPOST /files HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:24:06] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:24:17] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [20/Apr/2021 17:24:50] "[32mPOST /files HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:24:50] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:24:54] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [20/Apr/2021 17:25:28] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:25:29] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:25:31] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:25:31] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:25:39] "[32mPOST /files HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:25:39] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [20/Apr/2021 17:25:57] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:25:58] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:25:58] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:26:07] "[32mPOST /files HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:26:07] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [20/Apr/2021 17:26:20] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:26:22] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:26:23] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:26:24] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:26:24] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Here, I use the docx2txt library to turn this .docx file into .txt
+INFO: Filetype = .docx
+INFO: Uploading file FinalOperations.docx
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Here, I use the docx2txt library to turn this .docx file into .txt
+INFO: Filetype = .docx
+INFO: Uploading file FinalDataStorageStrategy.docx
+INFO: 127.0.0.1 - - [20/Apr/2021 17:26:33] "[32mPOST /files HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:26:33] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:26:33] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:26:33] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:26:44] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:27:50] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:27:51] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:27:53] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:27:53] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:27:53] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:27:54] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:27:58] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:28:00] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:28:01] "[32mGET /files/6/delete HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:28:01] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:28:01] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:28:01] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:28:03] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:28:04] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [20/Apr/2021 17:29:28] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:29:29] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:29:29] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Here, I use the docx2txt library to turn this .docx file into .txt
+INFO: Filetype = .docx
+INFO: Uploading file FinalOperations.docx
+INFO: 127.0.0.1 - - [20/Apr/2021 17:29:34] "[32mPOST /files HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:29:34] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:29:34] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:29:34] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:29:36] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:29:40] "[32mGET /files/5/delete HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:29:40] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:29:40] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:29:40] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:29:41] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:29:42] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:29:48] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:29:49] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:29:49] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Here, I use the docx2txt library to turn this .docx file into .txt
+INFO: Filetype = .docx
+INFO: Uploading file FinalOperations.docx
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Here, I use the docx2txt library to turn this .docx file into .txt
+INFO: Filetype = .docx
+INFO: Uploading file FinalDataStorageStrategy.docx
+INFO: 127.0.0.1 - - [20/Apr/2021 17:29:59] "[32mPOST /files HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:29:59] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:29:59] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:29:59] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:30:00] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:30:02] "[32mGET /files/6/delete HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:30:02] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:30:02] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:30:02] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:30:54] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:30:55] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:30:55] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:30:56] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/file_uploader_ingest/file_uploader_ingest.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/file_uploader_ingest/file_uploader_ingest.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [20/Apr/2021 17:32:45] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:32:47] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:32:47] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:32:55] "[35m[1mPOST /files HTTP/1.1[0m" 500 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Here, I use the docx2txt library to turn this .docx file into .txt
+INFO: Filetype = .docx
+INFO: Uploading file FinalOperations.docx
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Here, I use the docx2txt library to turn this .docx file into .txt
+INFO: Filetype = .docx
+INFO: Uploading file FinalDataStorageStrategy.docx
+INFO: 127.0.0.1 - - [20/Apr/2021 17:36:33] "[32mPOST /files HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:36:33] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:36:33] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:36:33] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:36:36] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:36:42] "[32mGET /files/5/edit HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:36:42] "[37mGET /editfile HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:36:49] "[32mPOST /files/5/edit HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:36:49] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:36:49] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:36:49] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:36:51] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:36:58] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:37:00] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	userID
+INFO: 	file object
+INFO: 	authors
+INFO: 	file
+INFO: 	file
+INFO: 	file_in
+INFO: 	file
+INFO: 	userID
+INFO: 	user
+INFO: 	user
+INFO: 	FileEditName
+INFO: 	creation_time
+INFO: 	command
+INFO: 	authors
+INFO: 	File Uploader
+INFO: 	authors
+INFO: 	web interface
+INFO: 	bandwidth
+INFO: 	run
+INFO: 	authors
+INFO: 	CPU usage
+INFO: 	fid
+INFO: 	fid
+INFO: 	Data Text
+INFO: 	API Type Entity
+INFO: 	authors
+INFO: 	screen
+INFO: 	FileDelete
+INFO: 	Professor
+INFO: 	variables
+INFO: 	Osama Homework 2 Final Operations
+INFO: 	files
+INFO: 	Secure File Uploader/Ingest
+INFO: 	Operations UploadFiles
+INFO: 	value
+INFO: 	fileID
+INFO: 	Text NLP Analysis
+INFO: 	Newsfeed Ingest Secure
+INFO: 	Flask
+INFO: 	EC500
+INFO: 	Luke Staib U39863533
+INFO: 	filetypes
+INFO: 	file
+INFO: 	F_ID
+INFO: 	file
+INFO: 	file
+INFO: 	file
+INFO: 	command
+INFO: 	CreateKeywords
+INFO: 	file
+INFO: 	user
+INFO: 	integer
+INFO: 	user
+INFO: 	User
+INFO: 	strings
+INFO: 	filetype
+INFO: 	message
+INFO: 	message
+INFO: 	database
+INFO: 	database
+INFO: 	integers
+INFO: 	creation_time
+INFO: 	creation
+INFO: 	Files
+INFO: 	file
+INFO: 	files
+INFO: 	file
+INFO: 	command
+INFO: 	authors
+INFO: 	authors
+INFO: 	file
+INFO: 	files
+INFO: 	sentiment results
+INFO: 	files
+INFO: 	file
+INFO: 	API commands
+INFO: 	user
+INFO: 	article
+INFO: 	fileID
+INFO: 	usage
+INFO: 	user
+INFO: 	Google
+INFO: 	keywords
+INFO: 	user
+INFO: 	Data API
+INFO: 	process User
+INFO: 	user
+INFO: 	strings
+INFO: 	frontend
+INFO: 	articles
+INFO: 	uploading
+INFO: 	user
+INFO: 	fid
+INFO: 	articles
+INFO: 	text
+INFO: 	text
+INFO: 	integer
+INFO: 	text
+INFO: 	files
+INFO: 	cProfile.
+INFO: 	creation_time
+INFO: 	error
+INFO: 	memory usage
+INFO: 	Operations DiscoverContent
+INFO: 	file data
+INFO: 	data
+INFO: 	integer
+INFO: 	authors
+INFO: 	user
+INFO: 	user
+INFO: 	authors
+INFO: 	command
+INFO: 	analysis
+INFO: 	articles
+INFO: 	data TXT
+INFO: 	success
+INFO: 	text analysis
+INFO: 	analyze_entities
+INFO: 	Error
+INFO: 	function
+INFO: 	test file txt
+INFO: 	function
+INFO: 	homepage
+INFO: 	status
+INFO: 	homepage
+INFO: 	Error
+INFO: 	Web application
+INFO: 	information
+INFO: 	log file
+INFO: 	user
+INFO: 	traffic
+INFO: 	network
+INFO: 	string Segment
+INFO: 	test file docx
+INFO: 	test file pdf
+INFO: 	screen
+INFO: 	API Type Procedure
+INFO: 	user
+INFO: 	AssessData
+INFO: 	operation
+INFO: 	analysis
+INFO: 	name
+INFO: 	input
+INFO: 	conversion
+INFO: 	TXT
+INFO: 	development logs
+INFO: 	account
+INFO: 	aspects
+INFO: 	webpage
+INFO: 	bottom
+INFO: 	MongoDB
+INFO: 	NLP
+INFO: 	Web application loads
+INFO: 	homepage
+INFO: 	searches
+INFO: 	Status
+INFO: 	searches
+INFO: 	output
+INFO: 	classify_text
+INFO: 	DiagnosticsNLP
+INFO: 	data
+INFO: 	keywords
+INFO: 	categories
+INFO: 	information
+INFO: 	sentiment
+INFO: 	display
+INFO: 	usage
+INFO: 	memory usage
+INFO: 	TXT
+INFO: 	PDF
+INFO: 	DiagnosticsUploader
+INFO: 	API Type Entity
+INFO: 	nothing
+INFO: 	web application API
+INFO: 	user Status API
+INFO: 	user option
+INFO: 	articles
+INFO: 	articles
+INFO: 	DOCX
+INFO: 	message
+INFO: 	Logging Functions
+INFO: 	functions
+INFO: 	web app
+INFO: 	system
+INFO: 	topic
+INFO: 	completion
+INFO: 	search query
+INFO: 	errors
+INFO: 	Operations ConvertFilesToText
+INFO: 	usage
+INFO: 	Diagnostic
+INFO: 	logging library
+INFO: 	search_text
+INFO: 	text
+INFO: 	network
+INFO: 	traffic
+INFO: 	Takes
+INFO: 	usage information
+INFO: 	text
+INFO: 	function
+INFO: 	Newsfeed
+INFO: 	text data
+INFO: 	data
+INFO: 	module
+INFO: 	module
+INFO: 	nothing
+INFO: 	DiagnosticsNewsfeed
+INFO: 	ObtainCategories
+INFO: 	memory usage
+INFO: 	CPU usage
+INFO: 	one
+INFO: 	text field
+INFO: 	warnings
+INFO: 	analyze_sentiment
+INFO: 	sentiment
+INFO: 	New York Times
+INFO: 	function
+INFO: 	Article Search API Returns
+INFO: 	list
+INFO: 	web application
+INFO: 	text
+INFO: 	categories
+INFO: 	keywords
+INFO: 	network
+INFO: 	traffic
+INFO: 	categories
+INFO: 	DOCX Input
+INFO: 	program
+INFO: 	score
+INFO: 	magnitude
+INFO: 	Python
+INFO: 	TXT TXT
+INFO: 	N/A
+INFO: 	3-27-21
+INFO: 	21
+INFO: 	3
+INFO: 	2
+INFO: 	27
+INFO: 	one
+INFO: 	30
+INFO: 	three
+INFO: Sentiment of text information entered: magnitude: 2.299999952316284
+score: -0.20000000298023224
+
+INFO: 127.0.0.1 - - [20/Apr/2021 17:37:06] "[32mGET /files/5/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:37:06] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:37:06] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:37:06] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [20/Apr/2021 17:37:08] "[37mGET /fileview HTTP/1.1[0m" 200 -

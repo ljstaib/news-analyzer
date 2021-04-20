@@ -359,22 +359,31 @@ class FileList(Resource):
 		for file in app_files:
 			if file.get('F_ID') > max_fid:
 				max_fid = file.get('F_ID')
-		fid = max_fid + 1
 
-		if 'file1' not in request.files:
-			flash('No file part')
-			return redirect("/")
-		file = request.files['file1']
-		if file.filename == '':
-			flash('No selected file')
-			return redirect("/")
+		files_uploaded = session['num_files']
+		for i in range(files_uploaded):		
+			fid = max_fid + 1
+			max_fid = fid
 
-		authors = request.form.get("authors")
-		creation_time = str(request.form.get("month") + "/" + request.form.get("day") + "/" + request.form.get("year"))
-		if session['uid'] != None:	
-			new_file = UploadFiles(session['uid'], file, fid, authors, creation_time) 
-		else:
-			new_file = UploadFiles(-1, file, fid, authors, creation_time) #-1 is not authenticated
+			file_var = 'file' + str(i + 1)
+
+			if (file_var) not in request.files:
+				print("ERROR: No files found when uploading.")
+				flash('No file part')
+				return redirect("/homepage")
+			file = request.files[file_var]
+			if file.filename == '':
+				print("ERROR: No files selected.")
+				flash('No selected file')
+				return redirect("/homepage")
+
+			authors = request.form.get("authors")
+			creation_time = str(request.form.get("month") + "/" + request.form.get("day") + "/" + request.form.get("year"))
+			if session['uid'] != None:	
+				new_file = UploadFiles(session['uid'], file, fid, authors, creation_time)
+				print("File created") 
+			else:
+				new_file = UploadFiles(-1, file, fid, authors, creation_time) #-1 is not authenticated
 		#Command line method:
 		# new_fileinfo = list(args['FileInfo'].split(", "))
 		# if (len(new_fileinfo) != 7):
@@ -390,15 +399,20 @@ class FileList(Resource):
 		# status = new_fileinfo[6]
 		# upload_time = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
 
-		if (new_file == False):
-			flash(f'There was a problem uploading your file. Please try again later.')
-			return redirect(url_for("upload"))
+			if (new_file == False):
+				flash(f'There was a problem uploading your file. Please try again later.')
+				success = False
+			else:
+				session['load_lock'] = False
+				files_collection.insert_one(new_file)
+				app_users, app_files = updateDB()
+				flash(f'File uploaded successfully.')
+				success = True
+
+		if (success == True):
+			return redirect(url_for("homepage"))
 		else:
-			session['load_lock'] = False
-			files_collection.insert_one(new_file)
-			app_users, app_files = updateDB()
-			flash(f'File uploaded successfully.')
-			return redirect(url_for("homepage"))					
+			return redirect(url_for("upload"))					
 
 class UserFiles(Resource):
 	#http://127.0.0.1:5000/ufiles/0/homepage

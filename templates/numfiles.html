@@ -7,11 +7,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 		<title>Upload - News Analyzer</title>
-		<script>
-			if (document.getElementById("extrafile1") !== null) {
-				console.log("WOAH")
-			}	
-		</script>
 	</head>
 	<body>
 		<div class="bigText">Upload a File</div>
@@ -25,7 +20,7 @@
 		  {% endif %}
 		{% endwith %}
 		<form action="/setnumfiles" method="post">
-			<div class="smallText">How many files would you like to upload (1-10 at once)</div>
+			<div class="smallText">How many files would you like to upload (1-10 at once)?</div>
 			<select name="file_num">
 				<option value="1">1</option>
 				<option value="2">2</option>
