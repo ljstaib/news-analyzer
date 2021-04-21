@@ -1,6 +1,5 @@
 # Homework #2 / Final Project for EC500 at BU: news-analyzer-ljstaib
-
-# Please email me if there is a deliverable that you do not see (I should have everything completed), email me to host the web application. Also, please see a demonstration of how the website is used in "UsageExample.mp4" in the folder labeled "Final_Information".
+## Please email me if there is a deliverable that you do not see (I should have everything completed), email me to host the web application. Also, please see a demonstration of how the website is used in "UsageExample.mp4" in the folder labeled "Final_Information".
 
 Copyright @2021 
 Luke Staib 
