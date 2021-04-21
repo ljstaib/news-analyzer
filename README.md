@@ -10,20 +10,20 @@ ljstaib@bu.edu
 
 # Final Project Status
 ## Features to add/improve upon for my Final Project:
-- Security
-  - Encrypting user information and file information (?) for storage in MongoDB Atlas
-  - Ensuring file upload is secure
-- File Uploader
-  - Adding new types of files (RTF, ODT?)
-  - Ability to upload more than one file at once
-- NLP Analysis
-  - More thorough final sentiment and analysis based off of data received (if possible)
-- Newsfeed ingest
-  - Adding more than one website for articles (NYT)
-  - Adding "Read Later" feature, create "ReadLaterList" field for each user in database, read/edit this list
-- Quality of Life Improvements
-  - Loading icons
-  - Improved styling
+- [ ] Security
+  - [ ] Encrypting user information and file information (?) for storage in MongoDB Atlas
+  - [ ] Ensuring file upload is secure
+- [X] File Uploader
+  - [X] Adding new types of files (RTF, ODT?)
+  - [X] Ability to upload more than one file at once
+- [ ] NLP Analysis
+  - [ ] More thorough final sentiment and analysis based off of data received (if possible)
+- [X] Newsfeed ingest
+  - [X] Adding more than one website for articles (NYT)
+  - [X] Adding "Read Later" feature, create "ReadLaterList" field for each user in database, read/edit this list
+- [ ] Quality of Life Improvements
+  - [ ] Loading icons
+  - [ ] Improved styling
 
 ## Status/Progress:
 - Added newsapi.org API to gather articles from more websites (4/18)
@@ -31,11 +31,15 @@ ljstaib@bu.edu
 - Finished "Read Later" feature (4/18-4/19)
   - User can save a link to their saved links on the newsfeed ingest screen
   - Can view their links from the homepage and read the article saved, or delete the link from their list
+  - Updated style of page when no links are saved (4/21)
 - Can now upload multiple files at once (4/19-4/20)
   - A user is able to upload 1-10 files instead of just 1 at a time
   - Added new HTML page: numfiles.html so that a user can select the number of files to upload at once
   - Incorporated a for loop in my upload code to retrieve file data for up to 10 files at a time
   - Limitation: Same authors, creation date for each file, but a user can edit this information when viewing a list of their files
+- Can now upload .RTF files (4/21) 
+- Made NLP analysis more clear to user (4/21)
+  - Instead of score and magnitude, shows sentiment as negative, neutral, or positive and the magnitude as weakly expressed, strongly expressed, or in the middle
 
 # HW2 Status - HW2
 Phase 1: Completed. Stub-API modules for Phase 1 are in their respective .py files. I also have psuedocode in newsanalyzer_pseudocode.txt.

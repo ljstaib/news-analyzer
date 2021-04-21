@@ -136,11 +136,16 @@ def ConvertFileToText(userID, file_in, filetype):
 			text_data = ""
 			with open(file_path, "rb") as f:
 				text_data = slate3k.PDF(f)
-			text_data = str("".join(text_data))	
+			text_data = str("".join(text_data))
+		elif filetype == "rtf":
+			logging.info("Here, I use simple file reading in Python to turn this .rtf file into .txt")
+			logging.info("Filetype = .rtf")
+			file_ref = open(file_path, "r")
+			text_data = file_ref.read()
 		else:
 			logging.debug("I will implement support for other filetypes")
 			logging.info("Filetype = other")	
-			text_data = "Placeholder text for an unsupported file. Supported files are currently txt, pdf, docx."	
+			text_data = "Placeholder text for an unsupported file. Supported files are currently txt, pdf, docx, rtf."	
 
 
 			# try:
@@ -226,7 +231,6 @@ def AssessData(text_data):
 
 	sentiment = response.document_sentiment
 	results = dict(
-		text=text_data,
 		score=f"{sentiment.score:.1%}",
 		magnitude=f"{sentiment.magnitude:.1%}",
 	)

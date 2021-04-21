@@ -31,7 +31,7 @@ except FileNotFoundError:
 	logging.basicConfig(filename='file_uploader_ingest.log', level=logging.INFO, format='%(levelname)s: %(message)s')
 
 UPLOAD_FOLDER = './File_Data'
-ALLOWED_EXTENSIONS = {'txt', 'pdf', 'docx'}
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'docx', 'rtf'}
 
 import sys
 sys.path.append('/home/runner/work/news-analyzer-ljstaib/news-analyzer-ljstaib')

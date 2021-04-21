@@ -427,7 +427,6 @@ class UserFiles(Resource):
 				if user.get('U_ID') == uid:
 					for file in app_files:
 						if file.get('Source') == uid:
-
 							file_data = [] #For each file
 							file_data.append(file.get('F_ID')) #fid, 0
 							#file_data.append(file) #file
@@ -448,7 +447,27 @@ class UserFiles(Resource):
 							else:	
 								file_data.append("N/A")	
 							if file.get('Sentiment') != None: #score and magnitude of sentiment, 8
-								file_data.append("Score: " + str(file.get('Sentiment').get('score')) + "   |   Magnitude: " + str(file.get('Sentiment').get('magnitude')))
+								score_val = file.get('Sentiment').get('score')
+								score_val = float(score_val[:-1])
+								score_val = score_val / 10
+								if (score_val < -0.2):
+									score = "Negative"
+								elif (score_val > 0.2):
+									score = "Positive"	
+								else:
+									score = "Neutral"
+
+								magnitude_val = file.get('Sentiment').get('magnitude')
+								magnitude_val = float(magnitude_val[:-1])
+								magnitude_val = magnitude_val / 10
+								if (magnitude_val < 0.5):
+									magnitude = "Weakly expressed"
+								elif (magnitude_val > 0.5 and magnitude_val < 1.5):
+									magnitude = "Expressed neither strongly nor weakly"
+								else:
+									magnitude = "Strongly expressed"
+
+								file_data.append("Sentiment: " + score + "       |       Magnitude of Sentiment: " + magnitude)
 							else:
 								file_data.append("N/A")
 

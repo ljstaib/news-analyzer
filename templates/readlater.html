@@ -33,14 +33,14 @@
 			<a href="/homepage">Return to Home</a>
 		</div>
 		<br><br>
-		<table>
-			<tr>
-				<th>Number</th>
-				<th>Link</th>
-				<th>Options</th>
-			</tr>	
-			{% with messages = get_flashed_messages() %}
-				{% if messages %}
+		{% with messages = get_flashed_messages() %}
+			{% if messages != [[]] %}
+				<table>
+					<tr>
+						<th>Number</th>
+						<th>Link</th>
+						<th>Options</th>
+					</tr>	
 					{% for message in messages %}
 						{% for link in message %}
 							<tr>
@@ -50,9 +50,11 @@
 							</tr>
 						{% endfor %}		
 					{% endfor %}
-			  	{% endif %}
-			{% endwith %}
-		</table>
+				</table>
+		  	{% else %}
+		  		<div class="smallText">You do not currently have any saved article links.</div>
+		  	{% endif %}
+		{% endwith %}
 		{% if session['readlater_lock'] != True %}
 			<a style="display: none" id="load_links" onclick="loadLinks()"></a>
 		{% endif %}	
