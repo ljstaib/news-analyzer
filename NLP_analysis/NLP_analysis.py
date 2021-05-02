@@ -27,6 +27,10 @@ import re
 import psutil
 import time
 import docx2txt #DOC -> TXT
+import nltk #summarization
+import heapq #summarization
+nltk.download('punkt')
+nltk.download('stopwords')
 
 try:
 	os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "../.keys/key.json"
@@ -237,6 +241,44 @@ def AssessData(text_data):
 
 	logging.info("Sentiment of text information entered: " + str(sentiment))
 	return results
+
+def Summarize(text_data):
+	text_data = re.sub(r'\s+', ' ', text_data)
+	new_text_data = re.sub('[^a-zA-Z]', ' ', text_data)
+	new_text_data = re.sub(r'\s+', ' ', new_text_data)
+
+	sentence_list = nltk.sent_tokenize(text_data) #text -> sentences
+
+	s_words = nltk.corpus.stopwords.words('english') #list of english stop words
+
+	word_frequencies = {}
+	sentence_scores = {}
+
+	for word in nltk.word_tokenize(new_text_data):
+	    if word not in s_words:
+	        if word not in word_frequencies.keys():
+	            word_frequencies[word] = 1
+	        else:
+	            word_frequencies[word] += 1
+
+	max_freq = max(word_frequencies.values())
+
+	for word in word_frequencies.keys():
+		word_frequencies[word] = (word_frequencies[word]/max_freq)
+
+	for s in sentence_list:
+	    for word in nltk.word_tokenize(s.lower()):
+	        if word in word_frequencies.keys():
+	            if len(s.split(' ')) < 30:
+	                if s not in sentence_scores.keys():
+	                    sentence_scores[s] = word_frequencies[word]
+	                else:
+	                    sentence_scores[s] += word_frequencies[word]
+
+	summary_sentences = heapq.nlargest(5, sentence_scores, key=sentence_scores.get) #retrieves 5 summary sentences
+	summary = ' '.join(summary_sentences)
+
+	return summary                 	            
 
 #SaveAnalysis in app.py, in /file GET method=analyze
 # def SaveAnalysis(file):

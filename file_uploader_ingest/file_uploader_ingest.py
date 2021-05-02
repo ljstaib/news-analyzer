@@ -91,6 +91,7 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 			status = "Testing file"
 			upload_time = "1/1/1900"
 			sentiment = None
+			summary = None
 			keywords = None
 			categories = None
 			test_file = {
@@ -104,6 +105,7 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 				'Size': filesize,
 				'UploadTime': upload_time,
 				'Sentiment': sentiment,
+				'Summary': summary,
 				'Tags': {
 					'Status': status,
 					'Keywords': keywords,
@@ -125,6 +127,7 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 				filesize = os.stat(UPLOAD_FOLDER + "/" + filename).st_size
 				upload_time = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
 				sentiment = None
+				summary = None
 				status = "Uploaded"
 				keywords = None
 				categories = None
@@ -139,6 +142,7 @@ def UploadFiles(userID, file_in, fid, authors, creation_time):
 					'Size': filesize,
 					'UploadTime': upload_time,
 					'Sentiment': sentiment,
+					'Summary': summary,
 					'Tags': {
 						'Status': status,
 						'Keywords': keywords,

@@ -1,0 +1,23 @@
+<!-- Luke Staib @2021 -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		<title>Text Analysis - News Analyzer</title>
+	</head>
+	<body>
+		<div class="bigText">Text Analysis of {{session['analyzed_data'][0]}}</div>
+		<div class="smallText">Up to First 5 Keywords: {{session['analyzed_data'][1]}}</div>
+		<div class="smallText">Up to First 5 Categories: {{session['analyzed_data'][2]}}</div>
+		<div class="smallText">Sentiment: {{session['analyzed_data'][3]}}</div>
+		<div class="smallText">Expression of Sentiment: {{session['analyzed_data'][4]}}</div>
+		<div class="smallText">Summary of Article: {{session['analyzed_data'][5]}}</div>
+		<br><br>
+		<div class="button">
+			<a href="/fileview">Return to your Files</a>
+		</div>
+	</body>
+</html>

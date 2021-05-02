@@ -105,7 +105,11 @@ def readlater():
 
 @app.route('/numfiles', methods=['GET'])
 def numfiles():
-	return render_template('numfiles.html')			
+	return render_template('numfiles.html')	
+
+@app.route('/analysis', methods=['GET'])
+def analysis():
+	return render_template('analysis.html')				
 # @app.route('/test_db')
 # def test_db():
 # 	test_user = {
@@ -274,13 +278,15 @@ class File(Resource):
 						text_data = file.get('Text')
 						keywords = CreateKeywords(text_data)
 						sentiment = AssessData(text_data)
+						summary = Summarize(text_data)
 						try:
 							categories = ObtainCategories(text_data)
 						except:
 							categories = {}
 
 						updated_file = { "$set": {
-							'Sentiment': sentiment, 
+							'Sentiment': sentiment,
+							'Summary': summary,
 							'Tags': {
 								'Status': "Analyzed",
 								'Keywords': keywords,
@@ -438,38 +444,6 @@ class UserFiles(Resource):
 							file_data.append(upload_time) #upload time, 3
 							file_data.append(file.get('CreationTime')) #date of article, 4
 							file_data.append(file.get('Tags').get('Status')) #status, 5
-							if (file.get('Tags').get('Keywords')):
-								file_data.append(", ".join(file.get('Tags').get('Keywords')[:5])) #1st 5 keywords, 6
-							else:	
-								file_data.append("N/A")
-							if (file.get('Tags').get('Categories') != {}):
-								file_data.append(file.get('Tags').get('Categories')) #1st 5 categories, 7
-							else:	
-								file_data.append("N/A")	
-							if file.get('Sentiment') != None: #score and magnitude of sentiment, 8
-								score_val = file.get('Sentiment').get('score')
-								score_val = float(score_val[:-1])
-								score_val = score_val / 10
-								if (score_val < -0.2):
-									score = "Negative"
-								elif (score_val > 0.2):
-									score = "Positive"	
-								else:
-									score = "Neutral"
-
-								magnitude_val = file.get('Sentiment').get('magnitude')
-								magnitude_val = float(magnitude_val[:-1])
-								magnitude_val = magnitude_val / 10
-								if (magnitude_val < 0.5):
-									magnitude = "Weakly expressed"
-								elif (magnitude_val > 0.5 and magnitude_val < 1.5):
-									magnitude = "Expressed neither strongly nor weakly"
-								else:
-									magnitude = "Strongly expressed"
-
-								file_data.append("Sentiment: " + score + "       |       Magnitude of Sentiment: " + magnitude)
-							else:
-								file_data.append("N/A")
 
 							files_data.append(file_data)	
 
@@ -567,9 +541,65 @@ class SetNumFiles(Resource):
 				return "Please enter an integer from 1-10." #Should be impossible unless messing with URL
 			else:		
 				session['num_files'] = num
-				return redirect(url_for('upload'))																
+				return redirect(url_for('upload'))	
 
+class LoadAnalysis(Resource):
+	def get(self, fid):
+		global app_users
+		global app_files
+		try:
+		    fid = int(fid)
+		except ValueError:
+		    return "Please enter a valid F_ID (int)"
+		else: 
+			for file in app_files:
+				if file.get('F_ID') == fid:
+					file_data = []
 
+					file_data.append(file.get('Name'))
+					if (file.get('Tags').get('Keywords')):
+						file_data.append(", ".join(file.get('Tags').get('Keywords')[:5])) #1st 5 keywords
+					else:	
+						file_data.append("N/A")
+					if (file.get('Tags').get('Categories') != {}):
+						file_data.append(file.get('Tags').get('Categories')) #1st 5 categories
+					else:	
+						file_data.append("N/A")	
+					if file.get('Sentiment') != None: #score and magnitude of sentiment
+						score_val = file.get('Sentiment').get('score')
+						score_val = float(score_val[:-1])
+						score_val = score_val / 10
+						if (score_val < -0.2):
+							score = "Negative"
+						elif (score_val > 0.2):
+							score = "Positive"	
+						else:
+							score = "Neutral"
+
+						magnitude_val = file.get('Sentiment').get('magnitude')
+						magnitude_val = float(magnitude_val[:-1])
+						magnitude_val = magnitude_val / 10
+						if (magnitude_val < 0.5):
+							magnitude = "Weakly expressed"
+						elif (magnitude_val > 0.5 and magnitude_val < 1.5):
+							magnitude = "Expressed neither strongly nor weakly"
+						else:
+							magnitude = "Strongly expressed"
+
+						file_data.append(score) #sentiment
+						file_data.append(magnitude) #magnitude
+					else:
+						file_data.append("N/A")	
+
+					if file.get('Summary') != None:	
+						summary = file.get('Summary')
+						file_data.append(summary)
+					else:
+						file_data.append("N/A")
+
+					session['analyzed_data'] = file_data
+					return redirect(url_for('analysis'))
+																									
 api.add_resource(UserList, '/users')
 api.add_resource(User, '/users/<uid>')
 api.add_resource(FileList, '/files')
@@ -579,7 +609,8 @@ api.add_resource(Searcher, '/search/<query>') #used with newsfeed ingest to sear
 api.add_resource(SaveReadLater, '/savelink/<uid>/<url>') #used for read later feature in news analyzer
 api.add_resource(LoadReadLater, '/loadlinks/<uid>') #used to retrieve read later links
 api.add_resource(UpdateReadLater, '/updatelink/<uid>/<url>') #deleting a saved link
-api.add_resource(SetNumFiles, '/setnumfiles')
+api.add_resource(SetNumFiles, '/setnumfiles') #setting number of files to upload at once
+api.add_resource(LoadAnalysis, '/loadanalysis/<fid>') #loading specific analysis for a file
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1592,3 +1592,1670 @@ INFO: 127.0.0.1 - - [20/Apr/2021 17:37:06] "[37mGET /homepage HTTP/1.1[0m" 200
 INFO: 127.0.0.1 - - [20/Apr/2021 17:37:06] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
 INFO: 127.0.0.1 - - [20/Apr/2021 17:37:06] "[37mGET /homepage HTTP/1.1[0m" 200 -
 INFO: 127.0.0.1 - - [20/Apr/2021 17:37:08] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [29/Apr/2021 00:27:47] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [29/Apr/2021 00:27:49] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [29/Apr/2021 00:27:54] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [29/Apr/2021 00:27:54] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [29/Apr/2021 00:27:54] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [29/Apr/2021 00:27:54] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [29/Apr/2021 00:27:55] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [29/Apr/2021 00:27:56] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [29/Apr/2021 00:27:57] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [29/Apr/2021 00:27:58] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [29/Apr/2021 00:27:58] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [29/Apr/2021 00:27:59] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [29/Apr/2021 00:28:00] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [29/Apr/2021 00:28:01] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [29/Apr/2021 00:28:02] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [29/Apr/2021 00:28:02] "[32mGET /loadlinks/0 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [29/Apr/2021 00:28:02] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [29/Apr/2021 00:28:03] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [29/Apr/2021 00:28:04] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [29/Apr/2021 00:28:04] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [29/Apr/2021 00:28:05] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [01/May/2021 23:20:42] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:20:42] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:20:44] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:20:51] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [01/May/2021 23:20:51] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:20:51] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [01/May/2021 23:20:51] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:21:05] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:23:40] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:23:41] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:23:42] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:23:45] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:23:45] "[32mGET /loadlinks/0 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [01/May/2021 23:23:45] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:23:47] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:24:07] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [01/May/2021 23:24:07] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:24:13] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:24:20] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:24:34] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:26:15] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:26:16] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:26:28] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:26:31] "[32mGET /files/1/edit HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [01/May/2021 23:26:32] "[37mGET /editfile HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:26:33] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:29:39] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:29:40] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:29:41] "[33mGET /analysis HTTP/1.1[0m" 404 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [01/May/2021 23:30:34] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:30:36] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:30:36] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:30:38] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:30:39] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:30:40] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:30:41] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [01/May/2021 23:33:06] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:33:11] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:33:12] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:33:57] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [01/May/2021 23:40:55] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [01/May/2021 23:45:13] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:45:14] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:45:15] "[35m[1mGET /analysis HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [01/May/2021 23:45:15] "[37mGET /analysis?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:45:15] "[37mGET /analysis?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:45:15] "[37mGET /analysis?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:45:15] "[37mGET /analysis?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:45:15] "[37mGET /analysis?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:45:15] "[37mGET /analysis?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:45:30] "[35m[1mGET /analysis HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [01/May/2021 23:45:30] "[37mGET /analysis?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:45:30] "[37mGET /analysis?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:45:30] "[37mGET /analysis?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:45:30] "[37mGET /analysis?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:45:30] "[37mGET /analysis?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [01/May/2021 23:46:54] "[35m[1mGET /analysis HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [01/May/2021 23:46:54] "[37mGET /analysis?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:46:54] "[37mGET /analysis?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:46:54] "[37mGET /analysis?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:46:54] "[37mGET /analysis?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:46:54] "[37mGET /analysis?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:46:57] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO: 127.0.0.1 - - [01/May/2021 23:47:00] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [01/May/2021 23:47:02] "[32mGET /loadanalysis/1 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [01/May/2021 23:47:02] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [01/May/2021 23:47:25] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:47:26] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:47:27] "[32mGET /loadanalysis/0 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [01/May/2021 23:47:27] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:47:32] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:47:34] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:47:37] "[32mGET /loadanalysis/2 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [01/May/2021 23:47:37] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:47:43] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:48:01] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:48:02] "[32mGET /loadanalysis/1 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [01/May/2021 23:48:02] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:48:03] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:48:05] "[32mGET /loadanalysis/1 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [01/May/2021 23:48:05] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:48:35] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:48:36] "[32mGET /loadanalysis/7 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [01/May/2021 23:48:36] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:48:43] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:48:44] "[32mGET /loadanalysis/3 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [01/May/2021 23:48:44] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:48:46] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:48:46] "[32mGET /loadanalysis/2 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [01/May/2021 23:48:46] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:48:59] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:49:00] "[32mGET /loadanalysis/1 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [01/May/2021 23:49:00] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:49:03] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:49:04] "[32mGET /loadanalysis/0 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [01/May/2021 23:49:04] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:49:06] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:49:07] "[32mGET /loadanalysis/3 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [01/May/2021 23:49:07] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:49:09] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:49:10] "[32mGET /loadanalysis/7 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [01/May/2021 23:49:10] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:49:11] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:49:13] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:49:45] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:49:46] "[32mGET /loadanalysis/2 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [01/May/2021 23:49:46] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:50:04] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [01/May/2021 23:50:05] "[32mGET /loadanalysis/1 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [01/May/2021 23:50:05] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [02/May/2021 00:07:46] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:07:46] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:07:48] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	userID
+INFO: 	TXT
+INFO: 	UploadError
+INFO: 	files
+INFO: 	files
+INFO: 	Type
+INFO: 	Operations
+INFO: 	Operations
+INFO: 	API
+INFO: 	DisplayUploadStatus
+INFO: 	progress
+INFO: 	FileEditName
+INFO: 	files
+INFO: 	files
+INFO: 	files
+INFO: 	Shows
+INFO: 	user
+INFO: 	Professor
+INFO: 	file
+INFO: 	FileDelete
+INFO: 	API
+INFO: 	Text NLP Analysis
+INFO: 	Newsfeed Ingest Secure File Uploader
+INFO: 	UploadFiles
+INFO: 	Secure File Uploader/Ingest
+INFO: 	files
+INFO: 	JSON
+INFO: 	type
+INFO: 	articles
+INFO: 	operation
+INFO: 	file list
+INFO: 	Luke Staib
+INFO: 	Osama Homework 2 Phase 1
+INFO: 	U39863533 EC500
+INFO: 	DeleteSentiment
+INFO: 	API
+INFO: 	function
+INFO: 	method
+INFO: 	times
+INFO: 	loop
+INFO: 	number
+INFO: 	switch
+INFO: 	English
+INFO: 	o RenderProgressBar
+INFO: 	file
+INFO: 	file
+INFO: 	list files
+INFO: 	file
+INFO: 	files
+INFO: 	files
+INFO: 	user
+INFO: 	o
+INFO: 	o
+INFO: 	o
+INFO: 	Text
+INFO: 	CancelUpload
+INFO: 	organize_type
+INFO: 	Data
+INFO: 	data
+INFO: 	data
+INFO: 	NLP o CreateKeywords
+INFO: 	ObtainArticles
+INFO: 	PPT
+INFO: 	AssessData
+INFO: 	error
+INFO: 	progress bar
+INFO: 	text
+INFO: 	files
+INFO: 	files
+INFO: 	files
+INFO: 	files
+INFO: 	development logs o Files
+INFO: 	o
+INFO: 	o
+INFO: 	account o
+INFO: 	program
+INFO: 	user
+INFO: 	user
+INFO: 	user
+INFO: 	user
+INFO: 	user
+INFO: 	file
+INFO: 	articles
+INFO: 	o
+INFO: 	example o API
+INFO: 	error
+INFO: 	user
+INFO: 	user
+INFO: 	user
+INFO: 	Text
+INFO: 	text
+INFO: 	text
+INFO: 	upload
+INFO: 	SaveSentiment
+INFO: 	EditSentiment
+INFO: 	user
+INFO: 	text
+INFO: 	text
+INFO: 	data
+INFO: 	file data
+INFO: 	data
+INFO: 	API data
+INFO: 	article data
+INFO: 	o Text data
+INFO: 	name
+INFO: 	name
+INFO: 	options
+INFO: 	Keywords
+INFO: 	array
+INFO: 	errors
+INFO: 	errors
+INFO: 	program
+INFO: 	articles
+INFO: 	Data
+INFO: 	user
+INFO: 	sentiment
+INFO: 	sentiment
+INFO: 	sentiment
+INFO: 	sentiment
+INFO: 	RAR
+INFO: 	TAR
+INFO: 	Status
+INFO: 	ReadLater
+INFO: 	Type
+INFO: 	program
+INFO: 	text
+INFO: 	text
+INFO: 	program
+INFO: 	o Error
+INFO: 	XLS
+INFO: 	CSV
+INFO: 	DOC
+INFO: 	XLSX
+INFO: 	PPTX
+INFO: 	RTF
+INFO: 	NLP Analysis
+INFO: 	Operations
+INFO: 	text analysis
+INFO: 	keywords
+INFO: 	keywords
+INFO: 	keywords
+INFO: 	uploads
+INFO: 	input
+INFO: 	process
+INFO: 	account
+INFO: 	data
+INFO: 	articles
+INFO: 	articles
+INFO: 	articles
+INFO: 	article
+INFO: 	usage Error information
+INFO: 	user
+INFO: 	name
+INFO: 	file
+INFO: 	OrganizeFileList
+INFO: 	Option
+INFO: 	display
+INFO: 	aspects
+INFO: 	user
+INFO: 	user
+INFO: 	language
+INFO: 	languages
+INFO: 	languages
+INFO: 	Takes
+INFO: 	topic
+INFO: 	articles
+INFO: 	o
+INFO: 	news websites
+INFO: 	multimedia
+INFO: 	DOCX
+INFO: 	PDF
+INFO: 	ZIP
+INFO: 	XLSM
+INFO: 	message
+INFO: 	details
+INFO: 	keywords
+INFO: 	NLP analysis
+INFO: 	option
+INFO: 	searches
+INFO: 	searches
+INFO: 	searches
+INFO: 	user account
+INFO: 	file/s
+INFO: 	parameters
+INFO: 	article
+INFO: 	articles
+INFO: 	articles
+INFO: 	User
+INFO: 	types
+INFO: 	error
+INFO: 	error
+INFO: 	error
+INFO: 	errors
+INFO: 	user
+INFO: 	Internet
+INFO: 	content
+INFO: 	Google API
+INFO: 	status
+INFO: 	information
+INFO: 	topic
+INFO: 	articleID
+INFO: 	database statistics
+INFO: 	Status
+INFO: 	user ability
+INFO: 	user ability
+INFO: 	files
+INFO: 	files
+INFO: 	error types
+INFO: 	Takes
+INFO: 	Uses
+INFO: 	ways
+INFO: 	output
+INFO: 	result
+INFO: 	terms
+INFO: 	text field
+INFO: 	Google
+INFO: 	text
+INFO: 	text
+INFO: 	text
+INFO: 	process
+INFO: 	input
+INFO: 	search
+INFO: 	text analysis API
+INFO: 	ZIP
+INFO: 	graphical user interface
+INFO: 	CPU usage
+INFO: 	memory usage
+INFO: 	ConvertFilesToText
+INFO: 	command
+INFO: 	NLP
+INFO: 	o Extract data
+INFO: 	errors
+INFO: 	Diagnostic
+INFO: 	o Profiling
+INFO: 	Diagnostics
+INFO: 	OrganizeContent
+INFO: 	German
+INFO: 	Hindi
+INFO: 	Russian
+INFO: 	Portuguese
+INFO: 	French
+INFO: 	Danish
+INFO: 	Chinese
+INFO: 	Spanish
+INFO: 	Japanese
+INFO: 	DisplayContent
+INFO: 	o Logs
+INFO: 	debugging purposes
+INFO: 	class
+INFO: 	indicator
+INFO: 	show traces
+INFO: 	warnings
+INFO: 	Logging
+INFO: 	Status
+INFO: 	Type
+INFO: 	Returns
+INFO: 	Operations
+INFO: 	list
+INFO: 	search_text
+INFO: 	progress
+INFO: 	o Input
+INFO: 	progress/status
+INFO: 	text-input interface
+INFO: 	Newsfeed
+INFO: 	system
+INFO: 	system
+INFO: 	Functions - SendLogReport
+INFO: 	emails
+INFO: 	Tweets
+INFO: 	reviews
+INFO: 	social media posts
+INFO: 	sources
+INFO: 	report
+INFO: 	user sentiment
+INFO: 	DiscoverContent
+INFO: 	2-11-21
+INFO: 	7
+INFO: 	2
+INFO: 	2
+INFO: 	1
+INFO: 	one
+INFO: 	11
+INFO: 	21
+INFO: 	7
+INFO: Sentiment of text information entered: magnitude: 8.0
+
+INFO: 127.0.0.1 - - [02/May/2021 00:07:51] "[35m[1mGET /files/2/analyze HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [02/May/2021 00:07:52] "[37mGET /files/2/analyze?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:07:52] "[37mGET /files/2/analyze?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:07:52] "[37mGET /files/2/analyze?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:07:52] "[37mGET /files/2/analyze?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:07:52] "[37mGET /files/2/analyze?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:07:52] "[37mGET /files/2/analyze?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: Keywords of text entered:
+INFO: 	userID
+INFO: 	TXT
+INFO: 	UploadError
+INFO: 	files
+INFO: 	files
+INFO: 	Type
+INFO: 	Operations
+INFO: 	Operations
+INFO: 	API
+INFO: 	DisplayUploadStatus
+INFO: 	progress
+INFO: 	FileEditName
+INFO: 	files
+INFO: 	files
+INFO: 	files
+INFO: 	Shows
+INFO: 	user
+INFO: 	Professor
+INFO: 	file
+INFO: 	FileDelete
+INFO: 	API
+INFO: 	Text NLP Analysis
+INFO: 	Newsfeed Ingest Secure File Uploader
+INFO: 	UploadFiles
+INFO: 	Secure File Uploader/Ingest
+INFO: 	files
+INFO: 	JSON
+INFO: 	type
+INFO: 	articles
+INFO: 	operation
+INFO: 	file list
+INFO: 	Luke Staib
+INFO: 	Osama Homework 2 Phase 1
+INFO: 	U39863533 EC500
+INFO: 	DeleteSentiment
+INFO: 	API
+INFO: 	function
+INFO: 	method
+INFO: 	times
+INFO: 	loop
+INFO: 	number
+INFO: 	switch
+INFO: 	English
+INFO: 	o RenderProgressBar
+INFO: 	file
+INFO: 	file
+INFO: 	list files
+INFO: 	file
+INFO: 	files
+INFO: 	files
+INFO: 	user
+INFO: 	o
+INFO: 	o
+INFO: 	o
+INFO: 	Text
+INFO: 	CancelUpload
+INFO: 	organize_type
+INFO: 	Data
+INFO: 	data
+INFO: 	data
+INFO: 	NLP o CreateKeywords
+INFO: 	ObtainArticles
+INFO: 	PPT
+INFO: 	AssessData
+INFO: 	error
+INFO: 	progress bar
+INFO: 	text
+INFO: 	files
+INFO: 	files
+INFO: 	files
+INFO: 	files
+INFO: 	development logs o Files
+INFO: 	o
+INFO: 	o
+INFO: 	account o
+INFO: 	program
+INFO: 	user
+INFO: 	user
+INFO: 	user
+INFO: 	user
+INFO: 	user
+INFO: 	file
+INFO: 	articles
+INFO: 	o
+INFO: 	example o API
+INFO: 	error
+INFO: 	user
+INFO: 	user
+INFO: 	user
+INFO: 	Text
+INFO: 	text
+INFO: 	text
+INFO: 	upload
+INFO: 	SaveSentiment
+INFO: 	EditSentiment
+INFO: 	user
+INFO: 	text
+INFO: 	text
+INFO: 	data
+INFO: 	file data
+INFO: 	data
+INFO: 	API data
+INFO: 	article data
+INFO: 	o Text data
+INFO: 	name
+INFO: 	name
+INFO: 	options
+INFO: 	Keywords
+INFO: 	array
+INFO: 	errors
+INFO: 	errors
+INFO: 	program
+INFO: 	articles
+INFO: 	Data
+INFO: 	user
+INFO: 	sentiment
+INFO: 	sentiment
+INFO: 	sentiment
+INFO: 	sentiment
+INFO: 	RAR
+INFO: 	TAR
+INFO: 	Status
+INFO: 	ReadLater
+INFO: 	Type
+INFO: 	program
+INFO: 	text
+INFO: 	text
+INFO: 	program
+INFO: 	o Error
+INFO: 	XLS
+INFO: 	CSV
+INFO: 	DOC
+INFO: 	XLSX
+INFO: 	PPTX
+INFO: 	RTF
+INFO: 	NLP Analysis
+INFO: 	Operations
+INFO: 	text analysis
+INFO: 	keywords
+INFO: 	keywords
+INFO: 	keywords
+INFO: 	uploads
+INFO: 	input
+INFO: 	process
+INFO: 	account
+INFO: 	data
+INFO: 	articles
+INFO: 	articles
+INFO: 	articles
+INFO: 	article
+INFO: 	usage Error information
+INFO: 	user
+INFO: 	name
+INFO: 	file
+INFO: 	OrganizeFileList
+INFO: 	Option
+INFO: 	display
+INFO: 	aspects
+INFO: 	user
+INFO: 	user
+INFO: 	language
+INFO: 	languages
+INFO: 	languages
+INFO: 	Takes
+INFO: 	topic
+INFO: 	articles
+INFO: 	o
+INFO: 	news websites
+INFO: 	multimedia
+INFO: 	DOCX
+INFO: 	PDF
+INFO: 	ZIP
+INFO: 	XLSM
+INFO: 	message
+INFO: 	details
+INFO: 	keywords
+INFO: 	NLP analysis
+INFO: 	option
+INFO: 	searches
+INFO: 	searches
+INFO: 	searches
+INFO: 	user account
+INFO: 	file/s
+INFO: 	parameters
+INFO: 	article
+INFO: 	articles
+INFO: 	articles
+INFO: 	User
+INFO: 	types
+INFO: 	error
+INFO: 	error
+INFO: 	error
+INFO: 	errors
+INFO: 	user
+INFO: 	Internet
+INFO: 	content
+INFO: 	Google API
+INFO: 	status
+INFO: 	information
+INFO: 	topic
+INFO: 	articleID
+INFO: 	database statistics
+INFO: 	Status
+INFO: 	user ability
+INFO: 	user ability
+INFO: 	files
+INFO: 	files
+INFO: 	error types
+INFO: 	Takes
+INFO: 	Uses
+INFO: 	ways
+INFO: 	output
+INFO: 	result
+INFO: 	terms
+INFO: 	text field
+INFO: 	Google
+INFO: 	text
+INFO: 	text
+INFO: 	text
+INFO: 	process
+INFO: 	input
+INFO: 	search
+INFO: 	text analysis API
+INFO: 	ZIP
+INFO: 	graphical user interface
+INFO: 	CPU usage
+INFO: 	memory usage
+INFO: 	ConvertFilesToText
+INFO: 	command
+INFO: 	NLP
+INFO: 	o Extract data
+INFO: 	errors
+INFO: 	Diagnostic
+INFO: 	o Profiling
+INFO: 	Diagnostics
+INFO: 	OrganizeContent
+INFO: 	German
+INFO: 	Hindi
+INFO: 	Russian
+INFO: 	Portuguese
+INFO: 	French
+INFO: 	Danish
+INFO: 	Chinese
+INFO: 	Spanish
+INFO: 	Japanese
+INFO: 	DisplayContent
+INFO: 	o Logs
+INFO: 	debugging purposes
+INFO: 	class
+INFO: 	indicator
+INFO: 	show traces
+INFO: 	warnings
+INFO: 	Logging
+INFO: 	Status
+INFO: 	Type
+INFO: 	Returns
+INFO: 	Operations
+INFO: 	list
+INFO: 	search_text
+INFO: 	progress
+INFO: 	o Input
+INFO: 	progress/status
+INFO: 	text-input interface
+INFO: 	Newsfeed
+INFO: 	system
+INFO: 	system
+INFO: 	Functions - SendLogReport
+INFO: 	emails
+INFO: 	Tweets
+INFO: 	reviews
+INFO: 	social media posts
+INFO: 	sources
+INFO: 	report
+INFO: 	user sentiment
+INFO: 	DiscoverContent
+INFO: 	2-11-21
+INFO: 	1
+INFO: 	2
+INFO: 	7
+INFO: 	one
+INFO: 	2
+INFO: 	7
+INFO: 	21
+INFO: 	11
+INFO: Sentiment of text information entered: magnitude: 8.0
+
+INFO: 127.0.0.1 - - [02/May/2021 00:08:25] "[35m[1mGET /files/2/analyze HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [02/May/2021 00:08:25] "[37mGET /files/2/analyze?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:08:25] "[37mGET /files/2/analyze?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:08:25] "[37mGET /files/2/analyze?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:08:25] "[37mGET /files/2/analyze?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:08:25] "[37mGET /files/2/analyze?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: Keywords of text entered:
+INFO: 	userID
+INFO: 	TXT
+INFO: 	UploadError
+INFO: 	files
+INFO: 	files
+INFO: 	Type
+INFO: 	Operations
+INFO: 	Operations
+INFO: 	API
+INFO: 	DisplayUploadStatus
+INFO: 	progress
+INFO: 	FileEditName
+INFO: 	files
+INFO: 	files
+INFO: 	files
+INFO: 	Shows
+INFO: 	user
+INFO: 	Professor
+INFO: 	file
+INFO: 	FileDelete
+INFO: 	API
+INFO: 	Text NLP Analysis
+INFO: 	Newsfeed Ingest Secure File Uploader
+INFO: 	UploadFiles
+INFO: 	Secure File Uploader/Ingest
+INFO: 	files
+INFO: 	JSON
+INFO: 	type
+INFO: 	articles
+INFO: 	operation
+INFO: 	file list
+INFO: 	Luke Staib
+INFO: 	Osama Homework 2 Phase 1
+INFO: 	U39863533 EC500
+INFO: 	DeleteSentiment
+INFO: 	API
+INFO: 	function
+INFO: 	method
+INFO: 	times
+INFO: 	loop
+INFO: 	number
+INFO: 	switch
+INFO: 	English
+INFO: 	o RenderProgressBar
+INFO: 	file
+INFO: 	file
+INFO: 	list files
+INFO: 	file
+INFO: 	files
+INFO: 	files
+INFO: 	user
+INFO: 	o
+INFO: 	o
+INFO: 	o
+INFO: 	Text
+INFO: 	CancelUpload
+INFO: 	organize_type
+INFO: 	Data
+INFO: 	data
+INFO: 	data
+INFO: 	NLP o CreateKeywords
+INFO: 	ObtainArticles
+INFO: 	PPT
+INFO: 	AssessData
+INFO: 	error
+INFO: 	progress bar
+INFO: 	text
+INFO: 	files
+INFO: 	files
+INFO: 	files
+INFO: 	files
+INFO: 	development logs o Files
+INFO: 	o
+INFO: 	o
+INFO: 	account o
+INFO: 	program
+INFO: 	user
+INFO: 	user
+INFO: 	user
+INFO: 	user
+INFO: 	user
+INFO: 	file
+INFO: 	articles
+INFO: 	o
+INFO: 	example o API
+INFO: 	error
+INFO: 	user
+INFO: 	user
+INFO: 	user
+INFO: 	Text
+INFO: 	text
+INFO: 	text
+INFO: 	upload
+INFO: 	SaveSentiment
+INFO: 	EditSentiment
+INFO: 	user
+INFO: 	text
+INFO: 	text
+INFO: 	data
+INFO: 	file data
+INFO: 	data
+INFO: 	API data
+INFO: 	article data
+INFO: 	o Text data
+INFO: 	name
+INFO: 	name
+INFO: 	options
+INFO: 	Keywords
+INFO: 	array
+INFO: 	errors
+INFO: 	errors
+INFO: 	program
+INFO: 	articles
+INFO: 	Data
+INFO: 	user
+INFO: 	sentiment
+INFO: 	sentiment
+INFO: 	sentiment
+INFO: 	sentiment
+INFO: 	RAR
+INFO: 	TAR
+INFO: 	Status
+INFO: 	ReadLater
+INFO: 	Type
+INFO: 	program
+INFO: 	text
+INFO: 	text
+INFO: 	program
+INFO: 	o Error
+INFO: 	XLS
+INFO: 	CSV
+INFO: 	DOC
+INFO: 	XLSX
+INFO: 	PPTX
+INFO: 	RTF
+INFO: 	NLP Analysis
+INFO: 	Operations
+INFO: 	text analysis
+INFO: 	keywords
+INFO: 	keywords
+INFO: 	keywords
+INFO: 	uploads
+INFO: 	input
+INFO: 	process
+INFO: 	account
+INFO: 	data
+INFO: 	articles
+INFO: 	articles
+INFO: 	articles
+INFO: 	article
+INFO: 	usage Error information
+INFO: 	user
+INFO: 	name
+INFO: 	file
+INFO: 	OrganizeFileList
+INFO: 	Option
+INFO: 	display
+INFO: 	aspects
+INFO: 	user
+INFO: 	user
+INFO: 	language
+INFO: 	languages
+INFO: 	languages
+INFO: 	Takes
+INFO: 	topic
+INFO: 	articles
+INFO: 	o
+INFO: 	news websites
+INFO: 	multimedia
+INFO: 	DOCX
+INFO: 	PDF
+INFO: 	ZIP
+INFO: 	XLSM
+INFO: 	message
+INFO: 	details
+INFO: 	keywords
+INFO: 	NLP analysis
+INFO: 	option
+INFO: 	searches
+INFO: 	searches
+INFO: 	searches
+INFO: 	user account
+INFO: 	file/s
+INFO: 	parameters
+INFO: 	article
+INFO: 	articles
+INFO: 	articles
+INFO: 	User
+INFO: 	types
+INFO: 	error
+INFO: 	error
+INFO: 	error
+INFO: 	errors
+INFO: 	user
+INFO: 	Internet
+INFO: 	content
+INFO: 	Google API
+INFO: 	status
+INFO: 	information
+INFO: 	topic
+INFO: 	articleID
+INFO: 	database statistics
+INFO: 	Status
+INFO: 	user ability
+INFO: 	user ability
+INFO: 	files
+INFO: 	files
+INFO: 	error types
+INFO: 	Takes
+INFO: 	Uses
+INFO: 	ways
+INFO: 	output
+INFO: 	result
+INFO: 	terms
+INFO: 	text field
+INFO: 	Google
+INFO: 	text
+INFO: 	text
+INFO: 	text
+INFO: 	process
+INFO: 	input
+INFO: 	search
+INFO: 	text analysis API
+INFO: 	ZIP
+INFO: 	graphical user interface
+INFO: 	CPU usage
+INFO: 	memory usage
+INFO: 	ConvertFilesToText
+INFO: 	command
+INFO: 	NLP
+INFO: 	o Extract data
+INFO: 	errors
+INFO: 	Diagnostic
+INFO: 	o Profiling
+INFO: 	Diagnostics
+INFO: 	OrganizeContent
+INFO: 	German
+INFO: 	Hindi
+INFO: 	Russian
+INFO: 	Portuguese
+INFO: 	French
+INFO: 	Danish
+INFO: 	Chinese
+INFO: 	Spanish
+INFO: 	Japanese
+INFO: 	DisplayContent
+INFO: 	o Logs
+INFO: 	debugging purposes
+INFO: 	class
+INFO: 	indicator
+INFO: 	show traces
+INFO: 	warnings
+INFO: 	Logging
+INFO: 	Status
+INFO: 	Type
+INFO: 	Returns
+INFO: 	Operations
+INFO: 	list
+INFO: 	search_text
+INFO: 	progress
+INFO: 	o Input
+INFO: 	progress/status
+INFO: 	text-input interface
+INFO: 	Newsfeed
+INFO: 	system
+INFO: 	system
+INFO: 	Functions - SendLogReport
+INFO: 	emails
+INFO: 	Tweets
+INFO: 	reviews
+INFO: 	social media posts
+INFO: 	sources
+INFO: 	report
+INFO: 	user sentiment
+INFO: 	DiscoverContent
+INFO: 	2-11-21
+INFO: 	2
+INFO: 	11
+INFO: 	21
+INFO: 	2
+INFO: 	7
+INFO: 	one
+INFO: 	1
+INFO: 	7
+INFO: Sentiment of text information entered: magnitude: 8.0
+
+INFO: 127.0.0.1 - - [02/May/2021 00:08:44] "[32mGET /files/2/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 00:08:44] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:08:44] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 00:08:44] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:08:47] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:08:48] "[32mGET /loadanalysis/2 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 00:08:48] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:08:51] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [02/May/2021 00:10:22] "[32mGET /loadanalysis/2 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 00:10:22] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:10:38] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:10:39] "[32mGET /loadanalysis/3 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 00:10:39] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:10:40] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:10:54] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:10:56] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:10:57] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 00:10:57] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Here, I use the slate3k library to turn this .pdf file into .txt
+INFO: Filetype = .pdf
+INFO: Uploading file giants.pdf
+INFO: 127.0.0.1 - - [02/May/2021 00:11:11] "[32mPOST /files HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 00:11:11] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:11:11] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 00:11:11] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:11:13] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:11:19] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:11:19] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	New York Giants
+INFO: 	Edge Ifeadi Odenigbo
+INFO: 	David Mayo
+INFO: 	spots
+INFO: 	Dave Gettleman
+INFO: 	BIG BLUE+ Takeaways
+INFO: 	team
+INFO: 	BBLUE
+INFO: 	deal
+INFO: 	video
+INFO: 	Free Agency
+INFO: 	Veteran Salary Benefit deal
+INFO: 	season
+INFO: 	Leonard Williams
+INFO: 	deal
+INFO: 	some
+INFO: 	cornerback
+INFO: 	Reggie Ragland
+INFO: 	Dion Lewis
+INFO: 	deal
+INFO: 	Austin Johnson
+INFO: 	Evan Engram
+INFO: 	draft class
+INFO: 	Nate Ebner
+INFO: 	one
+INFO: 	players
+INFO: 	contracts decisions
+INFO: 	non-decisions
+INFO: 	HOME
+INFO: 	teams
+INFO: 	rookie deals
+INFO: 	Mike Glennon
+INFO: 	credit
+INFO: 	deal
+INFO: 	deals
+INFO: 	draft
+INFO: 	draft
+INFO: 	linebacker
+INFO: 	Joe Judge
+INFO: 	way
+INFO: 	players
+INFO: 	agency
+INFO: 	Adoree' Jackson
+INFO: 	start
+INFO: 	The Giants
+INFO: 	prelude
+INFO: 	star
+INFO: 	tight end
+INFO: 	backup quarterback
+INFO: 	quarterback
+INFO: 	space
+INFO: 	cap space
+INFO: 	free agency moves
+INFO: 	edge rusher
+INFO: 	Jim Mora Jr
+INFO: 	chart
+INFO: 	Devontae Booker
+INFO: 	roles
+INFO: 	league
+INFO: 	fact
+INFO: 	running back
+INFO: 	offense
+INFO: 	league
+INFO: 	guessing game
+INFO: 	chance
+INFO: 	backup
+INFO: 	running back
+INFO: 	Devante Downs
+INFO: 	stretch
+INFO: 	tackling efficiency rate
+INFO: 	contract
+INFO: 	free agency scorecard
+INFO: 	process
+INFO: 	position
+INFO: 	nitpick
+INFO: 	someone
+INFO: 	teams
+INFO: 	C.J. Board
+INFO: 	bottom
+INFO: 	shopping spree
+INFO: 	odds
+INFO: 	Hill
+INFO: 	plan
+INFO: 	stories
+INFO: 	activity
+INFO: 	contract breakdowns
+INFO: 	links
+INFO: 	ability
+INFO: 	scheme
+INFO: 	difference
+INFO: 	need
+INFO: 	receiver
+INFO: 	productivity score
+INFO: 	Nate Solder
+INFO: 	Cap
+INFO: 	EDGE
+INFO: 	Kyle Rudolph
+INFO: 	Cullen Gillaspia
+INFO: 	injury
+INFO: 	Rob Sale
+INFO: 	team
+INFO: 	deal
+INFO: 	deal
+INFO: 	nothing
+INFO: 	Eli Penny
+INFO: 	salary cap
+INFO: 	PATRICIA TRAINA
+INFO: 	offensive line
+INFO: 	draft
+INFO: 	Cody Core
+INFO: 	player
+INFO: 	contract
+INFO: 	contract
+INFO: 	player
+INFO: 	way
+INFO: 	moves
+INFO: 	cap money
+INFO: 	money
+INFO: 	money
+INFO: 	linebacker
+INFO: 	Colt McCoy
+INFO: 	People
+INFO: 	player
+INFO: 	role
+INFO: 	teammates
+INFO: 	team
+INFO: 	leadership
+INFO: 	deal
+INFO: 	deal
+INFO: 	contract
+INFO: 	teams
+INFO: 	teams
+INFO: 	cap
+INFO: 	cap
+INFO: 	guard
+INFO: 	things
+INFO: 	NFL
+INFO: 	roster bonuses
+INFO: 	signing bonus
+INFO: 	incentives
+INFO: 	incentive
+INFO: 	linebacker
+INFO: 	deal
+INFO: 	deal
+INFO: 	objectives
+INFO: 	veteran
+INFO: 	contract
+INFO: 	Pro Bowl
+INFO: 	bath
+INFO: 	roster building
+INFO: 	process
+INFO: 	contract builder
+INFO: 	benefits
+INFO: 	hook
+INFO: 	berths
+INFO: 	Kyle Rudolph I
+INFO: 	teammates
+INFO: 	way
+INFO: 	team
+INFO: 	NCAA
+INFO: 	contracts
+INFO: 	Jason Garrett
+INFO: 	Pat Flaherty
+INFO: 	deal
+INFO: 	money hit
+INFO: 	role
+INFO: 	coaches
+INFO: 	principle
+INFO: 	depth
+INFO: 	option
+INFO: 	way
+INFO: 	hip ailment
+INFO: 	response
+INFO: 	way
+INFO: 	way
+INFO: 	proration
+INFO: 	salary cap exploding
+INFO: 	nature
+INFO: 	cap savings
+INFO: 	timing
+INFO: 	gobs
+INFO: 	career
+INFO: 	twists
+INFO: 	money
+INFO: 	teams
+INFO: 	backup quarterback
+INFO: 	upgrade
+INFO: 	move
+INFO: 	reason
+INFO: 	reason
+INFO: 	Some
+INFO: 	guess
+INFO: 	passing
+INFO: 	Downs
+INFO: 	third-down
+INFO: 	edge rushers
+INFO: 	pass-rush snaps
+INFO: 	rusher
+INFO: 	moves
+INFO: 	pass
+INFO: 	much
+INFO: 	running back
+INFO: 	promise
+INFO: 	character
+INFO: 	offensive line
+INFO: 	draft
+INFO: 	offensive line
+INFO: 	field
+INFO: 	guy
+INFO: 	season
+INFO: 	guy
+INFO: 	team
+INFO: 	league
+INFO: 	Core
+INFO: 	offense
+INFO: 	offense
+INFO: 	fullback
+INFO: 	fullback
+INFO: 	snaps
+INFO: 	physical
+INFO: 	hope
+INFO: 	Wayne Gallman
+INFO: 	players
+INFO: 	leadership role
+INFO: 	edition
+INFO: 	dent
+INFO: 	free agents
+INFO: 	signing
+INFO: 	money hit
+INFO: 	factors
+INFO: 	arm
+INFO: 	people
+INFO: 	playtime incentives
+INFO: 	base defense
+INFO: 	lot
+INFO: 	kickoff returner
+INFO: 	upgrade
+INFO: 	production
+INFO: 	career
+INFO: 	rate
+INFO: 	defense
+INFO: 	Kenny Golladay
+INFO: 	expectation
+INFO: 	arm strength
+INFO: 	lack
+INFO: 	quarterback
+INFO: 	season
+INFO: 	one
+INFO: 	Super Bowl
+INFO: 	fit
+INFO: 	lot
+INFO: 	Dalvin Tomlinson
+INFO: 	Kyler Fackrell
+INFO: 	hook
+INFO: 	position
+INFO: 	Kyle Pitts
+INFO: 	money hit
+INFO: 	role
+INFO: 	snaps
+INFO: 	Carter Coughlin
+INFO: 	VSB
+INFO: 	more
+INFO: 	rocket
+INFO: 	addition
+INFO: 	athleticism
+INFO: 	drop-off
+INFO: 	no one
+INFO: 	center
+INFO: 	criteria
+INFO: 	multimillions
+INFO: 	coaching staff
+INFO: 	bit
+INFO: 	quarterback hits
+INFO: 	cards
+INFO: 	designation
+INFO: 	point
+INFO: 	table
+INFO: 	direction
+INFO: 	team
+INFO: 	team
+INFO: 	tight end
+INFO: 	end
+INFO: 	increase
+INFO: 	rookie deals
+INFO: 	deals
+INFO: 	news
+INFO: 	steal
+INFO: 	mind
+INFO: 	performance escalator
+INFO: 	combination
+INFO: 	words
+INFO: 	fabric
+INFO: 	heart
+INFO: 	raise
+INFO: 	departure
+INFO: 	details
+INFO: 	retrospect
+INFO: 	rotation
+INFO: 	part
+INFO: 	problem
+INFO: 	sense
+INFO: 	cap
+INFO: 	team
+INFO: 	Jonotthan Harrison
+INFO: 	NFILMIG 2
+INFO: 	draft
+INFO: 	LTBEs
+INFO: 	NLTBE
+INFO: 	draft
+INFO: 	guards
+INFO: 	guards
+INFO: 	people
+INFO: 	picks
+INFO: 	playoff contender
+INFO: 	matter
+INFO: 	roster
+INFO: 	free agency
+INFO: 	free agency
+INFO: 	value
+INFO: 	roster spots
+INFO: 	scouts
+INFO: 	return
+INFO: 	feed
+INFO: 	LockedOn Giants
+INFO: 	way
+INFO: 	season
+INFO: 	cap space
+INFO: 	Lorenzo Carter
+INFO: 	good
+INFO: 	New York
+INFO: 	package
+INFO: 	everyone
+INFO: 	bank
+INFO: 	cutting
+INFO: 	doubt
+INFO: 	locker room
+INFO: 	kids
+INFO: 	none
+INFO: 	exception
+INFO: 	imbalance
+INFO: 	start
+INFO: 	star
+INFO: 	start
+INFO: 	draft picks
+INFO: 	draft picks
+INFO: 	picks
+INFO: 	comp draft picks
+INFO: 	draft class
+INFO: 	salary cap space
+INFO: 	snaps
+INFO: 	thing
+INFO: 	fact
+INFO: 	thinking
+INFO: 	change
+INFO: 	running back
+INFO: 	Daniel Jones
+INFO: 	Tae Crowder
+INFO: 	rule
+INFO: 	Saquon Barkley
+INFO: 	Achilles
+INFO: 	Pro Football Focus
+INFO: 	Vikings
+INFO: 	Hercules Mata'afa
+INFO: 	Patrick Graham
+INFO: 	chances
+INFO: 	cap
+INFO: 	lineman
+INFO: 	linemen
+INFO: 	formula
+INFO: 	rookie pool
+INFO: 	Rookie Pool
+INFO: 	formula
+INFO: 	newsletter
+INFO: 	questions
+INFO: 	podcasts
+INFO: 	Thoughts
+INFO: 	Twitter
+INFO: 	B.J.
+INFO: 	Kevin Zeitler
+INFO: 	free agency
+INFO: 	eyebrows
+INFO: 	mistakes
+INFO: 	window
+INFO: 	fuss
+INFO: 	effect
+INFO: 	number
+INFO: 	radar
+INFO: 	latest
+INFO: 	mailbag
+INFO: 	subscription
+INFO: 	podcast
+INFO: 	head coach
+INFO: 	roster
+INFO: 	heck
+INFO: 	first
+INFO: 	Penny
+INFO: 	total
+INFO: 	Kaden Smith
+INFO: 	New England
+INFO: 	Adrian Colbert
+INFO: 	RT Cameron Fleming
+INFO: 	Alfred Morris
+INFO: 	Spencer Pulley
+INFO: 	Jabaal Sheard
+INFO: 	OC
+INFO: 	draft class
+INFO: 	training
+INFO: 	no-brainer
+INFO: 	set
+INFO: 	personnel
+INFO: 	field
+INFO: 	hog molly
+INFO: 	person
+INFO: 	both
+INFO: 	scout
+INFO: 	video
+INFO: 	top
+INFO: 	questions
+INFO: 	mentor
+INFO: 	mentor
+INFO: 	berth
+INFO: 	reaction
+INFO: 	Levine Toilolo
+INFO: 	history
+INFO: 	eye
+INFO: 	article
+INFO: 	series
+INFO: 	track
+INFO: 	pants
+INFO: 	practice
+INFO: 	habits
+INFO: 	seat
+INFO: 	body
+INFO: 	peer
+INFO: 	tight ends
+INFO: 	Facebook
+INFO: 	sense
+INFO: 	way
+INFO: 	showing
+INFO: 	claim
+INFO: 	Giants view Rudolph
+INFO: 	Florida
+INFO: 	Q&As
+INFO: 	2021
+INFO: 	2022
+INFO: 	2025
+INFO: 	2023
+INFO: 	2021
+INFO: 	2022
+INFO: 	$250,000
+INFO: 	$17 million
+INFO: 	$4.25 million
+INFO: 	$3.4 million
+INFO: 	$3.4 million
+INFO: 	$1.127 million
+INFO: 	$987,500
+INFO: 	$137,500
+INFO: 	$2.3 million
+INFO: 	$6 million
+INFO: 	$1 million
+INFO: 	$250,000
+INFO: 	$1.5 million
+INFO: 	$3 million
+INFO: 	$3.5 million
+INFO: 	$1.35 million
+INFO: 	$650K
+INFO: 	$650,000
+INFO: 	$8,063,304
+INFO: 	$660,000
+INFO: 	$4.103 million
+INFO: 	1.127 million
+INFO: 	1.127 million
+INFO: 	2
+INFO: 	one
+INFO: 	1
+INFO: 	3
+INFO: 	one
+INFO: 	one
+INFO: 	660,000
+INFO: 	4.25 million
+INFO: 	1
+INFO: 	28
+INFO: 	5
+INFO: 	137,500
+INFO: 	7
+INFO: 	two
+INFO: 	23
+INFO: 	12
+INFO: 	2022
+INFO: 	5.6
+INFO: 	14
+INFO: 	13
+INFO: 	2021
+INFO: 	2.3 million
+INFO: 	one
+INFO: 	51
+INFO: 	6
+INFO: 	17 million
+INFO: 	10.5
+INFO: 	4.103 million
+INFO: 	4.103 million
+INFO: 	3.4 million
+INFO: 	6.4
+INFO: 	1.5 million
+INFO: 	one
+INFO: 	one
+INFO: 	650,000
+INFO: 	8,063,304
+INFO: 	2
+INFO: 	3 million
+INFO: 	650K
+INFO: 	two
+INFO: 	3.4 million
+INFO: 	one
+INFO: 	three
+INFO: 	2021
+INFO: 	12
+INFO: 	2
+INFO: 	One
+INFO: 	six
+INFO: 	five
+INFO: 	2022
+INFO: 	2025
+INFO: 	400
+INFO: 	8
+INFO: 	20250
+INFO: 	31
+INFO: 	4
+INFO: 	6.4
+INFO: 	3.5 million
+INFO: 	1.35 million
+INFO: 	9
+INFO: 	6 million
+INFO: 	Two
+INFO: 	15.0
+INFO: 	2
+INFO: 	10
+INFO: 	987,500
+INFO: 	250,000
+INFO: 	11
+INFO: 	11
+INFO: 	1 million
+INFO: 	250,000
+INFO: 	2023
+INFO: 	one
+INFO: Sentiment of text information entered: magnitude: 48.0
+
+INFO: 127.0.0.1 - - [02/May/2021 00:11:24] "[32mGET /files/8/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 00:11:24] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:11:24] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 00:11:24] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:11:26] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:11:27] "[32mGET /loadanalysis/8 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 00:11:27] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:12:07] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:12:12] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:12:16] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:12:17] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 00:12:17] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:12:21] "[37mGET /homepage HTTP/1.1[0m" 200 -
