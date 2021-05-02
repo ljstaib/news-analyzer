@@ -3274,3 +3274,13 @@ INFO: 127.0.0.1 - - [02/May/2021 00:20:45] "[37mGET /fileview HTTP/1.1[0m" 200
 INFO: 127.0.0.1 - - [02/May/2021 00:20:47] "[32mGET /loadanalysis/8 HTTP/1.1[0m" 302 -
 INFO: 127.0.0.1 - - [02/May/2021 00:20:47] "[37mGET /analysis HTTP/1.1[0m" 200 -
 INFO: 127.0.0.1 - - [02/May/2021 00:20:58] "[37mGET /fileview HTTP/1.1[0m" 200 -
+ERROR: User account with userID 10 not found.
+WARNING: UploadFiles: file ID (F_ID) should be an integer
+WARNING: UploadFiles: "authors" should be a string
+WARNING: UploadFiles: "creation_time" should be a string
+INFO: User account with userID 0 verified.
+ERROR: User account with userID 10 not found.
+WARNING: UploadFiles: file ID (F_ID) should be an integer
+WARNING: UploadFiles: "authors" should be a string
+WARNING: UploadFiles: "creation_time" should be a string
+INFO: User account with userID 0 verified.
