@@ -16,7 +16,7 @@ ljstaib@bu.edu
 - [X] File Uploader
   - [X] Adding new types of files (RTF, ODT?)
   - [X] Ability to upload more than one file at once
-- [ ] NLP Analysis
+- [ ] NLP Analysis: IN PROGRESS
   - [ ] More thorough final sentiment and analysis based off of data received (if possible)
 - [X] Newsfeed ingest
   - [X] Adding more than one website for articles (NYT)
@@ -40,7 +40,7 @@ ljstaib@bu.edu
 - Can now upload .RTF files (4/21) 
 - Made NLP analysis more clear to user (4/21)
   - Instead of score and magnitude, shows sentiment as negative, neutral, or positive and the magnitude as weakly expressed, strongly expressed, or in the middle
-- NLP Overheaul (5/2)
+- NLP Overhaul (5/1)
   - I created a separate analysis screen that a user can access from the file menu
   - A user can click on the "View Analysis" corresponding to a specific article to take them to a separate page
   - NLP information is no longer crammed on the file list page
