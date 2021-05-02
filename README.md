@@ -12,12 +12,13 @@ ljstaib@bu.edu
 ## Features to add/improve upon for my Final Project:
 - [ ] Security
   - [ ] Encrypting user information and file information (?) for storage in MongoDB Atlas
-  - [ ] Ensuring file upload is secure
+  - [X] Ensuring file upload is secure
 - [X] File Uploader
   - [X] Adding new types of files (RTF, ODT?)
   - [X] Ability to upload more than one file at once
 - [ ] NLP Analysis: IN PROGRESS
-  - [ ] More thorough final sentiment and analysis based off of data received (if possible)
+  - [X] More thorough final sentiment and analysis based off of data received (if possible)
+  - Additional features?
 - [X] Newsfeed ingest
   - [X] Adding more than one website for articles (NYT)
   - [X] Adding "Read Later" feature, create "ReadLaterList" field for each user in database, read/edit this list
@@ -45,6 +46,9 @@ ljstaib@bu.edu
   - A user can click on the "View Analysis" corresponding to a specific article to take them to a separate page
   - NLP information is no longer crammed on the file list page
   - Begun working on code to summarize the text data of articles
+- NLP continued (5/2)
+  - Edited analysis page
+  - Finished implementing summarization of inputted text (8 sentences)
 
 # HW2 Status - HW2
 Phase 1: Completed. Stub-API modules for Phase 1 are in their respective .py files. I also have psuedocode in newsanalyzer_pseudocode.txt.
