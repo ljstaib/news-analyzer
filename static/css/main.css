@@ -17,6 +17,12 @@ body {
 	line-height: 50px;
 }
 
+.analysisText {
+	color: #585A66;
+	font-size: 16px;
+	line-height: 40px;
+}
+
 .errorText {
 	color: #C90000;
 	font-size: 24px;

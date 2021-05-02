@@ -590,6 +590,7 @@ class LoadAnalysis(Resource):
 						file_data.append(magnitude) #magnitude
 					else:
 						file_data.append("N/A")	
+						file_data.append("N/A")	
 
 					if file.get('Summary') != None:	
 						summary = file.get('Summary')

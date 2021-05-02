@@ -10,14 +10,19 @@
 	</head>
 	<body>
 		<div class="bigText">Text Analysis of {{session['analyzed_data'][0]}}</div>
-		<div class="smallText">Up to First 5 Keywords: {{session['analyzed_data'][1]}}</div>
-		<div class="smallText">Up to First 5 Categories: {{session['analyzed_data'][2]}}</div>
-		<div class="smallText">Sentiment: {{session['analyzed_data'][3]}}</div>
-		<div class="smallText">Expression of Sentiment: {{session['analyzed_data'][4]}}</div>
-		<div class="smallText">Summary of Article: {{session['analyzed_data'][5]}}</div>
+		<div class="smallText">Up to First 5 Keywords: <div class="analysisText">{{session['analyzed_data'][1]}}</div></div>
+		<br>
+		<div class="smallText">Up to First 5 Categories: <div class="analysisText">{{session['analyzed_data'][2]}}</div></div>
+		<br>
+		<div class="smallText">Sentiment: <div class="analysisText">{{session['analyzed_data'][3]}}</div></div>
+		<br>
+		<div class="smallText">Expression of Sentiment: <div class="analysisText">{{session['analyzed_data'][4]}}</div></div>
+		<br>
+		<div class="smallText">Summary of Article: <div class="analysisText">{{session['analyzed_data'][5]}}</div></div>
 		<br><br>
 		<div class="button">
 			<a href="/fileview">Return to your Files</a>
 		</div>
+		<br><br>
 	</body>
 </html>

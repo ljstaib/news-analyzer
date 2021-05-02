@@ -3284,3 +3284,3993 @@ WARNING: UploadFiles: file ID (F_ID) should be an integer
 WARNING: UploadFiles: "authors" should be a string
 WARNING: UploadFiles: "creation_time" should be a string
 INFO: User account with userID 0 verified.
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [02/May/2021 17:41:24] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:41:24] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:17] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:23] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:23] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:23] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:23] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:24] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:26] "[32mGET /loadanalysis/3 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:26] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:28] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:30] "[32mGET /loadanalysis/1 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:30] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:30] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:31] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:32] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: Sentiment of text information entered: magnitude: 0.10000000149011612
+score: 0.10000000149011612
+
+INFO: 127.0.0.1 - - [02/May/2021 17:42:34] "[32mGET /files/0/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:34] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:34] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:34] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:36] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:37] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:37] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	Top secret
+INFO: 	eyes
+INFO: Sentiment of text information entered: magnitude: 1.2999999523162842
+score: 0.20000000298023224
+
+INFO: 127.0.0.1 - - [02/May/2021 17:42:39] "[32mGET /files/1/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:39] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:39] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:39] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:40] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	userID
+INFO: 	TXT
+INFO: 	UploadError
+INFO: 	files
+INFO: 	files
+INFO: 	Type
+INFO: 	Operations
+INFO: 	Operations
+INFO: 	API
+INFO: 	DisplayUploadStatus
+INFO: 	progress
+INFO: 	FileEditName
+INFO: 	files
+INFO: 	files
+INFO: 	files
+INFO: 	Shows
+INFO: 	user
+INFO: 	Professor
+INFO: 	file
+INFO: 	FileDelete
+INFO: 	API
+INFO: 	Text NLP Analysis
+INFO: 	Newsfeed Ingest Secure File Uploader
+INFO: 	UploadFiles
+INFO: 	Secure File Uploader/Ingest
+INFO: 	files
+INFO: 	JSON
+INFO: 	type
+INFO: 	articles
+INFO: 	operation
+INFO: 	file list
+INFO: 	Luke Staib
+INFO: 	Osama Homework 2 Phase 1
+INFO: 	U39863533 EC500
+INFO: 	DeleteSentiment
+INFO: 	API
+INFO: 	function
+INFO: 	method
+INFO: 	times
+INFO: 	loop
+INFO: 	number
+INFO: 	switch
+INFO: 	English
+INFO: 	o RenderProgressBar
+INFO: 	file
+INFO: 	file
+INFO: 	list files
+INFO: 	file
+INFO: 	files
+INFO: 	files
+INFO: 	user
+INFO: 	o
+INFO: 	o
+INFO: 	o
+INFO: 	Text
+INFO: 	CancelUpload
+INFO: 	organize_type
+INFO: 	Data
+INFO: 	data
+INFO: 	data
+INFO: 	NLP o CreateKeywords
+INFO: 	ObtainArticles
+INFO: 	PPT
+INFO: 	AssessData
+INFO: 	error
+INFO: 	progress bar
+INFO: 	text
+INFO: 	files
+INFO: 	files
+INFO: 	files
+INFO: 	files
+INFO: 	development logs o Files
+INFO: 	o
+INFO: 	o
+INFO: 	account o
+INFO: 	program
+INFO: 	user
+INFO: 	user
+INFO: 	user
+INFO: 	user
+INFO: 	user
+INFO: 	file
+INFO: 	articles
+INFO: 	o
+INFO: 	example o API
+INFO: 	error
+INFO: 	user
+INFO: 	user
+INFO: 	user
+INFO: 	Text
+INFO: 	text
+INFO: 	text
+INFO: 	upload
+INFO: 	SaveSentiment
+INFO: 	EditSentiment
+INFO: 	user
+INFO: 	text
+INFO: 	text
+INFO: 	data
+INFO: 	file data
+INFO: 	data
+INFO: 	API data
+INFO: 	article data
+INFO: 	o Text data
+INFO: 	name
+INFO: 	name
+INFO: 	options
+INFO: 	Keywords
+INFO: 	array
+INFO: 	errors
+INFO: 	errors
+INFO: 	program
+INFO: 	articles
+INFO: 	Data
+INFO: 	user
+INFO: 	sentiment
+INFO: 	sentiment
+INFO: 	sentiment
+INFO: 	sentiment
+INFO: 	RAR
+INFO: 	TAR
+INFO: 	Status
+INFO: 	ReadLater
+INFO: 	Type
+INFO: 	program
+INFO: 	text
+INFO: 	text
+INFO: 	program
+INFO: 	o Error
+INFO: 	XLS
+INFO: 	CSV
+INFO: 	DOC
+INFO: 	XLSX
+INFO: 	PPTX
+INFO: 	RTF
+INFO: 	NLP Analysis
+INFO: 	Operations
+INFO: 	text analysis
+INFO: 	keywords
+INFO: 	keywords
+INFO: 	keywords
+INFO: 	uploads
+INFO: 	input
+INFO: 	process
+INFO: 	account
+INFO: 	data
+INFO: 	articles
+INFO: 	articles
+INFO: 	articles
+INFO: 	article
+INFO: 	usage Error information
+INFO: 	user
+INFO: 	name
+INFO: 	file
+INFO: 	OrganizeFileList
+INFO: 	Option
+INFO: 	display
+INFO: 	aspects
+INFO: 	user
+INFO: 	user
+INFO: 	language
+INFO: 	languages
+INFO: 	languages
+INFO: 	Takes
+INFO: 	topic
+INFO: 	articles
+INFO: 	o
+INFO: 	news websites
+INFO: 	multimedia
+INFO: 	DOCX
+INFO: 	PDF
+INFO: 	ZIP
+INFO: 	XLSM
+INFO: 	message
+INFO: 	details
+INFO: 	keywords
+INFO: 	NLP analysis
+INFO: 	option
+INFO: 	searches
+INFO: 	searches
+INFO: 	searches
+INFO: 	user account
+INFO: 	file/s
+INFO: 	parameters
+INFO: 	article
+INFO: 	articles
+INFO: 	articles
+INFO: 	User
+INFO: 	types
+INFO: 	error
+INFO: 	error
+INFO: 	error
+INFO: 	errors
+INFO: 	user
+INFO: 	Internet
+INFO: 	content
+INFO: 	Google API
+INFO: 	status
+INFO: 	information
+INFO: 	topic
+INFO: 	articleID
+INFO: 	database statistics
+INFO: 	Status
+INFO: 	user ability
+INFO: 	user ability
+INFO: 	files
+INFO: 	files
+INFO: 	error types
+INFO: 	Takes
+INFO: 	Uses
+INFO: 	ways
+INFO: 	output
+INFO: 	result
+INFO: 	terms
+INFO: 	text field
+INFO: 	Google
+INFO: 	text
+INFO: 	text
+INFO: 	text
+INFO: 	process
+INFO: 	input
+INFO: 	search
+INFO: 	text analysis API
+INFO: 	ZIP
+INFO: 	graphical user interface
+INFO: 	CPU usage
+INFO: 	memory usage
+INFO: 	ConvertFilesToText
+INFO: 	command
+INFO: 	NLP
+INFO: 	o Extract data
+INFO: 	errors
+INFO: 	Diagnostic
+INFO: 	o Profiling
+INFO: 	Diagnostics
+INFO: 	OrganizeContent
+INFO: 	German
+INFO: 	Hindi
+INFO: 	Russian
+INFO: 	Portuguese
+INFO: 	French
+INFO: 	Danish
+INFO: 	Chinese
+INFO: 	Spanish
+INFO: 	Japanese
+INFO: 	DisplayContent
+INFO: 	o Logs
+INFO: 	debugging purposes
+INFO: 	class
+INFO: 	indicator
+INFO: 	show traces
+INFO: 	warnings
+INFO: 	Logging
+INFO: 	Status
+INFO: 	Type
+INFO: 	Returns
+INFO: 	Operations
+INFO: 	list
+INFO: 	search_text
+INFO: 	progress
+INFO: 	o Input
+INFO: 	progress/status
+INFO: 	text-input interface
+INFO: 	Newsfeed
+INFO: 	system
+INFO: 	system
+INFO: 	Functions - SendLogReport
+INFO: 	emails
+INFO: 	Tweets
+INFO: 	reviews
+INFO: 	social media posts
+INFO: 	sources
+INFO: 	report
+INFO: 	user sentiment
+INFO: 	DiscoverContent
+INFO: 	2-11-21
+INFO: 	1
+INFO: 	one
+INFO: 	21
+INFO: 	7
+INFO: 	2
+INFO: 	2
+INFO: 	11
+INFO: 	7
+INFO: Sentiment of text information entered: magnitude: 8.0
+
+INFO: 127.0.0.1 - - [02/May/2021 17:42:43] "[32mGET /files/2/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:43] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:43] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:43] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:44] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	White House
+INFO: 	Briefing
+INFO: 	February 21
+INFO: 	21
+INFO: Sentiment of text information entered: 
+INFO: 127.0.0.1 - - [02/May/2021 17:42:46] "[32mGET /files/3/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:46] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:46] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:46] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:47] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	file
+INFO: 	RTF
+INFO: 	world
+INFO: 	Testing12345 Hello
+INFO: Sentiment of text information entered: magnitude: 0.30000001192092896
+score: 0.10000000149011612
+
+INFO: 127.0.0.1 - - [02/May/2021 17:42:48] "[32mGET /files/7/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:48] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:48] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:49] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:49] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	New York Giants
+INFO: 	Edge Ifeadi Odenigbo
+INFO: 	David Mayo
+INFO: 	spots
+INFO: 	Dave Gettleman
+INFO: 	BIG BLUE+ Takeaways
+INFO: 	team
+INFO: 	BBLUE
+INFO: 	deal
+INFO: 	video
+INFO: 	Free Agency
+INFO: 	Veteran Salary Benefit deal
+INFO: 	season
+INFO: 	Leonard Williams
+INFO: 	deal
+INFO: 	some
+INFO: 	cornerback
+INFO: 	Reggie Ragland
+INFO: 	Dion Lewis
+INFO: 	deal
+INFO: 	Austin Johnson
+INFO: 	Evan Engram
+INFO: 	draft class
+INFO: 	Nate Ebner
+INFO: 	one
+INFO: 	players
+INFO: 	contracts decisions
+INFO: 	non-decisions
+INFO: 	HOME
+INFO: 	teams
+INFO: 	rookie deals
+INFO: 	Mike Glennon
+INFO: 	credit
+INFO: 	deal
+INFO: 	deals
+INFO: 	draft
+INFO: 	draft
+INFO: 	linebacker
+INFO: 	Joe Judge
+INFO: 	way
+INFO: 	players
+INFO: 	agency
+INFO: 	Adoree' Jackson
+INFO: 	start
+INFO: 	The Giants
+INFO: 	prelude
+INFO: 	star
+INFO: 	tight end
+INFO: 	backup quarterback
+INFO: 	quarterback
+INFO: 	space
+INFO: 	cap space
+INFO: 	free agency moves
+INFO: 	edge rusher
+INFO: 	Jim Mora Jr
+INFO: 	chart
+INFO: 	Devontae Booker
+INFO: 	roles
+INFO: 	league
+INFO: 	fact
+INFO: 	running back
+INFO: 	offense
+INFO: 	league
+INFO: 	guessing game
+INFO: 	chance
+INFO: 	backup
+INFO: 	running back
+INFO: 	Devante Downs
+INFO: 	stretch
+INFO: 	tackling efficiency rate
+INFO: 	contract
+INFO: 	free agency scorecard
+INFO: 	process
+INFO: 	position
+INFO: 	nitpick
+INFO: 	someone
+INFO: 	teams
+INFO: 	C.J. Board
+INFO: 	bottom
+INFO: 	shopping spree
+INFO: 	odds
+INFO: 	Hill
+INFO: 	plan
+INFO: 	stories
+INFO: 	activity
+INFO: 	contract breakdowns
+INFO: 	links
+INFO: 	ability
+INFO: 	scheme
+INFO: 	difference
+INFO: 	need
+INFO: 	receiver
+INFO: 	productivity score
+INFO: 	Nate Solder
+INFO: 	Cap
+INFO: 	EDGE
+INFO: 	Kyle Rudolph
+INFO: 	Cullen Gillaspia
+INFO: 	injury
+INFO: 	Rob Sale
+INFO: 	team
+INFO: 	deal
+INFO: 	deal
+INFO: 	nothing
+INFO: 	Eli Penny
+INFO: 	salary cap
+INFO: 	PATRICIA TRAINA
+INFO: 	offensive line
+INFO: 	draft
+INFO: 	Cody Core
+INFO: 	player
+INFO: 	contract
+INFO: 	contract
+INFO: 	player
+INFO: 	way
+INFO: 	moves
+INFO: 	cap money
+INFO: 	money
+INFO: 	money
+INFO: 	linebacker
+INFO: 	Colt McCoy
+INFO: 	People
+INFO: 	player
+INFO: 	role
+INFO: 	teammates
+INFO: 	team
+INFO: 	leadership
+INFO: 	deal
+INFO: 	deal
+INFO: 	contract
+INFO: 	teams
+INFO: 	teams
+INFO: 	cap
+INFO: 	cap
+INFO: 	guard
+INFO: 	things
+INFO: 	NFL
+INFO: 	roster bonuses
+INFO: 	signing bonus
+INFO: 	incentives
+INFO: 	incentive
+INFO: 	linebacker
+INFO: 	deal
+INFO: 	deal
+INFO: 	objectives
+INFO: 	veteran
+INFO: 	contract
+INFO: 	Pro Bowl
+INFO: 	bath
+INFO: 	roster building
+INFO: 	process
+INFO: 	contract builder
+INFO: 	benefits
+INFO: 	hook
+INFO: 	berths
+INFO: 	Kyle Rudolph I
+INFO: 	teammates
+INFO: 	way
+INFO: 	team
+INFO: 	NCAA
+INFO: 	contracts
+INFO: 	Jason Garrett
+INFO: 	Pat Flaherty
+INFO: 	deal
+INFO: 	money hit
+INFO: 	role
+INFO: 	coaches
+INFO: 	principle
+INFO: 	depth
+INFO: 	option
+INFO: 	way
+INFO: 	hip ailment
+INFO: 	response
+INFO: 	way
+INFO: 	way
+INFO: 	proration
+INFO: 	salary cap exploding
+INFO: 	nature
+INFO: 	cap savings
+INFO: 	timing
+INFO: 	gobs
+INFO: 	career
+INFO: 	twists
+INFO: 	money
+INFO: 	teams
+INFO: 	backup quarterback
+INFO: 	upgrade
+INFO: 	move
+INFO: 	reason
+INFO: 	reason
+INFO: 	Some
+INFO: 	guess
+INFO: 	passing
+INFO: 	Downs
+INFO: 	third-down
+INFO: 	edge rushers
+INFO: 	pass-rush snaps
+INFO: 	rusher
+INFO: 	moves
+INFO: 	pass
+INFO: 	much
+INFO: 	running back
+INFO: 	promise
+INFO: 	character
+INFO: 	offensive line
+INFO: 	draft
+INFO: 	offensive line
+INFO: 	field
+INFO: 	guy
+INFO: 	season
+INFO: 	guy
+INFO: 	team
+INFO: 	league
+INFO: 	Core
+INFO: 	offense
+INFO: 	offense
+INFO: 	fullback
+INFO: 	fullback
+INFO: 	snaps
+INFO: 	physical
+INFO: 	hope
+INFO: 	Wayne Gallman
+INFO: 	players
+INFO: 	leadership role
+INFO: 	edition
+INFO: 	dent
+INFO: 	free agents
+INFO: 	signing
+INFO: 	money hit
+INFO: 	factors
+INFO: 	arm
+INFO: 	people
+INFO: 	playtime incentives
+INFO: 	base defense
+INFO: 	lot
+INFO: 	kickoff returner
+INFO: 	upgrade
+INFO: 	production
+INFO: 	career
+INFO: 	rate
+INFO: 	defense
+INFO: 	Kenny Golladay
+INFO: 	expectation
+INFO: 	arm strength
+INFO: 	lack
+INFO: 	quarterback
+INFO: 	season
+INFO: 	one
+INFO: 	Super Bowl
+INFO: 	fit
+INFO: 	lot
+INFO: 	Dalvin Tomlinson
+INFO: 	Kyler Fackrell
+INFO: 	hook
+INFO: 	position
+INFO: 	Kyle Pitts
+INFO: 	money hit
+INFO: 	role
+INFO: 	snaps
+INFO: 	Carter Coughlin
+INFO: 	VSB
+INFO: 	more
+INFO: 	rocket
+INFO: 	addition
+INFO: 	athleticism
+INFO: 	drop-off
+INFO: 	no one
+INFO: 	center
+INFO: 	criteria
+INFO: 	multimillions
+INFO: 	coaching staff
+INFO: 	bit
+INFO: 	quarterback hits
+INFO: 	cards
+INFO: 	designation
+INFO: 	point
+INFO: 	table
+INFO: 	direction
+INFO: 	team
+INFO: 	team
+INFO: 	tight end
+INFO: 	end
+INFO: 	increase
+INFO: 	rookie deals
+INFO: 	deals
+INFO: 	news
+INFO: 	steal
+INFO: 	mind
+INFO: 	performance escalator
+INFO: 	combination
+INFO: 	words
+INFO: 	fabric
+INFO: 	heart
+INFO: 	raise
+INFO: 	departure
+INFO: 	details
+INFO: 	retrospect
+INFO: 	rotation
+INFO: 	part
+INFO: 	problem
+INFO: 	sense
+INFO: 	cap
+INFO: 	team
+INFO: 	Jonotthan Harrison
+INFO: 	NFILMIG 2
+INFO: 	draft
+INFO: 	LTBEs
+INFO: 	NLTBE
+INFO: 	draft
+INFO: 	guards
+INFO: 	guards
+INFO: 	people
+INFO: 	picks
+INFO: 	playoff contender
+INFO: 	matter
+INFO: 	roster
+INFO: 	free agency
+INFO: 	free agency
+INFO: 	value
+INFO: 	roster spots
+INFO: 	scouts
+INFO: 	return
+INFO: 	feed
+INFO: 	LockedOn Giants
+INFO: 	way
+INFO: 	season
+INFO: 	cap space
+INFO: 	Lorenzo Carter
+INFO: 	good
+INFO: 	New York
+INFO: 	package
+INFO: 	everyone
+INFO: 	bank
+INFO: 	cutting
+INFO: 	doubt
+INFO: 	locker room
+INFO: 	kids
+INFO: 	none
+INFO: 	exception
+INFO: 	imbalance
+INFO: 	start
+INFO: 	star
+INFO: 	start
+INFO: 	draft picks
+INFO: 	draft picks
+INFO: 	picks
+INFO: 	comp draft picks
+INFO: 	draft class
+INFO: 	salary cap space
+INFO: 	snaps
+INFO: 	thing
+INFO: 	fact
+INFO: 	thinking
+INFO: 	change
+INFO: 	running back
+INFO: 	Daniel Jones
+INFO: 	Tae Crowder
+INFO: 	rule
+INFO: 	Saquon Barkley
+INFO: 	Achilles
+INFO: 	Pro Football Focus
+INFO: 	Vikings
+INFO: 	Hercules Mata'afa
+INFO: 	Patrick Graham
+INFO: 	chances
+INFO: 	cap
+INFO: 	lineman
+INFO: 	linemen
+INFO: 	formula
+INFO: 	rookie pool
+INFO: 	Rookie Pool
+INFO: 	formula
+INFO: 	newsletter
+INFO: 	questions
+INFO: 	podcasts
+INFO: 	Thoughts
+INFO: 	Twitter
+INFO: 	B.J.
+INFO: 	Kevin Zeitler
+INFO: 	free agency
+INFO: 	eyebrows
+INFO: 	mistakes
+INFO: 	window
+INFO: 	fuss
+INFO: 	effect
+INFO: 	number
+INFO: 	radar
+INFO: 	latest
+INFO: 	mailbag
+INFO: 	subscription
+INFO: 	podcast
+INFO: 	head coach
+INFO: 	roster
+INFO: 	heck
+INFO: 	first
+INFO: 	Penny
+INFO: 	total
+INFO: 	Kaden Smith
+INFO: 	New England
+INFO: 	Adrian Colbert
+INFO: 	RT Cameron Fleming
+INFO: 	Alfred Morris
+INFO: 	Spencer Pulley
+INFO: 	Jabaal Sheard
+INFO: 	OC
+INFO: 	draft class
+INFO: 	training
+INFO: 	no-brainer
+INFO: 	set
+INFO: 	personnel
+INFO: 	field
+INFO: 	hog molly
+INFO: 	person
+INFO: 	both
+INFO: 	scout
+INFO: 	video
+INFO: 	top
+INFO: 	questions
+INFO: 	mentor
+INFO: 	mentor
+INFO: 	berth
+INFO: 	reaction
+INFO: 	Levine Toilolo
+INFO: 	history
+INFO: 	eye
+INFO: 	article
+INFO: 	series
+INFO: 	track
+INFO: 	pants
+INFO: 	practice
+INFO: 	habits
+INFO: 	seat
+INFO: 	body
+INFO: 	peer
+INFO: 	tight ends
+INFO: 	Facebook
+INFO: 	sense
+INFO: 	way
+INFO: 	showing
+INFO: 	claim
+INFO: 	Giants view Rudolph
+INFO: 	Florida
+INFO: 	Q&As
+INFO: 	2021
+INFO: 	2022
+INFO: 	2025
+INFO: 	2023
+INFO: 	2021
+INFO: 	2022
+INFO: 	$250,000
+INFO: 	$17 million
+INFO: 	$4.25 million
+INFO: 	$3.4 million
+INFO: 	$3.4 million
+INFO: 	$1.127 million
+INFO: 	$987,500
+INFO: 	$137,500
+INFO: 	$2.3 million
+INFO: 	$6 million
+INFO: 	$1 million
+INFO: 	$250,000
+INFO: 	$1.5 million
+INFO: 	$3 million
+INFO: 	$3.5 million
+INFO: 	$1.35 million
+INFO: 	$650K
+INFO: 	$650,000
+INFO: 	$8,063,304
+INFO: 	$660,000
+INFO: 	$4.103 million
+INFO: 	12
+INFO: 	one
+INFO: 	7
+INFO: 	2
+INFO: 	1 million
+INFO: 	2023
+INFO: 	1.5 million
+INFO: 	1.35 million
+INFO: 	One
+INFO: 	14
+INFO: 	1.127 million
+INFO: 	1.127 million
+INFO: 	3.4 million
+INFO: 	2
+INFO: 	17 million
+INFO: 	2021
+INFO: 	2025
+INFO: 	4.25 million
+INFO: 	2022
+INFO: 	one
+INFO: 	11
+INFO: 	8
+INFO: 	2021
+INFO: 	2
+INFO: 	51
+INFO: 	4.103 million
+INFO: 	4.103 million
+INFO: 	2
+INFO: 	6.4
+INFO: 	3.4 million
+INFO: 	4
+INFO: 	31
+INFO: 	10
+INFO: 	20250
+INFO: 	5
+INFO: 	11
+INFO: 	8,063,304
+INFO: 	two
+INFO: 	250,000
+INFO: 	650,000
+INFO: 	one
+INFO: 	10.5
+INFO: 	two
+INFO: 	one
+INFO: 	six
+INFO: 	3.5 million
+INFO: 	five
+INFO: 	28
+INFO: 	6 million
+INFO: 	660,000
+INFO: 	2.3 million
+INFO: 	3 million
+INFO: 	one
+INFO: 	one
+INFO: 	13
+INFO: 	6
+INFO: 	three
+INFO: 	1
+INFO: 	12
+INFO: 	250,000
+INFO: 	987,500
+INFO: 	137,500
+INFO: 	3
+INFO: 	400
+INFO: 	15.0
+INFO: 	Two
+INFO: 	9
+INFO: 	23
+INFO: 	5.6
+INFO: 	one
+INFO: 	one
+INFO: 	2022
+INFO: 	1
+INFO: 	650K
+INFO: 	6.4
+INFO: Sentiment of text information entered: magnitude: 48.0
+
+INFO: 127.0.0.1 - - [02/May/2021 17:42:53] "[32mGET /files/8/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:53] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:53] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:53] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:55] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:56] "[32mGET /loadanalysis/8 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:42:56] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [02/May/2021 17:43:19] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:43:19] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:43:22] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:43:24] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	New York Giants
+INFO: 	Edge Ifeadi Odenigbo
+INFO: 	David Mayo
+INFO: 	spots
+INFO: 	Dave Gettleman
+INFO: 	BIG BLUE+ Takeaways
+INFO: 	team
+INFO: 	BBLUE
+INFO: 	deal
+INFO: 	video
+INFO: 	Free Agency
+INFO: 	Veteran Salary Benefit deal
+INFO: 	season
+INFO: 	Leonard Williams
+INFO: 	deal
+INFO: 	some
+INFO: 	cornerback
+INFO: 	Reggie Ragland
+INFO: 	Dion Lewis
+INFO: 	deal
+INFO: 	Austin Johnson
+INFO: 	Evan Engram
+INFO: 	draft class
+INFO: 	Nate Ebner
+INFO: 	one
+INFO: 	players
+INFO: 	contracts decisions
+INFO: 	non-decisions
+INFO: 	HOME
+INFO: 	teams
+INFO: 	rookie deals
+INFO: 	Mike Glennon
+INFO: 	credit
+INFO: 	deal
+INFO: 	deals
+INFO: 	draft
+INFO: 	draft
+INFO: 	linebacker
+INFO: 	Joe Judge
+INFO: 	way
+INFO: 	players
+INFO: 	agency
+INFO: 	Adoree' Jackson
+INFO: 	start
+INFO: 	The Giants
+INFO: 	prelude
+INFO: 	star
+INFO: 	tight end
+INFO: 	backup quarterback
+INFO: 	quarterback
+INFO: 	space
+INFO: 	cap space
+INFO: 	free agency moves
+INFO: 	edge rusher
+INFO: 	Jim Mora Jr
+INFO: 	chart
+INFO: 	Devontae Booker
+INFO: 	roles
+INFO: 	league
+INFO: 	fact
+INFO: 	running back
+INFO: 	offense
+INFO: 	league
+INFO: 	guessing game
+INFO: 	chance
+INFO: 	backup
+INFO: 	running back
+INFO: 	Devante Downs
+INFO: 	stretch
+INFO: 	tackling efficiency rate
+INFO: 	contract
+INFO: 	free agency scorecard
+INFO: 	process
+INFO: 	position
+INFO: 	nitpick
+INFO: 	someone
+INFO: 	teams
+INFO: 	C.J. Board
+INFO: 	bottom
+INFO: 	shopping spree
+INFO: 	odds
+INFO: 	Hill
+INFO: 	plan
+INFO: 	stories
+INFO: 	activity
+INFO: 	contract breakdowns
+INFO: 	links
+INFO: 	ability
+INFO: 	scheme
+INFO: 	difference
+INFO: 	need
+INFO: 	receiver
+INFO: 	productivity score
+INFO: 	Nate Solder
+INFO: 	Cap
+INFO: 	EDGE
+INFO: 	Kyle Rudolph
+INFO: 	Cullen Gillaspia
+INFO: 	injury
+INFO: 	Rob Sale
+INFO: 	team
+INFO: 	deal
+INFO: 	deal
+INFO: 	nothing
+INFO: 	Eli Penny
+INFO: 	salary cap
+INFO: 	PATRICIA TRAINA
+INFO: 	offensive line
+INFO: 	draft
+INFO: 	Cody Core
+INFO: 	player
+INFO: 	contract
+INFO: 	contract
+INFO: 	player
+INFO: 	way
+INFO: 	moves
+INFO: 	cap money
+INFO: 	money
+INFO: 	money
+INFO: 	linebacker
+INFO: 	Colt McCoy
+INFO: 	People
+INFO: 	player
+INFO: 	role
+INFO: 	teammates
+INFO: 	team
+INFO: 	leadership
+INFO: 	deal
+INFO: 	deal
+INFO: 	contract
+INFO: 	teams
+INFO: 	teams
+INFO: 	cap
+INFO: 	cap
+INFO: 	guard
+INFO: 	things
+INFO: 	NFL
+INFO: 	roster bonuses
+INFO: 	signing bonus
+INFO: 	incentives
+INFO: 	incentive
+INFO: 	linebacker
+INFO: 	deal
+INFO: 	deal
+INFO: 	objectives
+INFO: 	veteran
+INFO: 	contract
+INFO: 	Pro Bowl
+INFO: 	bath
+INFO: 	roster building
+INFO: 	process
+INFO: 	contract builder
+INFO: 	benefits
+INFO: 	hook
+INFO: 	berths
+INFO: 	Kyle Rudolph I
+INFO: 	teammates
+INFO: 	way
+INFO: 	team
+INFO: 	NCAA
+INFO: 	contracts
+INFO: 	Jason Garrett
+INFO: 	Pat Flaherty
+INFO: 	deal
+INFO: 	money hit
+INFO: 	role
+INFO: 	coaches
+INFO: 	principle
+INFO: 	depth
+INFO: 	option
+INFO: 	way
+INFO: 	hip ailment
+INFO: 	response
+INFO: 	way
+INFO: 	way
+INFO: 	proration
+INFO: 	salary cap exploding
+INFO: 	nature
+INFO: 	cap savings
+INFO: 	timing
+INFO: 	gobs
+INFO: 	career
+INFO: 	twists
+INFO: 	money
+INFO: 	teams
+INFO: 	backup quarterback
+INFO: 	upgrade
+INFO: 	move
+INFO: 	reason
+INFO: 	reason
+INFO: 	Some
+INFO: 	guess
+INFO: 	passing
+INFO: 	Downs
+INFO: 	third-down
+INFO: 	edge rushers
+INFO: 	pass-rush snaps
+INFO: 	rusher
+INFO: 	moves
+INFO: 	pass
+INFO: 	much
+INFO: 	running back
+INFO: 	promise
+INFO: 	character
+INFO: 	offensive line
+INFO: 	draft
+INFO: 	offensive line
+INFO: 	field
+INFO: 	guy
+INFO: 	season
+INFO: 	guy
+INFO: 	team
+INFO: 	league
+INFO: 	Core
+INFO: 	offense
+INFO: 	offense
+INFO: 	fullback
+INFO: 	fullback
+INFO: 	snaps
+INFO: 	physical
+INFO: 	hope
+INFO: 	Wayne Gallman
+INFO: 	players
+INFO: 	leadership role
+INFO: 	edition
+INFO: 	dent
+INFO: 	free agents
+INFO: 	signing
+INFO: 	money hit
+INFO: 	factors
+INFO: 	arm
+INFO: 	people
+INFO: 	playtime incentives
+INFO: 	base defense
+INFO: 	lot
+INFO: 	kickoff returner
+INFO: 	upgrade
+INFO: 	production
+INFO: 	career
+INFO: 	rate
+INFO: 	defense
+INFO: 	Kenny Golladay
+INFO: 	expectation
+INFO: 	arm strength
+INFO: 	lack
+INFO: 	quarterback
+INFO: 	season
+INFO: 	one
+INFO: 	Super Bowl
+INFO: 	fit
+INFO: 	lot
+INFO: 	Dalvin Tomlinson
+INFO: 	Kyler Fackrell
+INFO: 	hook
+INFO: 	position
+INFO: 	Kyle Pitts
+INFO: 	money hit
+INFO: 	role
+INFO: 	snaps
+INFO: 	Carter Coughlin
+INFO: 	VSB
+INFO: 	more
+INFO: 	rocket
+INFO: 	addition
+INFO: 	athleticism
+INFO: 	drop-off
+INFO: 	no one
+INFO: 	center
+INFO: 	criteria
+INFO: 	multimillions
+INFO: 	coaching staff
+INFO: 	bit
+INFO: 	quarterback hits
+INFO: 	cards
+INFO: 	designation
+INFO: 	point
+INFO: 	table
+INFO: 	direction
+INFO: 	team
+INFO: 	team
+INFO: 	tight end
+INFO: 	end
+INFO: 	increase
+INFO: 	rookie deals
+INFO: 	deals
+INFO: 	news
+INFO: 	steal
+INFO: 	mind
+INFO: 	performance escalator
+INFO: 	combination
+INFO: 	words
+INFO: 	fabric
+INFO: 	heart
+INFO: 	raise
+INFO: 	departure
+INFO: 	details
+INFO: 	retrospect
+INFO: 	rotation
+INFO: 	part
+INFO: 	problem
+INFO: 	sense
+INFO: 	cap
+INFO: 	team
+INFO: 	Jonotthan Harrison
+INFO: 	NFILMIG 2
+INFO: 	draft
+INFO: 	LTBEs
+INFO: 	NLTBE
+INFO: 	draft
+INFO: 	guards
+INFO: 	guards
+INFO: 	people
+INFO: 	picks
+INFO: 	playoff contender
+INFO: 	matter
+INFO: 	roster
+INFO: 	free agency
+INFO: 	free agency
+INFO: 	value
+INFO: 	roster spots
+INFO: 	scouts
+INFO: 	return
+INFO: 	feed
+INFO: 	LockedOn Giants
+INFO: 	way
+INFO: 	season
+INFO: 	cap space
+INFO: 	Lorenzo Carter
+INFO: 	good
+INFO: 	New York
+INFO: 	package
+INFO: 	everyone
+INFO: 	bank
+INFO: 	cutting
+INFO: 	doubt
+INFO: 	locker room
+INFO: 	kids
+INFO: 	none
+INFO: 	exception
+INFO: 	imbalance
+INFO: 	start
+INFO: 	star
+INFO: 	start
+INFO: 	draft picks
+INFO: 	draft picks
+INFO: 	picks
+INFO: 	comp draft picks
+INFO: 	draft class
+INFO: 	salary cap space
+INFO: 	snaps
+INFO: 	thing
+INFO: 	fact
+INFO: 	thinking
+INFO: 	change
+INFO: 	running back
+INFO: 	Daniel Jones
+INFO: 	Tae Crowder
+INFO: 	rule
+INFO: 	Saquon Barkley
+INFO: 	Achilles
+INFO: 	Pro Football Focus
+INFO: 	Vikings
+INFO: 	Hercules Mata'afa
+INFO: 	Patrick Graham
+INFO: 	chances
+INFO: 	cap
+INFO: 	lineman
+INFO: 	linemen
+INFO: 	formula
+INFO: 	rookie pool
+INFO: 	Rookie Pool
+INFO: 	formula
+INFO: 	newsletter
+INFO: 	questions
+INFO: 	podcasts
+INFO: 	Thoughts
+INFO: 	Twitter
+INFO: 	B.J.
+INFO: 	Kevin Zeitler
+INFO: 	free agency
+INFO: 	eyebrows
+INFO: 	mistakes
+INFO: 	window
+INFO: 	fuss
+INFO: 	effect
+INFO: 	number
+INFO: 	radar
+INFO: 	latest
+INFO: 	mailbag
+INFO: 	subscription
+INFO: 	podcast
+INFO: 	head coach
+INFO: 	roster
+INFO: 	heck
+INFO: 	first
+INFO: 	Penny
+INFO: 	total
+INFO: 	Kaden Smith
+INFO: 	New England
+INFO: 	Adrian Colbert
+INFO: 	RT Cameron Fleming
+INFO: 	Alfred Morris
+INFO: 	Spencer Pulley
+INFO: 	Jabaal Sheard
+INFO: 	OC
+INFO: 	draft class
+INFO: 	training
+INFO: 	no-brainer
+INFO: 	set
+INFO: 	personnel
+INFO: 	field
+INFO: 	hog molly
+INFO: 	person
+INFO: 	both
+INFO: 	scout
+INFO: 	video
+INFO: 	top
+INFO: 	questions
+INFO: 	mentor
+INFO: 	mentor
+INFO: 	berth
+INFO: 	reaction
+INFO: 	Levine Toilolo
+INFO: 	history
+INFO: 	eye
+INFO: 	article
+INFO: 	series
+INFO: 	track
+INFO: 	pants
+INFO: 	practice
+INFO: 	habits
+INFO: 	seat
+INFO: 	body
+INFO: 	peer
+INFO: 	tight ends
+INFO: 	Facebook
+INFO: 	sense
+INFO: 	way
+INFO: 	showing
+INFO: 	claim
+INFO: 	Giants view Rudolph
+INFO: 	Florida
+INFO: 	Q&As
+INFO: 	2021
+INFO: 	2022
+INFO: 	2025
+INFO: 	2023
+INFO: 	2021
+INFO: 	2022
+INFO: 	$250,000
+INFO: 	$17 million
+INFO: 	$4.25 million
+INFO: 	$3.4 million
+INFO: 	$3.4 million
+INFO: 	$1.127 million
+INFO: 	$987,500
+INFO: 	$137,500
+INFO: 	$2.3 million
+INFO: 	$6 million
+INFO: 	$1 million
+INFO: 	$250,000
+INFO: 	$1.5 million
+INFO: 	$3 million
+INFO: 	$3.5 million
+INFO: 	$1.35 million
+INFO: 	$650K
+INFO: 	$650,000
+INFO: 	$8,063,304
+INFO: 	$660,000
+INFO: 	$4.103 million
+INFO: 	one
+INFO: 	250,000
+INFO: 	14
+INFO: 	13
+INFO: 	One
+INFO: 	6 million
+INFO: 	660,000
+INFO: 	one
+INFO: 	10.5
+INFO: 	1.5 million
+INFO: 	one
+INFO: 	20250
+INFO: 	2
+INFO: 	650,000
+INFO: 	28
+INFO: 	2.3 million
+INFO: 	5
+INFO: 	1 million
+INFO: 	8
+INFO: 	2021
+INFO: 	4
+INFO: 	one
+INFO: 	6.4
+INFO: 	6.4
+INFO: 	2022
+INFO: 	5.6
+INFO: 	1
+INFO: 	2
+INFO: 	10
+INFO: 	2022
+INFO: 	11
+INFO: 	8,063,304
+INFO: 	23
+INFO: 	one
+INFO: 	1
+INFO: 	51
+INFO: 	one
+INFO: 	2023
+INFO: 	2
+INFO: 	one
+INFO: 	1.127 million
+INFO: 	1.127 million
+INFO: 	three
+INFO: 	6
+INFO: 	400
+INFO: 	two
+INFO: 	six
+INFO: 	one
+INFO: 	4.103 million
+INFO: 	4.103 million
+INFO: 	two
+INFO: 	17 million
+INFO: 	250,000
+INFO: 	9
+INFO: 	five
+INFO: 	3.4 million
+INFO: 	650K
+INFO: 	2021
+INFO: 	137,500
+INFO: 	4.25 million
+INFO: 	3.4 million
+INFO: 	3
+INFO: 	12
+INFO: 	3 million
+INFO: 	2025
+INFO: 	7
+INFO: 	11
+INFO: 	12
+INFO: 	15.0
+INFO: 	2
+INFO: 	3.5 million
+INFO: 	1.35 million
+INFO: 	987,500
+INFO: 	Two
+INFO: 	31
+INFO: Sentiment of text information entered: magnitude: 48.0
+
+INFO: 127.0.0.1 - - [02/May/2021 17:43:28] "[32mGET /files/8/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:43:28] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:43:28] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:43:28] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:43:30] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:43:31] "[32mGET /loadanalysis/8 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:43:31] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:43:51] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:43:53] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [02/May/2021 17:48:10] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:48:11] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:48:11] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:48:15] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:48:18] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:48:19] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	New York Giants
+INFO: 	Edge Ifeadi Odenigbo
+INFO: 	David Mayo
+INFO: 	spots
+INFO: 	Dave Gettleman
+INFO: 	BIG BLUE+ Takeaways
+INFO: 	team
+INFO: 	BBLUE
+INFO: 	deal
+INFO: 	video
+INFO: 	Free Agency
+INFO: 	Veteran Salary Benefit deal
+INFO: 	season
+INFO: 	Leonard Williams
+INFO: 	deal
+INFO: 	some
+INFO: 	cornerback
+INFO: 	Reggie Ragland
+INFO: 	Dion Lewis
+INFO: 	deal
+INFO: 	Austin Johnson
+INFO: 	Evan Engram
+INFO: 	draft class
+INFO: 	Nate Ebner
+INFO: 	one
+INFO: 	players
+INFO: 	contracts decisions
+INFO: 	non-decisions
+INFO: 	HOME
+INFO: 	teams
+INFO: 	rookie deals
+INFO: 	Mike Glennon
+INFO: 	credit
+INFO: 	deal
+INFO: 	deals
+INFO: 	draft
+INFO: 	draft
+INFO: 	linebacker
+INFO: 	Joe Judge
+INFO: 	way
+INFO: 	players
+INFO: 	agency
+INFO: 	Adoree' Jackson
+INFO: 	start
+INFO: 	The Giants
+INFO: 	prelude
+INFO: 	star
+INFO: 	tight end
+INFO: 	backup quarterback
+INFO: 	quarterback
+INFO: 	space
+INFO: 	cap space
+INFO: 	free agency moves
+INFO: 	edge rusher
+INFO: 	Jim Mora Jr
+INFO: 	chart
+INFO: 	Devontae Booker
+INFO: 	roles
+INFO: 	league
+INFO: 	fact
+INFO: 	running back
+INFO: 	offense
+INFO: 	league
+INFO: 	guessing game
+INFO: 	chance
+INFO: 	backup
+INFO: 	running back
+INFO: 	Devante Downs
+INFO: 	stretch
+INFO: 	tackling efficiency rate
+INFO: 	contract
+INFO: 	free agency scorecard
+INFO: 	process
+INFO: 	position
+INFO: 	nitpick
+INFO: 	someone
+INFO: 	teams
+INFO: 	C.J. Board
+INFO: 	bottom
+INFO: 	shopping spree
+INFO: 	odds
+INFO: 	Hill
+INFO: 	plan
+INFO: 	stories
+INFO: 	activity
+INFO: 	contract breakdowns
+INFO: 	links
+INFO: 	ability
+INFO: 	scheme
+INFO: 	difference
+INFO: 	need
+INFO: 	receiver
+INFO: 	productivity score
+INFO: 	Nate Solder
+INFO: 	Cap
+INFO: 	EDGE
+INFO: 	Kyle Rudolph
+INFO: 	Cullen Gillaspia
+INFO: 	injury
+INFO: 	Rob Sale
+INFO: 	team
+INFO: 	deal
+INFO: 	deal
+INFO: 	nothing
+INFO: 	Eli Penny
+INFO: 	salary cap
+INFO: 	PATRICIA TRAINA
+INFO: 	offensive line
+INFO: 	draft
+INFO: 	Cody Core
+INFO: 	player
+INFO: 	contract
+INFO: 	contract
+INFO: 	player
+INFO: 	way
+INFO: 	moves
+INFO: 	cap money
+INFO: 	money
+INFO: 	money
+INFO: 	linebacker
+INFO: 	Colt McCoy
+INFO: 	People
+INFO: 	player
+INFO: 	role
+INFO: 	teammates
+INFO: 	team
+INFO: 	leadership
+INFO: 	deal
+INFO: 	deal
+INFO: 	contract
+INFO: 	teams
+INFO: 	teams
+INFO: 	cap
+INFO: 	cap
+INFO: 	guard
+INFO: 	things
+INFO: 	NFL
+INFO: 	roster bonuses
+INFO: 	signing bonus
+INFO: 	incentives
+INFO: 	incentive
+INFO: 	linebacker
+INFO: 	deal
+INFO: 	deal
+INFO: 	objectives
+INFO: 	veteran
+INFO: 	contract
+INFO: 	Pro Bowl
+INFO: 	bath
+INFO: 	roster building
+INFO: 	process
+INFO: 	contract builder
+INFO: 	benefits
+INFO: 	hook
+INFO: 	berths
+INFO: 	Kyle Rudolph I
+INFO: 	teammates
+INFO: 	way
+INFO: 	team
+INFO: 	NCAA
+INFO: 	contracts
+INFO: 	Jason Garrett
+INFO: 	Pat Flaherty
+INFO: 	deal
+INFO: 	money hit
+INFO: 	role
+INFO: 	coaches
+INFO: 	principle
+INFO: 	depth
+INFO: 	option
+INFO: 	way
+INFO: 	hip ailment
+INFO: 	response
+INFO: 	way
+INFO: 	way
+INFO: 	proration
+INFO: 	salary cap exploding
+INFO: 	nature
+INFO: 	cap savings
+INFO: 	timing
+INFO: 	gobs
+INFO: 	career
+INFO: 	twists
+INFO: 	money
+INFO: 	teams
+INFO: 	backup quarterback
+INFO: 	upgrade
+INFO: 	move
+INFO: 	reason
+INFO: 	reason
+INFO: 	Some
+INFO: 	guess
+INFO: 	passing
+INFO: 	Downs
+INFO: 	third-down
+INFO: 	edge rushers
+INFO: 	pass-rush snaps
+INFO: 	rusher
+INFO: 	moves
+INFO: 	pass
+INFO: 	much
+INFO: 	running back
+INFO: 	promise
+INFO: 	character
+INFO: 	offensive line
+INFO: 	draft
+INFO: 	offensive line
+INFO: 	field
+INFO: 	guy
+INFO: 	season
+INFO: 	guy
+INFO: 	team
+INFO: 	league
+INFO: 	Core
+INFO: 	offense
+INFO: 	offense
+INFO: 	fullback
+INFO: 	fullback
+INFO: 	snaps
+INFO: 	physical
+INFO: 	hope
+INFO: 	Wayne Gallman
+INFO: 	players
+INFO: 	leadership role
+INFO: 	edition
+INFO: 	dent
+INFO: 	free agents
+INFO: 	signing
+INFO: 	money hit
+INFO: 	factors
+INFO: 	arm
+INFO: 	people
+INFO: 	playtime incentives
+INFO: 	base defense
+INFO: 	lot
+INFO: 	kickoff returner
+INFO: 	upgrade
+INFO: 	production
+INFO: 	career
+INFO: 	rate
+INFO: 	defense
+INFO: 	Kenny Golladay
+INFO: 	expectation
+INFO: 	arm strength
+INFO: 	lack
+INFO: 	quarterback
+INFO: 	season
+INFO: 	one
+INFO: 	Super Bowl
+INFO: 	fit
+INFO: 	lot
+INFO: 	Dalvin Tomlinson
+INFO: 	Kyler Fackrell
+INFO: 	hook
+INFO: 	position
+INFO: 	Kyle Pitts
+INFO: 	money hit
+INFO: 	role
+INFO: 	snaps
+INFO: 	Carter Coughlin
+INFO: 	VSB
+INFO: 	more
+INFO: 	rocket
+INFO: 	addition
+INFO: 	athleticism
+INFO: 	drop-off
+INFO: 	no one
+INFO: 	center
+INFO: 	criteria
+INFO: 	multimillions
+INFO: 	coaching staff
+INFO: 	bit
+INFO: 	quarterback hits
+INFO: 	cards
+INFO: 	designation
+INFO: 	point
+INFO: 	table
+INFO: 	direction
+INFO: 	team
+INFO: 	team
+INFO: 	tight end
+INFO: 	end
+INFO: 	increase
+INFO: 	rookie deals
+INFO: 	deals
+INFO: 	news
+INFO: 	steal
+INFO: 	mind
+INFO: 	performance escalator
+INFO: 	combination
+INFO: 	words
+INFO: 	fabric
+INFO: 	heart
+INFO: 	raise
+INFO: 	departure
+INFO: 	details
+INFO: 	retrospect
+INFO: 	rotation
+INFO: 	part
+INFO: 	problem
+INFO: 	sense
+INFO: 	cap
+INFO: 	team
+INFO: 	Jonotthan Harrison
+INFO: 	NFILMIG 2
+INFO: 	draft
+INFO: 	LTBEs
+INFO: 	NLTBE
+INFO: 	draft
+INFO: 	guards
+INFO: 	guards
+INFO: 	people
+INFO: 	picks
+INFO: 	playoff contender
+INFO: 	matter
+INFO: 	roster
+INFO: 	free agency
+INFO: 	free agency
+INFO: 	value
+INFO: 	roster spots
+INFO: 	scouts
+INFO: 	return
+INFO: 	feed
+INFO: 	LockedOn Giants
+INFO: 	way
+INFO: 	season
+INFO: 	cap space
+INFO: 	Lorenzo Carter
+INFO: 	good
+INFO: 	New York
+INFO: 	package
+INFO: 	everyone
+INFO: 	bank
+INFO: 	cutting
+INFO: 	doubt
+INFO: 	locker room
+INFO: 	kids
+INFO: 	none
+INFO: 	exception
+INFO: 	imbalance
+INFO: 	start
+INFO: 	star
+INFO: 	start
+INFO: 	draft picks
+INFO: 	draft picks
+INFO: 	picks
+INFO: 	comp draft picks
+INFO: 	draft class
+INFO: 	salary cap space
+INFO: 	snaps
+INFO: 	thing
+INFO: 	fact
+INFO: 	thinking
+INFO: 	change
+INFO: 	running back
+INFO: 	Daniel Jones
+INFO: 	Tae Crowder
+INFO: 	rule
+INFO: 	Saquon Barkley
+INFO: 	Achilles
+INFO: 	Pro Football Focus
+INFO: 	Vikings
+INFO: 	Hercules Mata'afa
+INFO: 	Patrick Graham
+INFO: 	chances
+INFO: 	cap
+INFO: 	lineman
+INFO: 	linemen
+INFO: 	formula
+INFO: 	rookie pool
+INFO: 	Rookie Pool
+INFO: 	formula
+INFO: 	newsletter
+INFO: 	questions
+INFO: 	podcasts
+INFO: 	Thoughts
+INFO: 	Twitter
+INFO: 	B.J.
+INFO: 	Kevin Zeitler
+INFO: 	free agency
+INFO: 	eyebrows
+INFO: 	mistakes
+INFO: 	window
+INFO: 	fuss
+INFO: 	effect
+INFO: 	number
+INFO: 	radar
+INFO: 	latest
+INFO: 	mailbag
+INFO: 	subscription
+INFO: 	podcast
+INFO: 	head coach
+INFO: 	roster
+INFO: 	heck
+INFO: 	first
+INFO: 	Penny
+INFO: 	total
+INFO: 	Kaden Smith
+INFO: 	New England
+INFO: 	Adrian Colbert
+INFO: 	RT Cameron Fleming
+INFO: 	Alfred Morris
+INFO: 	Spencer Pulley
+INFO: 	Jabaal Sheard
+INFO: 	OC
+INFO: 	draft class
+INFO: 	training
+INFO: 	no-brainer
+INFO: 	set
+INFO: 	personnel
+INFO: 	field
+INFO: 	hog molly
+INFO: 	person
+INFO: 	both
+INFO: 	scout
+INFO: 	video
+INFO: 	top
+INFO: 	questions
+INFO: 	mentor
+INFO: 	mentor
+INFO: 	berth
+INFO: 	reaction
+INFO: 	Levine Toilolo
+INFO: 	history
+INFO: 	eye
+INFO: 	article
+INFO: 	series
+INFO: 	track
+INFO: 	pants
+INFO: 	practice
+INFO: 	habits
+INFO: 	seat
+INFO: 	body
+INFO: 	peer
+INFO: 	tight ends
+INFO: 	Facebook
+INFO: 	sense
+INFO: 	way
+INFO: 	showing
+INFO: 	claim
+INFO: 	Giants view Rudolph
+INFO: 	Florida
+INFO: 	Q&As
+INFO: 	2021
+INFO: 	2022
+INFO: 	2025
+INFO: 	2023
+INFO: 	2021
+INFO: 	2022
+INFO: 	$250,000
+INFO: 	$17 million
+INFO: 	$4.25 million
+INFO: 	$3.4 million
+INFO: 	$3.4 million
+INFO: 	$1.127 million
+INFO: 	$987,500
+INFO: 	$137,500
+INFO: 	$2.3 million
+INFO: 	$6 million
+INFO: 	$1 million
+INFO: 	$250,000
+INFO: 	$1.5 million
+INFO: 	$3 million
+INFO: 	$3.5 million
+INFO: 	$1.35 million
+INFO: 	$650K
+INFO: 	$650,000
+INFO: 	$8,063,304
+INFO: 	$660,000
+INFO: 	$4.103 million
+INFO: 	2.3 million
+INFO: 	2021
+INFO: 	5.6
+INFO: 	14
+INFO: 	13
+INFO: 	one
+INFO: 	23
+INFO: 	12
+INFO: 	2022
+INFO: 	two
+INFO: 	137,500
+INFO: 	7
+INFO: 	1
+INFO: 	4.25 million
+INFO: 	28
+INFO: 	5
+INFO: 	660,000
+INFO: 	3
+INFO: 	one
+INFO: 	1.127 million
+INFO: 	1.127 million
+INFO: 	1
+INFO: 	2
+INFO: 	one
+INFO: 	1.5 million
+INFO: 	3.4 million
+INFO: 	4.103 million
+INFO: 	4.103 million
+INFO: 	6.4
+INFO: 	17 million
+INFO: 	10.5
+INFO: 	6
+INFO: 	51
+INFO: 	One
+INFO: 	six
+INFO: 	2021
+INFO: 	2
+INFO: 	12
+INFO: 	three
+INFO: 	3.4 million
+INFO: 	two
+INFO: 	one
+INFO: 	3 million
+INFO: 	650K
+INFO: 	650,000
+INFO: 	2
+INFO: 	8,063,304
+INFO: 	one
+INFO: 	2023
+INFO: 	250,000
+INFO: 	11
+INFO: 	250,000
+INFO: 	1 million
+INFO: 	one
+INFO: 	2
+INFO: 	987,500
+INFO: 	10
+INFO: 	11
+INFO: 	one
+INFO: 	one
+INFO: 	15.0
+INFO: 	Two
+INFO: 	6 million
+INFO: 	9
+INFO: 	31
+INFO: 	20250
+INFO: 	4
+INFO: 	6.4
+INFO: 	3.5 million
+INFO: 	2025
+INFO: 	8
+INFO: 	400
+INFO: 	1.35 million
+INFO: 	five
+INFO: 	2022
+INFO: Sentiment of text information entered: magnitude: 48.0
+
+INFO: 127.0.0.1 - - [02/May/2021 17:48:23] "[32mGET /files/8/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:48:23] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:48:23] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:48:23] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:49:18] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:49:19] "[32mGET /loadanalysis/8 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:49:19] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:49:28] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [02/May/2021 17:49:42] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [02/May/2021 17:49:51] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:49:51] "[32mGET /loadlinks/0 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:49:51] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:49:52] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:49:53] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	New York Giants
+INFO: 	Edge Ifeadi Odenigbo
+INFO: 	David Mayo
+INFO: 	spots
+INFO: 	Dave Gettleman
+INFO: 	BIG BLUE+ Takeaways
+INFO: 	team
+INFO: 	BBLUE
+INFO: 	deal
+INFO: 	video
+INFO: 	Free Agency
+INFO: 	Veteran Salary Benefit deal
+INFO: 	season
+INFO: 	Leonard Williams
+INFO: 	deal
+INFO: 	some
+INFO: 	cornerback
+INFO: 	Reggie Ragland
+INFO: 	Dion Lewis
+INFO: 	deal
+INFO: 	Austin Johnson
+INFO: 	Evan Engram
+INFO: 	draft class
+INFO: 	Nate Ebner
+INFO: 	one
+INFO: 	players
+INFO: 	contracts decisions
+INFO: 	non-decisions
+INFO: 	HOME
+INFO: 	teams
+INFO: 	rookie deals
+INFO: 	Mike Glennon
+INFO: 	credit
+INFO: 	deal
+INFO: 	deals
+INFO: 	draft
+INFO: 	draft
+INFO: 	linebacker
+INFO: 	Joe Judge
+INFO: 	way
+INFO: 	players
+INFO: 	agency
+INFO: 	Adoree' Jackson
+INFO: 	start
+INFO: 	The Giants
+INFO: 	prelude
+INFO: 	star
+INFO: 	tight end
+INFO: 	backup quarterback
+INFO: 	quarterback
+INFO: 	space
+INFO: 	cap space
+INFO: 	free agency moves
+INFO: 	edge rusher
+INFO: 	Jim Mora Jr
+INFO: 	chart
+INFO: 	Devontae Booker
+INFO: 	roles
+INFO: 	league
+INFO: 	fact
+INFO: 	running back
+INFO: 	offense
+INFO: 	league
+INFO: 	guessing game
+INFO: 	chance
+INFO: 	backup
+INFO: 	running back
+INFO: 	Devante Downs
+INFO: 	stretch
+INFO: 	tackling efficiency rate
+INFO: 	contract
+INFO: 	free agency scorecard
+INFO: 	process
+INFO: 	position
+INFO: 	nitpick
+INFO: 	someone
+INFO: 	teams
+INFO: 	C.J. Board
+INFO: 	bottom
+INFO: 	shopping spree
+INFO: 	odds
+INFO: 	Hill
+INFO: 	plan
+INFO: 	stories
+INFO: 	activity
+INFO: 	contract breakdowns
+INFO: 	links
+INFO: 	ability
+INFO: 	scheme
+INFO: 	difference
+INFO: 	need
+INFO: 	receiver
+INFO: 	productivity score
+INFO: 	Nate Solder
+INFO: 	Cap
+INFO: 	EDGE
+INFO: 	Kyle Rudolph
+INFO: 	Cullen Gillaspia
+INFO: 	injury
+INFO: 	Rob Sale
+INFO: 	team
+INFO: 	deal
+INFO: 	deal
+INFO: 	nothing
+INFO: 	Eli Penny
+INFO: 	salary cap
+INFO: 	PATRICIA TRAINA
+INFO: 	offensive line
+INFO: 	draft
+INFO: 	Cody Core
+INFO: 	player
+INFO: 	contract
+INFO: 	contract
+INFO: 	player
+INFO: 	way
+INFO: 	moves
+INFO: 	cap money
+INFO: 	money
+INFO: 	money
+INFO: 	linebacker
+INFO: 	Colt McCoy
+INFO: 	People
+INFO: 	player
+INFO: 	role
+INFO: 	teammates
+INFO: 	team
+INFO: 	leadership
+INFO: 	deal
+INFO: 	deal
+INFO: 	contract
+INFO: 	teams
+INFO: 	teams
+INFO: 	cap
+INFO: 	cap
+INFO: 	guard
+INFO: 	things
+INFO: 	NFL
+INFO: 	roster bonuses
+INFO: 	signing bonus
+INFO: 	incentives
+INFO: 	incentive
+INFO: 	linebacker
+INFO: 	deal
+INFO: 	deal
+INFO: 	objectives
+INFO: 	veteran
+INFO: 	contract
+INFO: 	Pro Bowl
+INFO: 	bath
+INFO: 	roster building
+INFO: 	process
+INFO: 	contract builder
+INFO: 	benefits
+INFO: 	hook
+INFO: 	berths
+INFO: 	Kyle Rudolph I
+INFO: 	teammates
+INFO: 	way
+INFO: 	team
+INFO: 	NCAA
+INFO: 	contracts
+INFO: 	Jason Garrett
+INFO: 	Pat Flaherty
+INFO: 	deal
+INFO: 	money hit
+INFO: 	role
+INFO: 	coaches
+INFO: 	principle
+INFO: 	depth
+INFO: 	option
+INFO: 	way
+INFO: 	hip ailment
+INFO: 	response
+INFO: 	way
+INFO: 	way
+INFO: 	proration
+INFO: 	salary cap exploding
+INFO: 	nature
+INFO: 	cap savings
+INFO: 	timing
+INFO: 	gobs
+INFO: 	career
+INFO: 	twists
+INFO: 	money
+INFO: 	teams
+INFO: 	backup quarterback
+INFO: 	upgrade
+INFO: 	move
+INFO: 	reason
+INFO: 	reason
+INFO: 	Some
+INFO: 	guess
+INFO: 	passing
+INFO: 	Downs
+INFO: 	third-down
+INFO: 	edge rushers
+INFO: 	pass-rush snaps
+INFO: 	rusher
+INFO: 	moves
+INFO: 	pass
+INFO: 	much
+INFO: 	running back
+INFO: 	promise
+INFO: 	character
+INFO: 	offensive line
+INFO: 	draft
+INFO: 	offensive line
+INFO: 	field
+INFO: 	guy
+INFO: 	season
+INFO: 	guy
+INFO: 	team
+INFO: 	league
+INFO: 	Core
+INFO: 	offense
+INFO: 	offense
+INFO: 	fullback
+INFO: 	fullback
+INFO: 	snaps
+INFO: 	physical
+INFO: 	hope
+INFO: 	Wayne Gallman
+INFO: 	players
+INFO: 	leadership role
+INFO: 	edition
+INFO: 	dent
+INFO: 	free agents
+INFO: 	signing
+INFO: 	money hit
+INFO: 	factors
+INFO: 	arm
+INFO: 	people
+INFO: 	playtime incentives
+INFO: 	base defense
+INFO: 	lot
+INFO: 	kickoff returner
+INFO: 	upgrade
+INFO: 	production
+INFO: 	career
+INFO: 	rate
+INFO: 	defense
+INFO: 	Kenny Golladay
+INFO: 	expectation
+INFO: 	arm strength
+INFO: 	lack
+INFO: 	quarterback
+INFO: 	season
+INFO: 	one
+INFO: 	Super Bowl
+INFO: 	fit
+INFO: 	lot
+INFO: 	Dalvin Tomlinson
+INFO: 	Kyler Fackrell
+INFO: 	hook
+INFO: 	position
+INFO: 	Kyle Pitts
+INFO: 	money hit
+INFO: 	role
+INFO: 	snaps
+INFO: 	Carter Coughlin
+INFO: 	VSB
+INFO: 	more
+INFO: 	rocket
+INFO: 	addition
+INFO: 	athleticism
+INFO: 	drop-off
+INFO: 	no one
+INFO: 	center
+INFO: 	criteria
+INFO: 	multimillions
+INFO: 	coaching staff
+INFO: 	bit
+INFO: 	quarterback hits
+INFO: 	cards
+INFO: 	designation
+INFO: 	point
+INFO: 	table
+INFO: 	direction
+INFO: 	team
+INFO: 	team
+INFO: 	tight end
+INFO: 	end
+INFO: 	increase
+INFO: 	rookie deals
+INFO: 	deals
+INFO: 	news
+INFO: 	steal
+INFO: 	mind
+INFO: 	performance escalator
+INFO: 	combination
+INFO: 	words
+INFO: 	fabric
+INFO: 	heart
+INFO: 	raise
+INFO: 	departure
+INFO: 	details
+INFO: 	retrospect
+INFO: 	rotation
+INFO: 	part
+INFO: 	problem
+INFO: 	sense
+INFO: 	cap
+INFO: 	team
+INFO: 	Jonotthan Harrison
+INFO: 	NFILMIG 2
+INFO: 	draft
+INFO: 	LTBEs
+INFO: 	NLTBE
+INFO: 	draft
+INFO: 	guards
+INFO: 	guards
+INFO: 	people
+INFO: 	picks
+INFO: 	playoff contender
+INFO: 	matter
+INFO: 	roster
+INFO: 	free agency
+INFO: 	free agency
+INFO: 	value
+INFO: 	roster spots
+INFO: 	scouts
+INFO: 	return
+INFO: 	feed
+INFO: 	LockedOn Giants
+INFO: 	way
+INFO: 	season
+INFO: 	cap space
+INFO: 	Lorenzo Carter
+INFO: 	good
+INFO: 	New York
+INFO: 	package
+INFO: 	everyone
+INFO: 	bank
+INFO: 	cutting
+INFO: 	doubt
+INFO: 	locker room
+INFO: 	kids
+INFO: 	none
+INFO: 	exception
+INFO: 	imbalance
+INFO: 	start
+INFO: 	star
+INFO: 	start
+INFO: 	draft picks
+INFO: 	draft picks
+INFO: 	picks
+INFO: 	comp draft picks
+INFO: 	draft class
+INFO: 	salary cap space
+INFO: 	snaps
+INFO: 	thing
+INFO: 	fact
+INFO: 	thinking
+INFO: 	change
+INFO: 	running back
+INFO: 	Daniel Jones
+INFO: 	Tae Crowder
+INFO: 	rule
+INFO: 	Saquon Barkley
+INFO: 	Achilles
+INFO: 	Pro Football Focus
+INFO: 	Vikings
+INFO: 	Hercules Mata'afa
+INFO: 	Patrick Graham
+INFO: 	chances
+INFO: 	cap
+INFO: 	lineman
+INFO: 	linemen
+INFO: 	formula
+INFO: 	rookie pool
+INFO: 	Rookie Pool
+INFO: 	formula
+INFO: 	newsletter
+INFO: 	questions
+INFO: 	podcasts
+INFO: 	Thoughts
+INFO: 	Twitter
+INFO: 	B.J.
+INFO: 	Kevin Zeitler
+INFO: 	free agency
+INFO: 	eyebrows
+INFO: 	mistakes
+INFO: 	window
+INFO: 	fuss
+INFO: 	effect
+INFO: 	number
+INFO: 	radar
+INFO: 	latest
+INFO: 	mailbag
+INFO: 	subscription
+INFO: 	podcast
+INFO: 	head coach
+INFO: 	roster
+INFO: 	heck
+INFO: 	first
+INFO: 	Penny
+INFO: 	total
+INFO: 	Kaden Smith
+INFO: 	New England
+INFO: 	Adrian Colbert
+INFO: 	RT Cameron Fleming
+INFO: 	Alfred Morris
+INFO: 	Spencer Pulley
+INFO: 	Jabaal Sheard
+INFO: 	OC
+INFO: 	draft class
+INFO: 	training
+INFO: 	no-brainer
+INFO: 	set
+INFO: 	personnel
+INFO: 	field
+INFO: 	hog molly
+INFO: 	person
+INFO: 	both
+INFO: 	scout
+INFO: 	video
+INFO: 	top
+INFO: 	questions
+INFO: 	mentor
+INFO: 	mentor
+INFO: 	berth
+INFO: 	reaction
+INFO: 	Levine Toilolo
+INFO: 	history
+INFO: 	eye
+INFO: 	article
+INFO: 	series
+INFO: 	track
+INFO: 	pants
+INFO: 	practice
+INFO: 	habits
+INFO: 	seat
+INFO: 	body
+INFO: 	peer
+INFO: 	tight ends
+INFO: 	Facebook
+INFO: 	sense
+INFO: 	way
+INFO: 	showing
+INFO: 	claim
+INFO: 	Giants view Rudolph
+INFO: 	Florida
+INFO: 	Q&As
+INFO: 	2021
+INFO: 	2022
+INFO: 	2025
+INFO: 	2023
+INFO: 	2021
+INFO: 	2022
+INFO: 	$250,000
+INFO: 	$17 million
+INFO: 	$4.25 million
+INFO: 	$3.4 million
+INFO: 	$3.4 million
+INFO: 	$1.127 million
+INFO: 	$987,500
+INFO: 	$137,500
+INFO: 	$2.3 million
+INFO: 	$6 million
+INFO: 	$1 million
+INFO: 	$250,000
+INFO: 	$1.5 million
+INFO: 	$3 million
+INFO: 	$3.5 million
+INFO: 	$1.35 million
+INFO: 	$650K
+INFO: 	$650,000
+INFO: 	$8,063,304
+INFO: 	$660,000
+INFO: 	$4.103 million
+INFO: 	three
+INFO: 	3.4 million
+INFO: 	One
+INFO: 	six
+INFO: 	2
+INFO: 	12
+INFO: 	2021
+INFO: 	2
+INFO: 	8,063,304
+INFO: 	650,000
+INFO: 	one
+INFO: 	two
+INFO: 	one
+INFO: 	3 million
+INFO: 	987,500
+INFO: 	10
+INFO: 	2
+INFO: 	11
+INFO: 	650K
+INFO: 	15.0
+INFO: 	one
+INFO: 	one
+INFO: 	2023
+INFO: 	250,000
+INFO: 	1 million
+INFO: 	one
+INFO: 	11
+INFO: 	250,000
+INFO: 	8
+INFO: 	400
+INFO: 	2025
+INFO: 	2022
+INFO: 	five
+INFO: 	6 million
+INFO: 	9
+INFO: 	Two
+INFO: 	6.4
+INFO: 	31
+INFO: 	20250
+INFO: 	4
+INFO: 	3.5 million
+INFO: 	1.35 million
+INFO: 	2022
+INFO: 	23
+INFO: 	12
+INFO: 	2.3 million
+INFO: 	2021
+INFO: 	one
+INFO: 	13
+INFO: 	5.6
+INFO: 	14
+INFO: 	660,000
+INFO: 	one
+INFO: 	3
+INFO: 	1
+INFO: 	1.127 million
+INFO: 	1.127 million
+INFO: 	2
+INFO: 	137,500
+INFO: 	7
+INFO: 	two
+INFO: 	1
+INFO: 	4.25 million
+INFO: 	28
+INFO: 	5
+INFO: 	6.4
+INFO: 	3.4 million
+INFO: 	4.103 million
+INFO: 	4.103 million
+INFO: 	one
+INFO: 	1.5 million
+INFO: 	6
+INFO: 	51
+INFO: 	17 million
+INFO: 	10.5
+INFO: Sentiment of text information entered: magnitude: 48.0
+
+INFO: 127.0.0.1 - - [02/May/2021 17:49:57] "[32mGET /files/8/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:49:57] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:49:57] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:49:57] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:50:00] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:50:01] "[32mGET /loadanalysis/8 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:50:01] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:50:34] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:50:35] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:51:28] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:51:28] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:51:28] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Here, I use the slate3k library to turn this .pdf file into .txt
+INFO: Filetype = .pdf
+WARNING: Cannot locate objid=62
+INFO: Uploading file court_case.pdf
+INFO: 127.0.0.1 - - [02/May/2021 17:51:55] "[32mPOST /files HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:51:55] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:51:55] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:51:55] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:51:56] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:51:58] "[32mGET /loadanalysis/9 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:51:58] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:52:05] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [02/May/2021 17:53:06] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:53:07] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:53:08] "[32mGET /loadanalysis/9 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:53:08] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [02/May/2021 17:53:45] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:53:46] "[32mGET /loadanalysis/9 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:53:46] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [02/May/2021 17:55:06] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:55:10] "[32mGET /loadanalysis/9 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:55:10] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:55:14] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:55:17] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:55:18] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	Sean Wright
+INFO: 	state conviction
+INFO: 	U.S.
+INFO: 	judgment
+INFO: 	custody
+INFO: 	Alaska Supreme Court
+INFO: 	SUPREME COURT OF THE UNITED STATES
+INFO: 	ALASKA
+INFO: 	SEAN WRIGHT ON PETITION
+INFO: 	WRIT OF CERTIORARI
+INFO: 	procedure
+INFO: 	sentence
+INFO: 	custody
+INFO: 	UNITED STATES COURT OF APPEALS FOR THE NINTH CIRCUIT
+INFO: 	PER CURIAM
+INFO: 	counts
+INFO: 	sex offender
+INFO: 	minor
+INFO: 	abuse
+INFO: 	law
+INFO: 	jury
+INFO: 	Sex Offender Registration
+INFO: 	petition
+INFO: 	State v. Wright
+INFO: 	court
+INFO: 	conviction
+INFO: 	course
+INFO: 	Notification Act
+INFO: 	sentence
+INFO: 	motion
+INFO: 	U.S.C.
+INFO: 	state court
+INFO: 	State court
+INFO: 	court
+INFO: 	District Court
+INFO: 	writ
+INFO: 	conviction
+INFO: 	State court
+INFO: 	court
+INFO: 	motion
+INFO: 	count
+INFO: 	proceedings
+INFO: 	United States District Court for the District of Alaska
+INFO: 	state conviction
+INFO: 	custody
+INFO: 	custody
+INFO: 	120 Stat. 591
+INFO: 	habeas petitioner
+INFO: 	habeas corpus
+INFO: 	conviction
+INFO: 	judge
+INFO: 	Tennessee
+INFO: 	claims
+INFO: 	Judgment
+INFO: 	constitutionality
+INFO: 	sentence
+INFO: 	failure
+INFO: 	release
+INFO: 	State court
+INFO: 	Court of Appeals
+INFO: 	United States v. Wright
+INFO: 	conviction
+INFO: 	conviction
+INFO: 	view
+INFO: 	view
+INFO: 	writ
+INFO: 	ALASKA v. WRIGHT
+INFO: 	sentence
+INFO: 	sex offender
+INFO: 	predicate
+INFO: 	law
+INFO: 	ED Tenn
+INFO: 	abuse
+INFO: 	constitutionality
+INFO: 	minor
+INFO: 	habeas corpus
+INFO: 	petitioner
+INFO: 	con- viction
+INFO: 	fact
+INFO: 	mechanism
+INFO: 	threshold ground
+INFO: 	cus- tody
+INFO: 	somewhere
+INFO: 	Pet
+INFO: 	petition
+INFO: 	Id.
+INFO: 	convic- tion
+INFO: 	reg- ister
+INFO: 	behalf
+INFO: 	person
+INFO: 	Section
+INFO: 	application
+INFO: 	Eastern District
+INFO: 	crimes
+INFO: 	ECF Doc
+INFO: 	predicate
+INFO: 	panel
+INFO: 	state crime
+INFO: 	requirement
+INFO: 	judgment
+INFO: 	judgment
+INFO: 	route
+INFO: 	Appx. 544
+INFO: 	Cert
+INFO: 	conviction
+INFO: 	ability
+INFO: 	F. 3d
+INFO: 	Appx.
+INFO: 	writ
+INFO: 	view
+INFO: 	proceedings
+INFO: 	Zichko v. Idaho
+INFO: 	Sixth Amendment
+INFO: 	conviction
+INFO: 	case
+INFO: 	Maleng v. Cook
+INFO: 	means
+INFO: 	reason
+INFO: 	basis
+INFO: 	require- ments
+INFO: 	theories
+INFO: 	opinion
+INFO: 	sentences
+INFO: 	habeas petitioner
+INFO: 	sentence
+INFO: 	Lackawanna County District Attorney v. Coss
+INFO: 	possibility
+INFO: 	requirement
+INFO: 	possibility
+INFO: 	case
+INFO: 	difference
+INFO: 	enhancement
+INFO: 	2021
+INFO: 	April 26, 2021
+INFO: 	2009
+INFO: 	2017
+INFO: 	2016
+INFO: 	2009
+INFO: 	2020
+INFO: 	2001
+INFO: 	1989
+INFO: 	2021
+INFO: 	2001
+INFO: 	20913
+INFO: 	546
+INFO: 	1989
+INFO: 	401
+INFO: 	2009
+INFO: 	3
+INFO: 	2254
+INFO: 	28
+INFO: 	2020
+INFO: 	2254
+INFO: 	488
+INFO: 	20911
+INFO: 	2001
+INFO: 	404
+INFO: 	2009
+INFO: 	532
+INFO: 	819
+INFO: 	2254
+INFO: 	546
+INFO: 	593
+INFO: 	593
+INFO: 	16
+INFO: 	404
+INFO: 	66
+INFO: 	00112
+INFO: 	1
+INFO: 	490
+INFO: 	2021
+INFO: 	1
+INFO: 	2241
+INFO: 	2254
+INFO: 	2255
+INFO: 	1019
+INFO: 	2254
+INFO: 	544
+INFO: 	20913
+INFO: 	34
+INFO: 	545
+INFO: 	2254
+INFO: 	593
+INFO: 	2250
+INFO: 	17
+INFO: 	2254
+INFO: 	493
+INFO: 	one
+INFO: 	3
+INFO: 	2255
+INFO: 	2254
+INFO: 	2254
+INFO: 	492
+INFO: 	940
+INFO: 	166
+INFO: 	170
+INFO: 	1
+INFO: 	2
+INFO: 	18
+INFO: 	2017
+INFO: 	402
+INFO: 	394
+INFO: 	591
+INFO: 	3
+INFO: 	Ten
+INFO: 	1015
+INFO: 	3
+INFO: 	26
+INFO: 	13
+INFO: 	2001
+INFO: 	492
+INFO: 	490
+INFO: 	402
+INFO: 	20
+INFO: 	120
+INFO: 	247
+INFO: 	One
+INFO: 	2016
+INFO: 	2241
+INFO: 	819
+INFO: 	28
+INFO: 	2021
+INFO: 	2254
+INFO: 	2021
+INFO: 	2254
+INFO: 	five
+INFO: Sentiment of text information entered: magnitude: 10.800000190734863
+score: -0.10000000149011612
+
+INFO: 127.0.0.1 - - [02/May/2021 17:55:21] "[32mGET /files/9/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:55:21] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:55:21] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:55:21] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:55:23] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:55:24] "[32mGET /loadanalysis/9 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:55:24] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [02/May/2021 17:56:03] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:56:04] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:56:06] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	Sean Wright
+INFO: 	state conviction
+INFO: 	U.S.
+INFO: 	judgment
+INFO: 	custody
+INFO: 	Alaska Supreme Court
+INFO: 	SUPREME COURT OF THE UNITED STATES
+INFO: 	ALASKA
+INFO: 	SEAN WRIGHT ON PETITION
+INFO: 	WRIT OF CERTIORARI
+INFO: 	procedure
+INFO: 	sentence
+INFO: 	custody
+INFO: 	UNITED STATES COURT OF APPEALS FOR THE NINTH CIRCUIT
+INFO: 	PER CURIAM
+INFO: 	counts
+INFO: 	sex offender
+INFO: 	minor
+INFO: 	abuse
+INFO: 	law
+INFO: 	jury
+INFO: 	Sex Offender Registration
+INFO: 	petition
+INFO: 	State v. Wright
+INFO: 	court
+INFO: 	conviction
+INFO: 	course
+INFO: 	Notification Act
+INFO: 	sentence
+INFO: 	motion
+INFO: 	U.S.C.
+INFO: 	state court
+INFO: 	State court
+INFO: 	court
+INFO: 	District Court
+INFO: 	writ
+INFO: 	conviction
+INFO: 	State court
+INFO: 	court
+INFO: 	motion
+INFO: 	count
+INFO: 	proceedings
+INFO: 	United States District Court for the District of Alaska
+INFO: 	state conviction
+INFO: 	custody
+INFO: 	custody
+INFO: 	120 Stat. 591
+INFO: 	habeas petitioner
+INFO: 	habeas corpus
+INFO: 	conviction
+INFO: 	judge
+INFO: 	Tennessee
+INFO: 	claims
+INFO: 	Judgment
+INFO: 	constitutionality
+INFO: 	sentence
+INFO: 	failure
+INFO: 	release
+INFO: 	State court
+INFO: 	Court of Appeals
+INFO: 	United States v. Wright
+INFO: 	conviction
+INFO: 	conviction
+INFO: 	view
+INFO: 	view
+INFO: 	writ
+INFO: 	ALASKA v. WRIGHT
+INFO: 	sentence
+INFO: 	sex offender
+INFO: 	predicate
+INFO: 	law
+INFO: 	ED Tenn
+INFO: 	abuse
+INFO: 	constitutionality
+INFO: 	minor
+INFO: 	habeas corpus
+INFO: 	petitioner
+INFO: 	con- viction
+INFO: 	fact
+INFO: 	mechanism
+INFO: 	threshold ground
+INFO: 	cus- tody
+INFO: 	somewhere
+INFO: 	Pet
+INFO: 	petition
+INFO: 	Id.
+INFO: 	convic- tion
+INFO: 	reg- ister
+INFO: 	behalf
+INFO: 	person
+INFO: 	Section
+INFO: 	application
+INFO: 	Eastern District
+INFO: 	crimes
+INFO: 	ECF Doc
+INFO: 	predicate
+INFO: 	panel
+INFO: 	state crime
+INFO: 	requirement
+INFO: 	judgment
+INFO: 	judgment
+INFO: 	route
+INFO: 	Appx. 544
+INFO: 	Cert
+INFO: 	conviction
+INFO: 	ability
+INFO: 	F. 3d
+INFO: 	Appx.
+INFO: 	writ
+INFO: 	view
+INFO: 	proceedings
+INFO: 	Zichko v. Idaho
+INFO: 	Sixth Amendment
+INFO: 	conviction
+INFO: 	case
+INFO: 	Maleng v. Cook
+INFO: 	means
+INFO: 	reason
+INFO: 	basis
+INFO: 	require- ments
+INFO: 	theories
+INFO: 	opinion
+INFO: 	sentences
+INFO: 	habeas petitioner
+INFO: 	sentence
+INFO: 	Lackawanna County District Attorney v. Coss
+INFO: 	possibility
+INFO: 	requirement
+INFO: 	possibility
+INFO: 	case
+INFO: 	difference
+INFO: 	enhancement
+INFO: 	2021
+INFO: 	April 26, 2021
+INFO: 	2009
+INFO: 	2017
+INFO: 	2016
+INFO: 	2009
+INFO: 	2020
+INFO: 	2001
+INFO: 	1989
+INFO: 	2021
+INFO: 	2001
+INFO: 	20913
+INFO: 	1019
+INFO: 	2020
+INFO: 	2009
+INFO: 	593
+INFO: 	2021
+INFO: 	28
+INFO: 	532
+INFO: 	394
+INFO: 	166
+INFO: 	404
+INFO: 	2250
+INFO: 	2021
+INFO: 	1015
+INFO: 	2255
+INFO: 	20911
+INFO: 	28
+INFO: 	593
+INFO: 	3
+INFO: 	492
+INFO: 	2254
+INFO: 	401
+INFO: 	2009
+INFO: 	3
+INFO: 	2254
+INFO: 	17
+INFO: 	2254
+INFO: 	488
+INFO: 	819
+INFO: 	2021
+INFO: 	20
+INFO: 	546
+INFO: 	five
+INFO: 	2016
+INFO: 	1
+INFO: 	20913
+INFO: 	402
+INFO: 	2001
+INFO: 	1989
+INFO: 	490
+INFO: 	2001
+INFO: 	13
+INFO: 	2254
+INFO: 	2254
+INFO: 	402
+INFO: 	00112
+INFO: 	2254
+INFO: 	819
+INFO: 	492
+INFO: 	2241
+INFO: 	3
+INFO: 	247
+INFO: 	170
+INFO: 	2017
+INFO: 	one
+INFO: 	120
+INFO: 	493
+INFO: 	26
+INFO: 	404
+INFO: 	545
+INFO: 	2254
+INFO: 	490
+INFO: 	1
+INFO: 	591
+INFO: 	2254
+INFO: 	546
+INFO: 	2241
+INFO: 	2254
+INFO: 	Ten
+INFO: 	2
+INFO: 	34
+INFO: 	16
+INFO: 	544
+INFO: 	2254
+INFO: 	2254
+INFO: 	593
+INFO: 	2255
+INFO: 	66
+INFO: 	3
+INFO: 	18
+INFO: 	One
+INFO: 	1
+INFO: 	940
+INFO: Sentiment of text information entered: magnitude: 10.800000190734863
+score: -0.10000000149011612
+
+INFO: 127.0.0.1 - - [02/May/2021 17:56:09] "[32mGET /files/9/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:56:09] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:56:09] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:56:09] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:56:10] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:56:11] "[32mGET /loadanalysis/9 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:56:11] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [02/May/2021 17:56:52] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:56:54] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:56:56] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	Sean Wright
+INFO: 	state conviction
+INFO: 	U.S.
+INFO: 	judgment
+INFO: 	custody
+INFO: 	Alaska Supreme Court
+INFO: 	SUPREME COURT OF THE UNITED STATES
+INFO: 	ALASKA
+INFO: 	SEAN WRIGHT ON PETITION
+INFO: 	WRIT OF CERTIORARI
+INFO: 	procedure
+INFO: 	sentence
+INFO: 	custody
+INFO: 	UNITED STATES COURT OF APPEALS FOR THE NINTH CIRCUIT
+INFO: 	PER CURIAM
+INFO: 	counts
+INFO: 	sex offender
+INFO: 	minor
+INFO: 	abuse
+INFO: 	law
+INFO: 	jury
+INFO: 	Sex Offender Registration
+INFO: 	petition
+INFO: 	State v. Wright
+INFO: 	court
+INFO: 	conviction
+INFO: 	course
+INFO: 	Notification Act
+INFO: 	sentence
+INFO: 	motion
+INFO: 	U.S.C.
+INFO: 	state court
+INFO: 	State court
+INFO: 	court
+INFO: 	District Court
+INFO: 	writ
+INFO: 	conviction
+INFO: 	State court
+INFO: 	court
+INFO: 	motion
+INFO: 	count
+INFO: 	proceedings
+INFO: 	United States District Court for the District of Alaska
+INFO: 	state conviction
+INFO: 	custody
+INFO: 	custody
+INFO: 	120 Stat. 591
+INFO: 	habeas petitioner
+INFO: 	habeas corpus
+INFO: 	conviction
+INFO: 	judge
+INFO: 	Tennessee
+INFO: 	claims
+INFO: 	Judgment
+INFO: 	constitutionality
+INFO: 	sentence
+INFO: 	failure
+INFO: 	release
+INFO: 	State court
+INFO: 	Court of Appeals
+INFO: 	United States v. Wright
+INFO: 	conviction
+INFO: 	conviction
+INFO: 	view
+INFO: 	view
+INFO: 	writ
+INFO: 	ALASKA v. WRIGHT
+INFO: 	sentence
+INFO: 	sex offender
+INFO: 	predicate
+INFO: 	law
+INFO: 	ED Tenn
+INFO: 	abuse
+INFO: 	constitutionality
+INFO: 	minor
+INFO: 	habeas corpus
+INFO: 	petitioner
+INFO: 	con- viction
+INFO: 	fact
+INFO: 	mechanism
+INFO: 	threshold ground
+INFO: 	cus- tody
+INFO: 	somewhere
+INFO: 	Pet
+INFO: 	petition
+INFO: 	Id.
+INFO: 	convic- tion
+INFO: 	reg- ister
+INFO: 	behalf
+INFO: 	person
+INFO: 	Section
+INFO: 	application
+INFO: 	Eastern District
+INFO: 	crimes
+INFO: 	ECF Doc
+INFO: 	predicate
+INFO: 	panel
+INFO: 	state crime
+INFO: 	requirement
+INFO: 	judgment
+INFO: 	judgment
+INFO: 	route
+INFO: 	Appx. 544
+INFO: 	Cert
+INFO: 	conviction
+INFO: 	ability
+INFO: 	F. 3d
+INFO: 	Appx.
+INFO: 	writ
+INFO: 	view
+INFO: 	proceedings
+INFO: 	Zichko v. Idaho
+INFO: 	Sixth Amendment
+INFO: 	conviction
+INFO: 	case
+INFO: 	Maleng v. Cook
+INFO: 	means
+INFO: 	reason
+INFO: 	basis
+INFO: 	require- ments
+INFO: 	theories
+INFO: 	opinion
+INFO: 	sentences
+INFO: 	habeas petitioner
+INFO: 	sentence
+INFO: 	Lackawanna County District Attorney v. Coss
+INFO: 	possibility
+INFO: 	requirement
+INFO: 	possibility
+INFO: 	case
+INFO: 	difference
+INFO: 	enhancement
+INFO: 	2021
+INFO: 	April 26, 2021
+INFO: 	2009
+INFO: 	2017
+INFO: 	2016
+INFO: 	2009
+INFO: 	2020
+INFO: 	2001
+INFO: 	1989
+INFO: 	2021
+INFO: 	2001
+INFO: 	20913
+INFO: 	2254
+INFO: 	394
+INFO: 	One
+INFO: 	2254
+INFO: 	66
+INFO: 	490
+INFO: 	2254
+INFO: 	2255
+INFO: 	2255
+INFO: 	402
+INFO: 	493
+INFO: 	247
+INFO: 	490
+INFO: 	819
+INFO: 	2016
+INFO: 	2009
+INFO: 	1
+INFO: 	2254
+INFO: 	1989
+INFO: 	2009
+INFO: 	546
+INFO: 	18
+INFO: 	1
+INFO: 	404
+INFO: 	00112
+INFO: 	3
+INFO: 	2254
+INFO: 	20911
+INFO: 	2254
+INFO: 	2254
+INFO: 	1019
+INFO: 	120
+INFO: 	2021
+INFO: 	2021
+INFO: 	28
+INFO: 	819
+INFO: 	940
+INFO: 	2241
+INFO: 	401
+INFO: 	3
+INFO: 	593
+INFO: 	17
+INFO: 	2254
+INFO: 	one
+INFO: 	488
+INFO: 	20913
+INFO: 	2241
+INFO: 	1
+INFO: 	3
+INFO: 	26
+INFO: 	544
+INFO: 	2
+INFO: 	545
+INFO: 	34
+INFO: 	2017
+INFO: 	546
+INFO: 	16
+INFO: 	591
+INFO: 	532
+INFO: 	five
+INFO: 	Ten
+INFO: 	28
+INFO: 	2021
+INFO: 	20
+INFO: 	593
+INFO: 	166
+INFO: 	170
+INFO: 	2254
+INFO: 	402
+INFO: 	3
+INFO: 	2001
+INFO: 	2254
+INFO: 	13
+INFO: 	2001
+INFO: 	2020
+INFO: 	593
+INFO: 	1015
+INFO: 	2250
+INFO: 	492
+INFO: 	492
+INFO: 	404
+INFO: 	2254
+INFO: Sentiment of text information entered: magnitude: 10.800000190734863
+score: -0.10000000149011612
+
+INFO: 127.0.0.1 - - [02/May/2021 17:56:59] "[32mGET /files/9/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:56:59] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:56:59] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:56:59] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:57:00] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	New York Giants
+INFO: 	Edge Ifeadi Odenigbo
+INFO: 	David Mayo
+INFO: 	spots
+INFO: 	Dave Gettleman
+INFO: 	BIG BLUE+ Takeaways
+INFO: 	team
+INFO: 	BBLUE
+INFO: 	deal
+INFO: 	video
+INFO: 	Free Agency
+INFO: 	Veteran Salary Benefit deal
+INFO: 	season
+INFO: 	Leonard Williams
+INFO: 	deal
+INFO: 	some
+INFO: 	cornerback
+INFO: 	Reggie Ragland
+INFO: 	Dion Lewis
+INFO: 	deal
+INFO: 	Austin Johnson
+INFO: 	Evan Engram
+INFO: 	draft class
+INFO: 	Nate Ebner
+INFO: 	one
+INFO: 	players
+INFO: 	contracts decisions
+INFO: 	non-decisions
+INFO: 	HOME
+INFO: 	teams
+INFO: 	rookie deals
+INFO: 	Mike Glennon
+INFO: 	credit
+INFO: 	deal
+INFO: 	deals
+INFO: 	draft
+INFO: 	draft
+INFO: 	linebacker
+INFO: 	Joe Judge
+INFO: 	way
+INFO: 	players
+INFO: 	agency
+INFO: 	Adoree' Jackson
+INFO: 	start
+INFO: 	The Giants
+INFO: 	prelude
+INFO: 	star
+INFO: 	tight end
+INFO: 	backup quarterback
+INFO: 	quarterback
+INFO: 	space
+INFO: 	cap space
+INFO: 	free agency moves
+INFO: 	edge rusher
+INFO: 	Jim Mora Jr
+INFO: 	chart
+INFO: 	Devontae Booker
+INFO: 	roles
+INFO: 	league
+INFO: 	fact
+INFO: 	running back
+INFO: 	offense
+INFO: 	league
+INFO: 	guessing game
+INFO: 	chance
+INFO: 	backup
+INFO: 	running back
+INFO: 	Devante Downs
+INFO: 	stretch
+INFO: 	tackling efficiency rate
+INFO: 	contract
+INFO: 	free agency scorecard
+INFO: 	process
+INFO: 	position
+INFO: 	nitpick
+INFO: 	someone
+INFO: 	teams
+INFO: 	C.J. Board
+INFO: 	bottom
+INFO: 	shopping spree
+INFO: 	odds
+INFO: 	Hill
+INFO: 	plan
+INFO: 	stories
+INFO: 	activity
+INFO: 	contract breakdowns
+INFO: 	links
+INFO: 	ability
+INFO: 	scheme
+INFO: 	difference
+INFO: 	need
+INFO: 	receiver
+INFO: 	productivity score
+INFO: 	Nate Solder
+INFO: 	Cap
+INFO: 	EDGE
+INFO: 	Kyle Rudolph
+INFO: 	Cullen Gillaspia
+INFO: 	injury
+INFO: 	Rob Sale
+INFO: 	team
+INFO: 	deal
+INFO: 	deal
+INFO: 	nothing
+INFO: 	Eli Penny
+INFO: 	salary cap
+INFO: 	PATRICIA TRAINA
+INFO: 	offensive line
+INFO: 	draft
+INFO: 	Cody Core
+INFO: 	player
+INFO: 	contract
+INFO: 	contract
+INFO: 	player
+INFO: 	way
+INFO: 	moves
+INFO: 	cap money
+INFO: 	money
+INFO: 	money
+INFO: 	linebacker
+INFO: 	Colt McCoy
+INFO: 	People
+INFO: 	player
+INFO: 	role
+INFO: 	teammates
+INFO: 	team
+INFO: 	leadership
+INFO: 	deal
+INFO: 	deal
+INFO: 	contract
+INFO: 	teams
+INFO: 	teams
+INFO: 	cap
+INFO: 	cap
+INFO: 	guard
+INFO: 	things
+INFO: 	NFL
+INFO: 	roster bonuses
+INFO: 	signing bonus
+INFO: 	incentives
+INFO: 	incentive
+INFO: 	linebacker
+INFO: 	deal
+INFO: 	deal
+INFO: 	objectives
+INFO: 	veteran
+INFO: 	contract
+INFO: 	Pro Bowl
+INFO: 	bath
+INFO: 	roster building
+INFO: 	process
+INFO: 	contract builder
+INFO: 	benefits
+INFO: 	hook
+INFO: 	berths
+INFO: 	Kyle Rudolph I
+INFO: 	teammates
+INFO: 	way
+INFO: 	team
+INFO: 	NCAA
+INFO: 	contracts
+INFO: 	Jason Garrett
+INFO: 	Pat Flaherty
+INFO: 	deal
+INFO: 	money hit
+INFO: 	role
+INFO: 	coaches
+INFO: 	principle
+INFO: 	depth
+INFO: 	option
+INFO: 	way
+INFO: 	hip ailment
+INFO: 	response
+INFO: 	way
+INFO: 	way
+INFO: 	proration
+INFO: 	salary cap exploding
+INFO: 	nature
+INFO: 	cap savings
+INFO: 	timing
+INFO: 	gobs
+INFO: 	career
+INFO: 	twists
+INFO: 	money
+INFO: 	teams
+INFO: 	backup quarterback
+INFO: 	upgrade
+INFO: 	move
+INFO: 	reason
+INFO: 	reason
+INFO: 	Some
+INFO: 	guess
+INFO: 	passing
+INFO: 	Downs
+INFO: 	third-down
+INFO: 	edge rushers
+INFO: 	pass-rush snaps
+INFO: 	rusher
+INFO: 	moves
+INFO: 	pass
+INFO: 	much
+INFO: 	running back
+INFO: 	promise
+INFO: 	character
+INFO: 	offensive line
+INFO: 	draft
+INFO: 	offensive line
+INFO: 	field
+INFO: 	guy
+INFO: 	season
+INFO: 	guy
+INFO: 	team
+INFO: 	league
+INFO: 	Core
+INFO: 	offense
+INFO: 	offense
+INFO: 	fullback
+INFO: 	fullback
+INFO: 	snaps
+INFO: 	physical
+INFO: 	hope
+INFO: 	Wayne Gallman
+INFO: 	players
+INFO: 	leadership role
+INFO: 	edition
+INFO: 	dent
+INFO: 	free agents
+INFO: 	signing
+INFO: 	money hit
+INFO: 	factors
+INFO: 	arm
+INFO: 	people
+INFO: 	playtime incentives
+INFO: 	base defense
+INFO: 	lot
+INFO: 	kickoff returner
+INFO: 	upgrade
+INFO: 	production
+INFO: 	career
+INFO: 	rate
+INFO: 	defense
+INFO: 	Kenny Golladay
+INFO: 	expectation
+INFO: 	arm strength
+INFO: 	lack
+INFO: 	quarterback
+INFO: 	season
+INFO: 	one
+INFO: 	Super Bowl
+INFO: 	fit
+INFO: 	lot
+INFO: 	Dalvin Tomlinson
+INFO: 	Kyler Fackrell
+INFO: 	hook
+INFO: 	position
+INFO: 	Kyle Pitts
+INFO: 	money hit
+INFO: 	role
+INFO: 	snaps
+INFO: 	Carter Coughlin
+INFO: 	VSB
+INFO: 	more
+INFO: 	rocket
+INFO: 	addition
+INFO: 	athleticism
+INFO: 	drop-off
+INFO: 	no one
+INFO: 	center
+INFO: 	criteria
+INFO: 	multimillions
+INFO: 	coaching staff
+INFO: 	bit
+INFO: 	quarterback hits
+INFO: 	cards
+INFO: 	designation
+INFO: 	point
+INFO: 	table
+INFO: 	direction
+INFO: 	team
+INFO: 	team
+INFO: 	tight end
+INFO: 	end
+INFO: 	increase
+INFO: 	rookie deals
+INFO: 	deals
+INFO: 	news
+INFO: 	steal
+INFO: 	mind
+INFO: 	performance escalator
+INFO: 	combination
+INFO: 	words
+INFO: 	fabric
+INFO: 	heart
+INFO: 	raise
+INFO: 	departure
+INFO: 	details
+INFO: 	retrospect
+INFO: 	rotation
+INFO: 	part
+INFO: 	problem
+INFO: 	sense
+INFO: 	cap
+INFO: 	team
+INFO: 	Jonotthan Harrison
+INFO: 	NFILMIG 2
+INFO: 	draft
+INFO: 	LTBEs
+INFO: 	NLTBE
+INFO: 	draft
+INFO: 	guards
+INFO: 	guards
+INFO: 	people
+INFO: 	picks
+INFO: 	playoff contender
+INFO: 	matter
+INFO: 	roster
+INFO: 	free agency
+INFO: 	free agency
+INFO: 	value
+INFO: 	roster spots
+INFO: 	scouts
+INFO: 	return
+INFO: 	feed
+INFO: 	LockedOn Giants
+INFO: 	way
+INFO: 	season
+INFO: 	cap space
+INFO: 	Lorenzo Carter
+INFO: 	good
+INFO: 	New York
+INFO: 	package
+INFO: 	everyone
+INFO: 	bank
+INFO: 	cutting
+INFO: 	doubt
+INFO: 	locker room
+INFO: 	kids
+INFO: 	none
+INFO: 	exception
+INFO: 	imbalance
+INFO: 	start
+INFO: 	star
+INFO: 	start
+INFO: 	draft picks
+INFO: 	draft picks
+INFO: 	picks
+INFO: 	comp draft picks
+INFO: 	draft class
+INFO: 	salary cap space
+INFO: 	snaps
+INFO: 	thing
+INFO: 	fact
+INFO: 	thinking
+INFO: 	change
+INFO: 	running back
+INFO: 	Daniel Jones
+INFO: 	Tae Crowder
+INFO: 	rule
+INFO: 	Saquon Barkley
+INFO: 	Achilles
+INFO: 	Pro Football Focus
+INFO: 	Vikings
+INFO: 	Hercules Mata'afa
+INFO: 	Patrick Graham
+INFO: 	chances
+INFO: 	cap
+INFO: 	lineman
+INFO: 	linemen
+INFO: 	formula
+INFO: 	rookie pool
+INFO: 	Rookie Pool
+INFO: 	formula
+INFO: 	newsletter
+INFO: 	questions
+INFO: 	podcasts
+INFO: 	Thoughts
+INFO: 	Twitter
+INFO: 	B.J.
+INFO: 	Kevin Zeitler
+INFO: 	free agency
+INFO: 	eyebrows
+INFO: 	mistakes
+INFO: 	window
+INFO: 	fuss
+INFO: 	effect
+INFO: 	number
+INFO: 	radar
+INFO: 	latest
+INFO: 	mailbag
+INFO: 	subscription
+INFO: 	podcast
+INFO: 	head coach
+INFO: 	roster
+INFO: 	heck
+INFO: 	first
+INFO: 	Penny
+INFO: 	total
+INFO: 	Kaden Smith
+INFO: 	New England
+INFO: 	Adrian Colbert
+INFO: 	RT Cameron Fleming
+INFO: 	Alfred Morris
+INFO: 	Spencer Pulley
+INFO: 	Jabaal Sheard
+INFO: 	OC
+INFO: 	draft class
+INFO: 	training
+INFO: 	no-brainer
+INFO: 	set
+INFO: 	personnel
+INFO: 	field
+INFO: 	hog molly
+INFO: 	person
+INFO: 	both
+INFO: 	scout
+INFO: 	video
+INFO: 	top
+INFO: 	questions
+INFO: 	mentor
+INFO: 	mentor
+INFO: 	berth
+INFO: 	reaction
+INFO: 	Levine Toilolo
+INFO: 	history
+INFO: 	eye
+INFO: 	article
+INFO: 	series
+INFO: 	track
+INFO: 	pants
+INFO: 	practice
+INFO: 	habits
+INFO: 	seat
+INFO: 	body
+INFO: 	peer
+INFO: 	tight ends
+INFO: 	Facebook
+INFO: 	sense
+INFO: 	way
+INFO: 	showing
+INFO: 	claim
+INFO: 	Giants view Rudolph
+INFO: 	Florida
+INFO: 	Q&As
+INFO: 	2021
+INFO: 	2022
+INFO: 	2025
+INFO: 	2023
+INFO: 	2021
+INFO: 	2022
+INFO: 	$250,000
+INFO: 	$17 million
+INFO: 	$4.25 million
+INFO: 	$3.4 million
+INFO: 	$3.4 million
+INFO: 	$1.127 million
+INFO: 	$987,500
+INFO: 	$137,500
+INFO: 	$2.3 million
+INFO: 	$6 million
+INFO: 	$1 million
+INFO: 	$250,000
+INFO: 	$1.5 million
+INFO: 	$3 million
+INFO: 	$3.5 million
+INFO: 	$1.35 million
+INFO: 	$650K
+INFO: 	$650,000
+INFO: 	$8,063,304
+INFO: 	$660,000
+INFO: 	$4.103 million
+INFO: 	3.4 million
+INFO: 	15.0
+INFO: 	7
+INFO: 	2021
+INFO: 	10
+INFO: 	six
+INFO: 	4.103 million
+INFO: 	4.103 million
+INFO: 	Two
+INFO: 	2.3 million
+INFO: 	6.4
+INFO: 	1.35 million
+INFO: 	one
+INFO: 	1
+INFO: 	4
+INFO: 	3
+INFO: 	250,000
+INFO: 	1
+INFO: 	2022
+INFO: 	650K
+INFO: 	11
+INFO: 	20250
+INFO: 	650,000
+INFO: 	2
+INFO: 	one
+INFO: 	three
+INFO: 	250,000
+INFO: 	137,500
+INFO: 	2025
+INFO: 	6.4
+INFO: 	2
+INFO: 	3.4 million
+INFO: 	31
+INFO: 	13
+INFO: 	4.25 million
+INFO: 	11
+INFO: 	6 million
+INFO: 	2021
+INFO: 	1.127 million
+INFO: 	1.127 million
+INFO: 	3.5 million
+INFO: 	17 million
+INFO: 	1 million
+INFO: 	660,000
+INFO: 	five
+INFO: 	987,500
+INFO: 	two
+INFO: 	12
+INFO: 	one
+INFO: 	8,063,304
+INFO: 	2023
+INFO: 	2
+INFO: 	one
+INFO: 	12
+INFO: 	9
+INFO: 	10.5
+INFO: 	2022
+INFO: 	3 million
+INFO: 	14
+INFO: 	23
+INFO: 	one
+INFO: 	One
+INFO: 	one
+INFO: 	5
+INFO: 	8
+INFO: 	51
+INFO: 	two
+INFO: 	400
+INFO: 	5.6
+INFO: 	28
+INFO: 	6
+INFO: 	2
+INFO: 	1.5 million
+INFO: 	one
+INFO: 	one
+INFO: Sentiment of text information entered: magnitude: 48.0
+
+INFO: 127.0.0.1 - - [02/May/2021 17:57:05] "[32mGET /files/8/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:57:05] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:57:05] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:57:05] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:57:08] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:57:11] "[32mGET /loadanalysis/8 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:57:11] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:57:46] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:57:48] "[32mGET /loadanalysis/9 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:57:48] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:58:27] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:58:30] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [02/May/2021 17:58:59] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 17:59:00] "[32mGET /loadanalysis/9 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 17:59:00] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [02/May/2021 18:01:27] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 18:01:34] "[32mGET /loadanalysis/9 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 18:01:34] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 18:01:57] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 18:01:58] "[32mGET /loadanalysis/9 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 18:01:59] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 18:02:05] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 18:02:22] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 18:02:22] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 18:02:24] "[32mGET /loadanalysis/9 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 18:02:24] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 18:02:39] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 18:02:40] "[37mGET /homepage HTTP/1.1[0m" 200 -

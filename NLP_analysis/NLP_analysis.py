@@ -29,8 +29,8 @@ import time
 import docx2txt #DOC -> TXT
 import nltk #summarization
 import heapq #summarization
-nltk.download('punkt')
-nltk.download('stopwords')
+nltk.download('punkt', quiet=True)
+nltk.download('stopwords', quiet=True)
 
 try:
 	os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "../.keys/key.json"
@@ -269,13 +269,13 @@ def Summarize(text_data):
 	for s in sentence_list:
 	    for word in nltk.word_tokenize(s.lower()):
 	        if word in word_frequencies.keys():
-	            if len(s.split(' ')) < 30:
+	            if len(s.split(' ')) < 100: #100 word limit per sentence
 	                if s not in sentence_scores.keys():
 	                    sentence_scores[s] = word_frequencies[word]
 	                else:
 	                    sentence_scores[s] += word_frequencies[word]
 
-	summary_sentences = heapq.nlargest(5, sentence_scores, key=sentence_scores.get) #retrieves 5 summary sentences
+	summary_sentences = heapq.nlargest(8, sentence_scores, key=sentence_scores.get) #retrieves 6 summary sentences
 	summary = ' '.join(summary_sentences)
 
 	return summary                 	            
