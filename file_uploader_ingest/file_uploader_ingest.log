@@ -3259,3 +3259,18 @@ INFO: 127.0.0.1 - - [02/May/2021 00:12:16] "[37mGET /numfiles HTTP/1.1[0m" 200
 INFO: 127.0.0.1 - - [02/May/2021 00:12:17] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
 INFO: 127.0.0.1 - - [02/May/2021 00:12:17] "[37mGET /upload HTTP/1.1[0m" 200 -
 INFO: 127.0.0.1 - - [02/May/2021 00:12:21] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [02/May/2021 00:20:30] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:20:37] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:20:38] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:20:44] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 00:20:44] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:20:44] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 00:20:44] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:20:45] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:20:47] "[32mGET /loadanalysis/8 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [02/May/2021 00:20:47] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [02/May/2021 00:20:58] "[37mGET /fileview HTTP/1.1[0m" 200 -
