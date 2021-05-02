@@ -40,6 +40,11 @@ ljstaib@bu.edu
 - Can now upload .RTF files (4/21) 
 - Made NLP analysis more clear to user (4/21)
   - Instead of score and magnitude, shows sentiment as negative, neutral, or positive and the magnitude as weakly expressed, strongly expressed, or in the middle
+- NLP Overheaul (5/2)
+  - I created a separate analysis screen that a user can access from the file menu
+  - A user can click on the "View Analysis" corresponding to a specific article to take them to a separate page
+  - NLP information is no longer crammed on the file list page
+  - Begun working on code to summarize the text data of articles
 
 # HW2 Status - HW2
 Phase 1: Completed. Stub-API modules for Phase 1 are in their respective .py files. I also have psuedocode in newsanalyzer_pseudocode.txt.
