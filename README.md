@@ -13,6 +13,7 @@ ljstaib@bu.edu
 - [ ] Security
   - [ ] Encrypting user information and file information (?) for storage in MongoDB Atlas
   - [X] Ensuring file upload is secure
+  - [X] Ability for a user to reset their password on the login screen
 - [X] File Uploader
   - [X] Adding new types of files (RTF, ODT?)
   - [X] Ability to upload more than one file at once
@@ -49,6 +50,9 @@ ljstaib@bu.edu
 - NLP continued (5/2)
   - Edited analysis page
   - Finished implementing summarization of inputted text (8 sentences)
+- A user can now reset their password using the interface (5/3)
+  - Created "resetpass.html"
+  - Checks if passwords match, if password is from 8-256 characters, if user exists
 
 # HW2 Status - HW2
 Phase 1: Completed. Stub-API modules for Phase 1 are in their respective .py files. I also have psuedocode in newsanalyzer_pseudocode.txt.
