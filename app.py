@@ -109,7 +109,11 @@ def numfiles():
 
 @app.route('/analysis', methods=['GET'])
 def analysis():
-	return render_template('analysis.html')				
+	return render_template('analysis.html')	
+
+@app.route('/resetpass', methods=['GET'])
+def resetpass():	
+	return render_template('resetpass.html')				
 # @app.route('/test_db')
 # def test_db():
 # 	test_user = {
@@ -136,6 +140,8 @@ class User(Resource):
 
 	#http://127.0.0.1:5000/users/login
 	def post(self, uid):
+		global app_users
+		global app_files
 		method = uid
 		error = None
 		if (method == "login"):
@@ -158,8 +164,35 @@ class User(Resource):
 			# print("Failure")
 			flash("Credentials do not match.")
 			return redirect(url_for("login"))	
+		elif (method == "resetpass"):
+			uname = request.form.get("reset_username")
+			pword1 = request.form.get("reset_password1")
+			pword2 = request.form.get("reset_password2")
+
+			if (pword1 != pword2):
+				flash("Passwords do not match.")
+				return redirect(url_for("resetpass"))
+
+			if (len(pword1) < 8 or len(pword1) > 256):
+				flash("Passwords must be between 8-256 characters.")
+				return redirect(url_for("resetpass"))
+
+			for user in app_users:
+				if (user.get('Username') == uname):
+					uid = user.get('U_ID')
+					query = {"U_ID": uid}
+					updated_user = { "$set": {
+						'Password': pword1, 
+					}}
+					db.users_db.user_collection.update_one(query, updated_user)
+					app_users, app_files = updateDB()
+					flash("Password successfully reset.")
+					return redirect(url_for("resetpass"))
+
+			flash("User does not exist. Please create an account.")
+			return redirect(url_for("resetpass"))	
 		else:
-			return redirect(url_for("login"))			
+			return redirect(url_for("home"))			
 
 	#curl http://127.0.0.1:5000/users/2 -X DELETE -v
 	def delete(self, uid):
