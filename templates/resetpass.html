@@ -34,8 +34,6 @@
 		  {% endif %}
 		{% endwith %}
 		<form action="/users/resetpass" style="text-align: center" method="post">
-			<div class="smallText">Username</div>
-			<input type="text" name="reset_username" required>
 			<div class="smallText">New Password (8-256 characters)</div>
 			<input type="password" name="reset_password1" required>
 			<div class="smallText">Confirm New Password</div>
@@ -43,7 +41,7 @@
 			<br><br>
 			<input type="submit" value="Reset Password">
 			<br><br>
-			<a href="/login">Return to Login</a>
+			<a href="/homepage">Return to Homepage</a>
 		</div>	
 		</form>
 	</body>

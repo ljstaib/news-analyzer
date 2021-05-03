@@ -165,7 +165,7 @@ class User(Resource):
 			flash("Credentials do not match.")
 			return redirect(url_for("login"))	
 		elif (method == "resetpass"):
-			uname = request.form.get("reset_username")
+			uname = session['username']
 			pword1 = request.form.get("reset_password1")
 			pword2 = request.form.get("reset_password2")
 
@@ -192,7 +192,7 @@ class User(Resource):
 			flash("User does not exist. Please create an account.")
 			return redirect(url_for("resetpass"))	
 		else:
-			return redirect(url_for("home"))			
+			return redirect(url_for("homepage"))			
 
 	#curl http://127.0.0.1:5000/users/2 -X DELETE -v
 	def delete(self, uid):

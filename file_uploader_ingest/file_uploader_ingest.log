@@ -7452,3 +7452,34 @@ INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyze
 INFO:  * Restarting with stat
 WARNING:  * Debugger is active!
 INFO:  * Debugger PIN: 296-207-656
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [03/May/2021 18:09:56] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [03/May/2021 18:09:57] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [03/May/2021 18:10:02] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [03/May/2021 18:10:02] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [03/May/2021 18:10:03] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [03/May/2021 18:10:03] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [03/May/2021 18:10:04] "[37mGET /resetpass HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [03/May/2021 18:10:15] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [03/May/2021 18:10:35] "[37mGET /resetpass HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [03/May/2021 18:10:44] "[32mPOST /users/resetpass HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [03/May/2021 18:10:44] "[37mGET /resetpass HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [03/May/2021 18:10:45] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [03/May/2021 18:10:46] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [03/May/2021 18:10:47] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [03/May/2021 18:10:53] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [03/May/2021 18:10:53] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [03/May/2021 18:10:53] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [03/May/2021 18:10:53] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [03/May/2021 18:10:54] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
