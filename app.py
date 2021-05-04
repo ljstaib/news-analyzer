@@ -489,8 +489,8 @@ class UserFiles(Resource):
 				return redirect(url_for(page))	
 
 class Searcher(Resource):	
-	#http://127.0.0.1:5000/search/election/0
-	def get(self, query): #page refers to search results page (0-99)	
+	#http://127.0.0.1:5000/search/election
+	def get(self, query):	
 		results = DiscoverContent(query)
 		if (results == False):
 			flash("There was a problem searching. Please try again later.")	

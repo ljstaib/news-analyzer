@@ -31,7 +31,24 @@ body {
 }
 
 .button {
-	display: inline-block;
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+}
+
+.home_button {
+	background-color: #93A2FF;
+	border-radius: 5px;
+	height: 200px;
+	width: 200px;
+	cursor: pointer;
+	font-size: 36px;
+	font-family: Helvetica;
+	padding: 5px;
+	text-align: center;
+	align-content: space-around;
+	margin-left: 30px;
+	margin-top: 60px;
 }
 
 .file {

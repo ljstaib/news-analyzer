@@ -7483,3 +7483,636 @@ INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyze
 INFO:  * Restarting with stat
 WARNING:  * Debugger is active!
 INFO:  * Debugger PIN: 296-207-656
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [04/May/2021 13:04:27] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:04:27] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:04:29] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:04:35] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:04:35] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:04:35] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:04:35] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:04:57] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:04:57] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:05:59] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:06:00] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/NLP_analysis/NLP_analysis.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [04/May/2021 13:07:59] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	Sean Wright
+INFO: 	state conviction
+INFO: 	U.S.
+INFO: 	judgment
+INFO: 	custody
+INFO: 	Alaska Supreme Court
+INFO: 	SUPREME COURT OF THE UNITED STATES
+INFO: 	ALASKA
+INFO: 	SEAN WRIGHT ON PETITION
+INFO: 	WRIT OF CERTIORARI
+INFO: 	procedure
+INFO: 	sentence
+INFO: 	custody
+INFO: 	UNITED STATES COURT OF APPEALS FOR THE NINTH CIRCUIT
+INFO: 	PER CURIAM
+INFO: 	counts
+INFO: 	sex offender
+INFO: 	minor
+INFO: 	abuse
+INFO: 	law
+INFO: 	jury
+INFO: 	Sex Offender Registration
+INFO: 	petition
+INFO: 	State v. Wright
+INFO: 	court
+INFO: 	conviction
+INFO: 	course
+INFO: 	Notification Act
+INFO: 	sentence
+INFO: 	motion
+INFO: 	U.S.C.
+INFO: 	state court
+INFO: 	State court
+INFO: 	court
+INFO: 	District Court
+INFO: 	writ
+INFO: 	conviction
+INFO: 	State court
+INFO: 	court
+INFO: 	motion
+INFO: 	count
+INFO: 	proceedings
+INFO: 	United States District Court for the District of Alaska
+INFO: 	state conviction
+INFO: 	custody
+INFO: 	custody
+INFO: 	120 Stat. 591
+INFO: 	habeas petitioner
+INFO: 	habeas corpus
+INFO: 	conviction
+INFO: 	judge
+INFO: 	Tennessee
+INFO: 	claims
+INFO: 	Judgment
+INFO: 	constitutionality
+INFO: 	sentence
+INFO: 	failure
+INFO: 	release
+INFO: 	State court
+INFO: 	Court of Appeals
+INFO: 	United States v. Wright
+INFO: 	conviction
+INFO: 	conviction
+INFO: 	view
+INFO: 	view
+INFO: 	writ
+INFO: 	ALASKA v. WRIGHT
+INFO: 	sentence
+INFO: 	sex offender
+INFO: 	predicate
+INFO: 	law
+INFO: 	ED Tenn
+INFO: 	abuse
+INFO: 	constitutionality
+INFO: 	minor
+INFO: 	habeas corpus
+INFO: 	petitioner
+INFO: 	con- viction
+INFO: 	fact
+INFO: 	mechanism
+INFO: 	threshold ground
+INFO: 	cus- tody
+INFO: 	somewhere
+INFO: 	Pet
+INFO: 	petition
+INFO: 	Id.
+INFO: 	convic- tion
+INFO: 	reg- ister
+INFO: 	behalf
+INFO: 	person
+INFO: 	Section
+INFO: 	application
+INFO: 	Eastern District
+INFO: 	crimes
+INFO: 	ECF Doc
+INFO: 	predicate
+INFO: 	panel
+INFO: 	state crime
+INFO: 	requirement
+INFO: 	judgment
+INFO: 	judgment
+INFO: 	route
+INFO: 	Appx. 544
+INFO: 	Cert
+INFO: 	conviction
+INFO: 	ability
+INFO: 	F. 3d
+INFO: 	Appx.
+INFO: 	writ
+INFO: 	view
+INFO: 	proceedings
+INFO: 	Zichko v. Idaho
+INFO: 	Sixth Amendment
+INFO: 	conviction
+INFO: 	case
+INFO: 	Maleng v. Cook
+INFO: 	means
+INFO: 	reason
+INFO: 	basis
+INFO: 	require- ments
+INFO: 	theories
+INFO: 	opinion
+INFO: 	sentences
+INFO: 	habeas petitioner
+INFO: 	sentence
+INFO: 	Lackawanna County District Attorney v. Coss
+INFO: 	possibility
+INFO: 	requirement
+INFO: 	possibility
+INFO: 	case
+INFO: 	difference
+INFO: 	enhancement
+INFO: 	2021
+INFO: 	April 26, 2021
+INFO: 	2009
+INFO: 	2017
+INFO: 	2016
+INFO: 	2009
+INFO: 	2020
+INFO: 	2001
+INFO: 	1989
+INFO: 	2021
+INFO: 	2001
+INFO: 	20913
+INFO: 	1
+INFO: 	819
+INFO: 	544
+INFO: 	16
+INFO: 	20913
+INFO: 	2254
+INFO: 	1019
+INFO: 	546
+INFO: 	2020
+INFO: 	2254
+INFO: 	1989
+INFO: 	28
+INFO: 	1015
+INFO: 	1
+INFO: 	20911
+INFO: 	546
+INFO: 	one
+INFO: 	170
+INFO: 	2250
+INFO: 	3
+INFO: 	28
+INFO: 	five
+INFO: 	3
+INFO: 	532
+INFO: 	402
+INFO: 	2
+INFO: 	2001
+INFO: 	1
+INFO: 	490
+INFO: 	13
+INFO: 	2255
+INFO: 	2254
+INFO: 	2021
+INFO: 	17
+INFO: 	2254
+INFO: 	2021
+INFO: 	2021
+INFO: 	120
+INFO: 	66
+INFO: 	166
+INFO: 	593
+INFO: 	18
+INFO: 	34
+INFO: 	2255
+INFO: 	2016
+INFO: 	2009
+INFO: 	2254
+INFO: 	2254
+INFO: 	3
+INFO: 	247
+INFO: 	404
+INFO: 	2254
+INFO: 	593
+INFO: 	2241
+INFO: 	00112
+INFO: 	2254
+INFO: 	493
+INFO: 	404
+INFO: 	2254
+INFO: 	940
+INFO: 	490
+INFO: 	2001
+INFO: 	488
+INFO: 	394
+INFO: 	819
+INFO: 	One
+INFO: 	Ten
+INFO: 	2241
+INFO: 	2009
+INFO: 	2254
+INFO: 	593
+INFO: 	402
+INFO: 	2017
+INFO: 	3
+INFO: 	401
+INFO: 	26
+INFO: 	2254
+INFO: 	492
+INFO: 	492
+INFO: 	591
+INFO: 	545
+INFO: 	20
+INFO: Sentiment of text information entered: magnitude: 10.800000190734863
+score: -0.10000000149011612
+
+INFO: 127.0.0.1 - - [04/May/2021 13:08:02] "[32mGET /files/9/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:08:02] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:08:02] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:08:02] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:08:03] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:08:05] "[32mGET /loadanalysis/9 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:08:05] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:09:13] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:09:18] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:09:20] "[37mGET /resetpass HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:09:25] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [04/May/2021 13:11:42] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:11:43] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:11:48] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:11:49] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:11:49] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:11:49] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:14:02] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:14:03] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:14:21] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:14:22] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:14:56] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:14:57] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:15:07] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:15:07] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:17:15] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:17:16] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:17:43] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:17:44] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:19:12] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:19:13] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:19:14] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:19:15] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:22:36] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:22:37] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:23:49] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:23:50] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:23:56] "[33mGET /logout HTTP/1.1[0m" 404 -
+INFO: 127.0.0.1 - - [04/May/2021 13:23:58] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:24:18] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:25:39] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:25:47] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:25:47] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:26:41] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:26:41] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:27:15] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:27:15] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:27:41] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:27:41] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:28:30] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:28:30] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:28:50] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:28:50] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:06] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:08] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:08] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:10] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:10] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:12] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:13] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:14] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:14] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:15] "[32mGET /loadlinks/0 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:15] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:16] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:17] "[37mGET /resetpass HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:18] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:18] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:18] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:20] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:26] "[37mGET /signup HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:27] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:28] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:33] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:33] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:34] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:29:34] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:30:03] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:30:04] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:30:10] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:30:10] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:30:10] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:30:10] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:30:11] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:30:12] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:30:12] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:30:13] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:30:14] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:30:15] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:30:16] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:30:17] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:30:52] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:30:52] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:30:53] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:30:54] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:30:54] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:30:55] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:31:31] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:31:31] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:32:45] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:32:45] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:33:07] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:33:07] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:33:30] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:33:30] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:34:29] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:34:29] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:34:40] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:34:45] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:34:45] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:34:46] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:35:01] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:35:01] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:35:37] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:35:37] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:38:06] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:38:06] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:38:07] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:38:29] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:38:30] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:38:30] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:38:32] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:38:32] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:38:33] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:38:34] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:38:35] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:38:36] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:38:36] "[32mGET /loadlinks/0 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:38:36] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:38:37] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:38:38] "[37mGET /resetpass HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:38:39] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:49:05] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:49:06] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:49:06] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:49:08] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:49:08] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:49:10] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:49:10] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:49:12] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:49:13] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:49:13] "[32mGET /loadlinks/0 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:49:13] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:49:14] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:49:15] "[37mGET /resetpass HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:49:16] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:51:11] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:51:13] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:51:13] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:51:14] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:51:26] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:51:27] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:51:28] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:51:31] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:51:31] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:51:33] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:51:52] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:51:56] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:51:56] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:52:05] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:52:18] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:52:18] "[32mGET /loadlinks/0 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:52:18] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:52:19] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:52:20] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: Search text is test
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 13:52:24] "[32mGET /search/test HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:52:24] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: Search text is fun
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 13:52:30] "[32mGET /search/fun HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:52:30] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: Search text is trump
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 13:52:35] "[32mGET /search/trump HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:52:35] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: Search text is election
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 13:52:40] "[32mGET /search/election HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:52:40] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:52:42] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:52:43] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: Search text is vaccine
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 13:52:47] "[32mGET /search/vaccine HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:52:47] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: Search text is test
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 13:52:59] "[32mGET /search/test HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:52:59] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: Search text is election
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 13:53:54] "[32mGET /search/election HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:53:54] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/newsfeed_ingest/newsfeed_ingest.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/newsfeed_ingest/newsfeed_ingest.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: Search text is election
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 13:54:58] "[32mGET /search/election HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:54:58] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/newsfeed_ingest/newsfeed_ingest.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/newsfeed_ingest/newsfeed_ingest.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: Search text is election
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 13:55:33] "[32mGET /search/election HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:55:33] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/newsfeed_ingest/newsfeed_ingest.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/newsfeed_ingest/newsfeed_ingest.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/newsfeed_ingest/newsfeed_ingest.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: Search text is election
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 13:55:52] "[32mGET /search/election HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:55:52] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: Search text is boston university
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 13:56:12] "[32mGET /search/boston%20university HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:56:12] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/newsfeed_ingest/newsfeed_ingest.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [04/May/2021 13:58:45] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:58:47] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:58:47] "[32mGET /loadlinks/0 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:58:47] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:58:48] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:58:49] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: Search text is election
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 13:58:54] "[32mGET /search/election HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:58:54] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: Search text is election
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 13:59:20] "[32mGET /search/election HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 13:59:20] "[35m[1mGET /newsfeed HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [04/May/2021 13:59:20] "[37mGET /newsfeed?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:59:20] "[37mGET /newsfeed?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:59:20] "[37mGET /newsfeed?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:59:20] "[37mGET /newsfeed?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:59:20] "[37mGET /newsfeed?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 13:59:20] "[37mGET /newsfeed?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [04/May/2021 14:00:00] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 14:00:00] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 14:00:00] "[32mGET /loadlinks/0 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 14:00:00] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 14:00:00] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 14:00:03] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: Search text is test
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 14:00:08] "[32mGET /search/test HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 14:00:08] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: Search text is election
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 14:09:29] "[32mGET /search/election HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 14:09:29] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: Search text is election
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 14:09:35] "[32mGET /search/election HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 14:09:35] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/newsfeed_ingest/newsfeed_ingest.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/newsfeed_ingest/newsfeed_ingest.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: Search text is election
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 14:10:49] "[32mGET /search/election HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 14:10:49] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: Search text is election
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 14:11:16] "[32mGET /search/election HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 14:11:16] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: Search text is election
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 14:14:31] "[32mGET /search/election HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 14:14:31] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/app.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [04/May/2021 14:15:38] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [04/May/2021 14:15:57] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 14:15:57] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 14:15:58] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 14:16:04] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 14:16:04] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 14:16:04] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 14:16:04] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 14:16:07] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: Search text is trump
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 14:16:11] "[32mGET /search/trump HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 14:16:11] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: Search text is graduate school
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 14:16:24] "[32mGET /search/graduate%20school HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 14:16:24] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/newsfeed_ingest/newsfeed_ingest.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: Search text is graduate school
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 14:16:52] "[32mGET /search/graduate%20school HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 14:16:52] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: Search text is vaccine
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 14:17:00] "[32mGET /search/vaccine HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 14:17:00] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 14:17:03] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/newsfeed_ingest/newsfeed_ingest.py', reloading
+INFO:  * Restarting with stat

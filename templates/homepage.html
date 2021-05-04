@@ -18,6 +18,27 @@
 				window.location = "/ufiles/" + uid + "/homepage";
 				//alert("/ufiles/" + uid + "/homepage");
 			}
+			function upload() {
+				window.location = "/numfiles"
+			}
+			function fileview() {
+				window.location = "/fileview"
+			}
+			function analyzer() {
+				window.location = "/analyzer"
+			}
+			function newsfeed() {
+				window.location = "/newsfeed"
+			}
+			function readlater() {
+				window.location = "/readlater"
+			}
+			function resetpass() {
+				window.location = "/resetpass"
+			}
+			function logout() {
+				window.location = "/"
+			}
 		</script>
 	</head>
 	<body>
@@ -36,21 +57,21 @@
 		{% endwith %}
 		<br>
 		<div class="button">
-			<a href="/numfiles">Upload files</a>
+			<div class="home_button" onclick="upload()">Upload files</div>
 			<br><br>
-			<a href="/fileview">View your files</a>
+			<div class="home_button" onclick="fileview()">View your files</div>
 			<br><br>
-			<a href="/analyzer">Analyze uploaded files</a>
+			<div class="home_button" onclick="analyzer()">Analyze uploaded files</div>
 			<br><br>
-			<a href="/newsfeed">Search for articles</a>
+			<div class="home_button" onclick="newsfeed()">Search for articles</div>
 			<br><br>
-			<a href="/readlater">View saved articles</a>
+			<div class="home_button" onclick="readlater()">View saved articles</div>
 			<br><br>
-			<a href="/resetpass">Change your password</a>
+			<div class="home_button" onclick="resetpass()">Change your password</div>
+			<br><br><br><br>
+			<div class="home_button" onclick="loadFiles()">Files not displaying? Reload files!</div>
 			<br><br>
-			<a onclick="loadFiles()">Files not displaying? Reload files!</a>
-			<br><br>
-			<a href="/">Logout</a>
+			<div class="home_button" onclick="logout()">Logout</div>
 			{% if session['load_lock'] == False %}
 				<a style="display: none" id="load_files" onclick="loadFiles()"></a>
 			{% endif %}	

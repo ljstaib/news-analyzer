@@ -74,7 +74,7 @@ def DiscoverContent(search_text):
 		newsapi = NewsApiClient(api_key=news_key)
 		#search wide variety of websites for content within the last month, 15 results because of size to hold in flash variable
 		some_articles = newsapi.get_everything(q=search_text, from_param=date_last_month, to=date_now, language='en', page=1)
-		print(some_articles)
+		#print(some_articles)
 		all_articles = some_articles.get('articles')
 		article_titles = []
 		articles = []
@@ -84,8 +84,8 @@ def DiscoverContent(search_text):
 				articles.append(article)
 
 		some_articles = articles[:15] #1st 15 results
-		print("SOME ARTICLES")
-		print(some_articles)
+		#print("SOME ARTICLES")
+		#print(some_articles)
 
 		for article in some_articles:
 			result_titles.append(article.get('title'))
@@ -95,7 +95,7 @@ def DiscoverContent(search_text):
 		#10 results
 		url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + search_text + "&page=1" + "&api-key=" + nyt_key
 		reqs = (requests.get(url)).json()
-		print(reqs)
+		#print(reqs)
 
 		for i in range(1, len(reqs.get('response').get('docs'))):
 			#print(reqs[j].get('response').get('docs')[i])

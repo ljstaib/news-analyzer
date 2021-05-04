@@ -254,26 +254,26 @@ def Summarize(text_data):
 	word_frequencies = {}
 	sentence_scores = {}
 
-	for word in nltk.word_tokenize(new_text_data):
-	    if word not in s_words:
-	        if word not in word_frequencies.keys():
-	            word_frequencies[word] = 1
+	for w in nltk.word_tokenize(new_text_data):
+	    if w not in s_words:
+	        if w not in word_frequencies.keys():
+	            word_frequencies[w] = 1
 	        else:
-	            word_frequencies[word] += 1
+	            word_frequencies[w] += 1
 
 	max_freq = max(word_frequencies.values())
 
-	for word in word_frequencies.keys():
-		word_frequencies[word] = (word_frequencies[word]/max_freq)
+	for w in word_frequencies.keys():
+		word_frequencies[w] = (word_frequencies[w]/max_freq)
 
 	for s in sentence_list:
-	    for word in nltk.word_tokenize(s.lower()):
-	        if word in word_frequencies.keys():
+	    for w in nltk.word_tokenize(s.lower()):
+	        if w in word_frequencies.keys():
 	            if len(s.split(' ')) < 100: #100 word limit per sentence
 	                if s not in sentence_scores.keys():
-	                    sentence_scores[s] = word_frequencies[word]
+	                    sentence_scores[s] = word_frequencies[w]
 	                else:
-	                    sentence_scores[s] += word_frequencies[word]
+	                    sentence_scores[s] += word_frequencies[w]
 
 	summary_sentences = heapq.nlargest(8, sentence_scores, key=sentence_scores.get) #retrieves 6 summary sentences
 	summary = ' '.join(summary_sentences)
