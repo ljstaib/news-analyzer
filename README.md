@@ -17,7 +17,7 @@ ljstaib@bu.edu
 - [X] File Uploader
   - [X] Adding new types of files (RTF, ODT?)
   - [X] Ability to upload more than one file at once
-- [ ] NLP Analysis: IN PROGRESS
+- [X] NLP Analysis
   - [X] More thorough final sentiment and analysis based off of data received (if possible)
   - Additional features?
 - [X] Newsfeed ingest
@@ -25,7 +25,7 @@ ljstaib@bu.edu
   - [X] Adding "Read Later" feature, create "ReadLaterList" field for each user in database, read/edit this list
 - [ ] Quality of Life Improvements
   - [ ] Loading icons
-  - [ ] Improved styling
+  - [X] Improved styling
 
 ## Status/Progress:
 - Added newsapi.org API to gather articles from more websites (4/18)
@@ -53,6 +53,9 @@ ljstaib@bu.edu
 - A user can now reset their password using the interface (5/3)
   - Created "resetpass.html"
   - Checks if passwords match, if password is from 8-256 characters, if user exists
+- 5/4
+  - Fixed bug with newsfeed analyzer that would cause searches to not show up
+  - Improved styling on the home screen
 
 # HW2 Status - HW2
 Phase 1: Completed. Stub-API modules for Phase 1 are in their respective .py files. I also have psuedocode in newsanalyzer_pseudocode.txt.
