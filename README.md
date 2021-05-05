@@ -6,7 +6,7 @@ Luke Staib
 ljstaib@bu.edu
 
 # Hosting information
-- Website hosted at http://34.227.178.224:80/ (currently offline)
+- Website hosted at http://3.91.102.109:80 (currently offline)
 
 # Final Project Status
 ## Features to add/improve upon for my Final Project:
