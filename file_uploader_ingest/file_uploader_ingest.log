@@ -8116,3 +8116,383 @@ INFO: 127.0.0.1 - - [04/May/2021 14:17:00] "[37mGET /newsfeed HTTP/1.1[0m" 200
 INFO: 127.0.0.1 - - [04/May/2021 14:17:03] "[37mGET /homepage HTTP/1.1[0m" 200 -
 INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/newsfeed_ingest/newsfeed_ingest.py', reloading
 INFO:  * Restarting with stat
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [04/May/2021 21:51:11] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:51:38] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:51:45] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:51:45] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:51:45] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:51:45] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:51:48] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:51:49] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:51:52] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:51:52] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:51:54] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:51:55] "[37mGET /signup HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:52:15] "[32mPOST /users HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:52:15] "[37mGET /success HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:52:18] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:52:29] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:52:29] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:52:30] "[32mGET /ufiles/6/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:52:30] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:52:33] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:52:34] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:52:39] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:52:39] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:52:39] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:52:39] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:52:45] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:52:47] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:52:48] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:52:51] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:52:51] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:52:58] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:52:59] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:00] "[32mGET /files/9/delete HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:00] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:01] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:01] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:02] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:04] "[32mGET /files/8/delete HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:04] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:04] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:04] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:06] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:08] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:08] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:11] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:11] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Here, I use the slate3k library to turn this .pdf file into .txt
+INFO: Filetype = .pdf
+INFO: Uploading file giants.pdf
+INFO: User account with userID 0 verified.
+INFO: User account with userID 0 verified.
+INFO: Here, I use the slate3k library to turn this .pdf file into .txt
+INFO: Filetype = .pdf
+WARNING: Cannot locate objid=62
+INFO: Uploading file court_case.pdf
+INFO: 127.0.0.1 - - [04/May/2021 21:53:26] "[32mPOST /files HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:26] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:26] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:26] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:27] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:30] "[32mGET /files/9/edit HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:30] "[37mGET /editfile HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:39] "[32mPOST /files/9/edit HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:39] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:39] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:39] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:40] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:43] "[32mGET /loadanalysis/9 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:43] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:46] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:47] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:49] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: Keywords of text entered:
+INFO: 	Sean Wright
+INFO: 	state conviction
+INFO: 	U.S.
+INFO: 	judgment
+INFO: 	custody
+INFO: 	Alaska Supreme Court
+INFO: 	SUPREME COURT OF THE UNITED STATES
+INFO: 	ALASKA
+INFO: 	SEAN WRIGHT ON PETITION
+INFO: 	WRIT OF CERTIORARI
+INFO: 	procedure
+INFO: 	sentence
+INFO: 	custody
+INFO: 	UNITED STATES COURT OF APPEALS FOR THE NINTH CIRCUIT
+INFO: 	PER CURIAM
+INFO: 	counts
+INFO: 	sex offender
+INFO: 	minor
+INFO: 	abuse
+INFO: 	law
+INFO: 	jury
+INFO: 	Sex Offender Registration
+INFO: 	petition
+INFO: 	State v. Wright
+INFO: 	court
+INFO: 	conviction
+INFO: 	course
+INFO: 	Notification Act
+INFO: 	sentence
+INFO: 	motion
+INFO: 	U.S.C.
+INFO: 	state court
+INFO: 	State court
+INFO: 	court
+INFO: 	District Court
+INFO: 	writ
+INFO: 	conviction
+INFO: 	State court
+INFO: 	court
+INFO: 	motion
+INFO: 	count
+INFO: 	proceedings
+INFO: 	United States District Court for the District of Alaska
+INFO: 	state conviction
+INFO: 	custody
+INFO: 	custody
+INFO: 	120 Stat. 591
+INFO: 	habeas petitioner
+INFO: 	habeas corpus
+INFO: 	conviction
+INFO: 	judge
+INFO: 	Tennessee
+INFO: 	claims
+INFO: 	Judgment
+INFO: 	constitutionality
+INFO: 	sentence
+INFO: 	failure
+INFO: 	release
+INFO: 	State court
+INFO: 	Court of Appeals
+INFO: 	United States v. Wright
+INFO: 	conviction
+INFO: 	conviction
+INFO: 	view
+INFO: 	view
+INFO: 	writ
+INFO: 	ALASKA v. WRIGHT
+INFO: 	sentence
+INFO: 	sex offender
+INFO: 	predicate
+INFO: 	law
+INFO: 	ED Tenn
+INFO: 	abuse
+INFO: 	constitutionality
+INFO: 	minor
+INFO: 	habeas corpus
+INFO: 	petitioner
+INFO: 	con- viction
+INFO: 	fact
+INFO: 	mechanism
+INFO: 	threshold ground
+INFO: 	cus- tody
+INFO: 	somewhere
+INFO: 	Pet
+INFO: 	petition
+INFO: 	Id.
+INFO: 	convic- tion
+INFO: 	reg- ister
+INFO: 	behalf
+INFO: 	person
+INFO: 	Section
+INFO: 	application
+INFO: 	Eastern District
+INFO: 	crimes
+INFO: 	ECF Doc
+INFO: 	predicate
+INFO: 	panel
+INFO: 	state crime
+INFO: 	requirement
+INFO: 	judgment
+INFO: 	judgment
+INFO: 	route
+INFO: 	Appx. 544
+INFO: 	Cert
+INFO: 	conviction
+INFO: 	ability
+INFO: 	F. 3d
+INFO: 	Appx.
+INFO: 	writ
+INFO: 	view
+INFO: 	proceedings
+INFO: 	Zichko v. Idaho
+INFO: 	Sixth Amendment
+INFO: 	conviction
+INFO: 	case
+INFO: 	Maleng v. Cook
+INFO: 	means
+INFO: 	reason
+INFO: 	basis
+INFO: 	require- ments
+INFO: 	theories
+INFO: 	opinion
+INFO: 	sentences
+INFO: 	habeas petitioner
+INFO: 	sentence
+INFO: 	Lackawanna County District Attorney v. Coss
+INFO: 	possibility
+INFO: 	requirement
+INFO: 	possibility
+INFO: 	case
+INFO: 	difference
+INFO: 	enhancement
+INFO: 	2021
+INFO: 	April 26, 2021
+INFO: 	2009
+INFO: 	2017
+INFO: 	2016
+INFO: 	2009
+INFO: 	2020
+INFO: 	2001
+INFO: 	1989
+INFO: 	2021
+INFO: 	2001
+INFO: 	20913
+INFO: 	2009
+INFO: 	394
+INFO: 	1
+INFO: 	2254
+INFO: 	2254
+INFO: 	One
+INFO: 	1989
+INFO: 	2254
+INFO: 	2255
+INFO: 	2241
+INFO: 	17
+INFO: 	00112
+INFO: 	488
+INFO: 	593
+INFO: 	546
+INFO: 	2254
+INFO: 	2021
+INFO: 	1
+INFO: 	2255
+INFO: 	593
+INFO: 	2017
+INFO: 	20913
+INFO: 	2254
+INFO: 	2021
+INFO: 	490
+INFO: 	28
+INFO: 	166
+INFO: 	16
+INFO: 	593
+INFO: 	3
+INFO: 	2254
+INFO: 	1019
+INFO: 	404
+INFO: 	26
+INFO: 	20
+INFO: 	2254
+INFO: 	13
+INFO: 	18
+INFO: 	2020
+INFO: 	1015
+INFO: 	546
+INFO: 	2001
+INFO: 	2250
+INFO: 	544
+INFO: 	3
+INFO: 	404
+INFO: 	3
+INFO: 	402
+INFO: 	28
+INFO: 	819
+INFO: 	492
+INFO: 	493
+INFO: 	402
+INFO: 	2254
+INFO: 	2016
+INFO: 	120
+INFO: 	2009
+INFO: 	532
+INFO: 	170
+INFO: 	five
+INFO: 	1
+INFO: 	545
+INFO: 	3
+INFO: 	34
+INFO: 	Ten
+INFO: 	247
+INFO: 	2
+INFO: 	492
+INFO: 	2021
+INFO: 	66
+INFO: 	490
+INFO: 	2001
+INFO: 	20911
+INFO: 	401
+INFO: 	2254
+INFO: 	2254
+INFO: 	2254
+INFO: 	one
+INFO: 	2241
+INFO: 	819
+INFO: 	591
+INFO: 	940
+INFO: Sentiment of text information entered: magnitude: 10.800000190734863
+score: -0.10000000149011612
+
+INFO: 127.0.0.1 - - [04/May/2021 21:53:52] "[32mGET /files/9/analyze HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:52] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:52] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:52] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:54] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:58] "[32mGET /loadanalysis/9 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:53:58] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:54:11] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:54:15] "[32mGET /loadanalysis/8 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:54:15] "[37mGET /analysis HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:54:17] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:54:18] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:54:20] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: Search text is vaccine
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 21:54:26] "[32mGET /search/vaccine HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:54:26] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:54:40] "[32mGET /savelink/0/https%3A%252F%252Fwww.nytimes.com%252Finteractive%252F2021%252F04%252F29%252Fwell%252Flive%252F29healthquiz-04292021.html HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:54:40] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:54:42] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:54:42] "[32mGET /loadlinks/0 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:54:42] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:54:49] "[32mGET /updatelink/0/https%3A%252F%252Fwww.nytimes.com%252Finteractive%252F2021%252F04%252F29%252Fwell%252Flive%252F29healthquiz-04292021.html HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:54:49] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:54:50] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:54:50] "[32mGET /loadlinks/0 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:54:50] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:54:59] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:55:03] "[37mGET /resetpass HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:55:21] "[32mPOST /users/resetpass HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:55:21] "[37mGET /resetpass HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:55:23] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:55:24] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:55:27] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:55:35] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:55:35] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:55:43] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:55:43] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:55:43] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:55:43] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:56:28] "[37mGET /numfiles HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:56:31] "[32mPOST /setnumfiles HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:56:31] "[37mGET /upload HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:56:46] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:56:46] "[37mGET /analyzer HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:56:59] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:57:03] "[37mGET /fileview HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:57:15] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:57:17] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: Search text is new york knicks
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 21:57:25] "[32mGET /search/New%20York%20Knicks HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:57:25] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:57:44] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:57:45] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:57:45] "[32mGET /loadlinks/0 HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 21:57:45] "[37mGET /readlater HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:58:06] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:58:07] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:58:30] "[37mGET /signup HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:58:43] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:58:43] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 21:59:07] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 22:06:32] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 22:06:39] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 22:06:39] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 22:06:39] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 22:06:39] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 22:06:40] "[37mGET /resetpass HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 22:06:51] "[32mPOST /users/resetpass HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 22:06:51] "[37mGET /resetpass HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 22:06:52] "[37mGET /homepage HTTP/1.1[0m" 200 -

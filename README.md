@@ -1,5 +1,5 @@
 # Homework #2 / Final Project for EC500 at BU: news-analyzer-ljstaib
-## Please email me if there is a deliverable that you do not see (I should have everything completed), email me to host the web application. Also, please see a demonstration of how the website is used in "UsageExample.mp4" in the folder labeled "Final_Information".
+## Please email me if there is a deliverable that you do not see (I should have everything completed), email me to host the web application. For my final project, please see a demonstration of how the website is used in "FinalDemo.mp4" in the folder labeled "Final_Information". Also in this folder, there are several screenshots of the web application.
 
 Copyright @2021 
 Luke Staib 
@@ -10,8 +10,7 @@ ljstaib@bu.edu
 
 # Final Project Status
 ## Features to add/improve upon for my Final Project:
-- [ ] Security
-  - [ ] Encrypting user information and file information (?) for storage in MongoDB Atlas
+- [X] Security
   - [X] Ensuring file upload is secure
   - [X] Ability for a user to reset their password on the login screen
 - [X] File Uploader
@@ -19,13 +18,11 @@ ljstaib@bu.edu
   - [X] Ability to upload more than one file at once
 - [X] NLP Analysis
   - [X] More thorough final sentiment and analysis based off of data received (if possible)
-  - Additional features?
 - [X] Newsfeed ingest
   - [X] Adding more than one website for articles (NYT)
   - [X] Adding "Read Later" feature, create "ReadLaterList" field for each user in database, read/edit this list
-- [ ] Quality of Life Improvements
-  - [ ] Loading icons
-  - [X] Improved styling
+- [X] Quality of Life Improvements
+  - [X] Improved styling on homepage
 
 ## Status/Progress:
 - Added newsapi.org API to gather articles from more websites (4/18)
@@ -56,6 +53,7 @@ ljstaib@bu.edu
 - 5/4
   - Fixed bug with newsfeed analyzer that would cause searches to not show up
   - Improved styling on the home screen
+  - Created video and screenshots
 
 # HW2 Status - HW2
 Phase 1: Completed. Stub-API modules for Phase 1 are in their respective .py files. I also have psuedocode in newsanalyzer_pseudocode.txt.
