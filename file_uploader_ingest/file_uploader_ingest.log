@@ -8496,3 +8496,32 @@ INFO: 127.0.0.1 - - [04/May/2021 22:06:40] "[37mGET /resetpass HTTP/1.1[0m" 20
 INFO: 127.0.0.1 - - [04/May/2021 22:06:51] "[32mPOST /users/resetpass HTTP/1.1[0m" 302 -
 INFO: 127.0.0.1 - - [04/May/2021 22:06:51] "[37mGET /resetpass HTTP/1.1[0m" 200 -
 INFO: 127.0.0.1 - - [04/May/2021 22:06:52] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: 127.0.0.1 - - [04/May/2021 22:42:51] "[37mGET / HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 22:42:52] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 22:42:57] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 22:42:57] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 22:43:05] "[32mPOST /users/login HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 22:43:05] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 22:43:05] "[32mGET /ufiles/0/homepage HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 22:43:05] "[37mGET /homepage HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 22:43:07] "[37mGET /newsfeed HTTP/1.1[0m" 200 -
+INFO: Search text is test
+INFO: 127.0.0.1 - - [04/May/2021 22:43:10] "[35m[1mGET /search/test HTTP/1.1[0m" 500 -
+INFO: 127.0.0.1 - - [04/May/2021 22:43:10] "[37mGET /search/test?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 22:43:10] "[37mGET /search/test?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 22:43:10] "[37mGET /search/test?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 22:43:10] "[37mGET /search/test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 22:43:10] "[37mGET /search/test?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO: 127.0.0.1 - - [04/May/2021 22:43:10] "[37mGET /search/test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:  * Detected change in '/Users/luke/Documents/Code/EC500/HW2+3/news-analyzer-ljstaib/newsfeed_ingest/newsfeed_ingest.py', reloading
+INFO:  * Restarting with stat
+WARNING:  * Debugger is active!
+INFO:  * Debugger PIN: 296-207-656
+INFO: Search text is test
+INFO: Successful retrieval of news articles!
+INFO: 127.0.0.1 - - [04/May/2021 22:43:27] "[32mGET /search/test HTTP/1.1[0m" 302 -
+INFO: 127.0.0.1 - - [04/May/2021 22:43:27] "[37mGET /newsfeed HTTP/1.1[0m" 200 -

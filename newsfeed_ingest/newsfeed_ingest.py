@@ -23,7 +23,7 @@ import time
 import psutil
 import logging #Logging
 import requests #retrieving articles
-from newsapi import NewsApiClient #newsapi.org
+import newsapi #newsapi.org
 import datetime #get dates for newsapi
 
 tracemalloc.start()
@@ -71,9 +71,10 @@ def DiscoverContent(search_text):
 		#15 results from newsapi.org, 10 results from new york times
 
 		date_last_month, date_now = get_dates()
-		newsapi = NewsApiClient(api_key=news_key)
+		news = None
+		news = newsapi.NewsApiClient(api_key=news_key)
 		#search wide variety of websites for content within the last month, 15 results because of size to hold in flash variable
-		some_articles = newsapi.get_everything(q=search_text, from_param=date_last_month, to=date_now, language='en', page=1)
+		some_articles = news.get_everything(q=search_text, from_param=date_last_month, to=date_now, language='en', page=1)
 		#print(some_articles)
 		all_articles = some_articles.get('articles')
 		article_titles = []
