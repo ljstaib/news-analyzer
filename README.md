@@ -9,7 +9,7 @@ ljstaib@gmail.com
 This project was originally created to fulfill credit for an assignment in a class at Boston University. For this assignment, I created a website designed for journalists using Flask-RESTful. The website was designed to handle multiple users uploading multiple files at once.
 
 ## Documentation
-Please see the "docs" folder
+Please see the "docs" folder.
 
 ## Features
 - Logging in, signing up, ability for a user to change their password
@@ -18,6 +18,7 @@ Please see the "docs" folder
 - Sentiment analysis
 - Newsfeed ingester (the ability to search up topics and find relevant news articles)
 - Saving articles to a "Read Later" page
+- Database using MongoDB (db.py is not posted publicly)
 
 ## Demonstration
 - Website hosted at http://3.91.102.109:80 (currently offline)

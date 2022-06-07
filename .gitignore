@@ -1,0 +1,8 @@
+# Mac system files
+.DS_store
+
+# Python cache files
+__pycache__/
+
+# Sensitive data
+expressions.txt
