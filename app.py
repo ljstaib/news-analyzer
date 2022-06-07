@@ -114,16 +114,6 @@ def analysis():
 @app.route('/resetpass', methods=['GET'])
 def resetpass():	
 	return render_template('resetpass.html')				
-# @app.route('/test_db')
-# def test_db():
-# 	test_user = {
-# 		'U_ID': -1, 
-# 		'Username': "mongodb", 
-# 		'FirstName': "Data", 
-# 		'LastName': "Base"
-# 	}
-# 	db.users_db.user_collection.insert_one(test_user)	
-# 	return "Uploaded test user to MongoDB!"	
 
 class User(Resource):
 	#http://127.0.0.1:5000/users/0
@@ -270,16 +260,6 @@ class UserList(Resource):
 		new_fname = request.form.get("create_firstname")
 		new_lname = request.form.get("create_lastname")
 
-		# args = parser.parse_args()
-		# print("args:")
-		# print(args)
-		# new_userinfo = list(args['UserInfo'].split(", "))
-		# if (len(new_userinfo) != 3):
-		# 	return "To create a new user, UserInfo is a list of THREE arguments."
-		# # print(new_userinfo)
-		# new_uname = new_userinfo[0]
-		# new_fname = new_userinfo[1]
-		# new_lname = new_userinfo[2]
 		new_user = {
 			'U_ID': new_uid, 
 			'Username': new_uname, 
@@ -290,9 +270,7 @@ class UserList(Resource):
 		}	
 		db.users_db.user_collection.insert_one(new_user)
 		app_users, app_files = updateDB()
-		# new_user = (encodeJSON().encode(new_user)).replace(r'\"', '"')
-		# new_user = json.JSONDecoder().decode(new_user)
-		# app_users.append(new_user)
+
 		return redirect(url_for("success"))
 
 class File(Resource):
@@ -423,20 +401,6 @@ class FileList(Resource):
 				print("File created") 
 			else:
 				new_file = UploadFiles(-1, file, fid, authors, creation_time) #-1 is not authenticated
-		#Command line method:
-		# new_fileinfo = list(args['FileInfo'].split(", "))
-		# if (len(new_fileinfo) != 7):
-		# 	return "To create a new file, FileInfo is a list of SEVEN arguments."
-		# #print(new_fileinfo)
-		# filename = new_fileinfo[0]
-		# filetype = new_fileinfo[1]
-		# authors = new_fileinfo[2]
-		# text = ""
-		# creation_time = new_fileinfo[3]
-		# source = new_fileinfo[4]
-		# filesize = new_fileinfo[5]
-		# status = new_fileinfo[6]
-		# upload_time = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
 
 			if (new_file == False):
 				flash(f'There was a problem uploading your file. Please try again later.')
