@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # ========================================================================
-# Luke Staib ljstaib@bu.edu 
-# Copyright @2021, for EC500: Software Engineering
+# Luke Staib ljstaib@gmail.com 
+# Copyright @2021-22
 # Flask Restful Website
 # ========================================================================
 
